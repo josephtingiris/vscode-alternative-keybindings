@@ -28,7 +28,7 @@ Examples of expected answers:
 - Offer alternate shortcuts when conflicts or platform differences exist.
 
 Constraints
-- "when" clauses MUST be sorted first by `config.workbench.sideBar.location`, then alphabetically by context key.
+- "when" clauses MUST be sorted first by `config.workbench.sideBar.location`, then alphabetically by context key.  Special characters should sort before letters, i.e. !editorFocus && !terminalFocus && panelFocus
 
 References:
 - [vscode-when-contexts.md](../../references/vscode-when-contexts.md)
