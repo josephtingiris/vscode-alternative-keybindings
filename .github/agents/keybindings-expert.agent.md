@@ -27,6 +27,9 @@ Examples of expected answers:
 - Explain why a keybinding fails (conflicts, OS-level capture, or missing `when` context).
 - Offer alternate shortcuts when conflicts or platform differences exist.
 
+Constraints
+- "when" clauses MUST be sorted first by `config.workbench.sideBar.location`, then alphabetically by context key.
+
 References:
 - [vscode-when-contexts.md](../../references/vscode-when-contexts.md)
 - [vscode-api-commands.md](../../references/vscode-api-commands.md)
