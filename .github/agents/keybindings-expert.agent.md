@@ -29,6 +29,8 @@ Examples of expected answers:
 
 Constraints
 - "when" clauses MUST be sorted first by `config.workbench.sideBar.location`, then alphabetically by context key.  Special characters should sort before letters, i.e. !editorFocus && !terminalFocus && panelFocus
+- for consistent terminology, always refer to the official VS Code docs for keybinding and context key names.
+- when labeling the secondary sidebar, always use "secondary sidebar" instead of "auxiliary sidebar" or other variants.
 
 References:
 - [vscode-when-contexts.md](../../references/vscode-when-contexts.md)
