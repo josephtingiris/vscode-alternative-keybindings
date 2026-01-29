@@ -1,0 +1,12 @@
+FROM registry.fedoraproject.org/fedora:latest
+
+RUN dnf -y update && dnf -y install \
+  git \
+  neovim \
+  bash \
+  sudo \
+  shadow-utils && \
+  dnf clean all
+
+USER 1000:1000
+WORKDIR /workspace
