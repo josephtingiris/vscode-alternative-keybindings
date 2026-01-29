@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    // workspace settings that should be here (or in user settings.json), but not in the directory ./.vscode/settings.json
+    "chat.tools.terminal.autoApprove": {
+      "npm run compile": true
+    },
+    "makefile.configureOnOpen": false,
+    "shfmt.executablePath": "shfmt",
+    "shfmt.executableArgs": [
+      "--indent",
+      "4",
+      "--space-redirects",
+      "--case-indent",
+      "--simplify",
+    ],
+  },
+}
