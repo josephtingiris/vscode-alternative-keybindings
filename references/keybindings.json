@@ -60,6 +60,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
   },
   {
+    // (h) from Problems panel, jump directly to primary sidebar when sidebar is on the left
+    "key": "alt+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus"
+  },
+  {
     // (j) focus next part (sidebar on left)
     "key": "alt+j",
     "command": "workbench.action.focusNextPart",
