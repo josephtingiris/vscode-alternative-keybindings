@@ -1,0 +1,6 @@
+.vscode/**
+node_modules/**
+out/test/**
+.vscode-test/**
+src/**
+**/*.ts
