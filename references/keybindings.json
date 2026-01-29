@@ -1,0 +1,226 @@
+/*
+key bindings in this file override the defaults
+
+notes:
+    * keybindings here are designed to work well with and without the vscode-neovim extension
+    * use editorFocus and terminalFocus context keys to differentiate between when the editor or terminal has focus
+*/
+[
+  {
+    // (\) split editor vertically when in editor
+    "key": "alt+\\",
+    "command": "workbench.action.splitEditor",
+    "when": "editorFocus"
+  },
+  {
+    // (down arrow) focus next part (primary sidebar on left)
+    "key": "alt+down",
+    "command": "workbench.action.focusNextPart",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (down arrow) from secondary sidebar, jump to primary sidebar when primary is on the left
+    "key": "alt+down",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (h) focus previous part (primary sidebar on left)
+    "key": "alt+h",
+    "command": "workbench.action.focusPreviousPart",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (h) from left primary sidebar, jump to secondary sidebar when visible
+    "key": "alt+h",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
+  },
+  {
+    // (j) focus next part (primary sidebar on left)
+    "key": "alt+j",
+    "command": "workbench.action.focusNextPart",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (j) from secondary sidebar, jump to primary sidebar when primary is on the left
+    "key": "alt+j",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (k) focus previous part (primary sidebar on left)
+    "key": "alt+k",
+    "command": "workbench.action.focusPreviousPart",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (k) from left primary sidebar, jump to secondary sidebar when visible
+    "key": "alt+k",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
+  },
+  {
+    // (l) focus next part (primary sidebar on left)
+    "key": "alt+l",
+    "command": "workbench.action.focusNextPart",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (l) from secondary sidebar, jump to primary sidebar when primary is on the left
+    "key": "alt+l",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (left arrow) focus previous part (primary sidebar on left)
+    "key": "alt+left",
+    "command": "workbench.action.focusPreviousPart",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (left arrow) from left primary sidebar, jump to secondary sidebar when visible
+    "key": "alt+left",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
+  },
+  {
+    // (right arrow) focus next part (primary sidebar on left)
+    "key": "alt+right",
+    "command": "workbench.action.focusNextPart",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (right arrow) from secondary sidebar, jump to primary sidebar when primary is on the left
+    "key": "alt+right",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (up arrow) focus previous part (sidebar on left)
+    "key": "alt+up",
+    "command": "workbench.action.focusPreviousPart",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (up arrow) from left primary sidebar, jump to secondary sidebar when visible
+    "key": "alt+up",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
+  },
+  {
+    // (a z) toggle maximized editor when in editor
+    "key": "ctrl+a z",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "when": "editorFocus"
+  },
+  {
+    // (a z) toggle maximized panel when in terminal
+    "key": "ctrl+a z",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelFocus"
+  },
+  {
+    // (a z) toggle zen mode when not in terminal
+    "key": "ctrl+a z",
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.action.toggleZenMode"]
+    },
+    "when": "!editorFocus && !panelFocus && !terminalFocus"
+  },
+  {
+    // ([) fold all except current
+    "key": "ctrl+alt+[",
+    "command": "editor.foldAllExcept",
+    "when": "editorFocus"
+  },
+  {
+    // (]) unfold all
+    "key": "ctrl+alt+]",
+    "command": "editor.unfoldAll",
+    "when": "editorFocus"
+  },
+  {
+    // (down arrow) toggle bottom panel
+    "key": "ctrl+alt+down",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    // (h) toggle left panel
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    // (j) toggle bottom panel
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    // (k) toggle top panel
+    "key": "ctrl+alt+k",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    // (l) toggle right panel
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    // (left arrow) toggle left panel
+    "key": "ctrl+alt+left",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    // (right arrow) toggle right panel
+    "key": "ctrl+alt+right",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    // (up arrow) toggle top panel
+    "key": "ctrl+alt+up",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    // (k) disable neovim ctrl+k handler when not in insert mode (this preserves vscode's default ctrl+k behavior of waiting for a 2nd key to form a chord)
+    "key": "ctrl+k",
+    "command": "-vscode-neovim.send",
+    "when": "editorFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    // (right arrow) go forward/right to next open editor
+    "key": "ctrl+right",
+    //"command": "workbench.action.nextEditor"
+    "command": "workbench.action.focusRightGroup",
+    "when": "multipleEditorGroups"
+  },
+  {
+    // (-) split editor horizontally when in editor
+    "key": "ctrl+shift+-",
+    "command": "workbench.action.splitEditorDown",
+    "when": "editorFocus"
+  },
+  {
+    // (backspace) go to html/xml tag open/close match
+    "key": "ctrl+shift+backspace",
+    "command": "editor.emmet.action.matchTag"
+  },
+  {
+    // (c) open source control when not in terminal
+    "key": "ctrl+shift+c",
+    "command": "workbench.scm.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    // (t) open native terminal when not in terminal
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    // (f8) format/indent
+    "key": "f8",
+    "command": "editor.action.formatDocument",
+    "when": "!editorReadonly && !inCompositeEditor && editorFocus && editorHasDocumentFormattingProvider"
+  }
+]
