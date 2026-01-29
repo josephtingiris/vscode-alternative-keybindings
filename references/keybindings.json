@@ -13,6 +13,28 @@ notes:
     "when": "editorFocus"
   },
   {
+    "key": "alt+a d",
+    "command": "workbench.action.inspectContextKeys"
+  },
+  {
+    // (a z) toggle maximized panel when in editor
+    "key": "alt+a z",
+    "command": "workbench.action.toggleZenMode",
+    "when": "editorFocus"
+  },
+  {
+    // (a z) toggle maximized panel when in terminal
+    "key": "alt+a z",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelFocus"
+  },
+  {
+    // (a z) toggle zen mode when not in terminal
+    "key": "alt+a z",
+    "command": "workbench.action.toggleZenMode",
+    "when": "!editorFocus && !panelFocus && !terminalFocus"
+  },
+  {
     // (down arrow) focus next part (primary sidebar on left)
     "key": "alt+down",
     "command": "workbench.action.focusNextPart",
@@ -79,6 +101,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    // (left arrow) from Problems panel, jump directly to primary sidebar when primary is on the left
+    "key": "alt+left",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus"
+  },
+  {
     // (left arrow) from left primary sidebar, jump to secondary sidebar when visible
     "key": "alt+left",
     "command": "workbench.action.focusAuxiliaryBar",
@@ -113,21 +141,6 @@ notes:
     "key": "ctrl+a z",
     "command": "workbench.action.toggleMaximizeEditorGroup",
     "when": "editorFocus"
-  },
-  {
-    // (a z) toggle maximized panel when in terminal
-    "key": "ctrl+a z",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "panelFocus"
-  },
-  {
-    // (a z) toggle zen mode when not in terminal
-    "key": "ctrl+a z",
-    "command": "runCommands",
-    "args": {
-      "commands": ["workbench.action.toggleZenMode"]
-    },
-    "when": "!editorFocus && !panelFocus && !terminalFocus"
   },
   {
     // ([) fold all except current
