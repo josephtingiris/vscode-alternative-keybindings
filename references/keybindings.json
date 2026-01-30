@@ -7,14 +7,20 @@ notes:
 */
 [
   {
+    // (=) split terminal verically when terminal is focused
+    "key": "alt+=",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
     // (\) split editor vertically when in editor
     "key": "alt+\\",
     "command": "workbench.action.splitEditor",
     "when": "editorFocus"
   },
   {
-    // (a d) inspect context keys
-    "key": "alt+a d",
+    // (a alt+d) inspect context keys
+    "key": "alt+a alt+d",
     "command": "workbench.action.inspectContextKeys"
   },
   {
@@ -54,6 +60,11 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    "key": "alt+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalCount > 1"
+  },
+  {
     // (h) from left primary sidebar, jump to secondary sidebar when visible
     "key": "alt+h",
     "command": "workbench.action.focusAuxiliaryBar",
@@ -76,6 +87,11 @@ notes:
     "key": "alt+j",
     "command": "workbench.action.focusNextPart",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalCount > 1"
   },
   {
     // (j) from secondary sidebar, jump to primary sidebar when sidebar is on the left
@@ -102,6 +118,11 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    "key": "alt+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalCount > 1"
+  },
+  {
     // (l) from secondary sidebar, jump to primary sidebar when sidebar is on the left
     "key": "alt+l",
     "command": "workbench.action.focusSideBar",
@@ -118,6 +139,11 @@ notes:
     "key": "alt+left",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalCount > 1"
   },
   {
     // (left arrow) from left primary sidebar, jump to secondary sidebar when visible
@@ -142,6 +168,11 @@ notes:
     "key": "alt+right",
     "command": "workbench.action.focusNextPart",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalCount > 1"
   },
   {
     // (right arrow) from secondary sidebar, jump to primary sidebar when sidebar is on the left
@@ -236,7 +267,7 @@ notes:
     "key": "ctrl+right",
     //"command": "workbench.action.nextEditor"
     "command": "workbench.action.focusRightGroup",
-    "when": "multipleEditorGroups"
+    "when": "editorFocus && multipleEditorGroups"
   },
   {
     // (-) split editor horizontally when in editor
@@ -262,10 +293,15 @@ notes:
     "when": "!terminalFocus"
   },
   {
+    // (t) open a new terminal when terminal is focused
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
     // (f8) format/indent
     "key": "f8",
     "command": "editor.action.formatDocument",
     "when": "!editorReadonly && !inCompositeEditor && editorFocus && editorHasDocumentFormattingProvider"
   }
 ]
-
