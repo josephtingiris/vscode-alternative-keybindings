@@ -5,8 +5,9 @@
     },
   ],
   "settings": {
-    // workspace settings that should be here (or in user settings.json), but not in the directory ./.vscode/settings.json
+    // settings that should be here (or in user settings), not in directory .vscode/settings.json
     "chat.tools.terminal.autoApprove": {
+      "getent": true,
       "npm run compile": true
     },
     "makefile.configureOnOpen": false,
