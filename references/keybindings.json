@@ -60,10 +60,10 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
   },
   {
-    // (h) from Problems panel, jump directly to primary sidebar when sidebar is on the left
+    // (h) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
     "key": "alt+h",
     "command": "workbench.action.focusSideBar",
-    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus"
+    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus && sideBarVisible"
   },
   {
     // (j) focus next part (sidebar on left)
@@ -108,16 +108,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
-    // (left arrow) from Problems panel, jump directly to primary sidebar when sidebar is on the left
-    "key": "alt+left",
-    "command": "workbench.action.focusSideBar",
-    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus"
-  },
-  {
     // (left arrow) from left primary sidebar, jump to secondary sidebar when visible
     "key": "alt+left",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
+  },
+  {
+    // (left arrow) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
+    "key": "alt+left",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus && sideBarVisible"
   },
   {
     // (right arrow) focus next part (sidebar on left)
