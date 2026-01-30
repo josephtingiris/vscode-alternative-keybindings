@@ -66,6 +66,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus && sideBarVisible"
   },
   {
+    // (h) when config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen — go to active editor
+    "key": "alt+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen"
+  },
+  {
     // (j) focus next part (sidebar on left)
     "key": "alt+j",
     "command": "workbench.action.focusNextPart",
@@ -102,6 +108,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
   },
   {
+    // (l) when editor focused, go directly to secondary (auxiliary) sidebar
+    "key": "alt+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible"
+  },
+  {
     // (left arrow) focus previous part (sidebar on left)
     "key": "alt+left",
     "command": "workbench.action.focusPreviousPart",
@@ -120,6 +132,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus && sideBarVisible"
   },
   {
+    // (left arrow) when config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen — go to active editor
+    "key": "alt+left",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen"
+  },
+  {
     // (right arrow) focus next part (sidebar on left)
     "key": "alt+right",
     "command": "workbench.action.focusNextPart",
@@ -130,6 +148,12 @@ notes:
     "key": "alt+right",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (right arrow) when config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && editorFocus — go directly to secondary sidebar
+    "key": "alt+right",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && editorFocus"
   },
   {
     // (up arrow) focus previous part (sidebar on left)
@@ -244,3 +268,4 @@ notes:
     "when": "!editorReadonly && !inCompositeEditor && editorFocus && editorHasDocumentFormattingProvider"
   }
 ]
+
