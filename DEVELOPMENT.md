@@ -56,6 +56,17 @@ Tips and alternatives
 - If the Output channel remains empty, try restarting VS Code and re-running the toggle command.
 - As a last resort, open the Developer Tools console (Help → Toggle Developer Tools) and check the Console for related messages; however, the recommended place for keybinding resolution is the Output panel's logging channel.
 
+**Active development: auto-install references**
+
+- To actively edit `references/keybindings.json` and have changes automatically installed into your Windows 11 user keybindings, run the watcher in a second shell:
+
+```bash
+chmod +x bin/watch-runner.sh bin/keybindings-install-references.sh
+./bin/watch-runner.sh references/keybindings.json bin/keybindings-install-references.sh
+```
+
+The watcher is quiet while waiting. Each time the file changes it prints a delimiter with an ISO UTC timestamp and then runs `bin/keybindings-install-references.sh`, which copies the file into the Windows user profile (the installer detects WSL vs native Windows paths). Stop the watcher with Ctrl+C or `pkill -f watch-runner.sh`.
+
 How to interpret the log
 - "Source: user" indicates the binding comes from the user's `keybindings.json`.
 - When expressions evaluate to `true` means the binding was eligible when the keystroke occurred.
