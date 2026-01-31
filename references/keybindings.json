@@ -447,6 +447,22 @@ notes:
     "key": "ctrl+alt+h",
     "command": "config.workbench.sideBar.location == 'left' && workbench.action.toggleSidebarVisibility"
   },
+
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && sideBarVisible"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
+  },
   {
     // (j) toggle bottom panel
     "key": "ctrl+alt+j",
@@ -458,19 +474,49 @@ notes:
     "command": "workbench.action.togglePanel"
   },
   {
-    // (l) toggle right panel
     "key": "ctrl+alt+l",
-    "command": "workbench.action.toggleAuxiliaryBar"
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left'"
   },
   {
-    // (left) toggle left panel
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
     "key": "ctrl+alt+left",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "config.workbench.sideBar.location == 'left'"
   },
   {
-    // (right) toggle right panel
+    "key": "ctrl+alt+left",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && sideBarVisible"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
+  },
+  {
     "key": "ctrl+alt+right",
-    "command": "workbench.action.toggleAuxiliaryBar"
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
   },
   {
     // (up) toggle top panel
