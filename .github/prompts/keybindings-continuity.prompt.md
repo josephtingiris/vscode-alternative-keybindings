@@ -1,8 +1,7 @@
 ---
 agent: agent
 ---
-Ensure #file:../../references/keybindings.json is kept consistent with the keybinding conventions and context key usages defined in .github/agents/keybindings-expert.agent.md.
-
+Ensure #file:../../references/keybindings.json is kept consistent with the keybinding conventions and context key usages defined in .github/agents/keybindings-expert.agent.md and .github/instructions/keybindings-convenstions.instructions.md.
 When making changes to keybindings or `when` clauses in keybindings.json, follow these guidelines:
 - Use the correct context keys as specified in the keybindings-expert agent prompt.md.
 - Maintain proper sorting of `when` clauses as per the constraints in the keybindings-expert agent prompt.md.
