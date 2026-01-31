@@ -280,7 +280,7 @@ notes:
   },
   {
     "key": "alt+l",
-    "command": "workbench.action.nextEditorr",
+    "command": "workbench.action.nextEditor",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
@@ -365,6 +365,11 @@ notes:
     "key": "alt+right",
     "command": "workbench.action.nextEditor",
     "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.nextEditor",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
     // (right) focus right editor group when multiple editor groups
