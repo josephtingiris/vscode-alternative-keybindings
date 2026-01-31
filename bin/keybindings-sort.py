@@ -38,7 +38,6 @@ import sys
 import re
 import json
 import argparse
-import datetime
 from typing import List, Tuple
 
 def extract_preamble_postamble(text):
@@ -538,18 +537,18 @@ def main():
     sys.stdout.write('[')
     for i, (comments, obj) in enumerate(sorted_groups):
         is_last = (i == len(sorted_groups) - 1)
-        key_val, when_val = extract_key_when(obj)
-        pair_id = (key_val, when_val)
-        # Annotate if duplicate
-        if pair_id in seen:
-            comments += f'// DUPLICATE key: {key_val!r} when: {when_val!r}\n'
-        seen.add(pair_id)
         obj_out = obj.rstrip()
         when_changed = False
         if normalize_when:
             obj_out, when_changed = normalize_when_in_object(obj_out)
             if when_changed:
                 comments = re.sub(r'^\s*//\s*when-sorted:.*\n', '', comments, flags=re.MULTILINE)
+        key_val, when_val = extract_key_when(obj_out)
+        pair_id = (key_val, when_val)
+        # Annotate if duplicate
+        if pair_id in seen:
+            comments += f'// DUPLICATE key: {key_val!r} when: {when_val!r}\n'
+        seen.add(pair_id)
         sys.stdout.write(comments)
         idx = obj_out.rfind('}')
         if idx != -1:

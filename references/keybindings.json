@@ -295,16 +295,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
   },
   {
-    // (l) when editor focused, go directly to secondary (auxiliary) sidebar
-    "key": "alt+l",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible && activeEditorGroupLast"
-  },
-  {
     // (l)
     "key": "alt+l",
     "command": "workbench.action.nextEditor",
     "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorGroupIndex > 0 && activeEditorIsFirstInGroup"
+  },
+  {
+    // (l) when editor focused, go directly to secondary (auxiliary) sidebar
+    "key": "alt+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible && activeEditorGroupLast && multipleEditorGroups"
   },
   {
     // (left) focus previous part (sidebar on left)
