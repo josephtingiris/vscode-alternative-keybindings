@@ -20,11 +20,6 @@ notes:
     "when": "terminalFocus"
   },
   {
-    // (a alt+d) inspect context keys
-    "key": "alt+a alt+d",
-    "command": "workbench.action.inspectContextKeys"
-  },
-  {
     // (a z) toggle zen mode
     "key": "alt+a z",
     "command": "workbench.action.toggleZenMode"
@@ -34,6 +29,16 @@ notes:
     "key": "alt+a z",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "panelFocus"
+  },
+  {
+    // (a alt+d) [debug] inspect context keys
+    "key": "alt+d alt+i",
+    "command": "workbench.action.inspectContextKeys"
+  },
+  {
+    // (a alt+k) [debug] toggle keybinding logging to the debug console
+    "key": "alt+d alt+k",
+    "command": "workbench.action.toggleKeybindingsLog"
   },
   {
     // (down) focus previous part (sidebar on left) [default]
