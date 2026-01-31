@@ -38,6 +38,7 @@ import sys
 import re
 import json
 import argparse
+import datetime
 from typing import List, Tuple
 
 def extract_preamble_postamble(text):
@@ -106,41 +107,320 @@ def when_specificity(when_val: str) -> Tuple[int]:
     return (term_count,)
 
 
+class WhenNode:
+    def __init__(self, parens: bool = False):
+        self.parens = parens
+
+class WhenLeaf(WhenNode):
+    def __init__(self, text: str, parens: bool = False):
+        super().__init__(parens=parens)
+        self.text = text
+    def to_str(self) -> str:
+        return self.text
+
+class WhenNot(WhenNode):
+    def __init__(self, child: WhenNode, parens: bool = False):
+        super().__init__(parens=parens)
+        self.child = child
+    def to_str(self) -> str:
+        child_str = self.child.to_str()
+        if isinstance(self.child, (WhenAnd, WhenOr)) and not self.child.parens:
+            child_str = f'({child_str})'
+        return f'!{child_str}'
+
+class WhenAnd(WhenNode):
+    def __init__(self, children, parens: bool = False):
+        super().__init__(parens=parens)
+        self.children = children
+    def to_str(self) -> str:
+        return ' && '.join([render_when_node(c) for c in self.children])
+
+class WhenOr(WhenNode):
+    def __init__(self, children, parens: bool = False):
+        super().__init__(parens=parens)
+        self.children = children
+    def to_str(self) -> str:
+        return ' || '.join([render_when_node(c) for c in self.children])
+
+def render_when_node(node: WhenNode) -> str:
+    inner = node.to_str()
+    if node.parens:
+        return f'({inner})'
+    return inner
+
+def normalize_operand(text: str) -> str:
+    collapsed = re.sub(r'\s+', ' ', text).strip()
+    return collapsed
+
+def tokenize_when(expr: str):
+    tokens = []
+    buf = ''
+    i = 0
+    n = len(expr)
+    in_single = False
+    in_double = False
+    in_regex = False
+    regex_escape = False
+    prev_nonspace = ''
+
+    def flush_buf():
+        nonlocal buf
+        if buf.strip():
+            tokens.append(('OPERAND', normalize_operand(buf)))
+        buf = ''
+
+    while i < n:
+        ch = expr[i]
+
+        if in_single:
+            buf += ch
+            if ch == '\\':
+                if i + 1 < n:
+                    buf += expr[i + 1]
+                    i += 1
+            elif ch == "'":
+                in_single = False
+            i += 1
+            continue
+
+        if in_double:
+            buf += ch
+            if ch == '\\':
+                if i + 1 < n:
+                    buf += expr[i + 1]
+                    i += 1
+            elif ch == '"':
+                in_double = False
+            i += 1
+            continue
+
+        if in_regex:
+            buf += ch
+            if regex_escape:
+                regex_escape = False
+            elif ch == '\\':
+                regex_escape = True
+            elif ch == '/':
+                in_regex = False
+            i += 1
+            continue
+
+        if ch.isspace():
+            buf += ch
+            i += 1
+            continue
+
+        if ch == "'":
+            in_single = True
+            buf += ch
+            i += 1
+            continue
+
+        if ch == '"':
+            in_double = True
+            buf += ch
+            i += 1
+            continue
+
+        if ch == '/' and prev_nonspace == '~':
+            in_regex = True
+            buf += ch
+            i += 1
+            continue
+
+        if expr.startswith('&&', i) or expr.startswith('||', i):
+            flush_buf()
+            tokens.append(('OP', expr[i:i+2]))
+            i += 2
+            prev_nonspace = ''
+            continue
+
+        if ch in '()':
+            flush_buf()
+            tokens.append(('OP', ch))
+            i += 1
+            prev_nonspace = ch
+            continue
+
+        if ch == '!':
+            nxt = expr[i+1] if i + 1 < n else ''
+            if nxt == '=':
+                buf += ch
+                i += 1
+                prev_nonspace = ch
+                continue
+            if not buf.strip():
+                flush_buf()
+                tokens.append(('OP', '!'))
+                i += 1
+                prev_nonspace = '!'
+                continue
+
+        buf += ch
+        if not ch.isspace():
+            prev_nonspace = ch
+        i += 1
+
+    flush_buf()
+    return tokens
+
+def parse_when(expr: str) -> WhenNode:
+    tokens = tokenize_when(expr)
+    idx = 0
+
+    def peek():
+        return tokens[idx] if idx < len(tokens) else None
+
+    def consume():
+        nonlocal idx
+        t = tokens[idx] if idx < len(tokens) else None
+        idx += 1
+        return t
+
+    def parse_primary():
+        t = peek()
+        if not t:
+            return WhenLeaf('')
+        if t[0] == 'OP' and t[1] == '(':
+            consume()  # (
+            node = parse_or()
+            if peek() and peek()[0] == 'OP' and peek()[1] == ')':
+                consume()
+                node.parens = True
+            return node
+        if t[0] == 'OPERAND':
+            consume()
+            return WhenLeaf(t[1])
+        return WhenLeaf('')
+
+    def parse_unary():
+        t = peek()
+        if t and t[0] == 'OP' and t[1] == '!':
+            consume()
+            return WhenNot(parse_unary())
+        return parse_primary()
+
+    def parse_and():
+        node = parse_unary()
+        children = [node]
+        while True:
+            t = peek()
+            if t and t[0] == 'OP' and t[1] == '&&':
+                consume()
+                children.append(parse_unary())
+            else:
+                break
+        if len(children) == 1:
+            return children[0]
+        return WhenAnd(children)
+
+    def parse_or():
+        node = parse_and()
+        children = [node]
+        while True:
+            t = peek()
+            if t and t[0] == 'OP' and t[1] == '||':
+                consume()
+                children.append(parse_and())
+            else:
+                break
+        if len(children) == 1:
+            return children[0]
+        return WhenOr(children)
+
+    return parse_or()
+
 def canonicalize_when(when_val: str) -> str:
     """
-    Produce a canonical string for a `when` clause by sorting its top-level
-    terms according to project conventions:
-      1) positional indicators (e.g. config.workbench.sideBar.location, panelPosition)
-      2) focus-related terms (negatives before positives)
-      3) visible-related terms
-      4) other terms (alphabetical, special chars before letters)
-
-    This canonical form is used only for sorting comparisons (does not mutate
-    the original objects).
+    Produce a canonical string for a `when` clause by sorting operands inside
+    every AND node according to project conventions. Preserves OR groupings and
+    existing parentheses; does not reorder OR-level operands.
     """
     if not when_val:
         return ''
-    terms = [t.strip() for t in re.split(r'\s*&&\s*|\s*\|\|\s*', when_val.strip()) if t.strip()]
 
-    def term_group(t: str) -> int:
-        base = t.lstrip('!')
-        if 'config.workbench.sideBar.location' in base or 'panelPosition' in base:
-            return 0
-        # focus terms (editorFocus, panelFocus, terminalFocus, etc.)
-        if 'Focus' in base or base.endswith('Focus'):
-            return 1
-        # visible contexts
-        if 'Visible' in base or base.endswith('Visible'):
+    positional_prefixes = [
+        'config.workbench.sideBar.location',
+        'panel.location',
+        'panelPosition',
+        'view.',
+        'view.<viewId>.visible',
+        'view.container.',
+        'viewContainer.',
+        'workbench.panel.',
+        'workbench.view.',
+    ]
+    focus_keys = {
+        'activeEditor',
+        'auxiliaryBarFocus',
+        'editorFocus',
+        'editorTextFocus',
+        'focusedView',
+        'inputFocus',
+        'listFocus',
+        'notificationFocus',
+        'panelFocus',
+        'sideBarFocus',
+        'terminalFocus',
+        'textInputFocus',
+        'webviewFindWidgetVisible',
+    }
+    visibility_keys = {
+        'auxiliaryBarVisible',
+        'editorVisible',
+        'notificationCenterVisible',
+        'notificationToastsVisible',
+        'outline.visible',
+        'panelVisible',
+        'searchViewletVisible',
+        'sideBarVisible',
+        'terminalVisible',
+        'timeline.visible',
+        'view.<viewId>.visible',
+    }
+
+    def left_identifier(text: str) -> str:
+        t = text.strip()
+        while t.startswith('(') and t.endswith(')'):
+            t = t[1:-1].strip()
+        if t.startswith('!'):
+            t = t[1:].lstrip()
+        if not t:
+            return t
+        return t.split()[0]
+
+    def category_rank(text: str) -> int:
+        left = left_identifier(text)
+        for p in positional_prefixes:
+            if left.startswith(p):
+                return 1
+        if left in focus_keys:
             return 2
-        return 3
+        if left in visibility_keys:
+            return 3
+        return 4
 
-    def sort_key(t: str):
-        neg = 0 if t.startswith('!') else 1
-        base = t.lstrip('!')
-        return (term_group(t), neg, natural_key(base))
+    def sort_key(idx_and_node):
+        idx, node = idx_and_node
+        token = render_when_node(node)
+        return (category_rank(token), token.lower(), idx)
 
-    sorted_terms = sorted(terms, key=sort_key)
-    return ' && '.join(sorted_terms)
+    def sort_and_nodes(node: WhenNode):
+        if isinstance(node, WhenAnd):
+            for child in node.children:
+                sort_and_nodes(child)
+            items = list(enumerate(node.children))
+            items.sort(key=sort_key)
+            node.children = [it[1] for it in items]
+        elif isinstance(node, WhenOr):
+            for child in node.children:
+                sort_and_nodes(child)
+        elif isinstance(node, WhenNot):
+            sort_and_nodes(node.child)
+
+    ast = parse_when(when_val)
+    sort_and_nodes(ast)
+    return render_when_node(ast)
 
 def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None) -> Tuple:
     obj_match = re.search(r'\{.*\}', obj_text, re.DOTALL)
@@ -191,6 +471,18 @@ def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None
     except Exception:
         return ([], '', '')
 
+def normalize_when_in_object(obj_text: str) -> Tuple[str, bool]:
+    pattern = re.compile(r'("when"\s*:\s*")((?:\\.|[^"\\])*)(")')
+    match = pattern.search(obj_text)
+    if not match:
+        return obj_text, False
+    original_when = match.group(2)
+    normalized = canonicalize_when(original_when)
+    if normalized == original_when:
+        return obj_text, False
+    new_obj = obj_text[:match.start(2)] + normalized + obj_text[match.end(2):]
+    return new_obj, True
+
 def extract_key_when(obj_text: str) -> Tuple[str, str]:
     obj_match = re.search(r'\{.*\}', obj_text, re.DOTALL)
     if not obj_match:
@@ -234,6 +526,8 @@ def main():
 
     primary_order = args.primary
     secondary_order = args.secondary
+    normalize_when = (primary_order == 'when' or secondary_order == 'when')
+    when_sorted_comment = f"// when-sorted: {datetime.date.today().isoformat()} — reason: normalize when order\n"
 
     raw = sys.stdin.read()
     preamble, array_text, postamble = extract_preamble_postamble(raw)
@@ -251,8 +545,14 @@ def main():
         if pair_id in seen:
             comments += f'// DUPLICATE key: {key_val!r} when: {when_val!r}\n'
         seen.add(pair_id)
-        sys.stdout.write(comments)
         obj_out = obj.rstrip()
+        when_changed = False
+        if normalize_when:
+            obj_out, when_changed = normalize_when_in_object(obj_out)
+            if when_changed:
+                comments = re.sub(r'^\s*//\s*when-sorted:.*\n', '', comments, flags=re.MULTILINE)
+                comments += when_sorted_comment
+        sys.stdout.write(comments)
         idx = obj_out.rfind('}')
         if idx != -1:
             after = obj_out[idx+1:]
