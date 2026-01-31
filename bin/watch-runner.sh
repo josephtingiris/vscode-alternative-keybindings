@@ -28,10 +28,10 @@ usage() {
 }
 
 validate_requirements() {
-    if ! command -v realpath >/dev/null 2>&1; then
+    if ! command -v realpath > /dev/null 2>&1; then
         aborting "realpath is required but not found"
     fi
-    if ! command -v inotifywait >/dev/null 2>&1; then
+    if ! command -v inotifywait > /dev/null 2>&1; then
         aborting "inotifywait is required; install with: sudo apt install inotify-tools"
     fi
 }
@@ -44,17 +44,17 @@ main() {
 
     validate_requirements
 
-    WATCH_REAL=$(realpath "${WATCH}" 2>/dev/null) || aborting "file not found: ${WATCH}"
+    WATCH_REAL=$(realpath "${WATCH}" 2> /dev/null) || aborting "file not found: ${WATCH}"
     [ ! -f "${WATCH_REAL}" ] && aborting "not a regular file: ${WATCH_REAL}"
 
-    if [[ "${RUNNER}" == */* ]]; then
+    if [[ ${RUNNER} == */* ]]; then
         [ ! -x "${RUNNER}" ] && aborting "runner not executable: ${RUNNER}"
     else
-        ! command -v "${RUNNER}" >/dev/null 2>&1 && aborting "runner not found in PATH: ${RUNNER}"
+        ! command -v "${RUNNER}" > /dev/null 2>&1 && aborting "runner not found in PATH: ${RUNNER}"
     fi
 
     # Watch loop: quiet while waiting, print a delimiter then execute runner
-    while inotifywait -q -e close_write,modify,move,create "${WATCH_REAL}" >/dev/null 2>&1; do
+    while inotifywait -q -e close_write,modify,move,create "${WATCH_REAL}" > /dev/null 2>&1; do
         echo "---- RUN: $(date -u '+%Y-%m-%dT%H:%M:%SZ') ----"
         "${RUNNER}" "${WATCH_REAL}"
     done
@@ -63,4 +63,3 @@ main() {
 DIRNAME="$(dirname "$0")"
 
 main "$@"
-
