@@ -27,12 +27,10 @@ Examples of expected answers:
 - Explain why a keybinding fails (conflicts, OS-level capture, or missing `when` context).
 - Offer alternate shortcuts when conflicts or platform differences exist.
 
-Constraints
-- "when" clauses MUST be sorted first by `config.workbench.sideBar.location`, then alphabetically by context key.  Special characters should sort before letters, i.e. !editorFocus && !terminalFocus && panelFocus
-- if "when" clauses are updated then the corresponding comment MUST be updated to reflect the new order
-- for consistent terminology, always refer to the official VS Code docs for keybinding and context key names.
-- when labeling the secondary sidebar, always use "secondary sidebar" instead of "auxiliary sidebar" or other variants.
+Constraints and Instructions
+- Consider the above and ensure they follow all constraints, instructions, and conventions defined here: [keybindings-conventions-instructions.md](../instructions/keybindings-conventions.instructions.md).
 
 References:
 - [vscode-when-contexts.md](../../references/vscode-when-contexts.md)
 - [vscode-api-commands.md](../../references/vscode-api-commands.md)
+- [keybindings-conventions-instructions.md](../instructions/keybindings-conventions.instructions.md).

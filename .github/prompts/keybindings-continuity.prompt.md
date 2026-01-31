@@ -1,14 +1,16 @@
 ---
 agent: agent
 ---
-Ensure references/keybindings.json is kept consistent with the keybinding conventions and context key usages defined in .github/agents/keybindings-expert.agent.md.
+# Consider these points when authoring, changing, or reviewing keybinding-related files:
 
-When making changes to keybindings or `when` clauses in keybindings.json, follow these guidelines:
-- Use the correct context keys as specified in the keybindings-expert agent prompt.md.
-- Maintain proper sorting of `when` clauses as per the constraints in the keybindings-expert agent prompt.md.
-- Validate that all keybinding commands exist and are appropriate for the described contexts.
-- Provide explanations for any changes made, referencing the relevant sections of the keybindings-expert agent prompt.md when necessary.
+- Validate equivalent keybinding pairs exist for alt+arrow and alt+h/j/k/l (and vice versa), for example alt+left and alt+h should both containt he same when clause and command.
 
-Validate equivalent keybinding pairs exist for alt+arrow and alt+h/j/k/l (and vice versa), for example alt+left and alt+h should both containt he same when clause and command.
+- Ensure treferences/keybindings.json file is kept consistent with the keybinding conventions and context key usages 
 
-Validate comments exist for all objects and conform to the conventions described in .github/instructions/keybindings-conventions.instructions.md.
+- Validate all conventions are followed and comments exist for all objects
+
+Consider what's been given and make any necessary corrections or additons t follow what's defined in these files:
+
+1) .github/agents/keybindings-expert.agent.md.
+2) .github/instructions/keybindings-conventions.instructions.md.
+
