@@ -484,12 +484,6 @@ notes:
     "command": "editor.emmet.action.matchTag"
   },
   {
-    // (c) open source control when not in terminal
-    "key": "ctrl+shift+c",
-    "command": "workbench.scm.focus",
-    "when": "!terminalFocus"
-  },
-  {
     // (t) open native terminal when not in terminal
     "key": "ctrl+shift+t",
     "command": "workbench.action.terminal.openNativeConsole",
