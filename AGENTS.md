@@ -15,3 +15,4 @@
 ## Documentation & references
 - Keep README.md lightweight; expand detailed contributor docs in CONTRIBUTING.md and reference them from new examples.
 - When touching bd integration, cite https://github.com/bash-d/bd and mirror the instructions already captured in etc/bash.d/README.md.
+- Keybindings conventions: [.github/instructions/keybindings-conventions.instructions.md](.github/instructions/keybindings-conventions.instructions.md)
