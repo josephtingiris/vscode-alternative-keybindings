@@ -1,5 +1,5 @@
 ---
-description: 'Keybinding directional conventions for the codebase: mapping up/right/k/l to "next" and down/left/j/h to "previous".'
+description: 'VS Code keybindings labeling and documentation conventions for comments, documentation, and "when" clause sorting. Follow these guidelines to ensure clarity and consistency in keybinding-related texts across the project.'
 applyTo: "**"
 ---
 # Keybindings Labeling and Documentation Instructions
@@ -46,9 +46,9 @@ When writing or reviewing keybinding `when` clauses, follow these conventions an
 # Keybinding 'when' Clause Sorting Conventions
 
 When sorting `when` clauses in keybinding files, adhere to the following conventions:
-- "when" clauses MUST be sorted as follows:
+- "when" clauses MUST be sorted in the following order:
     1) unless specified otherwise, all when clauses should be sorted alphabetically with special characters sorting before letters, i.e. !editorFocus && !terminalFocus && panelFocus
-    2) user preferences for UI view placements should appear before other clauses, if they exist.  such as `config.workbench.sideBar.location` and/or `panelPosition`.
-    3) by focus context, with focused contexts (e.g., `editorFocus`, `terminalFocus`) appearing before visible contexts (e.g., `editorVisible`, `terminalVisible`).
-    4) by specific context keys before more general context keys.  for example, `editorTextFocus` should appear before `editorFocus`.
-    5) by negative context keys before positive context keys.  for example, `!editorFocus` should appear before `editorFocus`.
+    5) ensure negative context keys before positive context keys.  for example, `!editorFocus` should appear before `editorFocus`.
+    2) user preferences for UI view placements should sort before other clauses, if they exist.  positional indicators should appear before all others, such as `config.workbench.sideBar.location` and/or `panelPosition`.
+    4) focus should appear next (e.g., `!editorFocus`, `editorFocus`, `panelFocus`, `terminalFocus`, etc.)
+    5) visible contexts should appear next (e.g., `!panelVisible`, `editorVisible`, `terminalVisible`).
