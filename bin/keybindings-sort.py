@@ -105,7 +105,44 @@ def when_specificity(when_val: str) -> Tuple[int]:
     term_count = len(re.split(r'\s*&&\s*|\s*\|\|\s*', when_val.strip()))
     return (term_count,)
 
-def extract_sort_keys(obj_text: str, primary: str = 'key') -> Tuple:
+
+def canonicalize_when(when_val: str) -> str:
+    """
+    Produce a canonical string for a `when` clause by sorting its top-level
+    terms according to project conventions:
+      1) positional indicators (e.g. config.workbench.sideBar.location, panelPosition)
+      2) focus-related terms (negatives before positives)
+      3) visible-related terms
+      4) other terms (alphabetical, special chars before letters)
+
+    This canonical form is used only for sorting comparisons (does not mutate
+    the original objects).
+    """
+    if not when_val:
+        return ''
+    terms = [t.strip() for t in re.split(r'\s*&&\s*|\s*\|\|\s*', when_val.strip()) if t.strip()]
+
+    def term_group(t: str) -> int:
+        base = t.lstrip('!')
+        if 'config.workbench.sideBar.location' in base or 'panelPosition' in base:
+            return 0
+        # focus terms (editorFocus, panelFocus, terminalFocus, etc.)
+        if 'Focus' in base or base.endswith('Focus'):
+            return 1
+        # visible contexts
+        if 'Visible' in base or base.endswith('Visible'):
+            return 2
+        return 3
+
+    def sort_key(t: str):
+        neg = 0 if t.startswith('!') else 1
+        base = t.lstrip('!')
+        return (term_group(t), neg, natural_key(base))
+
+    sorted_terms = sorted(terms, key=sort_key)
+    return ' && '.join(sorted_terms)
+
+def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None) -> Tuple:
     obj_match = re.search(r'\{.*\}', obj_text, re.DOTALL)
     if not obj_match:
         return ([], '', '')
@@ -117,12 +154,40 @@ def extract_sort_keys(obj_text: str, primary: str = 'key') -> Tuple:
         key_val = str(obj.get('key', ''))
         when_val = str(obj.get('when', ''))
         comment_val = str(obj.get('_comment', ''))
-        # Support alternate primary sort order. Use natural order for both
-        # `key` and `when` values so numeric segments sort naturally.
+        canonical_when = canonicalize_when(when_val)
+
+        # Build a flexible sort tuple based on primary/secondary preferences.
+        keys = []
+
+        def append_when():
+            keys.append(when_specificity(when_val))
+            keys.append(natural_key(canonical_when))
+
+        def append_key():
+            keys.append(natural_key(key_val))
+
+        # Primary
         if primary == 'when':
-            return (when_specificity(when_val), natural_key(when_val), natural_key(key_val), comment_val)
+            append_when()
         else:
-            return (natural_key(key_val), when_specificity(when_val), natural_key(when_val), comment_val)
+            append_key()
+
+        # Secondary (if provided and different)
+        if secondary and secondary != primary:
+            if secondary == 'when':
+                append_when()
+            else:
+                append_key()
+
+        # Append any remaining fields not yet included
+        if 'when' not in (primary, secondary):
+            append_when()
+        if 'key' not in (primary, secondary):
+            append_key()
+
+        # Finally tie-break on comment
+        keys.append(comment_val)
+        return tuple(keys)
     except Exception:
         return ([], '', '')
 
@@ -162,16 +227,19 @@ def object_has_trailing_comma(obj_text: str) -> bool:
 def main():
     parser = argparse.ArgumentParser(description='Sort VS Code keybindings.json by key/when')
     parser.add_argument('--primary', '-p', choices=['key', 'when'], default='key',
-                        help="Primary sort field: 'key' (default) or 'when'")
+                        help="Primary sort field: 'key' (default) or 'when')")
+    parser.add_argument('--secondary', '-s', choices=['key', 'when'], default=None,
+                        help="Secondary sort field: 'key' or 'when' (optional)")
     args = parser.parse_args()
 
     primary_order = args.primary
+    secondary_order = args.secondary
 
     raw = sys.stdin.read()
     preamble, array_text, postamble = extract_preamble_postamble(raw)
     groups, trailing_comments = group_objects_with_comments(array_text)
     # Sort by chosen primary (natural), then the other field (natural), then by _comment
-    sorted_groups = sorted(groups, key=lambda pair: extract_sort_keys(pair[1], primary=primary_order))
+    sorted_groups = sorted(groups, key=lambda pair: extract_sort_keys(pair[1], primary=primary_order, secondary=secondary_order))
     seen = set()
     sys.stdout.write(preamble)
     sys.stdout.write('[')

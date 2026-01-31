@@ -65,7 +65,7 @@ main() {
     fi
 
     if type -p keybindings-sort.py > /dev/null 2>&1; then
-        keybindings-sort.py -p key < "${KEYBINDINGS_JSON}" > /tmp/keybindings-sorted.json
+        keybindings-sort.py -p key -s when < "${KEYBINDINGS_JSON}" > /tmp/keybindings-sorted.json
         mv /tmp/keybindings-sorted.json "${KEYBINDINGS_JSON}"
     fi
 

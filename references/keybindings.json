@@ -8,6 +8,12 @@ notes:
 */
 [
   {
+    // (-) split editor horizontally when in editor
+    "key": "alt+-",
+    "command": "workbench.action.splitEditorDown",
+    "when": "editorFocus"
+  },
+  {
     // (=) split editor vertically (editorFocus)
     "key": "alt+=",
     "command": "workbench.action.splitEditor",
@@ -138,16 +144,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && terminalCount > 1 && terminalFocus"
   },
   {
-    // (h) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
-    "key": "alt+h",
-    "command": "workbench.action.focusSideBar",
-    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus && sideBarVisible"
-  },
-  {
     // (h) when config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen — go to active editor
     "key": "alt+h",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen"
+  },
+  {
+    // (h) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
+    "key": "alt+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus && sideBarVisible"
   },
   {
     // (j) focus previous part (sidebar on left)
@@ -240,16 +246,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
-    // (k) from left primary sidebar, jump to secondary sidebar when visible
-    "key": "alt+k",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
-  },
-  {
     // (k) refocus on the first panel when a panel is visible and in the last editor group
     "key": "alt+k",
     "command": "workbench.action.focusLastEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorIsLastInGroup"
+  },
+  {
+    // (k) from left primary sidebar, jump to secondary sidebar when visible
+    "key": "alt+k",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
   },
   {
     // (l) focus next part (sidebar on left)
@@ -328,16 +334,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
   },
   {
-    // (left) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
-    "key": "alt+left",
-    "command": "workbench.action.focusSideBar",
-    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus && sideBarVisible"
-  },
-  {
     // (left) when config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen — go to active editor
     "key": "alt+left",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen"
+  },
+  {
+    // (left) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
+    "key": "alt+left",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && activePanel == 'workbench.panel.markers' && panelFocus && sideBarVisible"
   },
   {
     // (right) focus next part (sidebar on left)
@@ -397,16 +403,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
-    // (up) from left primary sidebar, jump to secondary sidebar when visible
-    "key": "alt+up",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
-  },
-  {
     // (up) refocus on the first panel when a panel is visible and in the last editor group
     "key": "alt+up",
     "command": "workbench.action.focusLastEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorIsLastInGroup"
+  },
+  {
+    // (up) from left primary sidebar, jump to secondary sidebar when visible
+    "key": "alt+up",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && sideBarFocus"
   },
   {
     // (a z) toggle maximize editor group when editorFocus
@@ -471,12 +477,6 @@ notes:
     "key": "ctrl+k",
     "command": "-vscode-neovim.send",
     "when": "editorFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert'"
-  },
-  {
-    // (-) split editor horizontally when in editor
-    "key": "ctrl+shift+-",
-    "command": "workbench.action.splitEditorDown",
-    "when": "editorFocus"
   },
   {
     // (backspace) go to html/xml tag open/close match
