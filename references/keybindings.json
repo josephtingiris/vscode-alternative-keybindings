@@ -55,61 +55,76 @@ notes:
   {
     // (down) focus previous editor (first in group) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 1.1",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "command": "editor.focus.down 1.1 a",
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (down) focus previous editor (last in group) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 1.2",
+    "command": "editor.focus.down 1.2 a",
     //"command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
   },
   {
     // (down) focus previous editor (across groups) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 2",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups"
+    "command": "editor.focus.down 2 a",
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups"
   },
   {
     // (down) focus previous editor (last in group, multiple groups) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 1.3",
+    "command": "editor.focus.down 1.3 a",
     //"command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
   },
   {
     // (down) focus previous editor (group last) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 3",
+    "command": "editor.focus.down 3 a",
     //"command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorGroupLast"
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorGroupLast"
   },
   {
     // (down) focus previous editor (across groups, first in group) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 2.1",
+    "command": "editor.focus.down 2.1 a",
     //"command": "workbench.action.focusBelowGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorIsFirstInGroup"
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorIsFirstInGroup"
   },
   {
     // (down) focus previous editor (across groups, last in group) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 2.1",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorIsLastInGroup"
+    "command": "editor.focus.down 2.1 a",
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     // (down) focus previous editor or panel (panelVisible) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 4",
+    "command": "editor.focus.down 4 a",
     //"command": "workbench.action.focusPanel",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorGroupLast && panelVisible"
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorGroupLast && panelVisible"
   },
   {
-    // (h) focus previous part (sidebar on left)
+    // (down)
+    "key": "alt+down",
+    "command": "workbench.action.focusPanel",
+    "when": "panelPosition == 'bottom' && panelVisible && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup && !multipleEditorGroups"
+  },
+  {
     "key": "alt+h",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.previousEditor",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.previousEditor",
+    "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
   },
   {
     // (h) from left primary sidebar, jump to secondary sidebar when visible
@@ -120,7 +135,7 @@ notes:
   {
     "key": "alt+h",
     "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
+    "when": "config.workbench.sideBar.location == 'left' && terminalCount > 1 && terminalFocus"
   },
   {
     // (h) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
@@ -149,7 +164,7 @@ notes:
   {
     "key": "alt+j",
     "command": "workbench.action.terminal.focusPrevious",
-    "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
+    "when": "config.workbench.sideBar.location == 'left' && terminalCount > 1 && terminalFocus"
   },
   {
     // (j)
@@ -157,60 +172,66 @@ notes:
     "command": "workbench.action.focusPreviousPart",
     //"command": "editor.focus.down 1",
     //"command": "terminal.focus",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1"
-  },
-  {
-    // (j)
-    "key": "alt+j",
-    "command": "editor.focus.down 1.1",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "when": "config.workbench.sideBar.location == 'left' && activeEditorGroupIndex == 1 && activeEditorGroupIndex > 0 && editorFocus"
   },
   {
     // (j)
     "key": "alt+j",
     "command": "editor.focus.down 1.2",
     //"command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
+    "when": "config.workbench.sideBar.location == 'left' && activeEditorGroupIndex == 1 && activeEditorGroupIndex > 0 && activeEditorIsLastInGroup && editorFocus"
   },
   {
     // (j)
     "key": "alt+j",
     "command": "editor.focus.down 2",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups"
+    "when": "config.workbench.sideBar.location == 'left' && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && editorFocus"
+  },
+  {
+    // (j)
+    "key": "alt+j",
+    "command": "editor.focus.down 1.1",
+    "when": "panelPosition == 'bottom' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (j)
     "key": "alt+j",
     "command": "editor.focus.down 1.3",
     //"command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+    "when": "config.workbench.sideBar.location == 'left' && activeEditorGroupIndex == 1 && activeEditorGroupIndex > 0 && activeEditorIsLastInGroup && multipleEditorGroups && editorFocus"
   },
   {
     // (j)
     "key": "alt+j",
     "command": "editor.focus.down 3",
     //"command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorGroupLast"
+    "when": "config.workbench.sideBar.location == 'left' && activeEditorGroupIndex > 1 && activeEditorGroupIndex > 0 && activeEditorGroupLast && multipleEditorGroups && editorFocus"
   },
   {
     // (j)
     "key": "alt+j",
     "command": "editor.focus.down 2.1",
     //"command": "workbench.action.focusBelowGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorIsFirstInGroup"
+    "when": "config.workbench.sideBar.location == 'left' && activeEditorGroupIndex > 1 && activeEditorGroupIndex > 0 && activeEditorIsFirstInGroup && multipleEditorGroups && editorFocus"
   },
   {
     // (j)
     "key": "alt+j",
     "command": "editor.focus.down 2.1",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorIsLastInGroup"
+    "when": "config.workbench.sideBar.location == 'left' && activeEditorGroupIndex > 1 && activeEditorGroupIndex > 0 && activeEditorIsLastInGroup && multipleEditorGroups && editorFocus"
+  },
+  {
+    // (j)
+    "key": "alt+j",
+    "command": "workbench.action.focusPanel",
+    "when": "panelPosition == 'bottom' && panelVisible && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup && !multipleEditorGroups"
   },
   {
     // (j)
     "key": "alt+j",
     "command": "editor.focus.down 4",
     //"command": "workbench.action.focusPanel",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex > 1 && multipleEditorGroups && activeEditorGroupLast && panelVisible"
+    "when": "config.workbench.sideBar.location == 'left' && activeEditorGroupIndex > 1 && activeEditorGroupIndex > 0 && activeEditorGroupLast && multipleEditorGroups && panelVisible && editorFocus"
   },
   {
     // (k) focus next part (sidebar on left)
@@ -242,10 +263,19 @@ notes:
     "when": "editorFocus"
   },
   {
-    // when the active editor is the keybindings editor and focused, go to next editor
     "key": "alt+l",
     "command": "workbench.action.nextEditor",
-    "when": "config.workbench.sideBar.location == 'left' && activeEditor == 'workbench.editor.keybindings' && editorFocus"
+    "when": "activeEditor == 'workbench.editor.keybindings' && editorIsOpen"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.nextEditor",
+    "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.nextEditorr",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
     // (l) from secondary sidebar, jump to primary sidebar when sidebar is on the left
@@ -254,21 +284,37 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
   },
   {
-    // (l) when editor focused, go directly to secondary (auxiliary) sidebar
-    "key": "alt+l",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible"
-  },
-  {
     "key": "alt+l",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
+  },
+  {
+    // (l) when editor focused, go directly to secondary (auxiliary) sidebar
+    "key": "alt+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupLast && auxiliaryBarVisible"
+  },
+  {
+    // (l)
+    "key": "alt+l",
+    "command": "workbench.action.nextEditor",
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (left) focus previous part (sidebar on left)
     "key": "alt+left",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.previousEditor",
+    "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.previousEditor",
+    "when": "config.workbench.sideBar.location == 'left' && activeEditor == 'workbench.editor.keybindings' && editorIsOpen"
   },
   {
     // (left) from left primary sidebar, jump to secondary sidebar when visible
@@ -305,6 +351,16 @@ notes:
     "when": "editorFocus"
   },
   {
+    "key": "alt+right",
+    "command": "workbench.action.nextEditor",
+    "when": "activeEditor == 'workbench.editor.keybindings' && editorIsOpen"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.nextEditor",
+    "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
+  },
+  {
     // (right) focus right editor group when multiple editor groups
     "key": "alt+right",
     //"command": "workbench.action.nextEditor"
@@ -317,12 +373,6 @@ notes:
     "when": "terminalFocus && terminalCount > 1"
   },
   {
-    // when the active editor is the keybindings editor and focused, go to next editor
-    "key": "alt+right",
-    "command": "workbench.action.nextEditor",
-    "when": "config.workbench.sideBar.location == 'left' && activeEditor == 'workbench.editor.keybindings' && editorFocus"
-  },
-  {
     // (right) from secondary sidebar, jump to primary sidebar when sidebar is on the left
     "key": "alt+right",
     "command": "workbench.action.focusSideBar",
@@ -333,6 +383,12 @@ notes:
     "key": "alt+right",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && editorFocus"
+  },
+  {
+    // (right)
+    "key": "alt+right",
+    "command": "workbench.action.nextEditor",
+    "when": "editorFocus && activeEditorGroupIndex > 0 && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (up) focus next part (sidebar on left)
