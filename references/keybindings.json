@@ -133,6 +133,12 @@ notes:
     "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
   },
   {
+    // (h) when config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible — go to active editor
+    "key": "alt+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
     // (h) from left primary sidebar, jump to secondary sidebar when visible
     "key": "alt+h",
     "command": "workbench.action.focusAuxiliaryBar",
@@ -142,12 +148,6 @@ notes:
     "key": "alt+h",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
-  },
-  {
-    // (h) when config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen — go to active editor
-    "key": "alt+h",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen"
   },
   {
     // (h) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
@@ -323,6 +323,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && activeEditor == 'workbench.editor.keybindings' && editorIsOpen"
   },
   {
+    // (left) when config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible — go to active editor
+    "key": "alt+left",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
     // (left) from left primary sidebar, jump to secondary sidebar when visible
     "key": "alt+left",
     "command": "workbench.action.focusAuxiliaryBar",
@@ -332,12 +338,6 @@ notes:
     "key": "alt+left",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
-  },
-  {
-    // (left) when config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen — go to active editor
-    "key": "alt+left",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && editorIsOpen"
   },
   {
     // (left) from Problems panel, jump directly to primary sidebar when sidebar is on the left and visible
