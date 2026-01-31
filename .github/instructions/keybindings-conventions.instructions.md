@@ -55,11 +55,11 @@ Algorithm (implementable):
 2. Normalize tokens:
   - Trim whitespace and collapse internal multiple spaces.
   - Normalize `!` to be a prefix with no space (`!editorFocus`).
-  - Compare keys case-insensitively for sorting decisions; preserve original casing in output.
+  - Compare tokens case-insensitively for sorting decisions; preserve original casing in output.
   - Treat each leaf operand as an atomic token (e.g., `config.x == 'y'` is one token).
 3. Sort rule application:
   - Apply sorting only to operands of AND nodes (including ANDs inside parentheses). Do NOT reorder operands across OR (`||`) at the same level.
-  - For each AND node, sort its N operands deterministically using the precedence categories below. Within the same category, use case-insensitive alphabetical order. If equal, preserve original token order as a stable tie-breaker.
+  - For each AND node, sort its N operands deterministically using the precedence categories below. Within the same category, use case-insensitive alphabetical order of the full token. If equal, preserve original token order as a stable tie-breaker.
 4. Reconstruct:
   - Rebuild expressions using ` && ` and ` || ` with single spaces and keep parentheses that were present so semantic grouping is unchanged.
   - Do not remove parentheses even if they become redundant.
@@ -76,7 +76,7 @@ Precedence categories for sorting inside an AND (higher → lower):
   - `viewContainer.`
   - `workbench.panel.`
   - `workbench.view.`
-2) Focus-related keys: list focus-related context keys alphabetically by base key. The sorter does not special-case negation — `!` is treated as a regular character during sorting. Within each focus-key category, order tokens using ASCII ordering so punctuation (including `!`) sorts before letters; for letter-only comparisons, sort case-insensitively.
+2) Focus-related keys: list focus-related context keys alphabetically by base key. The sorter does not special-case negation — `!` is treated as a regular character during sorting. Within this category, order tokens using case-insensitive alphabetical order of the full token.
   This list includes common editor, input, panel, sidebar, and list focus keys:
   - `activeEditor`
   - `auxiliaryBarFocus`
@@ -91,7 +91,7 @@ Precedence categories for sorting inside an AND (higher → lower):
   - `terminalFocus`
   - `textInputFocus`
   - `webviewFindWidgetVisible`
-4) Visibility-related keys (negatives first):
+3) Visibility-related keys: list visibility-related context keys alphabetically by base key. The sorter does not special-case negation — `!` is treated as a regular character during sorting. Within this category, order tokens using case-insensitive alphabetical order of the full token.
   - `auxiliaryBarVisible`
   - `editorVisible`
   - `notificationCenterVisible`
@@ -103,7 +103,7 @@ Precedence categories for sorting inside an AND (higher → lower):
   - `terminalVisible`
   - `timeline.visible`
   - `view.<viewId>.visible`
-4) Other well-known or project-specific context keys: sort case-insensitively alphabetically unless punctuation is present; punctuation and special characters (including `!`) are ordered by ASCII so they sort before letters. Do not force negated forms before non-negated forms — sorting follows ASCII/alpha rules described here.
+4) Other well-known or project-specific context keys: sort case-insensitively alphabetically by the full token. Do not force negated forms before non-negated forms — sorting follows standard case-insensitive lexical ordering of the full token.
 5) Final tie-breaker: when two tokens are equivalent under the above rules, preserve the original token order as a stable tie-breaker.
 
 Operator and grouping rules (unambiguous):
@@ -167,11 +167,6 @@ Machine-checkable unit-test mapping (JSON array):
   {"input":"!editorFocus && editorFocus && config.workbench.sideBar.location == 'left'","expected":"!editorFocus && editorFocus && config.workbench.sideBar.location == 'left'"}
 ]
 ```
-
-Comment update requirement:
-- When any `when` clause is changed, add or update an inline comment using this template directly above the clause or on the same line after it:
-  - `// when-sorted: [YYYY-MM-DD] — reason: [brief reason or PR#]`
-- Update this comment every time the clause is edited.
 
 Implementation notes and clarifying behaviors:
 - Treat a leaf token like `config.x == 'y'` as a single atomic token; sorting uses the left-most identifier when deciding category membership (e.g., `config.` prefix).

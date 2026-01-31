@@ -527,7 +527,6 @@ def main():
     primary_order = args.primary
     secondary_order = args.secondary
     normalize_when = (primary_order == 'when' or secondary_order == 'when')
-    when_sorted_comment = f"// when-sorted: {datetime.date.today().isoformat()} — reason: normalize when order\n"
 
     raw = sys.stdin.read()
     preamble, array_text, postamble = extract_preamble_postamble(raw)
@@ -551,7 +550,6 @@ def main():
             obj_out, when_changed = normalize_when_in_object(obj_out)
             if when_changed:
                 comments = re.sub(r'^\s*//\s*when-sorted:.*\n', '', comments, flags=re.MULTILINE)
-                comments += when_sorted_comment
         sys.stdout.write(comments)
         idx = obj_out.rfind('}')
         if idx != -1:
