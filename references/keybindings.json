@@ -4,7 +4,7 @@ key bindings in this file override the defaults
 notes:
   * try to avoid conflicts with default bindings and commoon extensions, however some conflicts are unavoidable so note them in comments
   * i'm aware of but don't use the vs code multiple cursor feature, so no keybindings for that
-  * keybindings here are designed to work well with and without the vscode-neovim extension
+  * these keybindings are designed to work well with and without the vscode-neovim extension
   * Convention: treat 'up' or 'k' or 'right' or 'l' as 'next'
   * Convention: treat 'down' or 'j' or 'left' or 'h' as 'previous'
 */
@@ -178,6 +178,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && panelFocus && sideBarVisible && activePanel == 'workbench.panel.markers'"
   },
   {
+    // (left) [top left]
+    "key": "alt+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+  },
+  {
     "key": "alt+home",
     "command": "workbench.action.focusActiveEditorGroup"
   },
@@ -347,6 +353,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
+    // (right) here
+    "key": "alt+l",
+    "command": "workbench.action.focusNextPart 1",
+    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
+  },
+  {
     "key": "alt+l",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
@@ -401,6 +413,12 @@ notes:
     "key": "alt+left",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && panelFocus && sideBarVisible && activePanel == 'workbench.panel.markers'"
+  },
+  {
+    // (left) [top left]
+    "key": "alt+left",
+    "command": "workbench.action.focusSideBar",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (right) when the primary sidebar is on the left then focus next part
