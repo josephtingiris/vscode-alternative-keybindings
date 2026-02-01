@@ -28,9 +28,9 @@ Examples of expected answers:
 - Offer alternate shortcuts when conflicts or platform differences exist.
 
 Constraints and Instructions
-- Consider the above and ensure they follow all constraints, instructions, and conventions defined here: [keybindings-conventions-instructions.md](../instructions/keybindings-conventions.instructions.md).
+- Consider the above and ensure they follow all constraints, instructions, and conventions defined here: [alternative-keybindings.instructions.md](../instructions/alternative-keybindings.instructions.md).
 
 References:
 - [vscode-when-contexts.md](../../references/vscode-when-contexts.md)
 - [vscode-api-commands.md](../../references/vscode-api-commands.md)
-- [keybindings-conventions-instructions.md](../instructions/keybindings-conventions.instructions.md).
+- [alternative-keybindings.instructions.md](../instructions/alternative-keybindings.instructions.md).

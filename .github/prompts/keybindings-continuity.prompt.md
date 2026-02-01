@@ -12,5 +12,5 @@ agent: agent
 Consider what's been given and make any necessary corrections or additons t follow what's defined in these files:
 
 1) .github/agents/keybindings-expert.agent.md.
-2) .github/instructions/keybindings-conventions.instructions.md.
+2) .github/instructions/alternative-keybindings.instructions.md.
 
