@@ -493,72 +493,108 @@ notes:
     "when": "panelPosition == 'bottom'"
   },
   {
-    // (h) toggle left primary sidebar
+    // (down) toggle bottom panel
+    "key": "ctrl+alt+down",
+    "command": "workbench.action.focusPanel",
+    "when": "panelPosition == 'bottom' && panelVisible"
+  },
+  {
+    // (down) toggle bottom panel
+    "key": "ctrl+alt+down",
+    "command": "workbench.action.togglePanel",
+    "when": "panelPosition == 'bottom' && panelFocus && panelVisible"
+  },
+  {
+    // (left) toggle left primary sidebar
     "key": "ctrl+alt+h",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    // (left)
     "key": "ctrl+alt+h",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarVisible"
   },
   {
+    // (left)
     "key": "ctrl+alt+h",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
   },
   {
-    // (j) toggle bottom panel
+    // (down) toggle bottom panel
     "key": "ctrl+alt+j",
-    "command": "workbench.action.togglePanel"
+    "command": "workbench.action.togglePanel",
+    "when": "panelPosition == 'bottom'"
   },
   {
-    // (k) toggle top panel
+    // (down) toggle bottom panel
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.focusPanel",
+    "when": "panelPosition == 'bottom' && panelVisible"
+  },
+  {
+    // (down) toggle bottom panel
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.togglePanel",
+    "when": "panelPosition == 'bottom' && panelFocus && panelVisible"
+  },
+  {
+    // (up) [default][special case, no when cluase]
     "key": "ctrl+alt+k",
-    "command": "workbench.action.togglePanel"
+    "command": "workbench.action.focusActiveEditorGroup"
   },
   {
+    // (right)
     "key": "ctrl+alt+l",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    // (right)
     "key": "ctrl+alt+l",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
   },
   {
+    // (right)
     "key": "ctrl+alt+l",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
   },
   {
+    // (left)
     "key": "ctrl+alt+left",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    // (left)
     "key": "ctrl+alt+left",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarVisible"
   },
   {
+    // (left)
     "key": "ctrl+alt+left",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
   },
   {
+    // (right)
     "key": "ctrl+alt+right",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    // (right)
     "key": "ctrl+alt+right",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
   },
   {
+    // (right)
     "key": "ctrl+alt+right",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
