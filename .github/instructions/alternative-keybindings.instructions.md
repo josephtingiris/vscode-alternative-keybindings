@@ -24,7 +24,7 @@ When writing comments, documentation, or labels related to keybindings in this p
   - `(direction)` — if appropriate include the relative direction, e.g. `(left)`, `(down)`, `(up)`, `(right)`
   - when phrase describing:
     a) the 'when' condition in a single sentence that starts with 'when', e.g. `when the primary sidebar is on left ...`
-    b) the action performed, e.g. `... then change focus to the editor.`
+    b) the action performed, e.g. `... then focus on the editor.`
   - optional context or nodes in brackets, e.g. `[default]` or `[corner case]`
   - Example:
 ```
