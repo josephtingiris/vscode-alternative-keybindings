@@ -21,21 +21,21 @@ When writing comments, documentation, or labels related to keybindings in this p
 - Use `left`/`down`/`up`/`right` in prose and comments instead of literal arrow or `hjkl` names. When necessary include concrete keys in examples or mirrored-note tags.
 - If adding new keybindings, prefer describing their effect as `left`, `down`, `up`, or `right` in comments and docs, then list the concrete keys in examples or code.
 - Keep comments short, in English, and easily human-readable. Use this structure where practical:
-  - `(direction)` — if appropriate include the relative direction, e.g. `(left)`, `(down)`, `(up)`, `(right)`
-  - when phrase describing:
+  1) `(direction)` - if appropriate include the relative direction, e.g. `(left)`, `(down)`, `(up)`, `(right)`
+  2) `(optional context or nodes)` -  in brackets, e.g. `[default]` or `[corner case]`
+  3) `(english grammar phrase)` - in English, in a single sentence or pseudo-sentence, describe:
     a) the 'when' condition in a single sentence that starts with 'when', e.g. `when the primary sidebar is on left ...`
     b) the action performed, e.g. `... then focus on the editor.`
-  - optional context or nodes in brackets, e.g. `[default]` or `[corner case]`
   - Example:
 ```
   {
-    // (left) when the primary sidebar is on the left, the focus is in the primary sidebar, and the secondary sidebar is visible then go to the secondary sidebar
+    // (left) [corner case] when the primary sidebar is on the left, the focus is on the primary sidebar, and the secondary sidebar is visible then go to the secondary sidebar
     "key": "alt+h",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
 ```
-- If labeling or referencing the priamry sidebar, always use "priamry sidebar" instead of simply "sidebar" or other variants.
+- If labeling or referencing the primary sidebar, always use "primary sidebar" instead of simply "sidebar" or other variants.
 - If labeling or referencing the secondary sidebar, always use "secondary sidebar" instead of "auxiliary sidebar" or other variants.
 
 # Keybinding 'when' Clause Conventions
