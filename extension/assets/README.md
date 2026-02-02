@@ -1,0 +1,1 @@
+https://commons.wikimedia.org/wiki/File:Computer_Keyboard_Macro.jpg
