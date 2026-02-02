@@ -1,0 +1,34 @@
+{
+  "name": "vscode-alternative-keybindings",
+  "displayName": "AlterNative Keybindings",
+  "publisher": "josephtingiris",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "description": "Minimal extension that registers configuration under the altKey.* namespace for use in when-clauses and context debugging.",
+  "categories": ["Other"],
+  "contributes": {
+    "configuration": {
+      "title": "AlterNative Keybindings Settings",
+      "properties": {
+        "altKey.default.primarySideBar": {
+          "type": "string",
+          "enum": ["left", "right"],
+          "default": "left",
+          "description": "Preferred primary sidebar location. Use in when-clauses as config.altKey.default.primarySideBar == 'left'."
+        },
+        "altKey.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AlterNative altKey behaviors. Access in when-clauses as config.altKey.enabled."
+        },
+        "altKey.wrap": {
+          "type": "boolean",
+          "default": true,
+          "description": "When navigating across UI components, wrap around at screen edges. Use config.altKey.wrap in when-clauses."
+        }
+      }
+    }
+  }
+}
