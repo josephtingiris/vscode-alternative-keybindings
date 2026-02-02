@@ -1,6 +1,11 @@
-.vscode/**
-node_modules/**
-out/test/**
-.vscode-test/**
-src/**
-**/*.ts
+# Ignore local vsix artifacts
+*.vsix
+
+# Exclude development docs from packaged VSIX
+DEVELOPMENT.md
+
+# Keep dist out out (if present)
+dist/
+
+# Keep node_modules out (if present)
+node_modules/
