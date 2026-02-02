@@ -7,6 +7,8 @@ notes:
   * i try (hard) to avoid conflicts with default bindings and commoon extensions, however some conflicts are unavoidable and can be noted
   * i'm aware i created numerous conflicts with the vs code multiple cursor feature, and will circle back to resolve them later (once I learn to use it better)
   * my primary editor is neovim, so these keybindings are designed to work well with and without the vscode-neovim extension
+  * if there is a commented command: in an object, and it is BELOW the active command:, then it is an old command that has been replaced but left for reference
+  * if there is a commented command: in an object, and it is ABOVE the active command:, then it is a potential future command that i have not yet implemented
   * i still need to test compatibility with other extensions, particularly vim emulation extensions
 */
 [
@@ -26,7 +28,7 @@ notes:
     // (=) split terminal vertically (terminalFocus)
     "key": "alt+=",
     "command": "workbench.action.terminal.split",
-    "when": "terminalFocus"
+    "when": "panelFocus && terminalFocus"
   },
   {
     // (a z) toggle zen mode
@@ -153,7 +155,7 @@ notes:
   {
     // (left) in panel
     "key": "alt+h",
-    "command": "workbench.action.previousPanelView 1",
+    "command": "alt+h workbench.action.previousPanelView 1",
     "when": "panelFocus"
   },
   {
@@ -174,15 +176,15 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
-    "key": "alt+h",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
-  },
-  {
     // (left) when the primary sidebar is on the left, the Problems panel is focused, and the primary sidebar is visible then go to the primary sidebar
     "key": "alt+h",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && panelFocus && sideBarVisible && activePanel == 'workbench.panel.markers'"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (left) [top left]
@@ -340,9 +342,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
+    // (right) [placeholder] this is the 'when-sorted' beginning of the alt+l keybindings (no when clause)
+    "key": "alt+l",
+    "command": "alt+l and when? no and when! :)"
+    //"command": "-noop"
+  },
+  {
     // (right) [default] when the primary sidebar is on the left then go to the next part
     "key": "alt+l",
     "command": "alt+l workbench.action.focusNextPart 1",
+    //"command": "workbench.action.focusNextPart",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
@@ -377,8 +386,8 @@ notes:
   },
   {
     "key": "alt+l",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalCount > 1"
+    "command": "alt+l workbench.action.nextPanelView 1",
+    "when": "panelFocus && terminalFocus"
   },
   {
     // (right) when the primary sidebar is on the left and the primary sidebar is focused then go to the active editor
@@ -388,17 +397,18 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
   },
   {
-    // (right) when the editor is focus on the first editor in the first group then go to the next editor
+    // (right) when the editor focus is on the first editor in the first group then go to the next editor
     "key": "alt+l",
     //"command": "workbench.action.nextEditor",
-    "command": "workbench.action.nextEditor 2 3",
+    "command": "alt+l workbench.action.nextEditor 2 3",
     "when": "!panelFocus && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
-    // (right) [OUTPUT panel special case] when the active panel is the OUTPUT panel and the panel is focused then go to the next panel view
+    // (right)
     "key": "alt+l",
-    "command": "workbench.action.nextPanelView 2",
-    "when": "editorFocus && panelFocus && activeLogOutput && activePanel == 'workbench.panel.output'"
+    //"command": "workbench.action.terminal.focusNextPane",
+    "command": "alt+l workbench.action.terminal.focusNextPane 0",
+    "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (right)
@@ -417,6 +427,16 @@ notes:
     "key": "alt+l",
     "command": "alt+l workbench.action.focusAuxiliaryBar 3",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible && activeEditorGroupLast && multipleEditorGroups"
+  },
+  {
+    "key": "alt+l",
+    "command": "alt+l workbench.action.terminal.focusWhere? no aux bar is open",
+    "when": "panelFocus && terminalFocus && !auxiliaryBarVisible && terminalCount == 1 && terminalGroupCount == 1"
+  },
+  {
+    "key": "alt+l",
+    "command": "alt+l workbench.action.terminal.focusWhere? aux bar is open",
+    "when": "panelFocus && terminalFocus && auxiliaryBarVisible && terminalCount == 1 && terminalGroupCount == 1"
   },
   {
     // (left) when the primary sidebar is on the left then focus previous part
@@ -447,15 +467,15 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
-    "key": "alt+left",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
-  },
-  {
     // (left) when the primary sidebar is on the left, the Problems panel is focused, and the primary sidebar is visible then go to the primary sidebar
     "key": "alt+left",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && panelFocus && sideBarVisible && activePanel == 'workbench.panel.markers'"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (left) [top left]
@@ -503,11 +523,6 @@ notes:
     "when": "editorFocus && multipleEditorGroups"
   },
   {
-    "key": "alt+right",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalCount > 1"
-  },
-  {
     // (right) when the primary sidebar is on the left, the editor is focused, and the secondary sidebar is visible then go to the secondary sidebar
     "key": "alt+right",
     "command": "workbench.action.focusAuxiliaryBar",
@@ -518,6 +533,11 @@ notes:
     "key": "alt+right",
     "command": "workbench.action.nextEditor",
     "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (up) when the primary sidebar is on the left then focus next part
@@ -700,12 +720,17 @@ notes:
     // (t) open a new terminal when terminal is focused
     "key": "ctrl+shift+t",
     "command": "workbench.action.terminal.new",
-    "when": "terminalFocus"
+    "when": "panelFocus && terminalFocus"
   },
   {
     // (f8) format/indent
     "key": "f8",
     "command": "editor.action.formatDocument",
     "when": "editorFocus && !editorReadonly && !inCompositeEditor && editorHasDocumentFormattingProvider"
+  },
+  {
+    "key": "f9",
+    "command": "f9 qualifies",
+    "when": "altKey.enabled"
   }
 ]
