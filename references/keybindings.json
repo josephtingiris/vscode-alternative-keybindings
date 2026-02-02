@@ -731,6 +731,6 @@ notes:
   {
     "key": "f9",
     "command": "f9 qualifies",
-    "when": "altKey.enabled"
+    "when": "config.altKey.enabled"
   }
 ]
