@@ -2,11 +2,12 @@
 key bindings in this file override the defaults
 
 notes:
-  * try to avoid conflicts with default bindings and commoon extensions, however some conflicts are unavoidable so note them in comments
-  * i'm aware of but don't use the vs code multiple cursor feature, so no keybindings for that
-  * these keybindings are designed to work well with and without the vscode-neovim extension
   * Convention: treat 'up' or 'k' or 'right' or 'l' as 'next'
   * Convention: treat 'down' or 'j' or 'left' or 'h' as 'previous'
+  * i try (hard) to avoid conflicts with default bindings and commoon extensions, however some conflicts are unavoidable and can be noted
+  * i'm aware i created numerous conflicts with the vs code multiple cursor feature, and will circle back to resolve them later (once I learn to use it better)
+  * my primary editor is neovim, so these keybindings are designed to work well with and without the vscode-neovim extension
+  * i still need to test compatibility with other extensions, particularly vim emulation extensions
 */
 [
   {
@@ -63,21 +64,27 @@ notes:
   {
     // (down) [top left] focus previous editor (first in group) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 1.1 a",
+    "command": "alt+down editor.focus.down 1.1 a",
     "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (down) [top last] focus previous editor (last in group) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 1.2 a",
+    "command": "alt+down editor.focus.down 1.2 a",
     //"command": "workbench.action.focusFirstEditorGroup",
     "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
   },
   {
     // (down) focus previous editor (across groups) (editorFocus)
     "key": "alt+down",
-    "command": "editor.focus.down 2 a",
+    "command": "alt+down editor.focus.down 2 a",
     "when": "editorFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
+  },
+  {
+    // (down) when the panel is on the bottom, the focus is in the terminal, and there are multiple terminals then focus the previous terminal pane
+    "key": "alt+down",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
   },
   {
     // (down) focus previous editor (last in group, multiple groups) (editorFocus)
@@ -200,9 +207,9 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
   },
   {
-    // (down)
+    // (down) [default] when panel is positioned and focused on the bottom then do not go down any further
     "key": "alt+j",
-    "command": "unk 1",
+    "command": "noop",
     "when": "panelPosition == 'bottom' && panelFocus"
   },
   {
@@ -230,6 +237,12 @@ notes:
     "command": "unk 4",
     //"command": "workbench.action.terminal.focusPrevious",
     "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
+  },
+  {
+    // (down) when the panel is on the bottom, the focus is in the terminal, and there are multiple terminals then focus the previous terminal pane
+    "key": "alt+j",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
   },
   {
     // (down)
@@ -303,6 +316,12 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    // (up) [default] when panel is positioned on the bottom and the editor is focused then do not go up any further
+    "key": "alt+k",
+    "command": "noop",
+    "when": "panelPosition == 'bottom' && editorFocus"
+  },
+  {
     // (up) when the primary sidebar is on the left and the panel is focused then focus the active editor
     "key": "alt+k",
     "command": "workbench.action.focusActiveEditorGroup",
@@ -321,58 +340,82 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
-    // (right) when the primary sidebar is on the left then focus next part
+    // (right) [default] when the primary sidebar is on the left then go to the next part
     "key": "alt+l",
-    "command": "workbench.action.focusNextPart",
+    "command": "alt+l workbench.action.focusNextPart 1",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    // (right) [default] when the editor is focused then go to the next editor
     "key": "alt+l",
     "command": "workbench.action.nextEditor",
     "when": "editorFocus"
   },
   {
+    // (right) [default] when the panel is focused then go to the next panel view
     "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    "when": "activeEditor == 'workbench.editor.keybindings' && editorIsOpen"
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
   },
   {
+    // (right) unknown
     "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
+    "command": "alt+l workbench.action.nextEditor 2 1",
+    "when": "activeEditor == 'workbench.editor.keybindings' && editorFocus"
   },
   {
     // (right) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
     "key": "alt+l",
-    "command": "workbench.action.focusSideBar",
+    "command": "alt+l workbench.action.focusSideBar 2 1",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
   },
   {
+    // (right) [default special case] when the editor is focused AND the panel is focused then go to the next panel view
     "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus"
-  },
-  {
-    // (right) here
-    "key": "alt+l",
-    "command": "workbench.action.focusNextPart 1",
-    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
+    "command": "workbench.action.nextPanelView",
+    "when": "editorFocus && panelFocus"
   },
   {
     "key": "alt+l",
     "command": "workbench.action.terminal.focusNextPane",
-    "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
+    "when": "terminalFocus && terminalCount > 1"
+  },
+  {
+    // (right) when the primary sidebar is on the left and the primary sidebar is focused then go to the active editor
+    "key": "alt+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    //"command": "workbench.action.focusNextPart 2",
+    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
+  },
+  {
+    // (right) when the editor is focus on the first editor in the first group then go to the next editor
+    "key": "alt+l",
+    //"command": "workbench.action.nextEditor",
+    "command": "workbench.action.nextEditor 2 3",
+    "when": "!panelFocus && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+  },
+  {
+    // (right) [OUTPUT panel special case] when the active panel is the OUTPUT panel and the panel is focused then go to the next panel view
+    "key": "alt+l",
+    "command": "workbench.action.nextPanelView 2",
+    "when": "editorFocus && panelFocus && activeLogOutput && activePanel == 'workbench.panel.output'"
   },
   {
     // (right)
     "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "command": "alt+l workbench.action.focusAuxiliaryBar 1",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus && !auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
-    // (right) when the editor is focused and the secondary sidebar is visible then go to the secondary sidebar
+    // (right) when the primary sidebar is on the left, the editor is focused, and the secondary sidebar is visible then go to the secondary sidebar
     "key": "alt+l",
     "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
+  },
+  {
+    // (right)
+    "key": "alt+l",
+    "command": "alt+l workbench.action.focusAuxiliaryBar 3",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible && activeEditorGroupLast && multipleEditorGroups"
   },
   {
