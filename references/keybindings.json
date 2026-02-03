@@ -24,75 +24,79 @@ Notes:
     "command": "-noop",
     // "command": "alt+' 2310",
     // "command": "cursorEnd",
-    "when": "textInputFocus"
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
     "key": "alt+,",
-    "command": "-noop"
-    // "command": "alt+, 2b70"
-    // "command": "workbench.action.navigateBack"
+    "command": "-noop",
+    // "command": "alt+, 2b70",
+    // "command": "workbench.action.navigateBack",
+    "when" : "config.altKey.enabled"
   },
   {
     // (split) [horizontal]
     "key": "alt+-",
     "command": "workbench.action.splitEditorDown",
     // "command": "alt+- 301f",
-    "when": "textInputFocus"
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
     // (split) [horizontal]
     "key": "alt+-",
     "command": "workbench.action.terminal.split",
-    "when": "panelFocus && terminalFocus"
+    "when": "panelFocus && terminalFocus && config.altKey.enabled"
   },
   {
     "key": "alt+.",
-    "command": "alt+. 00ba"
-    // "command": "workbench.action.navigateForward"
+    "command": "alt+. 00ba",
+    // "command": "workbench.action.navigateForward",
+    "when" : "config.altKey.enabled"
   },
   {
     "key": "alt+/",
     "command": "alt+/ e9b2",
     // "command": "editor.action.previousMatchFindAction",
-    "when": "editorFocus"
+    "when": "editorFocus && config.altKey.enabled"
   },
   {
     "key": "alt+;",
     "command": "alt+; afa2",
     // "command": "cursorHome",
-    "when": "textInputFocus"
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
     // (split) [vertical]
     "key": "alt+=",
     "command": "workbench.action.splitEditor",
     // "command": "alt+= 54b0",
-    "when": "textInputFocus"
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
     // (split) [vertical]
     "key": "alt+=",
     "command": "workbench.action.terminal.split",
     //"command": "alt+= 9e54",
-    "when": "panelFocus && terminalFocus"
+    "when": "panelFocus && terminalFocus && config.altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+[",
-    // "command": "alt+[ f982",
-    "command": "cursorMove",
+    "command": "alt+[ f982",
+    // "command": "cursorMove",
     "args": {
       "to": "prevBlankLine"
     },
-    "when": "textInputFocus"
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
+    // (right)
     "key": "alt+]",
-    // "command": "alt+] 9f69",
-    "command": "cursorMove",
+    "command": "alt+] ff82",
+    // "command": "cursorMove",
     "args": {
       "to": "nextBlankLine"
     },
-    "when": "textInputFocus"
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
     // (a z) toggle zen mode
