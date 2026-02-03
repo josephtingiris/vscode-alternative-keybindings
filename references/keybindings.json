@@ -20,56 +20,56 @@ Notes:
 [
   {
     "key": "alt+'",
-    // "command": "alt+' 2310"
+    // "command": "alt+' 2310",
     "command": "cursorEnd",
     "when": "textInputFocus"
   },
   {
     "key": "alt+,",
-    // "command": "alt+, 2b70"
+    // "command": "alt+, 2b70",
     "command": "workbench.action.navigateBack"
   },
   {
     // (-) split editor horizontally when in editor
     "key": "alt+-",
-    // "command": "alt+- 301f"
+    // "command": "alt+- 301f",
     "command": "workbench.action.splitEditorDown",
     "when": "editorFocus"
   },
   {
     "key": "alt+.",
-    // "command": "alt+. 00ba"
+    // "command": "alt+. 00ba",
     "command": "workbench.action.navigateForward"
   },
   {
     "key": "alt+/",
-    // "command": "alt+/ e9b2"
+    // "command": "alt+/ e9b2",
     "command": "editor.action.previousMatchFindAction",
     "when": "editorFocus"
   },
   {
     "key": "alt+;",
-    // "command": "alt+; afa2"
+    // "command": "alt+; afa2",
     "command": "cursorHome",
     "when": "textInputFocus"
   },
   {
     // (=) split editor vertically (editorFocus)
     "key": "alt+=",
-    // "command": "alt+= 54b0"
+    // "command": "alt+= 54b0",
     "command": "workbench.action.splitEditor",
     "when": "editorFocus"
   },
   {
     // (=) split terminal vertically (terminalFocus)
     "key": "alt+=",
-    // "command": "alt+= 9e54"
+    // "command": "alt+= 9e54",
     "command": "workbench.action.terminal.split",
     "when": "panelFocus && terminalFocus"
   },
   {
     "key": "alt+[",
-    // "command": "alt+[ f982"
+    // "command": "alt+[ f982",
     "command": "cursorMove",
     "args": {
       "to": "prevBlankLine"
@@ -78,7 +78,7 @@ Notes:
   },
   {
     "key": "alt+]",
-    // "command": "alt+] 9f69"
+    // "command": "alt+] 9f69",
     "command": "cursorMove",
     "args": {
       "to": "nextBlankLine"
@@ -88,1104 +88,1104 @@ Notes:
   {
     // (a z) toggle zen mode
     "key": "alt+a z",
-    // "command": "alt+a z b818"
+    // "command": "alt+a z b818",
     "command": "workbench.action.toggleZenMode"
   },
   {
     // (a z) toggle maximized panel (panelFocus)
     "key": "alt+a z",
-    // "command": "alt+a z ceb1"
+    // "command": "alt+a z ceb1",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "panelFocus"
   },
   {
     "key": "alt+b",
-    // "command": "alt+b d564"
+    // "command": "alt+b d564",
     "command": "cursorWordStartLeft",
     "when": "textInputFocus"
   },
   {
     // (a alt+d) [debug] inspect context keys
     "key": "alt+d alt+i",
-    // "command": "alt+d alt+i e219"
+    // "command": "alt+d alt+i e219",
     "command": "workbench.action.inspectContextKeys"
   },
   {
     // (a alt+k) [debug] toggle keybinding logging to the debug console
     "key": "alt+d alt+k",
-    // "command": "alt+d alt+k 0127"
+    // "command": "alt+d alt+k 0127",
     "command": "workbench.action.toggleKeybindingsLog"
   },
   {
     // (down) when the primary sidebar is on the left then focus previous part [default]
     "key": "alt+down",
-    // "command": "alt+down 1874"
+    // "command": "alt+down 1874",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "alt+down",
-    // "command": "alt+down acce"
+    // "command": "alt+down acce",
     "command": "cursorPageDown",
     "when": "textInputFocus"
   },
   {
     // (down) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
     "key": "alt+down",
-    // "command": "alt+down d1d7"
+    // "command": "alt+down d1d7",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
   },
   {
     // (down) [top left] focus previous editor (first in group) (editorFocus)
     "key": "alt+down",
-    // "command": "alt+down 1dda"
+    // "command": "alt+down 1dda",
     "command": "alt+down editor.focus.down 1.1 a",
     "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (down) [top last] focus previous editor (last in group) (editorFocus)
     "key": "alt+down",
-    // "command": "alt+down bb79"
+    // "command": "alt+down bb79",
     "command": "alt+down editor.focus.down 1.2 a",
-    // "command": "alt+down 8977"
+    // "command": "alt+down 8977",
     //"command": "workbench.action.focusFirstEditorGroup",
     "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
   },
   {
     // (down) focus previous editor (across groups) (editorFocus)
     "key": "alt+down",
-    // "command": "alt+down e78f"
+    // "command": "alt+down e78f",
     "command": "alt+down editor.focus.down 2 a",
     "when": "editorFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
   },
   {
     // (down) when the panel is on the bottom, the focus is in the terminal, and there are multiple terminals then focus the previous terminal pane
     "key": "alt+down",
-    // "command": "alt+down e592"
+    // "command": "alt+down e592",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
   },
   {
     // (down) focus previous editor (last in group, multiple groups) (editorFocus)
     "key": "alt+down",
-    // "command": "alt+down bf64"
+    // "command": "alt+down bf64",
     "command": "editor.focus.down 1.3 a",
-    // "command": "alt+down 54c5"
+    // "command": "alt+down 54c5",
     //"command": "workbench.action.focusFirstEditorGroup",
     "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
   },
   {
     // (down) focus previous editor (group last) (editorFocus)
     "key": "alt+down",
-    // "command": "alt+down ff12"
+    // "command": "alt+down ff12",
     "command": "editor.focus.down 3 a",
-    // "command": "alt+down 2d9f"
+    // "command": "alt+down 2d9f",
     //"command": "workbench.action.focusFirstEditorGroup",
     "when": "editorFocus && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
   },
   {
     // (down) focus previous editor (across groups, first in group) (editorFocus)
     "key": "alt+down",
-    // "command": "alt+down da9b"
+    // "command": "alt+down da9b",
     "command": "editor.focus.down 2.1 a",
-    // "command": "alt+down 6e28"
+    // "command": "alt+down 6e28",
     //"command": "workbench.action.focusBelowGroup",
     "when": "editorFocus && activeEditorGroupIndex > 1 && activeEditorIsFirstInGroup && multipleEditorGroups"
   },
   {
     // (down) focus previous editor (across groups, last in group) (editorFocus)
     "key": "alt+down",
-    // "command": "alt+down 8190"
+    // "command": "alt+down 8190",
     "command": "editor.focus.down 2.1 a",
     "when": "editorFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
   },
   {
     // (down) [single row]
     "key": "alt+down",
-    // "command": "alt+down 4080"
+    // "command": "alt+down 4080",
     "command": "workbench.action.focusPanel",
     "when": "panelPosition == 'bottom' && editorFocus && panelVisible && !multipleEditorGroups"
   },
   {
     // (down) focus previous editor or panel (panelVisible) (editorFocus)
     "key": "alt+down",
-    // "command": "alt+down 7899"
+    // "command": "alt+down 7899",
     "command": "editor.focus.down 4 a",
-    // "command": "alt+down 5794"
+    // "command": "alt+down 5794",
     //"command": "workbench.action.focusPanel",
     "when": "editorFocus && panelVisible && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
   },
   {
     // (down) [top left]
     "key": "alt+down",
-    // "command": "alt+down 13c1"
+    // "command": "alt+down 13c1",
     "command": "workbench.action.focusPanel",
     "when": "panelPosition == 'bottom' && panelVisible && !multipleEditorGroups && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (down) [top left]
     "key": "alt+down",
-    // "command": "alt+down bd93"
+    // "command": "alt+down bd93",
     "command": "workbench.action.focusPanel",
     "when": "panelPosition == 'bottom' && editorFocus && panelVisible && !multipleEditorGroups && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (left) when the primary sidebar is on the left then focus previous part
     "key": "alt+h",
-    // "command": "alt+h 9e21"
+    // "command": "alt+h 9e21",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     // (left) when editor is focused then go to previous editor
     "key": "alt+h",
-    // "command": "alt+h 080e"
+    // "command": "alt+h 080e",
     "command": "workbench.action.previousEditor 1",
     "when": "editorFocus"
   },
   {
     // (left) in panel
     "key": "alt+h",
-    // "command": "alt+h 8d95"
+    // "command": "alt+h 8d95",
     "command": "alt+h workbench.action.previousPanelView 1",
     "when": "panelFocus"
   },
   {
     "key": "alt+h",
-    // "command": "alt+h 5efd"
+    // "command": "alt+h 5efd",
     "command": "cursorLeft",
     "when": "textInputFocus"
   },
   {
     "key": "alt+h",
-    // "command": "alt+h d8fd"
+    // "command": "alt+h d8fd",
     "command": "workbench.action.previousEditor",
     "when": "activeEditor =~ '/^workbench.editor.settings/' && editorFocus"
   },
   {
     // (left) when the primary sidebar is on the left and focus is in the secondary sidebar then focus the active editor
     "key": "alt+h",
-    // "command": "alt+h 30e1"
+    // "command": "alt+h 30e1",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
   },
   {
     // (left) when the primary sidebar is on the left, the focus is in the primary sidebar, and the secondary sidebar is visible then go to the secondary sidebar
     "key": "alt+h",
-    // "command": "alt+h 6317"
+    // "command": "alt+h 6317",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
     // (left) when the primary sidebar is on the left, the Problems panel is focused, and the primary sidebar is visible then go to the primary sidebar
     "key": "alt+h",
-    // "command": "alt+h ccee"
+    // "command": "alt+h ccee",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && panelFocus && sideBarVisible && activePanel == 'workbench.panel.markers'"
   },
   {
     "key": "alt+h",
-    // "command": "alt+h a330"
+    // "command": "alt+h a330",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (left) [top left]
     "key": "alt+h",
-    // "command": "alt+h cd8d"
+    // "command": "alt+h cd8d",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     "key": "alt+home",
-    // "command": "alt+home 16c9"
+    // "command": "alt+home 16c9",
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
     // (down) when the primary sidebar is on the left then focus previous part
     "key": "alt+j",
-    // "command": "alt+j d93d"
+    // "command": "alt+j d93d",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "alt+j",
-    // "command": "alt+j b597"
+    // "command": "alt+j b597",
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
   },
   {
     "key": "alt+j",
-    // "command": "alt+j 8e38"
+    // "command": "alt+j 8e38",
     "command": "cursorDown",
     "when": "textInputFocus"
   },
   {
     // (down) [default] when panel is positioned and focused on the bottom then do not go down any further
     "key": "alt+j",
-    // "command": "alt+j 083d"
+    // "command": "alt+j 083d",
     "command": "noop",
     "when": "panelPosition == 'bottom' && panelFocus"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 753f"
+    // "command": "alt+j 753f",
     "command": "unk 2",
     "when": "panelPosition == 'bottom' && terminalFocus"
   },
   {
     // (down) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
     "key": "alt+j",
-    // "command": "alt+j edf6"
+    // "command": "alt+j edf6",
     "command": "workbench.action.focusPanel",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j b422"
+    // "command": "alt+j b422",
     "command": "workbench.action.focusPreviousPart",
-    // "command": "alt+j fe1c"
+    // "command": "alt+j fe1c",
     //"command": "editor.focus.down 1",
-    // "command": "alt+j ef10"
+    // "command": "alt+j ef10",
     //"command": "terminal.focus",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex == 1"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j f387"
+    // "command": "alt+j f387",
     "command": "unk 3",
     "when": "config.workbench.sideBar.location == 'left' && panelPosition == 'bottom' && terminalFocus"
   },
   {
     "key": "alt+j",
-    // "command": "alt+j d8d2"
+    // "command": "alt+j d8d2",
     "command": "unk 4",
-    // "command": "alt+j 2143"
+    // "command": "alt+j 2143",
     //"command": "workbench.action.terminal.focusPrevious",
     "when": "config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
   },
   {
     // (down) when the panel is on the bottom, the focus is in the terminal, and there are multiple terminals then focus the previous terminal pane
     "key": "alt+j",
-    // "command": "alt+j a1d4"
+    // "command": "alt+j a1d4",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 54d6"
+    // "command": "alt+j 54d6",
     "command": "editor.focus.down 1.2",
-    // "command": "alt+j 0bfb"
+    // "command": "alt+j 0bfb",
     //"command": "workbench.action.focusFirstEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j a51d"
+    // "command": "alt+j a51d",
     "command": "editor.focus.down 2",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 061b"
+    // "command": "alt+j 061b",
     "command": "editor.focus.down 1.1",
     "when": "panelPosition == 'bottom' && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (down) [single row]
     "key": "alt+j",
-    // "command": "alt+j 11a1"
+    // "command": "alt+j 11a1",
     "command": "workbench.action.focusPanel",
     "when": "panelPosition == 'bottom' && editorFocus && panelVisible && !multipleEditorGroups"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 3e25"
+    // "command": "alt+j 3e25",
     "command": "editor.focus.down 1.3",
-    // "command": "alt+j 9b5d"
+    // "command": "alt+j 9b5d",
     //"command": "workbench.action.focusFirstEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 8e92"
+    // "command": "alt+j 8e92",
     "command": "editor.focus.down 3",
-    // "command": "alt+j a914"
+    // "command": "alt+j a914",
     //"command": "workbench.action.focusFirstEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 3f63"
+    // "command": "alt+j 3f63",
     "command": "editor.focus.down 2.1",
-    // "command": "alt+j 1fbd"
+    // "command": "alt+j 1fbd",
     //"command": "workbench.action.focusBelowGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 1 && activeEditorIsFirstInGroup && multipleEditorGroups"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 55e1"
+    // "command": "alt+j 55e1",
     "command": "editor.focus.down 2.1",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 64f5"
+    // "command": "alt+j 64f5",
     "command": "editor.focus.down 4",
-    // "command": "alt+j 0119"
+    // "command": "alt+j 0119",
     //"command": "workbench.action.focusPanel",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && panelVisible && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
   },
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j 9b25"
+    // "command": "alt+j 9b25",
     "command": "workbench.action.focusPanel",
     "when": "panelPosition == 'bottom' && editorFocus && panelVisible && !multipleEditorGroups && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (up) when the primary sidebar is on the left then focus next part
     "key": "alt+k",
-    // "command": "alt+k 229d"
+    // "command": "alt+k 229d",
     "command": "workbench.action.focusNextPart",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "alt+k",
-    // "command": "alt+k b9c4"
+    // "command": "alt+k b9c4",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
   {
     "key": "alt+k",
-    // "command": "alt+k 6375"
+    // "command": "alt+k 6375",
     "command": "cursorUp",
     "when": "textInputFocus"
   },
   {
     // (up) [default] when panel is positioned on the bottom and the editor is focused then do not go up any further
     "key": "alt+k",
-    // "command": "alt+k a367"
+    // "command": "alt+k a367",
     "command": "noop",
     "when": "panelPosition == 'bottom' && editorFocus"
   },
   {
     // (up) when the primary sidebar is on the left and the panel is focused then focus the active editor
     "key": "alt+k",
-    // "command": "alt+k c9e7"
+    // "command": "alt+k c9e7",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "panelPosition == 'bottom' && panelFocus"
   },
   {
     // (up) when a panel is visible and focus is in the last editor group then focus the last editor group
     "key": "alt+k",
-    // "command": "alt+k 4326"
+    // "command": "alt+k 4326",
     "command": "workbench.action.focusLastEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorIsLastInGroup"
   },
   {
     // (up) when the primary sidebar is on the left and the primary sidebar is focused then go to the secondary sidebar
     "key": "alt+k",
-    // "command": "alt+k 5a80"
+    // "command": "alt+k 5a80",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
     // (right) [placeholder] this is the 'when-sorted' beginning of the alt+l keybindings (no when clause)
     "key": "alt+l",
-    // "command": "alt+l f53e"
+    // "command": "alt+l f53e",
     //"command": "noop"
-    // "command": "alt+l fd8e"
+    // "command": "alt+l fd8e",
     "command": "alt+l and when? no and when! :)"
   },
   {
     // (right) [default] when the primary sidebar is on the left then go to the next part
     "key": "alt+l",
-    // "command": "alt+l 0ae0"
+    // "command": "alt+l 0ae0",
     "command": "workbench.action.focusNextPart",
-    // "command": "alt+l 7186"
+    // "command": "alt+l 7186",
     //"command": "alt+l workbench.action.focusNextPart 1",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     // (right) [default] when the editor is focused then go to the next editor
     "key": "alt+l",
-    // "command": "alt+l c966"
+    // "command": "alt+l c966",
     "command": "workbench.action.nextEditor",
     "when": "editorFocus"
   },
   {
     // (right) [default] when the panel is focused then go to the next panel view
     "key": "alt+l",
-    // "command": "alt+l e857"
+    // "command": "alt+l e857",
     "command": "workbench.action.nextPanelView",
     "when": "panelFocus"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l cc62"
+    // "command": "alt+l cc62",
     "command": "cursorRight",
     "when": "textInputFocus"
   },
   {
     // (right) unknown
     "key": "alt+l",
-    // "command": "alt+l 8c60"
+    // "command": "alt+l 8c60",
     "command": "alt+l workbench.action.nextEditor 2 1",
     "when": "activeEditor == 'workbench.editor.keybindings' && editorFocus"
   },
   {
     // (right) when the primary sidebar is on the left and the primary sidebar is focused then go to the active editor
     "key": "alt+l",
-    // "command": "alt+l 4884"
+    // "command": "alt+l 4884",
     "command": "workbench.action.openEditorAtIndex1",
-    // "command": "alt+l c4fb"
+    // "command": "alt+l c4fb",
     //"command": "alt+l workbench.action.focusActiveEditorGroup 1",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
   },
   {
     // (right) [default special case] when the editor is focused AND the panel is focused then go to the next panel view
     "key": "alt+l",
-    // "command": "alt+l 90d8"
+    // "command": "alt+l 90d8",
     "command": "workbench.action.nextPanelView",
-    // "command": "alt+l ec57"
+    // "command": "alt+l ec57",
     //"command": "alt+l workbench.action.nextEditor jjtjjjjjjjjjjjjjjjjj",
     "when": "editorFocus && focusedView != '' && panelFocus"
   },
   {
     // (right) [default special case] when the editor is focused AND the panel is focused then go to the next panel view
     "key": "alt+l",
-    // "command": "alt+l 6539"
+    // "command": "alt+l 6539",
     "command": "alt+l workbench.action.nextEditor jjt2",
-    // "command": "alt+l b392"
+    // "command": "alt+l b392",
     //"command": "workbench.action.nextEditor",
     "when": "editorFocus && focusedView == '' && panelFocus"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l effb"
+    // "command": "alt+l effb",
     "command": "alt+l workbench.action.nextEditor 123",
-    // "command": "alt+l e28b"
+    // "command": "alt+l e28b",
     //"command": "workbench.action.nextEditor",
     "when": "editorFocus && panelFocus && terminalFocus"
   },
   {
     // (right) when the editor focus is on the first editor in the first group then go to the next editor
     "key": "alt+l",
-    // "command": "alt+l 2195"
+    // "command": "alt+l 2195",
     "command": "workbench.action.nextEditor",
-    // "command": "alt+l a4e4"
+    // "command": "alt+l a4e4",
     //"command": "alt+l workbench.action.nextEditor 2 3",
     "when": "!panelFocus && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (right) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
     "key": "alt+l",
-    // "command": "alt+l 53d3"
+    // "command": "alt+l 53d3",
     //"command": "noop",
-    // "command": "alt+l 0981"
+    // "command": "alt+l 0981",
     "command": "alt+l noop nowrap",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible && !config.altKey.wrap"
   },
   {
     // (right) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
     "key": "alt+l",
-    // "command": "alt+l ec4c"
+    // "command": "alt+l ec4c",
     "command": "workbench.action.focusSideBar",
-    // "command": "alt+l 56ae"
+    // "command": "alt+l 56ae",
     //"command": "alt+l workbench.action.focusSideBar wrap",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible && config.altKey.wrap"
   },
   {
     // (right)
     "key": "alt+l",
-    // "command": "alt+l ca60"
+    // "command": "alt+l ca60",
     "command": "workbench.action.terminal.focusNextPane",
-    // "command": "alt+l 9ca6"
+    // "command": "alt+l 9ca6",
     //"command": "alt+l workbench.action.terminal.focusNextPane 0",
     "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (right)
     "key": "alt+l",
-    // "command": "alt+l d40b"
+    // "command": "alt+l d40b",
     "command": "alt+l workbench.action.focusAuxiliaryBar 3",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible && activeEditorGroupLast && multipleEditorGroups"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l 8d53"
+    // "command": "alt+l 8d53",
     "command": "alt+l workbench.action.terminal.focusWhere? no aux bar is open",
     "when": "panelFocus && terminalFocus && !auxiliaryBarVisible && terminalCount == 1 && terminalGroupCount == 1"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l f2dc"
+    // "command": "alt+l f2dc",
     "command": "alt+l workbench.action.terminal.focusWhere? aux bar is open",
     "when": "panelFocus && terminalFocus && auxiliaryBarVisible && terminalCount == 1 && terminalGroupCount == 1"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l d001"
+    // "command": "alt+l d001",
     "command": "workbench.action.nextPanelView",
-    // "command": "alt+l 5d27"
+    // "command": "alt+l 5d27",
     //"command": "workbench.action.focusAuxiliaryBar jj1",
     "when": "config.workbench.sideBar.location == 'left' && !editorFocus && panelFocus && auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l fe0b"
+    // "command": "alt+l fe0b",
     "command": "workbench.action.focusAuxiliaryBar",
-    // "command": "alt+l fecd"
+    // "command": "alt+l fecd",
     //"command": "workbench.action.focusAuxiliaryBar jj2",
     "when": "config.workbench.sideBar.location == 'left' && !panelFocus && editorFocus && auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l 458e"
+    // "command": "alt+l 458e",
     "command": "workbench.action.focusAuxiliaryBar jj4",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && panelFocus && !auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l 1384"
+    // "command": "alt+l 1384",
     "command": "workbench.action.nextPanelView",
-    // "command": "alt+l a1c4"
+    // "command": "alt+l a1c4",
     //"command": "workbench.action.focusNext jjjjjjjj",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && panelFocus && auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     "key": "alt+l",
-    // "command": "alt+l 32e7"
+    // "command": "alt+l 32e7",
     "command": "workbench.action.nextEditor",
-    // "command": "alt+l bdf9"
+    // "command": "alt+l bdf9",
     //"command": "alt+l workbench.action.nextEditor jjt3",
     "when": "config.workbench.sideBar.location == 'left' && !auxiliaryBarFocus && !editorFocus && !panelFocus && !sideBarFocus && focusedView == '' && editorIsOpen"
   },
   {
     // (right)
     "key": "alt+l",
-    // "command": "alt+l bdf8"
+    // "command": "alt+l bdf8",
     "command": "alt+l workbench.action.focusAuxiliaryBar 1 nowrap",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && !auxiliaryBarVisible && sideBarVisible && !config.altKey.wrap && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     // (right)
     "key": "alt+l",
-    // "command": "alt+l f108"
+    // "command": "alt+l f108",
     "command": "workbench.action.focusSideBar",
-    // "command": "alt+l bcfe"
+    // "command": "alt+l bcfe",
     //"command": "alt+l workbench.action.focusSideBar 1 wrap",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup && config.altKey.wrap"
   },
   {
     // (left) when the primary sidebar is on the left then focus previous part
     "key": "alt+left",
-    // "command": "alt+left b31e"
+    // "command": "alt+left b31e",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "alt+left",
-    // "command": "alt+left 4da6"
+    // "command": "alt+left 4da6",
     "command": "workbench.action.previousEditor",
     "when": "activeEditor =~ '/^workbench.editor.settings/' && editorFocus"
   },
   {
     // (left) when the primary sidebar is on the left and focus is in the secondary sidebar then focus the active editor
     "key": "alt+left",
-    // "command": "alt+left aee4"
+    // "command": "alt+left aee4",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
   },
   {
     "key": "alt+left",
-    // "command": "alt+left b92c"
+    // "command": "alt+left b92c",
     "command": "workbench.action.previousEditor",
     "when": "config.workbench.sideBar.location == 'left' && activeEditor == 'workbench.editor.keybindings' && editorFocus"
   },
   {
     // (left) when the primary sidebar is on the left and the primary sidebar is focused then go to the secondary sidebar
     "key": "alt+left",
-    // "command": "alt+left 6f16"
+    // "command": "alt+left 6f16",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
     // (left) when the primary sidebar is on the left, the Problems panel is focused, and the primary sidebar is visible then go to the primary sidebar
     "key": "alt+left",
-    // "command": "alt+left 8cf6"
+    // "command": "alt+left 8cf6",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && panelFocus && sideBarVisible && activePanel == 'workbench.panel.markers'"
   },
   {
     "key": "alt+left",
-    // "command": "alt+left a2b7"
+    // "command": "alt+left a2b7",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (left) [top left]
     "key": "alt+left",
-    // "command": "alt+left 13db"
+    // "command": "alt+left 13db",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     "key": "alt+m",
-    // "command": "alt+m 605a"
+    // "command": "alt+m 605a",
     "command": "editor.action.jumpToBracket",
     "when": "editorTextFocus"
   },
   {
     "key": "alt+n",
-    // "command": "alt+n 318f"
+    // "command": "alt+n 318f",
     "command": "editor.action.nextMatchFindAction",
     "when": "editorFocus"
   },
   {
     // (right) when the primary sidebar is on the left then focus next part
     "key": "alt+right",
-    // "command": "alt+right b693"
+    // "command": "alt+right b693",
     "command": "workbench.action.focusNextPart",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "alt+right",
-    // "command": "alt+right 4a17"
+    // "command": "alt+right 4a17",
     "command": "workbench.action.nextEditor",
     "when": "editorFocus"
   },
   {
     "key": "alt+right",
-    // "command": "alt+right 2032"
+    // "command": "alt+right 2032",
     "command": "workbench.action.nextEditor",
     "when": "activeEditor == 'workbench.editor.keybindings' && editorIsOpen"
   },
   {
     "key": "alt+right",
-    // "command": "alt+right 8851"
+    // "command": "alt+right 8851",
     "command": "workbench.action.nextEditor",
     "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
   },
   {
     // (right) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
     "key": "alt+right",
-    // "command": "alt+right 9e6e"
+    // "command": "alt+right 9e6e",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
   },
   {
     "key": "alt+right",
-    // "command": "alt+right 35e5"
+    // "command": "alt+right 35e5",
     "command": "workbench.action.nextEditor",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
     // (right) focus right editor group when multiple editor groups
     "key": "alt+right",
-    // "command": "alt+right 0c18"
+    // "command": "alt+right 0c18",
     //"command": "workbench.action.nextEditor"
-    // "command": "alt+right 7293"
+    // "command": "alt+right 7293",
     "command": "workbench.action.focusRightGroup",
     "when": "editorFocus && multipleEditorGroups"
   },
   {
     // (right) when the primary sidebar is on the left, the editor is focused, and the secondary sidebar is visible then go to the secondary sidebar
     "key": "alt+right",
-    // "command": "alt+right 857a"
+    // "command": "alt+right 857a",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible"
   },
   {
     // (right)
     "key": "alt+right",
-    // "command": "alt+right 58ac"
+    // "command": "alt+right 58ac",
     "command": "workbench.action.nextEditor",
     "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     "key": "alt+right",
-    // "command": "alt+right 7b39"
+    // "command": "alt+right 7b39",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     "key": "alt+s alt+l",
-    // "command": "alt+s alt+l b3d5"
+    // "command": "alt+s alt+l b3d5",
     "command": "expandLineSelection",
     "when": "editorFocus"
   },
   {
     "key": "alt+s alt+m",
-    // "command": "alt+s alt+m 696d"
+    // "command": "alt+s alt+m 696d",
     "command": "editor.action.selectToBracket",
     "when": "editorFocus"
   },
   {
     "key": "alt+s alt+o",
-    // "command": "alt+s alt+o 8f29"
+    // "command": "alt+s alt+o 8f29",
     "command": "editor.action.smartSelect.expand",
     "when": "editorFocus"
   },
   {
     "key": "alt+s shift+alt+o",
-    // "command": "alt+s shift+alt+o 82de"
+    // "command": "alt+s shift+alt+o 82de",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorFocus"
   },
   {
     // (up) when the primary sidebar is on the left then focus next part
     "key": "alt+up",
-    // "command": "alt+up cc46"
+    // "command": "alt+up cc46",
     "command": "workbench.action.focusNextPart",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "alt+up",
-    // "command": "alt+up ef97"
+    // "command": "alt+up ef97",
     "command": "cursorPageUp",
     "when": "textInputFocus"
   },
   {
     // (up) when a panel is visible and focus is in the last editor group then focus the last editor group
     "key": "alt+up",
-    // "command": "alt+up 5200"
+    // "command": "alt+up 5200",
     "command": "workbench.action.focusLastEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorIsLastInGroup"
   },
   {
     // (up) when the primary sidebar is on the left and the primary sidebar is focused then go to the secondary sidebar
     "key": "alt+up",
-    // "command": "alt+up e272"
+    // "command": "alt+up e272",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
     // (up) when panel is focused on the bottom then go up to the active editor
     "key": "alt+up",
-    // "command": "alt+up de47"
+    // "command": "alt+up de47",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "panelPosition == 'bottom' && panelFocus && editorIsOpen"
   },
   {
     "key": "alt+v alt+a",
-    // "command": "alt+v alt+a 69f8"
+    // "command": "alt+v alt+a 69f8",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
     "key": "alt+v alt+c",
-    // "command": "alt+v alt+c ef60"
+    // "command": "alt+v alt+c ef60",
     "command": "workbench.action.toggleStatusbarVisibility"
   },
   {
     "key": "alt+v alt+d",
-    // "command": "alt+v alt+d 0154"
+    // "command": "alt+v alt+d 0154",
     "command": "workbench.action.toggleZenMode"
   },
   {
     "key": "alt+v alt+e",
-    // "command": "alt+v alt+e 70ea"
+    // "command": "alt+v alt+e 70ea",
     "command": "workbench.action.togglePanel"
   },
   {
     "key": "alt+v alt+f",
-    // "command": "alt+v alt+f cfaf"
+    // "command": "alt+v alt+f cfaf",
     "command": "workbench.action.toggleFullScreen"
   },
   {
     "key": "alt+v alt+i",
-    // "command": "alt+v alt+i 02ef"
+    // "command": "alt+v alt+i 02ef",
     "command": "workbench.action.toggleZenMode"
   },
   {
     "key": "alt+v alt+m",
-    // "command": "alt+v alt+m cd63"
+    // "command": "alt+v alt+m cd63",
     "command": "editor.action.toggleMinimap"
   },
   {
     "key": "alt+v alt+s",
-    // "command": "alt+v alt+s 522d"
+    // "command": "alt+v alt+s 522d",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "alt+v alt+t",
-    // "command": "alt+v alt+t 7b8f"
+    // "command": "alt+v alt+t 7b8f",
     "command": "workbench.action.toggleTabsVisibility"
   },
   {
     "key": "alt+w",
-    // "command": "alt+w d632"
+    // "command": "alt+w d632",
     "command": "cursorWordStartRight",
     "when": "textInputFocus"
   },
   {
     "key": "cmd+alt+j",
-    // "command": "cmd+alt+j cf6a"
+    // "command": "cmd+alt+j cf6a",
     "command": "editor.action.insertCursorBelow",
     "when": "editorTextFocus"
   },
   {
     "key": "cmd+alt+k",
-    // "command": "cmd+alt+k 8860"
+    // "command": "cmd+alt+k 8860",
     "command": "editor.action.insertCursorAbove",
     "when": "editorTextFocus"
   },
   {
     "key": "cmd+alt+l",
-    // "command": "cmd+alt+l 6e7f"
+    // "command": "cmd+alt+l 6e7f",
     "command": "removeSecondaryCursors",
     "when": "textInputFocus && editorHasMultipleSelections"
   },
   {
     "key": "cmd+m",
-    // "command": "cmd+m e3ee"
+    // "command": "cmd+m e3ee",
     "command": "editor.action.jumpToBracket",
     "when": "editorTextFocus"
   },
   {
     // (a z) toggle maximize editor group when editorFocus
     "key": "ctrl+a z",
-    // "command": "ctrl+a z 703e"
+    // "command": "ctrl+a z 703e",
     "command": "workbench.action.toggleMaximizeEditorGroup",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
     // ([) fold all except current
     "key": "ctrl+alt+[",
-    // "command": "ctrl+alt+[ d981"
+    // "command": "ctrl+alt+[ d981",
     "command": "editor.foldAllExcept",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
     // (]) unfold all
     "key": "ctrl+alt+]",
-    // "command": "ctrl+alt+] c878"
+    // "command": "ctrl+alt+] c878",
     "command": "editor.unfoldAll",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
     // (down) toggle bottom panel
     "key": "ctrl+alt+down",
-    // "command": "ctrl+alt+down 2a7f"
+    // "command": "ctrl+alt+down 2a7f",
     "command": "workbench.action.togglePanel",
     "when": "panelPosition == 'bottom'"
   },
   {
     // (down) toggle bottom panel
     "key": "ctrl+alt+down",
-    // "command": "ctrl+alt+down 58d1"
+    // "command": "ctrl+alt+down 58d1",
     "command": "workbench.action.focusPanel",
     "when": "panelPosition == 'bottom' && panelVisible"
   },
   {
     // (down) toggle bottom panel
     "key": "ctrl+alt+down",
-    // "command": "ctrl+alt+down 48b7"
+    // "command": "ctrl+alt+down 48b7",
     "command": "workbench.action.togglePanel",
     "when": "panelPosition == 'bottom' && panelFocus && panelVisible"
   },
   {
     // (left) toggle left primary sidebar
     "key": "ctrl+alt+h",
-    // "command": "ctrl+alt+h 8e24"
+    // "command": "ctrl+alt+h 8e24",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "ctrl+alt+h",
-    // "command": "ctrl+alt+h 9979"
+    // "command": "ctrl+alt+h 9979",
     "command": "cursorWordPartLeft",
     "when": "textInputFocus"
   },
   {
     // (left)
     "key": "ctrl+alt+h",
-    // "command": "ctrl+alt+h bc4d"
+    // "command": "ctrl+alt+h bc4d",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarVisible"
   },
   {
     // (left)
     "key": "ctrl+alt+h",
-    // "command": "ctrl+alt+h 2ed2"
+    // "command": "ctrl+alt+h 2ed2",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
   },
   {
     // (down) toggle bottom panel
     "key": "ctrl+alt+j",
-    // "command": "ctrl+alt+j 398d"
+    // "command": "ctrl+alt+j 398d",
     "command": "workbench.action.togglePanel",
     "when": "panelPosition == 'bottom'"
   },
   {
     "key": "ctrl+alt+j",
-    // "command": "ctrl+alt+j 93c9"
+    // "command": "ctrl+alt+j 93c9",
     "command": "cursorPageDown",
     "when": "textInputFocus"
   },
   {
     // (down) toggle bottom panel
     "key": "ctrl+alt+j",
-    // "command": "ctrl+alt+j de38"
+    // "command": "ctrl+alt+j de38",
     "command": "workbench.action.focusPanel",
     "when": "panelPosition == 'bottom' && panelVisible"
   },
   {
     // (down) toggle bottom panel
     "key": "ctrl+alt+j",
-    // "command": "ctrl+alt+j 8c48"
+    // "command": "ctrl+alt+j 8c48",
     "command": "workbench.action.togglePanel",
     "when": "panelPosition == 'bottom' && panelFocus && panelVisible"
   },
   {
     // (up) [default][special case, no when cluase]
     "key": "ctrl+alt+k",
-    // "command": "ctrl+alt+k 2ba8"
+    // "command": "ctrl+alt+k 2ba8",
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
     "key": "ctrl+alt+k",
-    // "command": "ctrl+alt+k 9a08"
+    // "command": "ctrl+alt+k 9a08",
     "command": "cursorPageUp",
     "when": "textInputFocus"
   },
   {
     // (right) toggle secondary sidebar
     "key": "ctrl+alt+l",
-    // "command": "ctrl+alt+l ae58"
+    // "command": "ctrl+alt+l ae58",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "ctrl+alt+l",
-    // "command": "ctrl+alt+l 75ac"
+    // "command": "ctrl+alt+l 75ac",
     "command": "cursorWordPartRight",
     "when": "textInputFocus"
   },
   {
     // (right) focus secondary sidebar
     "key": "ctrl+alt+l",
-    // "command": "ctrl+alt+l 45f7"
+    // "command": "ctrl+alt+l 45f7",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
   },
   {
     // (right) toggle secondary sidebar when focused
     "key": "ctrl+alt+l",
-    // "command": "ctrl+alt+l 7d75"
+    // "command": "ctrl+alt+l 7d75",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
   },
   {
     // (left) toggle left primary sidebar
     "key": "ctrl+alt+left",
-    // "command": "ctrl+alt+left a03d"
+    // "command": "ctrl+alt+left a03d",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     // (left) focus primary sidebar
     "key": "ctrl+alt+left",
-    // "command": "ctrl+alt+left abb5"
+    // "command": "ctrl+alt+left abb5",
     "command": "workbench.action.focusSideBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarVisible"
   },
   {
     // (left) toggle left primary sidebar when focused
     "key": "ctrl+alt+left",
-    // "command": "ctrl+alt+left 89bc"
+    // "command": "ctrl+alt+left 89bc",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
   },
   {
     // (right) toggle secondary sidebar
     "key": "ctrl+alt+right",
-    // "command": "ctrl+alt+right bd33"
+    // "command": "ctrl+alt+right bd33",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
     // (right) focus secondary sidebar
     "key": "ctrl+alt+right",
-    // "command": "ctrl+alt+right 0b31"
+    // "command": "ctrl+alt+right 0b31",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
   },
   {
     // (right) toggle secondary sidebar when focused
     "key": "ctrl+alt+right",
-    // "command": "ctrl+alt+right f5ea"
+    // "command": "ctrl+alt+right f5ea",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
   },
   {
     // (up) toggle top panel
     "key": "ctrl+alt+up",
-    // "command": "ctrl+alt+up 91c0"
+    // "command": "ctrl+alt+up 91c0",
     "command": "workbench.action.togglePanel"
   },
   {
     "key": "ctrl+d",
-    // "command": "ctrl+d 26cb"
+    // "command": "ctrl+d 26cb",
     "command": "workbench.action.closeActiveEditor",
     "when": "editorFocus"
   },
   {
     "key": "ctrl+d",
-    // "command": "ctrl+d cc30"
+    // "command": "ctrl+d cc30",
     "command": "workbench.action.closeActiveEditor",
     "when": "config.workbench.sideBar.location == 'left' && !auxiliaryBarFocus && !editorFocus && !panelFocus && !sideBarFocus && focusedView == '' && editorIsOpen"
   },
   {
     // (up) disable neovim ctrl+k handler when not in insert mode (preserve VS Code's default ctrl+k chord behavior)
     "key": "ctrl+k",
-    // "command": "ctrl+k 26b7"
+    // "command": "ctrl+k 26b7",
     "command": "-vscode-neovim.send",
     "when": "editorFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init"
   },
   {
     "key": "ctrl+shift+alt+h",
-    // "command": "ctrl+shift+alt+h e7f3"
+    // "command": "ctrl+shift+alt+h e7f3",
     "command": "cursorWordPartLeftSelect",
     "when": "textInputFocus"
   },
   {
     "key": "ctrl+shift+alt+l",
-    // "command": "ctrl+shift+alt+l a597"
+    // "command": "ctrl+shift+alt+l a597",
     "command": "cursorWordPartRightSelect",
     "when": "textInputFocus"
   },
   {
     // (backspace) go to html/xml tag open/close match
     "key": "ctrl+shift+backspace",
-    // "command": "ctrl+shift+backspace 6b42"
+    // "command": "ctrl+shift+backspace 6b42",
     "command": "editor.emmet.action.matchTag"
   },
   {
     // (t) open native terminal when not in terminal
     "key": "ctrl+shift+t",
-    // "command": "ctrl+shift+t f641"
+    // "command": "ctrl+shift+t f641",
     "command": "workbench.action.terminal.openNativeConsole",
     "when": "!terminalFocus"
   },
   {
     // (t) open a new terminal when terminal is focused
     "key": "ctrl+shift+t",
-    // "command": "ctrl+shift+t 2520"
+    // "command": "ctrl+shift+t 2520",
     "command": "workbench.action.terminal.new",
     "when": "panelFocus && terminalFocus"
   },
@@ -1204,19 +1204,19 @@ Notes:
   },
   {
     "key": "shift+alt+'",
-    // "command": "shift+alt+' 9a87"
+    // "command": "shift+alt+' 9a87",
     "command": "cursorEndSelect",
     "when": "textInputFocus"
   },
   {
     "key": "shift+alt+;",
-    // "command": "shift+alt+; f151"
+    // "command": "shift+alt+; f151",
     "command": "cursorHomeSelect",
     "when": "textInputFocus"
   },
   {
     "key": "shift+alt+[",
-    // "command": "shift+alt+[ d58a"
+    // "command": "shift+alt+[ d58a",
     "command": "cursorMove",
     "args": {
       "to": "prevBlankLine",
@@ -1226,7 +1226,7 @@ Notes:
   },
   {
     "key": "shift+alt+]",
-    // "command": "shift+alt+] 26aa"
+    // "command": "shift+alt+] 26aa",
     "command": "cursorMove",
     "args": {
       "to": "nextBlankLine",
@@ -1236,49 +1236,49 @@ Notes:
   },
   {
     "key": "shift+alt+b",
-    // "command": "shift+alt+b 9207"
+    // "command": "shift+alt+b 9207",
     "command": "cursorWordStartLeftSelect",
     "when": "textInputFocus"
   },
   {
     "key": "shift+alt+h",
-    // "command": "shift+alt+h c3b9"
+    // "command": "shift+alt+h c3b9",
     "command": "cursorLeftSelect",
     "when": "textInputFocus"
   },
   {
     "key": "shift+alt+j",
-    // "command": "shift+alt+j 2d08"
+    // "command": "shift+alt+j 2d08",
     "command": "cursorDownSelect",
     "when": "textInputFocus"
   },
   {
     "key": "shift+alt+k",
-    // "command": "shift+alt+k ef46"
+    // "command": "shift+alt+k ef46",
     "command": "cursorUpSelect",
     "when": "textInputFocus"
   },
   {
     "key": "shift+alt+l",
-    // "command": "shift+alt+l b6a2"
+    // "command": "shift+alt+l b6a2",
     "command": "cursorRightSelect",
     "when": "textInputFocus"
   },
   {
     "key": "shift+alt+n",
-    // "command": "shift+alt+n 9e8d"
+    // "command": "shift+alt+n 9e8d",
     "command": "editor.action.previousMatchFindAction",
     "when": "editorFocus"
   },
   {
     "key": "shift+alt+s shift+alt+o",
-    // "command": "shift+alt+s shift+alt+o b4a8"
+    // "command": "shift+alt+s shift+alt+o b4a8",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorFocus"
   },
   {
     "key": "shift+alt+w",
-    // "command": "shift+alt+w f5b4"
+    // "command": "shift+alt+w f5b4",
     "command": "cursorWordStartRightSelect",
     "when": "textInputFocus"
   }
