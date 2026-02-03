@@ -619,52 +619,6 @@ Notes:
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup && config.altKey.wrap"
   },
   {
-    // (left) when the primary sidebar is on the left then focus previous part
-    "key": "alt+left",
-    // "command": "alt+left b31e",
-    "command": "workbench.action.focusPreviousPart",
-    "when": "config.workbench.sideBar.location == 'left'"
-  },
-  {
-    "key": "alt+left",
-    // "command": "alt+left 4da6",
-    "command": "workbench.action.previousEditor",
-    "when": "activeEditor =~ '/^workbench.editor.settings/' && editorFocus"
-  },
-  {
-    // (left) when the primary sidebar is on the left and focus is in the secondary sidebar then focus the active editor
-    "key": "alt+left",
-    // "command": "alt+left aee4",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
-  },
-  {
-    "key": "alt+left",
-    // "command": "alt+left b92c",
-    "command": "workbench.action.previousEditor",
-    "when": "config.workbench.sideBar.location == 'left' && activeEditor == 'workbench.editor.keybindings' && editorFocus"
-  },
-  {
-    // (left) when the primary sidebar is on the left and the primary sidebar is focused then go to the secondary sidebar
-    "key": "alt+left",
-    // "command": "alt+left 6f16",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
-  },
-  {
-    "key": "alt+left",
-    // "command": "alt+left a2b7",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
-  },
-  {
-    // (left) [top left]
-    "key": "alt+left",
-    // "command": "alt+left 13db",
-    "command": "workbench.action.focusSideBar",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
     "key": "alt+m",
     // "command": "alt+m 605a",
     "command": "editor.action.jumpToBracket",
@@ -675,73 +629,6 @@ Notes:
     // "command": "alt+n 318f",
     "command": "editor.action.nextMatchFindAction",
     "when": "editorFocus"
-  },
-  {
-    // (right) when the primary sidebar is on the left then focus next part
-    "key": "alt+right",
-    // "command": "alt+right b693",
-    "command": "workbench.action.focusNextPart",
-    "when": "config.workbench.sideBar.location == 'left'"
-  },
-  {
-    "key": "alt+right",
-    // "command": "alt+right 4a17",
-    "command": "workbench.action.nextEditor",
-    "when": "editorFocus"
-  },
-  {
-    "key": "alt+right",
-    // "command": "alt+right 2032",
-    "command": "workbench.action.nextEditor",
-    "when": "activeEditor == 'workbench.editor.keybindings' && editorIsOpen"
-  },
-  {
-    "key": "alt+right",
-    // "command": "alt+right 8851",
-    "command": "workbench.action.nextEditor",
-    "when": "activeEditor =~ '/^workbench.editor.settings/' && editorIsOpen"
-  },
-  {
-    // (right) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
-    "key": "alt+right",
-    // "command": "alt+right 9e6e",
-    "command": "workbench.action.focusSideBar",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
-  },
-  {
-    "key": "alt+right",
-    // "command": "alt+right 35e5",
-    "command": "workbench.action.nextEditor",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus"
-  },
-  {
-    // (right) focus right editor group when multiple editor groups
-    "key": "alt+right",
-    // "command": "alt+right 0c18",
-    // "command": "workbench.action.nextEditor"
-    // "command": "alt+right 7293",
-    "command": "workbench.action.focusRightGroup",
-    "when": "editorFocus && multipleEditorGroups"
-  },
-  {
-    // (right) when the primary sidebar is on the left, the editor is focused, and the secondary sidebar is visible then go to the secondary sidebar
-    "key": "alt+right",
-    // "command": "alt+right 857a",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible"
-  },
-  {
-    // (right)
-    "key": "alt+right",
-    // "command": "alt+right 58ac",
-    "command": "workbench.action.nextEditor",
-    "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    "key": "alt+right",
-    // "command": "alt+right 7b39",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     "key": "alt+s alt+l",
@@ -766,40 +653,6 @@ Notes:
     // "command": "alt+s shift+alt+o 82de",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorFocus"
-  },
-  {
-    // (up) when the primary sidebar is on the left then focus next part
-    "key": "alt+up",
-    // "command": "alt+up cc46",
-    "command": "workbench.action.focusNextPart",
-    "when": "config.workbench.sideBar.location == 'left'"
-  },
-  {
-    "key": "alt+up",
-    // "command": "alt+up ef97",
-    "command": "cursorPageUp",
-    "when": "textInputFocus"
-  },
-  {
-    // (up) when a panel is visible and focus is in the last editor group then focus the last editor group
-    "key": "alt+up",
-    // "command": "alt+up 5200",
-    "command": "workbench.action.focusLastEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && editorFocus && activeEditorIsLastInGroup"
-  },
-  {
-    // (up) when the primary sidebar is on the left and the primary sidebar is focused then go to the secondary sidebar
-    "key": "alt+up",
-    // "command": "alt+up e272",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
-  },
-  {
-    // (up) when panel is focused on the bottom then go up to the active editor
-    "key": "alt+up",
-    // "command": "alt+up de47",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "panelPosition == 'bottom' && panelFocus && editorIsOpen"
   },
   {
     "key": "alt+v alt+a",
@@ -884,107 +737,95 @@ Notes:
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
-    // ([) fold all except current
+    // (left) unfold all
     "key": "ctrl+alt+[",
     // "command": "ctrl+alt+[ d981",
-    "command": "editor.foldAllExcept",
+    "command": "editor.unfoldAll",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
-    // (]) unfold all
+    // (right) fold all except current
     "key": "ctrl+alt+]",
     // "command": "ctrl+alt+] c878",
-    "command": "editor.unfoldAll",
+    "command": "editor.foldAllExcept",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
     // (left) toggle left primary sidebar
     "key": "ctrl+alt+h",
+    "command": "workbench.action.toggleSidebarVisibility",
     // "command": "ctrl+alt+h 8e24",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "config.workbench.sideBar.location == 'left'"
-  },
-  {
-    "key": "ctrl+alt+h",
-    "command": "ctrl+alt+h 9979",
-    // "command": "cursorWordPartLeft",
-    "when": "textInputFocus"
+    "when": "config.workbench.sideBar.location == 'left' && !sideBarVisible && config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+alt+h",
-    // "command": "ctrl+alt+h bc4d",
     "command": "workbench.action.focusSideBar",
-    "when": "config.workbench.sideBar.location == 'left' && sideBarVisible"
+    // "command": "ctrl+alt+h bc4d",
+    "when": "config.workbench.sideBar.location == 'left' && sideBarVisible && config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+alt+h",
-    // "command": "ctrl+alt+h 2ed2",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
+    // "command": "ctrl+alt+h 2ed2",
+    "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible && config.altKey.enabled"
+  },
+  {
+    // (down)
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.togglePanel",
+    // "command": "ctrl+alt+j 398d",
+    "when": "panelPosition == 'bottom' && !panelVisible && config.altKey.enabled"
+  },
+  {
+    // (down)
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.focusPanel",
+    // "command": "ctrl+alt+j de38",
+    "when": "panelPosition == 'bottom' && panelVisible && config.altKey.enabled"
   },
   {
     // (down) toggle bottom panel
     "key": "ctrl+alt+j",
-    "command": "ctrl+alt+j 398d",
-    // "command": "workbench.action.togglePanel",
-    "when": "panelPosition == 'bottom' && config.altKey.enabled",
+    "command": "workbench.action.togglePanel",
+    // "command": "ctrl+alt+j 8c48",
+    "when": "panelPosition == 'bottom' && panelFocus && panelVisible && config.altKey.enabled"
   },
   {
-    "key": "ctrl+alt+j",
-    "command": "ctrl+alt+j 93c9",
-    // "command": "cursorPageDown",
-    "when": "config.altKey.enabled && textInputFocus"
-  },
-  {
-    // (down) toggle bottom panel
-    "key": "ctrl+alt+j",
-    "command": "ctrl+alt+j de38",
-    // "command": "workbench.action.focusPanel",
-    "when": "config.altKey.enabled && panelPosition == 'bottom' && panelVisible"
-  },
-  {
-    // (down) toggle bottom panel
-    "key": "ctrl+alt+j",
-    "command": "ctrl+alt+j 8c48",
-    // "command": "workbench.action.togglePanel",
-    "when": "config.altKey.enabled && panelPosition == 'bottom' && panelFocus && panelVisible"
+    // (up)
+    "key": "ctrl+alt+k",
+    "command": "breadcrumbs.focusAndSelect",
+    // "command": "ctrl+alt+k 7ba3",
+    "when": "panelPosition == 'bottom' && textInputFocus && config.altKey.enabled"
   },
   {
     // (up)
     "key": "ctrl+alt+k",
     "command": "workbench.action.focusActiveEditorGroup",
     // "command": "ctrl+alt+k 2ba8",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (up)
-    "key": "ctrl+alt+k",
-    "command": "ctrl+alt+k 9a08",
-    // "command": "cursorPageUp",
-    "when": "textInputFocus && config.altKey.enabled"
+    "when": "panelPosition == 'bottom' && panelFocus && panelVisible && config.altKey.enabled"
   },
   {
     // (right) toggle secondary sidebar
     "key": "ctrl+alt+l",
     "command": "workbench.action.toggleAuxiliaryBar",
     // "command": "ctrl+alt+l ae58",
-    "when": "config.workbench.sideBar.location == 'left' && !auxiliaryBarVisible"
+    "when": "config.workbench.sideBar.location == 'left' && !auxiliaryBarVisible && config.altKey.enabled"
   },
   {
     // (right) focus secondary sidebar
     "key": "ctrl+alt+l",
     "command": "workbench.action.focusAuxiliaryBar",
     // "command": "ctrl+alt+l 45f7",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarVisible && config.altKey.enabled"
   },
   {
     // (right) toggle secondary sidebar
     "key": "ctrl+alt+l",
     "command": "workbench.action.toggleAuxiliaryBar",
     // "command": "ctrl+alt+l 7d75",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible && config.altKey.enabled"
   },
   {
     // (close)
@@ -1001,10 +842,16 @@ Notes:
     "when": "!auxiliaryBarFocus && !editorFocus && !panelFocus && !sideBarFocus && focusedView == '' && config.altKey.enabled && editorIsOpen"
   },
   {
-    // (up) disable neovim ctrl+k handler when not in insert mode (preserve VS Code's default ctrl+k chord behavior)
+    // (neovim) disable vscode's ctrl+f find handler (let Neovim deal with it)
+    "key": "ctrl+f",
+    "command": "-actions.find",
+    // "command": "ctrl+f 1d3e",
+    "when": "editorFocus && config.altKey.enabled && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.f && neovim.init"
+  },
+  {
+    // (neovim) disable neovim's ctrl+k handler (preserve VS Code's default ctrl+k chord behavior)
     "key": "ctrl+k",
     "command": "-vscode-neovim.send",
-    // "command": "ctrl+k 26b7",
     "when": "editorFocus && config.altKey.enabled && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init"
   },
   {
