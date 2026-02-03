@@ -1,15 +1,21 @@
 /*
-key bindings in this file override the defaults
+keyboard grammar in this User's keybindings.json file override the defaults
 
-notes:
-  * Convention: treat 'up' or 'k' or 'right' or 'l' as 'next'
-  * Convention: treat 'down' or 'j' or 'left' or 'h' as 'previous'
+Conventions: 
+  * treat 'up' or 'k' or 'right' or 'l' as 'next'
+  * treat 'down' or 'j' or 'left' or 'h' as 'previous'
+  * if there is a commented command in an object:
+    - if it is ABOVE the active command:, then it is a potential future command that i have not yet implemented
+    - if it is BELOW the active command:, then it is an old command that has been replaced but left for reference
+  * 'command not found' command: placeholders:
+    - are left in to help with debugging, sorting, and future key binding placements
+    - should contain the key and a 4-character UNIQUE identifier, i.e. 'alt+l jj4e' or 'alt+l 8df3'
+
+Notes:
+  * my primary editor is [neo]vim, so this keyboard grammar is designed to work well with and without the vscode-neovim extension
   * i try (hard) to avoid conflicts with default bindings and commoon extensions, however some conflicts are unavoidable and can be noted
-  * i'm aware i created numerous conflicts with the vs code multiple cursor feature, and will circle back to resolve them later (once I learn to use it better)
-  * my primary editor is neovim, so these keybindings are designed to work well with and without the vscode-neovim extension
-  * if there is a commented command: in an object, and it is BELOW the active command:, then it is an old command that has been replaced but left for reference
-  * if there is a commented command: in an object, and it is ABOVE the active command:, then it is a potential future command that i have not yet implemented
   * i still need to test compatibility with other extensions, particularly vim emulation extensions
+  * i'm aware of numerous conflicts with the vs code multiple cursor feature, and will circle back to resolve them later (once I learn to use it better)
 */
 [
   {
