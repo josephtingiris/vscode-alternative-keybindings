@@ -10,9 +10,8 @@ and working with the VS Code AlterNative Keybindings extension and repository to
    - [Autoscroll](#autoscroll)
    - [Window-channel format notes](#window-channel-format-notes)
 - [Active development](#active-development)
-   - [Auto-install references](#auto-install-references)
+   - [Auto-install and testing references](#auto-install-references)
 - [Packaging & local install (VSIX)](#packaging--local-install-vsix)
-- [Contributing](#contributing)
 
 ---
 
@@ -21,13 +20,13 @@ and working with the VS Code AlterNative Keybindings extension and repository to
 ### Live resolver
 
 Keyboard shortcut resolution is internal to VS Code. Use the live resolver to
-capture how VS Code resolves key events and which `when` clauses evaluated true.
+capture how VS Code resolves key events and `when` clauses.
 
 Steps:
 
-1. Open the Command Palette (Ctrl+Shift+P) and run **Developer: Toggle Keyboard Shortcuts Troubleshooting**.
+1. Open the Command Palette (`Ctrl+Shift+P`) and run **Developer: Toggle Keyboard Shortcuts Troubleshooting**.
    - This toggles logging of keyboard events and their resolution.
-2. Open the Output panel: View → Output (Ctrl+Shift+U) and choose the appropriate channel.
+2. Open the Output panel: View → Output (`Ctrl+Shift+U`) and choose the appropriate channel.
    - Preferred channels: `Log (Keybindings)` or `Log (Keybindings) - Extension` (names vary by build).
    - If only `Window` appears, select `Window` and press the keys you want to inspect; some builds route the log there.
 3. Press the keystroke(s) to inspect and watch output lines like: `Resolved -> <command id>` and `When: <when expression> = true|false`.
@@ -45,9 +44,10 @@ Some builds print keybinding logs to the `Window` channel with lines prefixed by
 
 ## Active development
 
-### Auto-install references
+<a name="auto-install-references"></a>
+### Auto-install and testing references
 
-To test changes to `references/keybindings.json` automatically (copies into a Windows user profile when applicable), use the watcher:
+Test changes to `references/keybindings.json` automatically (copies into a Windows user profile when applicable), use the watcher:
 
 ```bash
 chmod +x bin/watch-runner.sh bin/keybindings-install-references.sh
@@ -61,6 +61,8 @@ Notes on the installer: the script attempts to detect WSL vs native Windows and 
 ---
 
 ## Packaging & local install (VSIX)
+
+<a name="packaging--local-install-vsix"></a>
 
 Package and install a local VSIX for testing:
 

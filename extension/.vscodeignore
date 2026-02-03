@@ -2,7 +2,6 @@
 *.vsix
 
 # Exclude development docs from packaged VSIX
-DEVELOPMENT.md
 
 # Keep asset files out (if present)
 assets/
