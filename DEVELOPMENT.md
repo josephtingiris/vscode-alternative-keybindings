@@ -1,75 +1,98 @@
-**Development**
+## Development Guide
 
-This document captures developer-focused notes for debugging and testing.
+This document contains developer-focused notes for debugging, testing, packaging,
+and working with the VS Code AlterNative Keybindings extension and repository tools.
 
-**DEBUGGING**
+### Quick index
 
-Keyboard shortcuts can be hard to debug because resolution is internal to VS Code.
-Below are concise steps to enable the built-in troubleshooting logger and how to find
-the output when the Output panel only shows the `Window` channel.
+- Debugging keybindings
+- Interpreting logs
+- Active development (watcher for `references/keybindings.json`)
+- Packaging & installing the extension (VSIX)
+- Contributing
 
-**Keyboard Shortcuts Troubleshooting (live resolver)**
+---
 
-1. Open the Command Palette (Ctrl+Shift+P) and run: "Developer: Toggle Keyboard Shortcuts Troubleshooting".
-   - Running this command toggles logging of keyboard events and their resolution.
+## Debugging keybindings (live resolver)
 
-2. Open the Output panel: View → Output (or `Ctrl+Shift+U`).
+Keyboard shortcut resolution is internal to VS Code. Use the live resolver to
+capture how VS Code resolves key events and which `when` clauses evaluated true.
 
-3. Select the correct output channel from the dropdown in the Output panel.
-   - Preferred channel: `Log (Keybindings)` or `Log (Keybindings) - Extension` (names may vary by VS Code build).
-   - If you only see `Window` in the channel dropdown, select `Window` and then press the keystroke you want to inspect — the troubleshooting log often appears there in some builds and distributions.
-   - If the `Log (Keybindings)` channel is present but not visible in the dropdown, run the toggle command again to ensure logging started; the channel is created when logging begins.
+Steps:
 
-4. Press the keystroke(s) you want to inspect. The Output channel will show lines similar to:
+1. Open the Command Palette (Ctrl+Shift+P) and run **Developer: Toggle Keyboard Shortcuts Troubleshooting**.
+   - This toggles logging of keyboard events and their resolution.
+2. Open the Output panel: View → Output (Ctrl+Shift+U) and choose the appropriate channel.
+   - Preferred channels: `Log (Keybindings)` or `Log (Keybindings) - Extension` (names vary by build).
+   - If only `Window` appears, select `Window` and press the keys you want to inspect; some builds route the log there.
+3. Press the keystroke(s) to inspect and watch output lines like: `Resolved -> <command id>` and `When: <when expression> = true|false`.
+4. Run the toggle command again to stop logging.
 
-   - Keyboard event: `<key sequence>`
-   - Resolved -> `<command id>`  (source: `user` | `default` | `extension`)
-   - When: `<when expression>` = true|false
-   - Handled: yes|no
+### Autoscroll
 
-5. To stop logging, run "Developer: Toggle Keyboard Shortcuts Troubleshooting" again.
+Enable **Auto Scroll** in the Output panel (three-dot menu) to keep new lines visible while testing.
 
-Autoscroll
-- In the Output panel, enable the dropdown menu (three-dot) and turn on **Auto Scroll** so new log lines stay visible while you press keys.
+### Window-channel format notes
 
-Window-channel log format
-- When the Output channel is `Window` the keybinding service logs slightly differently; example lines below show the typical format found in recent VS Code builds:
+Some builds print keybinding logs to the `Window` channel with lines prefixed by `/`, `|`, `\`, `+` that indicate dispatch, conversion, match results, and invocation. Look for `matched <command>` and `source: user|default|extension`.
 
-```
-2026-01-29 17:06:46.684 [info] [Window] [KeybindingService]: / Soft dispatching keyboard event
-2026-01-29 17:06:46.684 [info] [Window] [KeybindingService]: | Resolving alt+UpArrow
-2026-01-29 17:06:46.684 [info] [Window] [KeybindingService]: \ From 13 keybinding entries, matched workbench.action.focusPreviousPart, when: config.workbench.sideBar.location == 'left', source: user.
-2026-01-29 17:06:46.684 [info] [Window] [KeybindingService]: / Received  keydown event - modifiers: [alt], code: ArrowUp, keyCode: 38, key: ArrowUp
-2026-01-29 17:06:46.684 [info] [Window] [KeybindingService]: | Converted keydown event - modifiers: [alt], code: ArrowUp, keyCode: 16 ('UpArrow')
-2026-01-29 17:06:46.684 [info] [Window] [KeybindingService]: | Resolving alt+UpArrow
-2026-01-29 17:06:46.684 [info] [Window] [KeybindingService]: \ From 13 keybinding entries, matched workbench.action.focusPreviousPart, when: config.workbench.sideBar.location == 'left', source: user.
-2026-01-29 17:06:46.684 [info] [Window] [KeybindingService]: + Invoking command workbench.action.focusPreviousPart.
-```
+---
 
-Notes on the `Window` format
-- Timestamps and a logger name (`[Window] [KeybindingService]`) prefix each line.
-- The lines beginning with `/`, `|`, `\`, `+` are the service's visual markers for stages of resolution: dispatch, conversion, match results, and invocation.
-- Look for `matched <command>` and `source: user|default|extension` to identify which keybinding fired and where it came from.
+## Active development: auto-install references
 
-Tips and alternatives
-- If you prefer a persistent copy of the log, open the Output panel, select the channel, press `Ctrl+A` then `Ctrl+C` and paste into a file.
-- If the Output channel remains empty, try restarting VS Code and re-running the toggle command.
-- As a last resort, open the Developer Tools console (Help → Toggle Developer Tools) and check the Console for related messages; however, the recommended place for keybinding resolution is the Output panel's logging channel.
-
-**Active development: auto-install references**
-
-- To actively edit `references/keybindings.json` and have changes automatically installed into your Windows 11 user keybindings, run the watcher in a second shell:
+To test changes to `references/keybindings.json` automatically (copies into a Windows user profile when applicable), use the watcher:
 
 ```bash
 chmod +x bin/watch-runner.sh bin/keybindings-install-references.sh
 ./bin/watch-runner.sh references/keybindings.json bin/keybindings-install-references.sh
 ```
 
-The watcher is quiet while waiting. Each time the file changes it prints a delimiter with an ISO UTC timestamp and then runs `bin/keybindings-install-references.sh`, which copies the file into the Windows user profile (the installer detects WSL vs native Windows paths). Stop the watcher with Ctrl+C or `pkill -f watch-runner.sh`.
+The watcher runs quietly and executes the installer script on file changes. Stop it with Ctrl+C or `pkill -f watch-runner.sh`.
 
-How to interpret the log
-- "Source: user" indicates the binding comes from the user's `keybindings.json`.
-- When expressions evaluate to `true` means the binding was eligible when the keystroke occurred.
-- "Handled: yes" means the event was consumed and the command executed.
+Notes on the installer: the script attempts to detect WSL vs native Windows and copy the file into the proper user keybindings location.
 
-If you'd like, I can add a short script to parse the copied output and summarize matches by command or source.
+---
+
+## Packaging & local install (VSIX)
+
+Package and install a local VSIX for testing:
+
+1. Install `vsce` (if required):
+
+```bash
+npm install -g @vscode/vsce
+```
+
+2. From the repo root, package the extension into `extension/dist`:
+
+```bash
+cd extension
+mkdir -p dist
+vsce package --allow-missing-repository --out dist/
+```
+
+3. Install the produced VSIX:
+
+```bash
+code --install-extension dist/vscode-alternative-keybindings-<version>.vsix
+```
+
+To force an overwrite during testing:
+
+```bash
+code --install-extension --force dist/vscode-alternative-keybindings-<version>.vsix
+```
+
+Make sure to bump `extension/package.json` `version` before packaging when creating upgrades.
+
+Exclude development docs and other files from the packaged VSIX using `extension/.vscodeignore`.
+
+---
+
+## Contributing
+
+- Open issues and pull requests on the repository.
+- Follow any contribution guidelines in `CONTRIBUTING.md` if present.
+- Use the `bin/` helper scripts for packaging, testing, and repetitive tasks.
+
+---
