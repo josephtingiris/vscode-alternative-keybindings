@@ -26,7 +26,7 @@ All project-related strings (repositories, packages, display names) must satisfy
 | **Nickname** | `alt-key` | used for CLI or commands. |
 
 ## 3. Searchability Objectives
-- **Exact Match:** `VS Code Alternative keybindings`
+- **Exact Match:** `VS Code Alternative Keybindings`
 - **Modifier Match:** `alternative keybindings`
 - **Short Match:** `alt-key`
 - **Phonetic Match:** `AlterNative`
