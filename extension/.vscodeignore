@@ -4,7 +4,10 @@
 # Exclude development docs from packaged VSIX
 DEVELOPMENT.md
 
-# Keep dist out out (if present)
+# Keep asset files out (if present)
+assets/
+
+# Keep dist files out (if present)
 dist/
 
 # Keep node_modules out (if present)
