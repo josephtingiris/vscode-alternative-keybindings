@@ -13,10 +13,34 @@ notes:
 */
 [
   {
+    "key": "alt+'",
+    "command": "cursorEnd",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+,",
+    "command": "workbench.action.navigateBack"
+  },
+
+  {
     // (-) split editor horizontally when in editor
     "key": "alt+-",
     "command": "workbench.action.splitEditorDown",
     "when": "editorFocus"
+  },
+  {
+    "key": "alt+.",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "alt+/",
+    "command": "editor.action.previousMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+;",
+    "command": "cursorHome",
+    "when": "textInputFocus"
   },
   {
     // (=) split editor vertically (editorFocus)
@@ -31,6 +55,22 @@ notes:
     "when": "panelFocus && terminalFocus"
   },
   {
+    "key": "alt+[",
+    "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine"
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+]",
+    "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine"
+    },
+    "when": "textInputFocus"
+  },
+  {
     // (a z) toggle zen mode
     "key": "alt+a z",
     "command": "workbench.action.toggleZenMode"
@@ -40,6 +80,11 @@ notes:
     "key": "alt+a z",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "panelFocus"
+  },
+  {
+    "key": "alt+b",
+    "command": "cursorWordStartLeft",
+    "when": "textInputFocus"
   },
   {
     // (a alt+d) [debug] inspect context keys
@@ -56,6 +101,11 @@ notes:
     "key": "alt+down",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "alt+down",
+    "command": "cursorPageDown",
+    "when": "textInputFocus"
   },
   {
     // (down) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
@@ -160,6 +210,11 @@ notes:
   },
   {
     "key": "alt+h",
+    "command": "cursorLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+h",
     "command": "workbench.action.previousEditor",
     "when": "activeEditor =~ '/^workbench.editor.settings/' && editorFocus"
   },
@@ -201,6 +256,16 @@ notes:
     "key": "alt+j",
     "command": "workbench.action.focusPreviousPart",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+j",
+    "command": "cursorDown",
+    "when": "textInputFocus"
   },
   {
     // (down) [default] when panel is positioned and focused on the bottom then do not go down any further
@@ -318,6 +383,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    "key": "alt+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+k",
+    "command": "cursorUp",
+    "when": "textInputFocus"
+  },
+  {
     // (up) [default] when panel is positioned on the bottom and the editor is focused then do not go up any further
     "key": "alt+k",
     "command": "noop",
@@ -365,6 +440,11 @@ notes:
     "key": "alt+l",
     "command": "workbench.action.nextPanelView",
     "when": "panelFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "cursorRight",
+    "when": "textInputFocus"
   },
   {
     // (right) unknown
@@ -531,6 +611,16 @@ notes:
     "when": "config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
+    "key": "alt+m",
+    "command": "editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+n",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
     // (right) when the primary sidebar is on the left then focus next part
     "key": "alt+right",
     "command": "workbench.action.focusNextPart",
@@ -587,10 +677,35 @@ notes:
     "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
+    "key": "alt+s alt+l",
+    "command": "expandLineSelection",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+s alt+m",
+    "command": "editor.action.selectToBracket",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+s alt+o",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+s shift+alt+o",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorFocus"
+  },
+  {
     // (up) when the primary sidebar is on the left then focus next part
     "key": "alt+up",
     "command": "workbench.action.focusNextPart",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "alt+up",
+    "command": "cursorPageUp",
+    "when": "textInputFocus"
   },
   {
     // (up) when a panel is visible and focus is in the last editor group then focus the last editor group
@@ -609,6 +724,67 @@ notes:
     "key": "alt+up",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "panelPosition == 'bottom' && panelFocus && editorIsOpen"
+  },
+  {
+    "key": "alt+v alt+a",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "alt+v alt+c",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+  {
+    "key": "alt+v alt+d",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "alt+v alt+e",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "alt+v alt+f",
+    "command": "workbench.action.toggleFullScreen"
+  },
+  {
+    "key": "alt+v alt+i",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "alt+v alt+m",
+    "command": "editor.action.toggleMinimap"
+  },
+  {
+    "key": "alt+v alt+s",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "alt+v alt+t",
+    "command": "workbench.action.toggleTabsVisibility"
+  },
+  {
+    "key": "alt+w",
+    "command": "cursorWordStartRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+alt+j",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+alt+k",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+alt+l",
+    "command": "removeSecondaryCursors",
+    "when": "textInputFocus && editorHasMultipleSelections"
+  },
+  {
+    "key": "cmd+m",
+    "command": "editor.action.jumpToBracket",
+    "when": "editorTextFocus"
   },
   {
     // (a z) toggle maximize editor group when editorFocus
@@ -653,6 +829,11 @@ notes:
     "when": "config.workbench.sideBar.location == 'left'"
   },
   {
+    "key": "ctrl+alt+h",
+    "command": "cursorWordPartLeft",
+    "when": "textInputFocus"
+  },
+  {
     // (left)
     "key": "ctrl+alt+h",
     "command": "workbench.action.focusSideBar",
@@ -669,6 +850,11 @@ notes:
     "key": "ctrl+alt+j",
     "command": "workbench.action.togglePanel",
     "when": "panelPosition == 'bottom'"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "cursorPageDown",
+    "when": "textInputFocus"
   },
   {
     // (down) toggle bottom panel
@@ -688,10 +874,20 @@ notes:
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
+    "key": "ctrl+alt+k",
+    "command": "cursorPageUp",
+    "when": "textInputFocus"
+  },
+  {
     // (right) toggle secondary sidebar
     "key": "ctrl+alt+l",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left'"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "cursorWordPartRight",
+    "when": "textInputFocus"
   },
   {
     // (right) focus secondary sidebar
@@ -763,6 +959,16 @@ notes:
     "when": "editorFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init"
   },
   {
+    "key": "ctrl+shift+alt+h",
+    "command": "cursorWordPartLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+l",
+    "command": "cursorWordPartRightSelect",
+    "when": "textInputFocus"
+  },
+  {
     // (backspace) go to html/xml tag open/close match
     "key": "ctrl+shift+backspace",
     "command": "editor.emmet.action.matchTag"
@@ -789,5 +995,73 @@ notes:
     "key": "f9",
     "command": "altKey.enabled && config.altKey.wrap",
     "when": "config.altKey.enabled && config.altKey.wrap"
+  },
+  {
+    "key": "shift+alt+'",
+    "command": "cursorEndSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+;",
+    "command": "cursorHomeSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+[",
+    "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine",
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+]",
+    "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine",
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+b",
+    "command": "cursorWordStartLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "cursorLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "cursorDownSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "cursorUpSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "cursorRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+n",
+    "command": "editor.action.previousMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+s shift+alt+o",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+w",
+    "command": "cursorWordStartRightSelect",
+    "when": "textInputFocus"
   }
 ]
