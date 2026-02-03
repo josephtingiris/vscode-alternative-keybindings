@@ -1,10 +1,12 @@
 # VS Code AlterNative Keybindings
 
-VS Code AlterNative Keybindings is a collection of an extension, developer tooling,
-and utilities that provide alt+arrow and alt+hjkl directional navigation across
+VS Code AlterNative Keybindings is an extension and developer tooling
+that provide an opinionated keyboard grammar focused on speed running
+the Workbench UI.  Among many intuitively placed keyboard actions, at its 
+core it features alt+arrow and alt+hjkl directional navigation among
 the VS Code Workbench UI components (editor groups, side bars, panel, and terminals).
 
-This repository contains the user-facing extension plus supporting scripts,
+This git repository contains the user-facing extension plus supporting scripts,
 development notes, and examples for contributors and advanced users.
 
 **Quick links**
