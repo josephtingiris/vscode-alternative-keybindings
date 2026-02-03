@@ -31,7 +31,7 @@ Notes:
     "command": "-noop",
     // "command": "alt+, 2b70",
     // "command": "workbench.action.navigateBack",
-    "when" : "config.altKey.enabled"
+    "when": "config.altKey.enabled"
   },
   {
     // (split) [horizontal]
@@ -50,7 +50,7 @@ Notes:
     "key": "alt+.",
     "command": "alt+. 00ba",
     // "command": "workbench.action.navigateForward",
-    "when" : "config.altKey.enabled"
+    "when": "config.altKey.enabled"
   },
   {
     "key": "alt+/",
@@ -99,147 +99,38 @@ Notes:
     "when": "textInputFocus && config.altKey.enabled"
   },
   {
-    // (a z) toggle zen mode
+    // (zoom) toggle maximized editor (zen mode)
     "key": "alt+a z",
+    "command": "workbench.action.toggleZenMode",
     // "command": "alt+a z b818",
-    "command": "workbench.action.toggleZenMode"
+    "when": "config.altKey.enabled"
   },
   {
-    // (a z) toggle maximized panel (panelFocus)
+    // (zoom) toggle maximized panel
     "key": "alt+a z",
-    // "command": "alt+a z ceb1",
     "command": "workbench.action.toggleMaximizedPanel",
-    "when": "panelFocus"
+    // "command": "alt+a z ceb1",
+    "when": "panelFocus && config.altKey.enabled"
   },
   {
     "key": "alt+b",
-    // "command": "alt+b d564",
-    "command": "cursorWordStartLeft",
-    "when": "textInputFocus"
+    "command": "alt+b d564",
+    // "command": "cursorWordStartLeft",
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
-    // (a alt+d) [debug] inspect context keys
+    // (debug) inspect context keys
     "key": "alt+d alt+i",
+    "command": "workbench.action.inspectContextKeys",
     // "command": "alt+d alt+i e219",
-    "command": "workbench.action.inspectContextKeys"
+    "when": "config.altKey.enabled"
   },
   {
-    // (a alt+k) [debug] toggle keybinding logging to the debug console
+    // (debug) toggle keybinding logging
     "key": "alt+d alt+k",
+    "command": "workbench.action.toggleKeybindingsLog",
     // "command": "alt+d alt+k 0127",
-    "command": "workbench.action.toggleKeybindingsLog"
-  },
-  {
-    // (down) when the primary sidebar is on the left then focus previous part [default]
-    "key": "alt+down",
-    // "command": "alt+down 1874",
-    "command": "workbench.action.focusPreviousPart",
-    "when": "config.workbench.sideBar.location == 'left'"
-  },
-  {
-    "key": "alt+down",
-    // "command": "alt+down acce",
-    "command": "cursorPageDown",
-    "when": "textInputFocus"
-  },
-  {
-    // (down) when the primary sidebar is on the left and focus is in the secondary sidebar then go to the primary sidebar
-    "key": "alt+down",
-    // "command": "alt+down d1d7",
-    "command": "workbench.action.focusSideBar",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
-  },
-  {
-    // (down) [top left] focus previous editor (first in group) (editorFocus)
-    "key": "alt+down",
-    // "command": "alt+down 1dda",
-    "command": "alt+down editor.focus.down 1.1 a",
-    "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    // (down) [top last] focus previous editor (last in group) (editorFocus)
-    "key": "alt+down",
-    "command": "alt+down bb79",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
-  },
-  {
-    // (down) focus previous editor (across groups) (editorFocus)
-    "key": "alt+down",
-    // "command": "alt+down e78f",
-    "command": "alt+down editor.focus.down 2 a",
-    "when": "editorFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
-  },
-  {
-    // (down) when the panel is on the bottom, the focus is in the terminal, and there are multiple terminals then focus the previous terminal pane
-    "key": "alt+down",
-    // "command": "alt+down e592",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
-  },
-  {
-    // (down) focus previous editor (last in group, multiple groups) (editorFocus)
-    "key": "alt+down",
-    // "command": "alt+down bf64",
-    "command": "editor.focus.down 1.3 a",
-    // "command": "alt+down 54c5",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
-  },
-  {
-    // (down) focus previous editor (group last) (editorFocus)
-    "key": "alt+down",
-    // "command": "alt+down ff12",
-    "command": "editor.focus.down 3 a",
-    // "command": "alt+down 2d9f",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "editorFocus && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
-  },
-  {
-    // (down) focus previous editor (across groups, first in group) (editorFocus)
-    "key": "alt+down",
-    // "command": "alt+down da9b",
-    "command": "editor.focus.down 2.1 a",
-    // "command": "alt+down 6e28",
-    // "command": "workbench.action.focusBelowGroup",
-    "when": "editorFocus && activeEditorGroupIndex > 1 && activeEditorIsFirstInGroup && multipleEditorGroups"
-  },
-  {
-    // (down) focus previous editor (across groups, last in group) (editorFocus)
-    "key": "alt+down",
-    // "command": "alt+down 8190",
-    "command": "editor.focus.down 2.1 a",
-    "when": "editorFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
-  },
-  {
-    // (down) [single row]
-    "key": "alt+down",
-    // "command": "alt+down 4080",
-    "command": "workbench.action.focusPanel",
-    "when": "panelPosition == 'bottom' && editorFocus && panelVisible && !multipleEditorGroups"
-  },
-  {
-    // (down) focus previous editor or panel (panelVisible) (editorFocus)
-    "key": "alt+down",
-    // "command": "alt+down 7899",
-    "command": "editor.focus.down 4 a",
-    // "command": "alt+down 5794",
-    // "command": "workbench.action.focusPanel",
-    "when": "editorFocus && panelVisible && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
-  },
-  {
-    // (down) [top left]
-    "key": "alt+down",
-    // "command": "alt+down 13c1",
-    "command": "workbench.action.focusPanel",
-    "when": "panelPosition == 'bottom' && panelVisible && !multipleEditorGroups && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    // (down) [top left]
-    "key": "alt+down",
-    // "command": "alt+down bd93",
-    "command": "workbench.action.focusPanel",
-    "when": "panelPosition == 'bottom' && editorFocus && panelVisible && !multipleEditorGroups && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "when": "config.altKey.enabled"
   },
   {
     // (left) when the primary sidebar is on the left then focus previous part
@@ -984,27 +875,6 @@ Notes:
     // "command": "ctrl+alt+] c878",
     "command": "editor.unfoldAll",
     "when": "config.workbench.sideBar.location == 'left' && editorFocus"
-  },
-  {
-    // (down) toggle bottom panel
-    "key": "ctrl+alt+down",
-    // "command": "ctrl+alt+down 2a7f",
-    "command": "workbench.action.togglePanel",
-    "when": "panelPosition == 'bottom'"
-  },
-  {
-    // (down) toggle bottom panel
-    "key": "ctrl+alt+down",
-    // "command": "ctrl+alt+down 58d1",
-    "command": "workbench.action.focusPanel",
-    "when": "panelPosition == 'bottom' && panelVisible"
-  },
-  {
-    // (down) toggle bottom panel
-    "key": "ctrl+alt+down",
-    // "command": "ctrl+alt+down 48b7",
-    "command": "workbench.action.togglePanel",
-    "when": "panelPosition == 'bottom' && panelFocus && panelVisible"
   },
   {
     // (left) toggle left primary sidebar
