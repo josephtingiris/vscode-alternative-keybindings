@@ -21,14 +21,14 @@ Notes:
 [
   {
     "key": "alt+'",
-    "command": "-noop",
+    "command": "noop",
     // "command": "alt+' 2310",
     // "command": "cursorEnd",
     "when": "textInputFocus && config.altKey.enabled"
   },
   {
     "key": "alt+,",
-    "command": "-noop",
+    "command": "noop",
     // "command": "alt+, 2b70",
     // "command": "workbench.action.navigateBack",
     "when": "config.altKey.enabled"
@@ -56,7 +56,7 @@ Notes:
     "key": "alt+/",
     "command": "alt+/ e9b2",
     // "command": "editor.action.previousMatchFindAction",
-    "when": "editorFocus && config.altKey.enabled"
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
     "key": "alt+;",
@@ -133,44 +133,45 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
-    // (left) when the primary sidebar is on the left then focus previous part
+    // (left)
     "key": "alt+h",
-    // "command": "alt+h 9e21",
-    "command": "workbench.action.focusPreviousPart",
-    "when": "config.workbench.sideBar.location == 'left'"
+    //"command": "noop",
+    "command": "alt+h 873e",
+    "when": "config.altKey.enabled"
   },
   {
-    // (left) when editor is focused then go to previous editor
+    // (left)
     "key": "alt+h",
-    // "command": "alt+h 080e",
-    "command": "workbench.action.previousEditor 1",
-    "when": "editorFocus"
+    // "command": "workbench.action.focusPreviousPart",
+    "command": "alt+h 9e21",
+    "when": "config.workbench.sideBar.location == 'left' && config.altKey.enabled"
   },
   {
-    // (left) in panel
+    // (left)
     "key": "alt+h",
-    // "command": "alt+h 8d95",
-    "command": "alt+h workbench.action.previousPanelView 1",
-    "when": "panelFocus"
+    "command": "alt+h 8d95",
+    "when": "panelFocus && config.altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+h",
-    // "command": "alt+h 5efd",
-    "command": "cursorLeft",
-    "when": "textInputFocus"
+    "command": "alt+h 080e",
+    // "command": "cursorLeft",
+    "when": "textInputFocus && config.altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+h",
-    // "command": "alt+h d8fd",
     "command": "workbench.action.previousEditor",
-    "when": "activeEditor =~ '/^workbench.editor.settings/' && editorFocus"
+    // "command": "alt+h d8fd",
+    "when": "activeEditor =~ '/^workbench.editor.settings/' && textInputFocus && config.altKey.enabled"
   },
   {
-    // (left) when the primary sidebar is on the left and focus is in the secondary sidebar then focus the active editor
+    // (left)
     "key": "alt+h",
-    // "command": "alt+h 30e1",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
+    "command": "alt+h 30e1",
+    // "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && config.altKey.enabled"
   },
   {
     // (left) when the primary sidebar is on the left, the focus is in the primary sidebar, and the secondary sidebar is visible then go to the secondary sidebar
@@ -178,6 +179,13 @@ Notes:
     // "command": "alt+h 6317",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (left)
+    "key": "alt+h",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+h 43ad",
+    "when": "config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible && config.altKey.enabled"
   },
   {
     // (left) when the primary sidebar is on the left, the Problems panel is focused, and the primary sidebar is visible then go to the primary sidebar
