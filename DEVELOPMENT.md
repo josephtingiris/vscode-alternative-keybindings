@@ -3,17 +3,22 @@
 This document contains developer-focused notes for debugging, testing, packaging,
 and working with the VS Code AlterNative Keybindings extension and repository tools.
 
-### Quick index
+### Table of Contents
 
-- Debugging keybindings
-- Interpreting logs
-- Active development (watcher for `references/keybindings.json`)
-- Packaging & installing the extension (VSIX)
-- Contributing
+- [Debugging keybindings](#debugging-keybindings)
+   - [Live resolver](#live-resolver)
+   - [Autoscroll](#autoscroll)
+   - [Window-channel format notes](#window-channel-format-notes)
+- [Active development](#active-development)
+   - [Auto-install references](#auto-install-references)
+- [Packaging & local install (VSIX)](#packaging--local-install-vsix)
+- [Contributing](#contributing)
 
 ---
 
-## Debugging keybindings (live resolver)
+## Debugging keybindings
+
+### Live resolver
 
 Keyboard shortcut resolution is internal to VS Code. Use the live resolver to
 capture how VS Code resolves key events and which `when` clauses evaluated true.
@@ -38,7 +43,9 @@ Some builds print keybinding logs to the `Window` channel with lines prefixed by
 
 ---
 
-## Active development: auto-install references
+## Active development
+
+### Auto-install references
 
 To test changes to `references/keybindings.json` automatically (copies into a Windows user profile when applicable), use the watcher:
 
@@ -86,13 +93,5 @@ code --install-extension --force dist/vscode-alternative-keybindings-<version>.v
 Make sure to bump `extension/package.json` `version` before packaging when creating upgrades.
 
 Exclude development docs and other files from the packaged VSIX using `extension/.vscodeignore`.
-
----
-
-## Contributing
-
-- Open issues and pull requests on the repository.
-- Follow any contribution guidelines in `CONTRIBUTING.md` if present.
-- Use the `bin/` helper scripts for packaging, testing, and repetitive tasks.
 
 ---
