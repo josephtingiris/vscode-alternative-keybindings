@@ -1,6 +1,5 @@
 # VS Code AlterNative Keybindings
 
-[![License](https://img.shields.io/badge/license-SEE--LICENSE-blue.svg)](LICENSE)
 VS Code AlterNative Keybindings is a collection of an extension, developer tooling,
 and utilities that provide alt+arrow and alt+hjkl directional navigation across
 the VS Code Workbench UI components (editor groups, side bars, panel, and terminals).
@@ -19,4 +18,4 @@ Contributing
 
 License
 
-- See the [LICENSE](LICENSE) file for terms.
+[![License](https://img.shields.io/badge/license-SEE--LICENSE-blue.svg)](LICENSE)
