@@ -326,13 +326,6 @@ Notes:
   {
     // (down)
     "key": "alt+j",
-    // "command": "alt+j a51d",
-    "command": "editor.focus.down 2",
-    "when": "config.altKey.enabled && config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
-  },
-  {
-    // (down)
-    "key": "alt+j",
     "command": "alt+j 3e25",
     // "command": "workbench.action.focusFirstEditorGroup",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
@@ -357,6 +350,13 @@ Notes:
     // "command": "alt+j 55e1",
     "command": "editor.focus.down 2.1",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "alt+j",
+    // "command": "alt+j a51d",
+    "command": "editor.focus.down 2",
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
   },
   {
     // (down)
@@ -600,7 +600,7 @@ Notes:
     "key": "alt+l",
     // "command": "alt+l bdf8",
     "command": "alt+l workbench.action.focusAuxiliaryBar 1 nowrap",
-    "when": "!config.altKey.wrap && config.altKey.enabled && config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
+    "when": "!config.altKey.wrap && config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     "key": "alt+m",

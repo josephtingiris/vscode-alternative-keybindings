@@ -413,10 +413,30 @@ def canonicalize_when(when_val: str) -> str:
                 sort_and_nodes(child)
             items = list(enumerate(node.children))
             items.sort(key=sort_key)
-            node.children = [it[1] for it in items]
+            # Assign sorted children and remove duplicates while preserving order
+            sorted_children = [it[1] for it in items]
+            unique: list[WhenNode] = []
+            seen = set()
+            for c in sorted_children:
+                tok = render_when_node(c)
+                if tok in seen:
+                    continue
+                seen.add(tok)
+                unique.append(c)
+            node.children = unique
         elif isinstance(node, WhenOr):
             for child in node.children:
                 sort_and_nodes(child)
+            # Remove duplicate OR operands while preserving order
+            unique: list[WhenNode] = []
+            seen = set()
+            for c in node.children:
+                tok = render_when_node(c)
+                if tok in seen:
+                    continue
+                seen.add(tok)
+                unique.append(c)
+            node.children = unique
         elif isinstance(node, WhenNot):
             sort_and_nodes(node.child)
 
