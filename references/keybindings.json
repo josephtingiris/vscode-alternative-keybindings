@@ -585,158 +585,154 @@ Notes:
   {
     // (right)
     "key": "alt+l",
-    // "command": "alt+l bdf8",
-    "command": "alt+l workbench.action.focusAuxiliaryBar 1 nowrap",
-    "when": "!config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
-  },
-  {
-    // (right)
-    "key": "alt+l",
     // "command": "alt+l f108",
     "command": "workbench.action.focusSideBar",
-    // "command": "alt+l bcfe",
-    // "command": "alt+l workbench.action.focusSideBar 1 wrap",
-    "when": "config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
+    "when": "config.altKey.enabled && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     "key": "alt+l",
     // "command": "alt+l 32e7",
     "command": "workbench.action.nextEditor",
-    // "command": "alt+l bdf9",
-    // "command": "alt+l workbench.action.nextEditor jjt3",
-    "when": "config.workbench.sideBar.location == 'left' && !auxiliaryBarFocus && !panelFocus && !sideBarFocus && !textInputFocus && focusedView == '' && editorIsOpen"
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && !auxiliaryBarFocus && !panelFocus && !sideBarFocus && !textInputFocus && focusedView == '' && editorIsOpen"
+  },
+  {
+    // (right)
+    "key": "alt+l",
+    // "command": "alt+l bdf8",
+    "command": "alt+l workbench.action.focusAuxiliaryBar 1 nowrap",
+    "when": "!config.altKey.wrap && config.altKey.enabled && config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
     "key": "alt+m",
     // "command": "alt+m 605a",
     "command": "editor.action.jumpToBracket",
-    "when": "editorTextFocus"
+    "when": "config.altKey.enabled && editorTextFocus"
   },
   {
     "key": "alt+n",
     // "command": "alt+n 318f",
     "command": "editor.action.nextMatchFindAction",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "alt+s alt+l",
     // "command": "alt+s alt+l b3d5",
     "command": "expandLineSelection",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "alt+s alt+m",
     // "command": "alt+s alt+m 696d",
     "command": "editor.action.selectToBracket",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "alt+s alt+o",
     // "command": "alt+s alt+o 8f29",
     "command": "editor.action.smartSelect.expand",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "alt+s shift+alt+o",
     // "command": "alt+s shift+alt+o 82de",
     "command": "editor.action.smartSelect.shrink",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "alt+v alt+a",
     // "command": "alt+v alt+a 69f8",
-    "command": "workbench.action.toggleActivityBarVisibility"
+    "command": "config.altKey.enabled && workbench.action.toggleActivityBarVisibility"
   },
   {
     "key": "alt+v alt+c",
     // "command": "alt+v alt+c ef60",
-    "command": "workbench.action.toggleStatusbarVisibility"
+    "command": "config.altKey.enabled && workbench.action.toggleStatusbarVisibility"
   },
   {
     "key": "alt+v alt+d",
     // "command": "alt+v alt+d 0154",
-    "command": "workbench.action.toggleZenMode"
+    "command": "config.altKey.enabled && workbench.action.toggleZenMode"
   },
   {
     "key": "alt+v alt+e",
     // "command": "alt+v alt+e 70ea",
-    "command": "workbench.action.togglePanel"
+    "command": "config.altKey.enabled && workbench.action.togglePanel"
   },
   {
     "key": "alt+v alt+f",
     // "command": "alt+v alt+f cfaf",
-    "command": "workbench.action.toggleFullScreen"
+    "command": "config.altKey.enabled && workbench.action.toggleFullScreen"
   },
   {
     "key": "alt+v alt+i",
     // "command": "alt+v alt+i 02ef",
-    "command": "workbench.action.toggleZenMode"
+    "command": "config.altKey.enabled && workbench.action.toggleZenMode"
   },
   {
     "key": "alt+v alt+m",
     // "command": "alt+v alt+m cd63",
-    "command": "editor.action.toggleMinimap"
+    "command": "config.altKey.enabled && editor.action.toggleMinimap"
   },
   {
     "key": "alt+v alt+s",
     // "command": "alt+v alt+s 522d",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "command": "config.altKey.enabled && workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "alt+v alt+t",
     // "command": "alt+v alt+t 7b8f",
-    "command": "workbench.action.toggleTabsVisibility"
+    "command": "config.altKey.enabled && workbench.action.toggleTabsVisibility"
   },
   {
     "key": "alt+w",
     // "command": "alt+w d632",
     "command": "cursorWordStartRight",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "cmd+alt+j",
     // "command": "cmd+alt+j cf6a",
     "command": "editor.action.insertCursorBelow",
-    "when": "editorTextFocus"
+    "when": "config.altKey.enabled && editorTextFocus"
   },
   {
     "key": "cmd+alt+k",
     // "command": "cmd+alt+k 8860",
     "command": "editor.action.insertCursorAbove",
-    "when": "editorTextFocus"
+    "when": "config.altKey.enabled && editorTextFocus"
   },
   {
     "key": "cmd+alt+l",
     // "command": "cmd+alt+l 6e7f",
     "command": "removeSecondaryCursors",
-    "when": "textInputFocus && editorHasMultipleSelections"
+    "when": "config.altKey.enabled && textInputFocus && editorHasMultipleSelections"
   },
   {
     "key": "cmd+m",
     // "command": "cmd+m e3ee",
     "command": "editor.action.jumpToBracket",
-    "when": "editorTextFocus"
+    "when": "config.altKey.enabled && editorTextFocus"
   },
   {
     // (a z) toggle maximize editor group when textInputFocus
     "key": "ctrl+a z",
     "command": "ctrl+a z 703e",
     // "command": "workbench.action.toggleMaximizeEditorGroup",
-    "when": "config.workbench.sideBar.location == 'left' && textInputFocus"
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus"
   },
   {
     // (left) unfold all
     "key": "ctrl+alt+[",
     // "command": "ctrl+alt+[ d981",
     "command": "editor.unfoldAll",
-    "when": "config.workbench.sideBar.location == 'left' && textInputFocus"
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus"
   },
   {
     // (right) fold all except current
     "key": "ctrl+alt+]",
     // "command": "ctrl+alt+] c878",
     "command": "editor.foldAllExcept",
-    "when": "config.workbench.sideBar.location == 'left' && textInputFocus"
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus"
   },
   {
     // (left) toggle left primary sidebar
@@ -907,7 +903,7 @@ Notes:
       "to": "prevBlankLine",
       "select": true
     },
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "shift+alt+]",
@@ -917,25 +913,25 @@ Notes:
       "to": "nextBlankLine",
       "select": true
     },
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "shift+alt+b",
     // "command": "shift+alt+b 9207",
     "command": "cursorWordStartLeftSelect",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "shift+alt+h",
     // "command": "shift+alt+h c3b9",
     "command": "cursorLeftSelect",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "shift+alt+j",
     // "command": "shift+alt+j 2d08",
     "command": "cursorDownSelect",
-    "when": "textInputFocus"
+    "when": "config.altKey.enabled && textInputFocus"
   },
   {
     "key": "shift+alt+k",
