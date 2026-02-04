@@ -342,12 +342,6 @@ def canonicalize_when(when_val: str) -> str:
         'config.workbench.sideBar.location',
         'panel.location',
         'panelPosition',
-        'view.',
-        'view.<viewId>.visible',
-        'view.container.',
-        'viewContainer.',
-        'workbench.panel.',
-        'workbench.view.',
     ]
     focus_keys = {
         'activeEditor',
@@ -362,7 +356,13 @@ def canonicalize_when(when_val: str) -> str:
         'sideBarFocus',
         'terminalFocus',
         'textInputFocus',
+        'view.',
+        'view.<viewId>.visible',
+        'view.container.',
+        'viewContainer.',
         'webviewFindWidgetVisible',
+        'workbench.panel.',
+        'workbench.view.',
     }
     visibility_keys = {
         'auxiliaryBarVisible',
