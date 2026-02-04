@@ -390,14 +390,17 @@ def canonicalize_when(when_val: str) -> str:
 
     def category_rank(text: str) -> int:
         left = left_identifier(text)
+        # Treat any `config.` key as highest precedence.
+        if left.startswith('config.'):
+            return 1
         for p in positional_prefixes:
             if left.startswith(p):
-                return 1
+                return 2
         if left in focus_keys:
-            return 2
-        if left in visibility_keys:
             return 3
-        return 4
+        if left in visibility_keys:
+            return 4
+        return 5
 
     def sort_key(idx_and_node):
         idx, node = idx_and_node
