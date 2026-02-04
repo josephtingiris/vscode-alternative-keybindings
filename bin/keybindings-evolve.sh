@@ -45,7 +45,7 @@ process_keybindings() {
     local dirname
     dirname="$(dirname "${0}")"
 
-    "${dirname}/keybindings-remove.py" command gigachad < "${file}"
+    "${dirname}/keybindings-remove.py" command example < "${file}"
 }
 
 # Main function

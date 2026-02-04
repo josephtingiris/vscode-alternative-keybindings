@@ -8,7 +8,7 @@ python3 keybindings-remove.py <attribute> <search_string> < keybindings.json
 
 Examples:
 
-python3 keybindings-remove.py _gigachad gigachad < keybindings.json > keybindings-nogigachad.json
+python3 keybindings-remove.py _example example < keybindings.json > keybindings-noexample.json
 
 Description:
 
