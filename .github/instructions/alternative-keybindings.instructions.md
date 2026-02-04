@@ -108,16 +108,7 @@ Algorithm (implementable):
 5. Idempotence: running the algorithm twice must produce the same output as running it once.
 
 Precedence categories for sorting inside an AND (higher → lower):
-1) Positional / UI placement keys: tokens that begin with any of these prefixes (sorted alphabetically using ASCII ordering, so punctuation/special characters sort before letters). These keys indicate placement or container locations in the UI and should sort before focus/visibility keys:
-  - `config.workbench.sideBar.location`
-  - `panel.location`
-  - `panelPosition`
-  - `view.`
-  - `view.<viewId>.visible`
-  - `view.container.`
-  - `viewContainer.`
-  - `workbench.panel.`
-  - `workbench.view.`
+1) Configuration keys: tokens that begin with `config.` (sorted alphabetically using ASCII ordering, so punctuation/special characters sort before letters). These keys indicate configuration preferences and should sort before focus/visibility keys.
 2) Focus-related keys: list focus-related context keys alphabetically by base key. The sorter does not special-case negation — `!` is treated as a regular character during sorting. Within this category, order tokens using case-insensitive alphabetical order of the full token.
   This list includes common editor, input, panel, sidebar, and list focus keys:
   - `activeEditor`
@@ -128,11 +119,19 @@ Precedence categories for sorting inside an AND (higher → lower):
   - `inputFocus`
   - `listFocus`
   - `notificationFocus`
+  - `panel.location`
   - `panelFocus`
+  - `panelPosition`
   - `sideBarFocus`
   - `terminalFocus`
   - `textInputFocus`
+  - `view.`
+  - `view.<viewId>.visible`
+  - `view.container.`
+  - `viewContainer.`
   - `webviewFindWidgetVisible`
+  - `workbench.panel.`
+  - `workbench.view.`
 3) Visibility-related keys: list visibility-related context keys alphabetically by base key. The sorter does not special-case negation — `!` is treated as a regular character during sorting. Within this category, order tokens using case-insensitive alphabetical order of the full token.
   - `auxiliaryBarVisible`
   - `editorVisible`
