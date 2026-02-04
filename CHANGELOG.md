@@ -8,7 +8,7 @@ The format is based on "Keep a Changelog" and uses `YYYY-mm-dd` dated headings.
 
 ### Added
 - Initial release: VS Code extension providing alt+arrow and alt+hjkl navigation across editor groups, side bars, panels, and terminals (extension/README.md, extension/).
-- Command-line tooling for keybinding maintenance and transformations (bin/keybindings-evolve, bin/keybindings-merge.py, bin/keybindings-gigachad.py, bin/keybindings-remove.py, bin/keybindings-remove-comments.py, bin/keybindings-sort.py).
+- Command-line tooling for keybinding maintenance and transformations (bin/keybindings-evolve, bin/keybindings-merge.py, bin/keybindings-remove.py, bin/keybindings-remove-comments.py, bin/keybindings-sort.py).
 - Repository-level agent and contributor guidance, project overview, and conventions (AGENTS.md, README.md).
 
 ### Documentation
