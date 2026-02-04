@@ -19,6 +19,11 @@ Notes:
   * i'm aware of numerous conflicts with the vs code multiple cursor feature, and will circle back to resolve them later (once I learn to use it better)
 */
 [
+  /*
+   *
+   * alt<key> bindings
+   *
+   */
   {
     "key": "alt+'",
     "command": "noop",
@@ -136,7 +141,7 @@ Notes:
     // (left)
     "key": "alt+h",
     //"command": "noop",
-    "command": "alt+h 873e",
+    "command": "alt+h and when? no and when! :)",
     "when": "config.altKey.enabled"
   },
   {
@@ -176,16 +181,23 @@ Notes:
   {
     // (left)
     "key": "alt+h",
-    "command": "workbench.action.focusPanel",
-    // "command": "alt+h 43ad",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
+    "command": "workbench.action.previousPanelView",
+    // "command": "alt+h c899",
+    "when": "!config.altKey.wrap && config.altKey.enabled && config.workbench.sideBar.location == 'left' && panelFocus"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "workbench.action.previousPanelView",
-    // "command": "alt+h c899",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && panelFocus && navigableContainerFocused"
+    // "command": "alt+h a8ed",
+    "when": "config.altKey.enabled && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
+  },
+  {
+    // (left)
+    "key": "alt+h",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+h 43ad",
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
   },
   {
     // (left)
@@ -202,32 +214,11 @@ Notes:
     "when": "config.altKey.enabled && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
-    // (left)
-    "key": "alt+h",
-    "command": "alt+h a8ed",
-    // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && !sideBarVisible && !navigableContainerFocused"
-  },
-  {
-    // (left)
-    "key": "alt+h",
-    "command": "alt+h c8ee",
-    // "command": "workbench.action.focusSideBar",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && focusedView != '' && panelFocus && sideBarVisible && !navigableContainerFocused"
-  },
-  {
     // (left) [top left]
     "key": "alt+h",
     "command": "workbench.action.focusSideBar",
     // "command": "alt+h cd8d",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    // (left)
-    "key": "alt+h",
-    "command": "alt+h bbed",
-    // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && !sideBarVisible && auxiliaryBarVisible && !navigableContainerFocused"
   },
   {
     "key": "alt+home",
@@ -239,7 +230,7 @@ Notes:
     // (down)
     "key": "alt+j",
     //"command": "noop",
-    "command": "alt+j 20ca",
+    "command": "alt+j and when? no and when! :)",
     "when": "config.altKey.enabled"
   },
   {
@@ -320,12 +311,6 @@ Notes:
   {
     // (down)
     "key": "alt+j",
-    "command": "alt+j 061b",
-    "when": "config.altKey.enabled && panelPosition == 'bottom' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    // (down)
-    "key": "alt+j",
     "command": "workbench.action.focusPanel",
     // "command": "alt+j 11a1",
     "when": "config.altKey.enabled && panelPosition == 'bottom' && textInputFocus && panelVisible && !multipleEditorGroups"
@@ -333,9 +318,10 @@ Notes:
   {
     // (down)
     "key": "alt+j",
-    "command": "alt+j 3e25",
+    "command": "workbench.action.focusBelowGroup",
+    // "command": "alt+j 3e25",
     // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+    "when": "config.altKey.enabled && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
   },
   {
     // (down)
@@ -354,15 +340,16 @@ Notes:
   {
     // (down)
     "key": "alt+j",
-    "command": "alt+j 55e1",
+    "command": "workbench.action.nextEditor",
+    // "command": "alt+j 55e1",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
   },
   {
     // (down)
     "key": "alt+j",
-    "command": "alt+j 64f5",
-    // "command": "workbench.action.focusPanel",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && panelVisible && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
+    "command": "workbench.action.focusBelowGroup",
+    // "command": "alt+j 061b",
+    "when": "config.altKey.enabled && panelPosition == 'bottom' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup && multipleEditorGroups"
   },
   {
     // (down)
@@ -372,50 +359,64 @@ Notes:
     "when": "config.altKey.enabled && panelPosition == 'bottom' && textInputFocus && panelVisible && !multipleEditorGroups && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
+    // (down) [last editor group]
+    "key": "alt+j",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+j 64f5",
+    "when": "config.altKey.enabled && panelPosition == 'bottom' && textInputFocus && panelVisible && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
+  },
+  {
+    "key": "alt+k",
+    //"command": "noop",
+    "command": "alt+k and when? no and when! :)",
+    "when": "config.altKey.enabled"
+  },
+  {
     // (up) when the primary sidebar is on the left then focus next part
     "key": "alt+k",
-    // "command": "alt+k 229d",
-    "command": "workbench.action.focusNextPart",
+    "command": "alt+k 229d",
+    // "command": "workbench.action.focusNextPart",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left'"
   },
   {
     "key": "alt+k",
-    // "command": "alt+k b9c4",
-    "command": "workbench.action.quickOpenSelectPrevious",
+    "command": "alt+k b9c4",
+    // "command": "workbench.action.quickOpenSelectPrevious",
     "when": "config.altKey.enabled && inQuickOpen"
   },
   {
     "key": "alt+k",
-    // "command": "alt+k 6375",
-    "command": "cursorUp",
+    "command": "alt+k 6375",
+    // "command": "cursorUp",
     "when": "config.altKey.enabled && textInputFocus"
   },
   {
-    // (up) when the primary sidebar is on the left and the panel is focused then focus the active editor
+    // (up)
     "key": "alt+k",
-    // "command": "alt+k c9e7",
     "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+k c9e7",
     "when": "config.altKey.enabled && panelPosition == 'bottom' && panelFocus"
   },
   {
-    // (up) [default] when panel is positioned on the bottom and the editor is focused then do not go up any further
+    // (up)
     "key": "alt+k",
-    // "command": "alt+k a367",
-    "command": "noop",
+    "command": "alt+k a367",
+    // "command": "noop",
     "when": "config.altKey.enabled && panelPosition == 'bottom' && textInputFocus"
   },
   {
-    // (up) when the primary sidebar is on the left and the primary sidebar is focused then go to the secondary sidebar
+    // (up)
     "key": "alt+k",
-    // "command": "alt+k 5a80",
-    "command": "workbench.action.focusAuxiliaryBar",
+    "command": "alt+k 5a80",
+    //"command": "workbench.action.focusAuxiliaryBar",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
-    // (up) when a panel is visible and focus is in the last editor group then focus the last editor group
+    // (up)
     "key": "alt+k",
+    "command": "workbench.action.focusAboveGroup",
     // "command": "alt+k 4326",
-    "command": "workbench.action.focusLastEditorGroup",
+    // "command": "workbench.action.focusLastEditorGroup",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorIsLastInGroup"
   },
   {
@@ -423,7 +424,6 @@ Notes:
     "key": "alt+l",
     // "command": "noop"
     "command": "alt+l and when? no and when! :)",
-    // "command": "alt+l f53e",
     "when": "config.altKey.enabled"
   },
   {
@@ -502,15 +502,8 @@ Notes:
   {
     // (right)
     "key": "alt+l",
-    "command": "alt+l 4884",
-    // "command": "workbench.action.openEditorAtIndex1",
-    "when": "config.AltKey.enabled && config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
-  },
-  {
-    // (right) here
-    "key": "alt+l",
-    "command": "alt+l 6ae3",
-    // "command": "workbench.action.openEditorAtIndex1",
+    "command": "workbench.action.openEditorAtIndex1",
+    // "command": "alt+l 6ae3",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
   },
   {
@@ -534,8 +527,8 @@ Notes:
   {
     // (right)
     "key": "alt+l",
+    "command": "workbench.action.nextEditor",
     // "command": "alt+l d40b",
-    "command": "alt+l workbench.action.focusAuxiliaryBar 3",
     "when": "config.workbench.sideBar.location == 'left' && textInputFocus && auxiliaryBarVisible && activeEditorGroupLast && multipleEditorGroups"
   },
   {
@@ -688,9 +681,19 @@ Notes:
     "command": "cursorWordStartRight",
     "when": "config.altKey.enabled && textInputFocus"
   },
+  /*
+   *
+   * cmd+alt<key> bindings
+   *
+   */
+  {
+    "key": "cmd+alt+'",
+    "command": "cmd+alt+' cf6a",
+    "when": "config.altKey.enabled"
+  },
   {
     "key": "cmd+alt+j",
-    // "command": "cmd+alt+j cf6a",
+    // "command": "cmd+alt+j jj31",
     "command": "editor.action.insertCursorBelow",
     "when": "config.altKey.enabled && editorTextFocus"
   },
@@ -706,11 +709,15 @@ Notes:
     "command": "removeSecondaryCursors",
     "when": "config.altKey.enabled && textInputFocus && editorHasMultipleSelections"
   },
+  /*
+   *
+   * ctrl+alt<key> bindings
+   *
+   */
   {
-    "key": "cmd+m",
-    // "command": "cmd+m e3ee",
-    "command": "editor.action.jumpToBracket",
-    "when": "config.altKey.enabled && editorTextFocus"
+    "key": "ctrl+'",
+    "command": "ctrl+' c62e",
+    "when": "config.altKey.enabled"
   },
   {
     // (a z) toggle maximize editor group when textInputFocus
@@ -718,6 +725,11 @@ Notes:
     "command": "ctrl+a z 703e",
     // "command": "workbench.action.toggleMaximizeEditorGroup",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+'",
+    "command": "ctrl+alt+' 86ba",
+    "when": "config.altKey.enabled"
   },
   {
     // (left) unfold all
@@ -837,17 +849,71 @@ Notes:
     "command": "-vscode-neovim.send",
     "when": "config.altKey.enabled && textInputFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init"
   },
+  /*
+   *
+   * ctrl+shift+alt<key> bindings
+   *
+   */
+  {
+    "key": "ctrl+shift+alt+'",
+    "command": "ctrl+shift+alt+' ea81",
+    // "command": "cursorEndSelect",
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "ctrl+shift+alt+-",
+    "command": "ctrl+shift+alt+- 83ab",
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "ctrl+shift+alt+;",
+    "command": "ctrl+shift+alt+; 3e53",
+    // "command": "cursorHomeSelect",
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "ctrl+shift+alt+=",
+    "command": "ctrl+shift+alt+= 73eb",
+    "when": "config.altKey.enabled"
+  },
+  /*
+  note: ctrl+shift+alt+arrow keys have system keybindings (mimic them?)
+  */
   {
     "key": "ctrl+shift+alt+h",
     "command": "ctrl+shift+alt+h e7f3",
     // "command": "cursorWordPartLeftSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "ctrl+shift+alt+j",
+    "command": "ctrl+shift+alt+h b35f",
+    // "command": "cursorWordPartDownSelect",
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "ctrl+shift+alt+k",
+    "command": "ctrl+shift+alt+h ae91",
+    // "command": "cursorWordPartUpSelect",
+    "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+l",
     "command": "ctrl+shift+alt+l a597",
     // "command": "cursorWordPartRightSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "ctrl+shift+alt+pagedown",
+    // "command": "-noop",
+    "command": "ctrl+shift+alt+pagedown a4b3",
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "ctrl+shift+alt+pageup",
+    // "command": "-noop",
+    "command": "ctrl+shift+alt+pageup 91bf",
+    "when": "config.altKey.enabled"
   },
   {
     // (backspace) go to html/xml tag open/close match
@@ -865,10 +931,15 @@ Notes:
   {
     // (t) open a new terminal when terminal is focused
     "key": "ctrl+shift+t",
-    // "command": "ctrl+shift+t 2520",
+    // "command": "ctrl+shift+t 7c32",
     "command": "workbench.action.terminal.new",
     "when": "config.altKey.enabled && panelFocus && terminalFocus"
   },
+  /*
+   *
+   * f key bindings
+   *
+   */
   {
     // (f8) format/indent
     "key": "f8",
@@ -882,17 +953,32 @@ Notes:
     "command": "altKey.enabled && config.altKey.wrap",
     "when": "config.altKey.enabled && config.altKey.wrap"
   },
+  /*
+   *
+   * shift+alt+<key> bindings
+   *
+   */
   {
     "key": "shift+alt+'",
     "command": "shift+alt+' 9a87",
     // "command": "cursorEndSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "shift+alt+-",
+    "command": "shift+alt+- b3u2",
+    "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+;",
     "command": "shift+alt+; f151",
     // "command": "cursorHomeSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "shift+alt+=",
+    "command": "shift+alt+= 7e41",
+    "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+[",
@@ -914,52 +1000,48 @@ Notes:
     },
     "when": "config.altKey.enabled && textInputFocus"
   },
-  {
-    "key": "shift+alt+b",
-    // "command": "shift+alt+b 9207",
-    "command": "cursorWordStartLeftSelect",
-    "when": "config.altKey.enabled && textInputFocus"
-  },
+  /*
+  note: shft+alt+arrow keys have system keybindings (mimic them?)
+  */
   {
     "key": "shift+alt+h",
-    // "command": "shift+alt+h c3b9",
-    "command": "cursorLeftSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "command": "shift+alt+h c3b9",
+    "when": "config.altKey.enabled"
+  },
+  {
+    "key": "shift+alt+home",
+    // "command": "-noop",
+    "command": "shift+alt+home 2cdf",
+    "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+j",
-    // "command": "shift+alt+j 2d08",
-    "command": "cursorDownSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "command": "shift+alt+j 2d08",
+    // "command": "cursorDownSelect",
+    "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+k",
-    // "command": "shift+alt+k ef46",
-    "command": "cursorUpSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "command": "shift+alt+k ef46",
+    // "command": "cursorUpSelect",
+    "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+l",
-    // "command": "shift+alt+l b6a2",
-    "command": "cursorRightSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "command": "shift+alt+l b6a2",
+    // "command": "cursorRightSelect",
+    "when": "config.altKey.enabled"
   },
   {
-    "key": "shift+alt+n",
-    // "command": "shift+alt+n 9e8d",
-    "command": "editor.action.previousMatchFindAction",
-    "when": "config.altKey.enabled && textInputFocus"
+    "key": "shift+alt+pagedown",
+    // "command": "-noop",
+    "command": "shift+alt+pagedown 54be",
+    "when": "config.altKey.enabled"
   },
   {
-    "key": "shift+alt+s shift+alt+o",
-    // "command": "shift+alt+s shift+alt+o b4a8",
-    "command": "editor.action.smartSelect.shrink",
-    "when": "config.altKey.enabled && textInputFocus"
-  },
-  {
-    "key": "shift+alt+w",
-    // "command": "shift+alt+w f5b4",
-    "command": "cursorWordStartRightSelect",
-    "when": "config.altKey.enabled && textInputFocus"
+    "key": "shift+alt+pageup",
+    // "command": "-noop",
+    "command": "shift+alt+pageup fe23",
+    "when": "config.altKey.enabled"
   }
 ]
