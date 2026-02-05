@@ -121,6 +121,13 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (zoom) toggle secondary side bar
+    "key": "alt+a z",
+    "command": "alt+a z ceb2",
+    // "command": "workbench.action.toggleMaximizedAuxiliaryBar",
+    "when": "config.altKey.enabled && auxiliaryBarFocus"
+  },
+  {
     // (zoom) toggle maximized panel
     "key": "alt+a z",
     "command": "workbench.action.toggleMaximizedPanel",
@@ -203,6 +210,13 @@ Notes:
   {
     // (left)
     "key": "alt+h",
+    "command": "alt+h 6318",
+    // "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && !panelVisible"
+  },
+  {
+    // (left)
+    "key": "alt+h",
     "command": "workbench.action.focusPanel",
     // "command": "alt+h 43ad",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
@@ -213,6 +227,13 @@ Notes:
     "command": "workbench.action.focusAuxiliaryBar",
     // "command": "alt+h 6317",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (left)
+    "key": "alt+h",
+    "command": "alt+h 6320",
+    // "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible && editorIsOpen"
   },
   {
     // (left)
@@ -570,8 +591,8 @@ Notes:
   {
     // (right) (wrap)
     "key": "alt+l",
-    "command": "alt+l f108",
-    // "command": "workbench.action.focusSideBar",
+    "command": "workbench.action.focusSideBar",
+    // "command": "alt+l f108",
     "when": "config.altKey.enabled && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
