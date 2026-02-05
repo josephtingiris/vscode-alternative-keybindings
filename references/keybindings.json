@@ -447,22 +447,9 @@ Notes:
   },
   {
     "key": "alt+l",
-    "command": "alt+l cc62",
-    // "command": "workbench.action.nextEditor",
-    // "command": "cursorRight",
-    "when": "config.altKey.enabled && textInputFocus"
-  },
-// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
-// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
-// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
-// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
-// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
-// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
-  {
-    // (right)
-    "key": "alt+l",
     "command": "workbench.action.nextEditor",
-    // "command": "alt+l c966",
+    // "command": "alt+l cc62",
+    // "command": "cursorRight",
     "when": "config.altKey.enabled && textInputFocus"
   },
   {
@@ -546,12 +533,6 @@ Notes:
   },
   {
     "key": "alt+l",
-    "command": "alt+l fe0b",
-    // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && !panelFocus && textInputFocus && auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
-  },
-  {
-    "key": "alt+l",
     "command": "alt+l d001",
     // "command": "workbench.action.nextPanelView",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && !textInputFocus && panelFocus && auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
@@ -574,6 +555,12 @@ Notes:
     "when": "!config.altKey.wrap && config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
   },
   {
+    "key": "alt+l",
+    "command": "alt+l fe0b",
+    // "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.altKey.enabled && config.altKey.wrap && config.workbench.sideBar.location == 'left' && !panelFocus && textInputFocus && auxiliaryBarVisible && !multipleEditorGroups && activeEditorIsLastInGroup"
+  },
+  {
     // (right)
     "key": "alt+l",
     "command": "alt+l f108",
@@ -582,9 +569,9 @@ Notes:
   },
   {
     "key": "alt+l",
-    "command": "alt+l 32e7",
-    // "command": "workbench.action.nextEditor",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && !auxiliaryBarFocus && !panelFocus && !sideBarFocus && !terminalFocus && !textInputFocus && focusedView == '' && activeEditorIsReadonly && editorIsOpen"
+    "command": "workbench.action.nextEditor",
+    // "command": "alt+l 32e7",
+    "when": "config.altKey.enabled && !auxiliaryBarFocus && !panelFocus && !sideBarFocus && !terminalFocus && !textInputFocus && activeEditor != '' && focusedView == '' && activeEditorIsReadonly && editorIsOpen"
     //"when": "config.altKey.enabled && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
     //"when": "config.altKey.enabled && activeEditor == 'workbench.editor.keybindings' && textInputFocus"
   },
@@ -764,7 +751,7 @@ Notes:
     "key": "ctrl+alt+k",
     "command": "breadcrumbs.focusAndSelect",
     // "command": "ctrl+alt+k 7ba3",
-    "when": "config.altKey.enabled && panelPosition == 'bottom' && textInputFocus"
+    "when": "config.altKey.enabled && panelPosition == 'bottom' && textInputFocus && activeEditorGroupIndex == 1"
   },
   {
     // (right)
