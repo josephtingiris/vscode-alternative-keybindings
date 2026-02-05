@@ -339,7 +339,6 @@ def canonicalize_when(when_val: str) -> str:
         return ''
 
     positional_prefixes = [
-        'config.workbench.sideBar.location',
         'panel.location',
         'panelPosition',
     ]
