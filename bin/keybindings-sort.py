@@ -93,6 +93,10 @@ def natural_key(s):
     import re
     return [int(text) if text.isdigit() else text.lower() for text in re.split(r'(\d+)', s)]
 
+def natural_key_case_sensitive(s):
+    import re
+    return [int(text) if text.isdigit() else text for text in re.split(r'(\d+)', s)]
+
 def when_specificity(when_val: str) -> Tuple[int]:
     """
     Heuristic specificity score for a when clause. Lower is broader.
@@ -387,24 +391,38 @@ def canonicalize_when(when_val: str) -> str:
             return t
         return t.split()[0]
 
-    def category_rank(text: str) -> int:
+    def _matches_entry(left: str, entry: str) -> bool:
+        if entry.endswith('.'):
+            return left.startswith(entry)
+        if '<viewId>' in entry:
+            prefix, suffix = entry.split('<viewId>', 1)
+            return left.startswith(prefix) and left.endswith(suffix)
+        return left == entry
+
+    def _is_focus(left: str) -> bool:
+        return any(_matches_entry(left, entry) for entry in focus_keys)
+
+    def _is_visibility(left: str) -> bool:
+        return any(_matches_entry(left, entry) for entry in visibility_keys)
+
+    def group_rank(text: str) -> int:
         left = left_identifier(text)
-        # Treat any `config.` key as highest precedence.
+        # Group order: config.* -> positional prefixes -> focus -> visibility -> other
         if left.startswith('config.'):
             return 1
-        for p in positional_prefixes:
-            if left.startswith(p):
-                return 2
-        if left in focus_keys:
+        if any(left.startswith(p) for p in positional_prefixes):
+            return 2
+        if _is_focus(left):
             return 3
-        if left in visibility_keys:
+        if _is_visibility(left):
             return 4
         return 5
 
     def sort_key(idx_and_node):
         idx, node = idx_and_node
         token = render_when_node(node)
-        return (category_rank(token), token.lower(), idx)
+        order_token = token[1:] if token.startswith('!') else token
+        return (group_rank(token), natural_key_case_sensitive(order_token), idx)
 
     def sort_and_nodes(node: WhenNode):
         if isinstance(node, WhenAnd):
@@ -443,6 +461,27 @@ def canonicalize_when(when_val: str) -> str:
     sort_and_nodes(ast)
     return render_when_node(ast)
 
+def sortable_when_key(when_val: str) -> str:
+    if not when_val:
+        return ''
+    canonical = canonicalize_when(when_val)
+    ast = parse_when(canonical)
+
+    def render_sort(node: WhenNode) -> str:
+        if isinstance(node, WhenLeaf):
+            return node.text
+        if isinstance(node, WhenNot):
+            return render_sort(node.child)
+        if isinstance(node, WhenAnd):
+            inner = ' && '.join([render_sort(c) for c in node.children])
+            return f'({inner})' if node.parens else inner
+        if isinstance(node, WhenOr):
+            inner = ' || '.join([render_sort(c) for c in node.children])
+            return f'({inner})' if node.parens else inner
+        return ''
+
+    return render_sort(ast)
+
 def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None) -> Tuple:
     obj_match = re.search(r'\{.*\}', obj_text, re.DOTALL)
     if not obj_match:
@@ -456,13 +495,16 @@ def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None
         when_val = str(obj.get('when', ''))
         comment_val = str(obj.get('_comment', ''))
         canonical_when = canonicalize_when(when_val)
+        sortable_when = sortable_when_key(when_val)
 
         # Build a flexible sort tuple based on primary/secondary preferences.
         keys = []
 
         def append_when():
+            # Use canonicalized when for ordering but ignore leading '!'
+            # so negation does not affect sort position. Case-sensitive.
             keys.append(when_specificity(when_val))
-            keys.append(natural_key(canonical_when))
+            keys.append(natural_key_case_sensitive(sortable_when))
 
         def append_key():
             keys.append(natural_key(key_val))
@@ -547,7 +589,9 @@ def main():
 
     primary_order = args.primary
     secondary_order = args.secondary
-    normalize_when = (primary_order == 'when' or secondary_order == 'when')
+    # Always normalize `when` clauses so sub-clauses are deduped and grouped
+    # consistently before any sorting.
+    normalize_when = True
 
     raw = sys.stdin.read()
     preamble, array_text, postamble = extract_preamble_postamble(raw)
@@ -566,10 +610,11 @@ def main():
             if when_changed:
                 comments = re.sub(r'^\s*//\s*when-sorted:.*\n', '', comments, flags=re.MULTILINE)
         key_val, when_val = extract_key_when(obj_out)
-        pair_id = (key_val, when_val)
+        canonical_when = canonicalize_when(when_val)
+        pair_id = (key_val, canonical_when)
         # Annotate if duplicate
         if pair_id in seen:
-            comments += f'// DUPLICATE key: {key_val!r} when: {when_val!r}\n'
+            comments += f'// DUPLICATE key: {key_val!r} when: {canonical_when!r}\n'
         seen.add(pair_id)
         sys.stdout.write(comments)
         idx = obj_out.rfind('}')
