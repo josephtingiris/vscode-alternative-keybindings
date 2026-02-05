@@ -499,13 +499,6 @@ Notes:
   {
     // (right)
     "key": "alt+l",
-    "command": "alt+l 2195",
-    // "command": "workbench.action.nextEditor",
-    "when": "!panelFocus && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    // (right)
-    "key": "alt+l",
     "command": "workbench.action.openEditorAtIndex1",
     // "command": "alt+l 6ae3",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
@@ -518,11 +511,18 @@ Notes:
     "when": "config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible"
   },
   {
+    // (right) [top left]
+    "key": "alt+l",
+    "command": "workbench.action.nextEditor",
+    // "command": "alt+l 2195",
+    "when": "config.altKey.enabled && !panelFocus && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+  },
+  {
     // (right)
     "key": "alt+l",
     // "command": "workbench.action.terminal.focusNextPane",
     "command": "alt+l ca60",
-    "when": "panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
+    "when": "config.altKey.enabled && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (right)
