@@ -2,7 +2,11 @@
   "name": "alt-key",
   "displayName": "AlterNative Keybindings",
   "publisher": "josephtingiris",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josephtingiris/vscode-alternative-keybindings"
+  },
   "icon": "vscode-alternative-keybindings.png",
   "license": "MIT",
   "engines": {
@@ -14,16 +18,21 @@
     "configuration": {
       "title": "AlterNative Keybindings Settings",
       "properties": {
-        "altKey.default.primarySideBar": {
-          "type": "string",
-          "enum": ["left", "right"],
-          "default": "left",
-          "description": "Preferred primary sidebar location. Use in when-clauses as config.altKey.default.primarySideBar == 'left'."
-        },
         "altKey.enabled": {
           "type": "boolean",
           "default": true,
           "description": "Enable AlterNative altKey behaviors. Access in when-clauses as config.altKey.enabled."
+        },
+        "altKey.orientation": {
+          "type": "string",
+          "enum": ["default", "left", "right"],
+          "default": "default",
+          "description": "Preferred navigation orientation ('default' uses VS Code defaults). Use in when-clauses as config.altKey.orientation == 'left'."
+        },
+        "altKey.vim": {
+          "type": "boolean",
+          "default": true,
+          "description": "Bind VIM key navigation (h, j, k, l) for UI component navigation. Use config.altKey.vim in when-clauses."
         },
         "altKey.wrap": {
           "type": "boolean",
