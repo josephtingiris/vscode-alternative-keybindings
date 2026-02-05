@@ -17,6 +17,7 @@ Notes:
   * i try (hard) to avoid conflicts with default bindings and commoon extensions, however some conflicts are unavoidable and can be noted
   * i still need to test compatibility with other extensions, particularly vim emulation extensions
   * i'm aware of numerous conflicts with the vs code multiple cursor feature, and will circle back to resolve them later (once I learn to use it better)
+  * ctrl+shift+alt+arrow keys have system keybindings (mimic them?)
 */
 [
   /*
@@ -695,15 +696,15 @@ Notes:
   {
     // (left) unfold all
     "key": "ctrl+alt+[",
-    // "command": "ctrl+alt+[ d981",
     "command": "editor.unfoldAll",
+    // "command": "ctrl+alt+[ d981",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus"
   },
   {
     // (right) fold all except current
     "key": "ctrl+alt+]",
-    // "command": "ctrl+alt+] c878",
     "command": "editor.foldAllExcept",
+    // "command": "ctrl+alt+] c878",
     "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && textInputFocus"
   },
   {
@@ -810,11 +811,6 @@ Notes:
     "command": "-vscode-neovim.send",
     "when": "config.altKey.enabled && textInputFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init"
   },
-  /*
-   *
-   * ctrl+shift+alt<key> bindings
-   *
-   */
   {
     "key": "ctrl+shift+alt+'",
     "command": "ctrl+shift+alt+' ea81",
@@ -837,9 +833,6 @@ Notes:
     "command": "ctrl+shift+alt+= 73eb",
     "when": "config.altKey.enabled"
   },
-  /*
-  note: ctrl+shift+alt+arrow keys have system keybindings (mimic them?)
-  */
   {
     "key": "ctrl+shift+alt+h",
     "command": "ctrl+shift+alt+h e7f3",
@@ -879,46 +872,37 @@ Notes:
   {
     // (backspace) go to html/xml tag open/close match
     "key": "ctrl+shift+backspace",
-    // "command": "ctrl+shift+backspace 6b42",
-    "command": "config.altKey.enabled && editor.emmet.action.matchTag"
+    "command": "ctrl+shift+backspace 6b42",
+    // "command": "editor.emmet.action.matchTag",
+    "when": "config.altKey.enabled"
   },
   {
     // (t) open native terminal when not in terminal
     "key": "ctrl+shift+t",
-    // "command": "ctrl+shift+t f641",
     "command": "workbench.action.terminal.openNativeConsole",
+    // "command": "ctrl+shift+t f641",
     "when": "config.altKey.enabled && !terminalFocus"
   },
   {
     // (t) open a new terminal when terminal is focused
     "key": "ctrl+shift+t",
-    // "command": "ctrl+shift+t 7c32",
     "command": "workbench.action.terminal.new",
+    // "command": "ctrl+shift+t 7c32",
     "when": "config.altKey.enabled && panelFocus && terminalFocus"
   },
-  /*
-   *
-   * f key bindings
-   *
-   */
   {
     // (f8) format/indent
     "key": "f8",
-    // "command": "f8 f0fb"
     "command": "editor.action.formatDocument",
+    // "command": "f8 f0fb"
     "when": "config.altKey.enabled && textInputFocus && !editorReadonly && !inCompositeEditor && editorHasDocumentFormattingProvider"
   },
   {
     "key": "f9",
-    // "command": "f9 5a61"
     "command": "altKey.enabled && config.altKey.wrap",
+    // "command": "f9 5a61"
     "when": "config.altKey.enabled && config.altKey.wrap"
   },
-  /*
-   *
-   * shift+alt+<key> bindings
-   *
-   */
   {
     "key": "shift+alt+'",
     "command": "shift+alt+' 9a87",
