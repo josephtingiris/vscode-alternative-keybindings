@@ -20,12 +20,8 @@ Notes:
   * ctrl+shift+alt+arrow keys have system keybindings (mimic them?)
 */
 [
-  /*
-   *
-   * alt<key> bindings
-   *
-   */
   {
+    // (noop)
     "key": "alt+'",
     "command": "noop",
     // "command": "alt+' 2310",
@@ -33,6 +29,7 @@ Notes:
     "when": "config.altKey.enabled && textInputFocus"
   },
   {
+    // (noop)
     "key": "alt+,",
     "command": "noop",
     // "command": "alt+, 2b70",
@@ -455,6 +452,10 @@ Notes:
     // "command": "cursorRight",
     "when": "config.altKey.enabled && textInputFocus"
   },
+// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
+// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
+// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
+// DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
 // DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
 // DUPLICATE key: 'alt+l' when: 'config.altKey.enabled && textInputFocus'
   {
