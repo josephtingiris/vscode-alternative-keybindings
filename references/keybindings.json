@@ -156,28 +156,28 @@ Notes:
   {
     // (left)
     "key": "alt+h",
+    "command": "alt+h 9e21",
+    // "command": "workbench.action.focusPreviousPart",
+    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (left)
+    "key": "alt+h",
     "command": "alt+h 9e22",
-    "when": "config.altKey.enabled && !config.altKey.wrap && config.workbench.sideBar.location == 'left'"
+    "when": "config.altKey.enabled && config.altKey.vim && !config.altKey.wrap && config.workbench.sideBar.location == 'left'"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 8d95",
-    "when": "config.altKey.enabled && config.altKey.wrap && panelFocus"
+    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && panelFocus"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 080e",
     // "command": "cursorLeft",
-    "when": "config.altKey.enabled && config.altKey.wrap && textInputFocus"
-  },
-  {
-    // (left)
-    "key": "alt+h",
-    "command": "alt+h 9e21",
-    // "command": "workbench.action.focusPreviousPart",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left'"
+    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && textInputFocus"
   },
   {
     // (left)
