@@ -1,76 +1,5 @@
 #!/usr/bin/env python3
 """
-Generate a JSON array of keybinding objects to stdout.
-
-Usage: ./bin/keybindings-model.py
-"""
-import json
-import secrets
-
-modifiers = [
-    "alt+",
-    "ctrl+",
-    "alt+meta+",
-    "ctrl+alt+",
-    "shift+alt+",
-    "ctrl+alt+meta+",
-    "ctrl+shift+alt+",
-    "shift+alt+meta+",
-    "ctrl+shift+alt+meta+",
-]
-
-keys = [
-    "-",
-    "=",
-    "[",
-    "]",
-    ";",
-    "'",
-    ",",
-    ".",
-    "a",
-    "d",
-    "h",
-    "j",
-    "k",
-    "l",
-    "end",
-    "home",
-    "pagedown",
-    "left",
-    "down",
-    "up",
-    "right",
-]
-
-vi_keys = {"h", "j", "k", "l"}
-arrow_keys = {"end", "home", "pagedown", "left", "down", "up", "right"}
-
-def make_command(key_str: str) -> str:
-    return f"{key_str} {secrets.token_hex(2)}"
-
-def when_for(key: str) -> str:
-    if key in vi_keys:
-        return "altKey.enabled && altKey.vi"
-    if key in arrow_keys:
-        return "altKey.enabled && altKey.arrows"
-    return "altKey.enabled"
-
-def main():
-    out = []
-    for k in keys:
-        for mod in modifiers:
-            key_str = f"{mod}{k}"
-            out.append({
-                "key": key_str,
-                "command": make_command(key_str),
-                "when": when_for(k),
-            })
-
-    print(json.dumps(out, indent=2))
-
-#!/usr/bin/env python3
-"""
 (C) 2026 Joseph Tingiris (joseph.tingiris@gmail.com)
 
 Generate a JSON array of keybinding objects.
@@ -145,7 +74,7 @@ ARROW_KEYS: Set[str] = {"end", "home", "pagedown", "left", "down", "up", "right"
 
 
 def make_command(key_str: str) -> str:
-    """Return a command string `"<key> <4hex>"`."""
+    """Return a command string "<key> <4hex>"."""
     return f"{key_str} {secrets.token_hex(2)}"
 
 

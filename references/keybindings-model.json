@@ -1,947 +1,947 @@
-[
-  {
+[  {
     "key": "alt+'",
-    "command": "alt+' c699",
+    "command": "alt+' 6ec6",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+,",
-    "command": "alt+, 97fd",
+    "command": "alt+, c6d9",
     "when": "altKey.enabled"
   },
+
   {
     "key": "alt+-",
-    "command": "alt+- 11a9",
+    "command": "alt+- dbb8",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+.",
-    "command": "alt+. c0cd",
+    "command": "alt+. bdfc",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+;",
-    "command": "alt+; ebf3",
+    "command": "alt+; 1c27",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+=",
-    "command": "alt+= 4ca4",
+    "command": "alt+= 5183",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+[",
-    "command": "alt+[ 8193",
+    "command": "alt+[ 79a7",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+]",
-    "command": "alt+] 85e4",
+    "command": "alt+] 6a31",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+a",
-    "command": "alt+a 22b8",
+    "command": "alt+a a1a2",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+d",
-    "command": "alt+d 33e0",
+    "command": "alt+d 4d96",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+down",
-    "command": "alt+down 226d",
+    "command": "alt+down cfd6",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+end",
-    "command": "alt+end a4ff",
+    "command": "alt+end f05d",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+h",
-    "command": "alt+h fdb4",
+    "command": "alt+h eb16",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "alt+home",
-    "command": "alt+home b13b",
+    "command": "alt+home 98d9",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+j",
-    "command": "alt+j 7afa",
+    "command": "alt+j bff3",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "alt+k",
-    "command": "alt+k 8cee",
+    "command": "alt+k e632",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "alt+l",
-    "command": "alt+l 9723",
+    "command": "alt+l a8d7",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "alt+left",
-    "command": "alt+left 17a9",
+    "command": "alt+left 84a3",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+meta+'",
-    "command": "alt+meta+' e02f",
+    "command": "alt+meta+' f657",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+,",
-    "command": "alt+meta+, 2acc",
+    "command": "alt+meta+, 7c92",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+-",
-    "command": "alt+meta+- 9e75",
+    "command": "alt+meta+- 7b2f",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+.",
-    "command": "alt+meta+. 2b65",
+    "command": "alt+meta+. 6f09",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+;",
-    "command": "alt+meta+; 425d",
+    "command": "alt+meta+; fd3a",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+=",
-    "command": "alt+meta+= 9339",
+    "command": "alt+meta+= af69",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+[",
-    "command": "alt+meta+[ d194",
+    "command": "alt+meta+[ 5f48",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+]",
-    "command": "alt+meta+] eb20",
+    "command": "alt+meta+] a52b",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+a",
-    "command": "alt+meta+a e9a0",
+    "command": "alt+meta+a a3f9",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+d",
-    "command": "alt+meta+d 8d74",
+    "command": "alt+meta+d f12d",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+down",
-    "command": "alt+meta+down 6a97",
+    "command": "alt+meta+down c53e",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+meta+end",
-    "command": "alt+meta+end 03c3",
+    "command": "alt+meta+end e47b",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+meta+h",
-    "command": "alt+meta+h 86f0",
+    "command": "alt+meta+h 438a",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "alt+meta+home",
-    "command": "alt+meta+home fd7f",
+    "command": "alt+meta+home bc75",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+meta+j",
-    "command": "alt+meta+j 49a9",
+    "command": "alt+meta+j 79fd",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "alt+meta+k",
-    "command": "alt+meta+k 0b4e",
+    "command": "alt+meta+k 5978",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "alt+meta+l",
-    "command": "alt+meta+l 69d8",
+    "command": "alt+meta+l b456",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "alt+meta+left",
-    "command": "alt+meta+left 1705",
+    "command": "alt+meta+left 6b02",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+meta+pagedown",
-    "command": "alt+meta+pagedown 4396",
+    "command": "alt+meta+pagedown d5b5",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+meta+right",
-    "command": "alt+meta+right 8984",
+    "command": "alt+meta+right da8e",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+meta+up",
-    "command": "alt+meta+up 2e8a",
+    "command": "alt+meta+up 16b0",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+pagedown",
-    "command": "alt+pagedown 8c8b",
+    "command": "alt+pagedown 02a7",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+right",
-    "command": "alt+right e414",
+    "command": "alt+right 44f6",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "alt+up",
-    "command": "alt+up ea99",
+    "command": "alt+up e0b5",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+'",
-    "command": "ctrl+' 9fc8",
+    "command": "ctrl+' 7d95",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+,",
-    "command": "ctrl+, 3a30",
+    "command": "ctrl+, 1b16",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+-",
-    "command": "ctrl+- 2de0",
+    "command": "ctrl+- 8a8a",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+.",
-    "command": "ctrl+. 639d",
+    "command": "ctrl+. 5f1f",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+;",
-    "command": "ctrl+; 6ca8",
+    "command": "ctrl+; 16b8",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+=",
-    "command": "ctrl+= 7d0f",
+    "command": "ctrl+= 1eb3",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+[",
-    "command": "ctrl+[ ea55",
+    "command": "ctrl+[ fa9f",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+]",
-    "command": "ctrl+] 0e49",
+    "command": "ctrl+] 5de8",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+a",
-    "command": "ctrl+a c15f",
+    "command": "ctrl+a 7bb0",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+'",
-    "command": "ctrl+alt+' 255b",
+    "command": "ctrl+alt+' 1e8d",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+,",
-    "command": "ctrl+alt+, 1052",
+    "command": "ctrl+alt+, 6a99",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+-",
-    "command": "ctrl+alt+- d5c0",
+    "command": "ctrl+alt+- 5155",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+.",
-    "command": "ctrl+alt+. 22cc",
+    "command": "ctrl+alt+. 1d9a",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+;",
-    "command": "ctrl+alt+; 2fe9",
+    "command": "ctrl+alt+; d392",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+=",
-    "command": "ctrl+alt+= 82a0",
+    "command": "ctrl+alt+= 9728",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+[",
-    "command": "ctrl+alt+[ 3c26",
+    "command": "ctrl+alt+[ 62e8",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+]",
-    "command": "ctrl+alt+] c226",
+    "command": "ctrl+alt+] 86cd",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+a",
-    "command": "ctrl+alt+a 03cf",
+    "command": "ctrl+alt+a 3e15",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+d",
-    "command": "ctrl+alt+d 6a85",
+    "command": "ctrl+alt+d 7775",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+down",
-    "command": "ctrl+alt+down 0a33",
+    "command": "ctrl+alt+down 6a80",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+end",
-    "command": "ctrl+alt+end 3978",
+    "command": "ctrl+alt+end 0a79",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+h",
-    "command": "ctrl+alt+h 9709",
+    "command": "ctrl+alt+h 75cc",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+alt+home",
-    "command": "ctrl+alt+home a43e",
+    "command": "ctrl+alt+home e091",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+j",
-    "command": "ctrl+alt+j ea97",
+    "command": "ctrl+alt+j 7a62",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+alt+k",
-    "command": "ctrl+alt+k 2d0e",
+    "command": "ctrl+alt+k 197a",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+alt+l",
-    "command": "ctrl+alt+l 542f",
+    "command": "ctrl+alt+l d9ee",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+alt+left",
-    "command": "ctrl+alt+left e7d4",
+    "command": "ctrl+alt+left e4eb",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+'",
-    "command": "ctrl+alt+meta+' 0f96",
+    "command": "ctrl+alt+meta+' 3e2d",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+,",
-    "command": "ctrl+alt+meta+, 18f4",
+    "command": "ctrl+alt+meta+, 7294",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+-",
-    "command": "ctrl+alt+meta+- 024d",
+    "command": "ctrl+alt+meta+- 1fbc",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+.",
-    "command": "ctrl+alt+meta+. 9756",
+    "command": "ctrl+alt+meta+. 0b45",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+;",
-    "command": "ctrl+alt+meta+; 53fc",
+    "command": "ctrl+alt+meta+; d306",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+=",
-    "command": "ctrl+alt+meta+= 100d",
+    "command": "ctrl+alt+meta+= 86c0",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+[",
-    "command": "ctrl+alt+meta+[ 5c2c",
+    "command": "ctrl+alt+meta+[ f6e8",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+]",
-    "command": "ctrl+alt+meta+] 1db3",
+    "command": "ctrl+alt+meta+] ed71",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+a",
-    "command": "ctrl+alt+meta+a d5c6",
+    "command": "ctrl+alt+meta+a 0c8d",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+d",
-    "command": "ctrl+alt+meta+d f0a1",
+    "command": "ctrl+alt+meta+d 0d53",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+down",
-    "command": "ctrl+alt+meta+down b6cd",
+    "command": "ctrl+alt+meta+down bfab",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+end",
-    "command": "ctrl+alt+meta+end beee",
+    "command": "ctrl+alt+meta+end 9df3",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+h",
-    "command": "ctrl+alt+meta+h ae78",
+    "command": "ctrl+alt+meta+h d06a",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+alt+meta+home",
-    "command": "ctrl+alt+meta+home 764d",
+    "command": "ctrl+alt+meta+home 0cba",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+j",
-    "command": "ctrl+alt+meta+j 0cef",
+    "command": "ctrl+alt+meta+j 5a34",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+alt+meta+k",
-    "command": "ctrl+alt+meta+k aa6c",
+    "command": "ctrl+alt+meta+k 70da",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+alt+meta+l",
-    "command": "ctrl+alt+meta+l a825",
+    "command": "ctrl+alt+meta+l f28c",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+alt+meta+left",
-    "command": "ctrl+alt+meta+left 597b",
+    "command": "ctrl+alt+meta+left 818f",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+pagedown",
-    "command": "ctrl+alt+meta+pagedown de97",
+    "command": "ctrl+alt+meta+pagedown b95a",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+right",
-    "command": "ctrl+alt+meta+right 347b",
+    "command": "ctrl+alt+meta+right 4c69",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+up",
-    "command": "ctrl+alt+meta+up d2be",
+    "command": "ctrl+alt+meta+up eb7b",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+pagedown",
-    "command": "ctrl+alt+pagedown 86d3",
+    "command": "ctrl+alt+pagedown 508a",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+right",
-    "command": "ctrl+alt+right e9d7",
+    "command": "ctrl+alt+right f43a",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+alt+up",
-    "command": "ctrl+alt+up 25af",
+    "command": "ctrl+alt+up 5f27",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+d",
-    "command": "ctrl+d 8a99",
+    "command": "ctrl+d a82a",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+down",
-    "command": "ctrl+down 8998",
+    "command": "ctrl+down 92ad",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+end",
-    "command": "ctrl+end 8ac9",
+    "command": "ctrl+end 70fe",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+h",
-    "command": "ctrl+h b5fe",
+    "command": "ctrl+h a387",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+home",
-    "command": "ctrl+home d7b1",
+    "command": "ctrl+home 7e36",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+j",
-    "command": "ctrl+j a504",
+    "command": "ctrl+j ab0e",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+k",
-    "command": "ctrl+k 3f5e",
+    "command": "ctrl+k 59d7",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+l",
-    "command": "ctrl+l 6947",
+    "command": "ctrl+l 9c2c",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+left",
-    "command": "ctrl+left 3f00",
+    "command": "ctrl+left 0422",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+pagedown",
-    "command": "ctrl+pagedown 5bd5",
+    "command": "ctrl+pagedown cb0b",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+right",
-    "command": "ctrl+right dbac",
+    "command": "ctrl+right 8a91",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+'",
-    "command": "ctrl+shift+alt+' 6a52",
+    "command": "ctrl+shift+alt+' 30ef",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+,",
-    "command": "ctrl+shift+alt+, ddee",
+    "command": "ctrl+shift+alt+, 2014",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+-",
-    "command": "ctrl+shift+alt+- 64f5",
+    "command": "ctrl+shift+alt+- fadc",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+.",
-    "command": "ctrl+shift+alt+. f9f7",
+    "command": "ctrl+shift+alt+. 1948",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+;",
-    "command": "ctrl+shift+alt+; 5d68",
+    "command": "ctrl+shift+alt+; 3d38",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+=",
-    "command": "ctrl+shift+alt+= 506e",
+    "command": "ctrl+shift+alt+= 70cc",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+[",
-    "command": "ctrl+shift+alt+[ 3d78",
+    "command": "ctrl+shift+alt+[ b7a8",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+]",
-    "command": "ctrl+shift+alt+] b180",
+    "command": "ctrl+shift+alt+] 11f9",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+a",
-    "command": "ctrl+shift+alt+a f4f2",
+    "command": "ctrl+shift+alt+a e0c6",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+d",
-    "command": "ctrl+shift+alt+d 455a",
+    "command": "ctrl+shift+alt+d c508",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+down",
-    "command": "ctrl+shift+alt+down 2a88",
+    "command": "ctrl+shift+alt+down 486a",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+end",
-    "command": "ctrl+shift+alt+end fb7f",
+    "command": "ctrl+shift+alt+end 551c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+h",
-    "command": "ctrl+shift+alt+h 595e",
+    "command": "ctrl+shift+alt+h 5957",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+shift+alt+home",
-    "command": "ctrl+shift+alt+home 442b",
+    "command": "ctrl+shift+alt+home deab",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+j",
-    "command": "ctrl+shift+alt+j ceba",
+    "command": "ctrl+shift+alt+j 3d5c",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+shift+alt+k",
-    "command": "ctrl+shift+alt+k 8bb9",
+    "command": "ctrl+shift+alt+k 22ea",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+shift+alt+l",
-    "command": "ctrl+shift+alt+l 0396",
+    "command": "ctrl+shift+alt+l 66b5",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+shift+alt+left",
-    "command": "ctrl+shift+alt+left 21b3",
+    "command": "ctrl+shift+alt+left c3a4",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+'",
-    "command": "ctrl+shift+alt+meta+' 3d01",
+    "command": "ctrl+shift+alt+meta+' 8c6a",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+,",
-    "command": "ctrl+shift+alt+meta+, c9f0",
+    "command": "ctrl+shift+alt+meta+, ba61",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+-",
-    "command": "ctrl+shift+alt+meta+- c9ac",
+    "command": "ctrl+shift+alt+meta+- c0c5",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+.",
-    "command": "ctrl+shift+alt+meta+. 90b4",
+    "command": "ctrl+shift+alt+meta+. aeea",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+;",
-    "command": "ctrl+shift+alt+meta+; d4c2",
+    "command": "ctrl+shift+alt+meta+; 3def",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+=",
-    "command": "ctrl+shift+alt+meta+= ddfe",
+    "command": "ctrl+shift+alt+meta+= cdda",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+[",
-    "command": "ctrl+shift+alt+meta+[ 4e97",
+    "command": "ctrl+shift+alt+meta+[ 9968",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+]",
-    "command": "ctrl+shift+alt+meta+] ab08",
+    "command": "ctrl+shift+alt+meta+] 4966",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+a",
-    "command": "ctrl+shift+alt+meta+a 5073",
+    "command": "ctrl+shift+alt+meta+a efbe",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+d",
-    "command": "ctrl+shift+alt+meta+d 01e2",
+    "command": "ctrl+shift+alt+meta+d 8a44",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+down",
-    "command": "ctrl+shift+alt+meta+down 18d3",
+    "command": "ctrl+shift+alt+meta+down bf48",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+end",
-    "command": "ctrl+shift+alt+meta+end 6e52",
+    "command": "ctrl+shift+alt+meta+end 5228",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+h",
-    "command": "ctrl+shift+alt+meta+h 5fba",
+    "command": "ctrl+shift+alt+meta+h 686e",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+shift+alt+meta+home",
-    "command": "ctrl+shift+alt+meta+home fe01",
+    "command": "ctrl+shift+alt+meta+home d5aa",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+j",
-    "command": "ctrl+shift+alt+meta+j 99fb",
+    "command": "ctrl+shift+alt+meta+j 9235",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+shift+alt+meta+k",
-    "command": "ctrl+shift+alt+meta+k 50e6",
+    "command": "ctrl+shift+alt+meta+k 17d7",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+shift+alt+meta+l",
-    "command": "ctrl+shift+alt+meta+l 092d",
+    "command": "ctrl+shift+alt+meta+l 61dc",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "ctrl+shift+alt+meta+left",
-    "command": "ctrl+shift+alt+meta+left e05a",
+    "command": "ctrl+shift+alt+meta+left 86df",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+pagedown",
-    "command": "ctrl+shift+alt+meta+pagedown 9570",
+    "command": "ctrl+shift+alt+meta+pagedown f560",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+right",
-    "command": "ctrl+shift+alt+meta+right d6b4",
+    "command": "ctrl+shift+alt+meta+right 05e6",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+up",
-    "command": "ctrl+shift+alt+meta+up f544",
+    "command": "ctrl+shift+alt+meta+up cc40",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+pagedown",
-    "command": "ctrl+shift+alt+pagedown 3214",
+    "command": "ctrl+shift+alt+pagedown 5845",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+right",
-    "command": "ctrl+shift+alt+right 9e74",
+    "command": "ctrl+shift+alt+right 4d36",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+up",
-    "command": "ctrl+shift+alt+up 69ac",
+    "command": "ctrl+shift+alt+up 2b9c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+up",
-    "command": "ctrl+up 033f",
+    "command": "ctrl+up 6584",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+'",
-    "command": "shift+alt+' 340f",
+    "command": "shift+alt+' a860",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+,",
-    "command": "shift+alt+, af05",
+    "command": "shift+alt+, f445",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+-",
-    "command": "shift+alt+- 45c0",
+    "command": "shift+alt+- bc73",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+.",
-    "command": "shift+alt+. e1cf",
+    "command": "shift+alt+. ffbb",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+;",
-    "command": "shift+alt+; af4e",
+    "command": "shift+alt+; e9b5",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+=",
-    "command": "shift+alt+= 5b6e",
+    "command": "shift+alt+= e665",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+[",
-    "command": "shift+alt+[ 9526",
+    "command": "shift+alt+[ ab21",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+]",
-    "command": "shift+alt+] 09d0",
+    "command": "shift+alt+] 1f88",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+a",
-    "command": "shift+alt+a 98ba",
+    "command": "shift+alt+a a319",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+d",
-    "command": "shift+alt+d 0fcb",
+    "command": "shift+alt+d a0a7",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+down",
-    "command": "shift+alt+down 5dc0",
+    "command": "shift+alt+down 3199",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+end",
-    "command": "shift+alt+end 1a82",
+    "command": "shift+alt+end 5801",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+h",
-    "command": "shift+alt+h ce61",
+    "command": "shift+alt+h 46ed",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "shift+alt+home",
-    "command": "shift+alt+home c35d",
+    "command": "shift+alt+home 5228",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+j",
-    "command": "shift+alt+j 65bb",
+    "command": "shift+alt+j 7ff7",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "shift+alt+k",
-    "command": "shift+alt+k 86d7",
+    "command": "shift+alt+k c3ad",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "shift+alt+l",
-    "command": "shift+alt+l 601b",
+    "command": "shift+alt+l c86b",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "shift+alt+left",
-    "command": "shift+alt+left 3e27",
+    "command": "shift+alt+left 33ee",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+meta+'",
-    "command": "shift+alt+meta+' 0e39",
+    "command": "shift+alt+meta+' 54b1",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+,",
-    "command": "shift+alt+meta+, caae",
+    "command": "shift+alt+meta+, fc9e",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+-",
-    "command": "shift+alt+meta+- 6252",
+    "command": "shift+alt+meta+- fc64",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+.",
-    "command": "shift+alt+meta+. 2915",
+    "command": "shift+alt+meta+. 403c",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+;",
-    "command": "shift+alt+meta+; 2db5",
+    "command": "shift+alt+meta+; bf1b",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+=",
-    "command": "shift+alt+meta+= 63af",
+    "command": "shift+alt+meta+= 17e9",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+[",
-    "command": "shift+alt+meta+[ aa5c",
+    "command": "shift+alt+meta+[ 7fac",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+]",
-    "command": "shift+alt+meta+] 126a",
+    "command": "shift+alt+meta+] b249",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+a",
-    "command": "shift+alt+meta+a ff88",
+    "command": "shift+alt+meta+a 9f50",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+d",
-    "command": "shift+alt+meta+d 4e20",
+    "command": "shift+alt+meta+d 705c",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+down",
-    "command": "shift+alt+meta+down 84f7",
+    "command": "shift+alt+meta+down e342",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+meta+end",
-    "command": "shift+alt+meta+end 4722",
+    "command": "shift+alt+meta+end 439e",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+meta+h",
-    "command": "shift+alt+meta+h 72b1",
+    "command": "shift+alt+meta+h 2e58",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "shift+alt+meta+home",
-    "command": "shift+alt+meta+home 88a3",
+    "command": "shift+alt+meta+home a471",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+meta+j",
-    "command": "shift+alt+meta+j 2d33",
+    "command": "shift+alt+meta+j 472c",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "shift+alt+meta+k",
-    "command": "shift+alt+meta+k 5742",
+    "command": "shift+alt+meta+k fa8c",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "shift+alt+meta+l",
-    "command": "shift+alt+meta+l 58c2",
+    "command": "shift+alt+meta+l ee5f",
     "when": "altKey.enabled && altKey.vi"
   },
   {
     "key": "shift+alt+meta+left",
-    "command": "shift+alt+meta+left a020",
+    "command": "shift+alt+meta+left ad81",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+meta+pagedown",
-    "command": "shift+alt+meta+pagedown 23a2",
+    "command": "shift+alt+meta+pagedown 4821",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+meta+right",
-    "command": "shift+alt+meta+right 52c4",
+    "command": "shift+alt+meta+right 81d7",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+meta+up",
-    "command": "shift+alt+meta+up a70c",
+    "command": "shift+alt+meta+up 07c8",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+pagedown",
-    "command": "shift+alt+pagedown 4a7f",
+    "command": "shift+alt+pagedown ea1f",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+right",
-    "command": "shift+alt+right 3063",
+    "command": "shift+alt+right 2823",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "shift+alt+up",
-    "command": "shift+alt+up 2e97",
+    "command": "shift+alt+up a9bc",
     "when": "altKey.arrows && altKey.enabled"
   }
 ]
