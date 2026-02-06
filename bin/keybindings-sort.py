@@ -40,6 +40,7 @@ import json
 import argparse
 from typing import List, Tuple
 
+
 def extract_preamble_postamble(text):
     start = text.find('[')
     end = text.rfind(']')
@@ -49,6 +50,7 @@ def extract_preamble_postamble(text):
     postamble = text[end+1:]
     array_text = text[start+1:end]  # exclude [ and ]
     return preamble, array_text, postamble
+
 
 def group_objects_with_comments(array_text: str) -> Tuple[List[Tuple[str, str]], str]:
     groups = []
@@ -76,6 +78,7 @@ def group_objects_with_comments(array_text: str) -> Tuple[List[Tuple[str, str]],
     trailing_comments = comments
     return groups, trailing_comments
 
+
 def strip_json_comments(text):
     def replacer(match):
         s = match.group(0)
@@ -85,17 +88,21 @@ def strip_json_comments(text):
     pattern = r'("(?:\\.|[^"\\])*"|//.*?$|/\*.*?\*/)'  # string or comment
     return re.sub(pattern, replacer, text, flags=re.DOTALL | re.MULTILINE)
 
+
 def strip_trailing_commas(text):
     text = re.sub(r',\s*([}\]])', r'\1', text)
     return text
+
 
 def natural_key(s):
     import re
     return [int(text) if text.isdigit() else text.lower() for text in re.split(r'(\d+)', s)]
 
+
 def natural_key_case_sensitive(s):
     import re
     return [int(text) if text.isdigit() else text for text in re.split(r'(\d+)', s)]
+
 
 def when_specificity(when_val: str) -> Tuple[int]:
     """
@@ -114,36 +121,45 @@ class WhenNode:
     def __init__(self, parens: bool = False):
         self.parens = parens
 
+
 class WhenLeaf(WhenNode):
     def __init__(self, text: str, parens: bool = False):
         super().__init__(parens=parens)
         self.text = text
+
     def to_str(self) -> str:
         return self.text
+
 
 class WhenNot(WhenNode):
     def __init__(self, child: WhenNode, parens: bool = False):
         super().__init__(parens=parens)
         self.child = child
+
     def to_str(self) -> str:
         child_str = self.child.to_str()
         if isinstance(self.child, (WhenAnd, WhenOr)) and not self.child.parens:
             child_str = f'({child_str})'
         return f'!{child_str}'
 
+
 class WhenAnd(WhenNode):
     def __init__(self, children, parens: bool = False):
         super().__init__(parens=parens)
         self.children = children
+
     def to_str(self) -> str:
         return ' && '.join([render_when_node(c) for c in self.children])
+
 
 class WhenOr(WhenNode):
     def __init__(self, children, parens: bool = False):
         super().__init__(parens=parens)
         self.children = children
+
     def to_str(self) -> str:
         return ' || '.join([render_when_node(c) for c in self.children])
+
 
 def render_when_node(node: WhenNode) -> str:
     inner = node.to_str()
@@ -151,9 +167,11 @@ def render_when_node(node: WhenNode) -> str:
         return f'({inner})'
     return inner
 
+
 def normalize_operand(text: str) -> str:
     collapsed = re.sub(r'\s+', ' ', text).strip()
     return collapsed
+
 
 def tokenize_when(expr: str):
     tokens = []
@@ -267,6 +285,7 @@ def tokenize_when(expr: str):
     flush_buf()
     return tokens
 
+
 def parse_when(expr: str) -> WhenNode:
     tokens = tokenize_when(expr)
     idx = 0
@@ -332,6 +351,7 @@ def parse_when(expr: str) -> WhenNode:
         return WhenOr(children)
 
     return parse_or()
+
 
 def canonicalize_when(when_val: str) -> str:
     """
@@ -461,6 +481,7 @@ def canonicalize_when(when_val: str) -> str:
     sort_and_nodes(ast)
     return render_when_node(ast)
 
+
 def sortable_when_key(when_val: str) -> str:
     if not when_val:
         return ''
@@ -481,6 +502,7 @@ def sortable_when_key(when_val: str) -> str:
         return ''
 
     return render_sort(ast)
+
 
 def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None) -> Tuple:
     obj_match = re.search(r'\{.*\}', obj_text, re.DOTALL)
@@ -534,6 +556,7 @@ def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None
     except Exception:
         return ([], '', '')
 
+
 def normalize_when_in_object(obj_text: str) -> Tuple[str, bool]:
     pattern = re.compile(r'("when"\s*:\s*")((?:\\.|[^"\\])*)(")')
     match = pattern.search(obj_text)
@@ -545,6 +568,7 @@ def normalize_when_in_object(obj_text: str) -> Tuple[str, bool]:
         return obj_text, False
     new_obj = obj_text[:match.start(2)] + normalized + obj_text[match.end(2):]
     return new_obj, True
+
 
 def extract_key_when(obj_text: str) -> Tuple[str, str]:
     obj_match = re.search(r'\{.*\}', obj_text, re.DOTALL)
@@ -560,6 +584,7 @@ def extract_key_when(obj_text: str) -> Tuple[str, str]:
         return (key_val, when_val)
     except Exception:
         return ('', '')
+
 
 def object_has_trailing_comma(obj_text: str) -> bool:
     lines = obj_text.rstrip().splitlines()
@@ -579,8 +604,10 @@ def object_has_trailing_comma(obj_text: str) -> bool:
                 return False
     return False
 
+
 def main():
-    parser = argparse.ArgumentParser(description='Sort VS Code keybindings.json by key/when')
+    parser = argparse.ArgumentParser(
+        description='Sort VS Code keybindings.json by key/when')
     parser.add_argument('--primary', '-p', choices=['key', 'when'], default='key',
                         help="Primary sort field: 'key' (default) or 'when')")
     parser.add_argument('--secondary', '-s', choices=['key', 'when'], default=None,
@@ -597,7 +624,8 @@ def main():
     preamble, array_text, postamble = extract_preamble_postamble(raw)
     groups, trailing_comments = group_objects_with_comments(array_text)
     # Sort by chosen primary (natural), then the other field (natural), then by _comment
-    sorted_groups = sorted(groups, key=lambda pair: extract_sort_keys(pair[1], primary=primary_order, secondary=secondary_order))
+    sorted_groups = sorted(groups, key=lambda pair: extract_sort_keys(
+        pair[1], primary=primary_order, secondary=secondary_order))
     seen = set()
     sys.stdout.write(preamble)
     sys.stdout.write('[')
@@ -608,7 +636,8 @@ def main():
         if normalize_when:
             obj_out, when_changed = normalize_when_in_object(obj_out)
             if when_changed:
-                comments = re.sub(r'^\s*//\s*when-sorted:.*\n', '', comments, flags=re.MULTILINE)
+                comments = re.sub(r'^\s*//\s*when-sorted:.*\n',
+                                  '', comments, flags=re.MULTILINE)
         key_val, when_val = extract_key_when(obj_out)
         canonical_when = canonicalize_when(when_val)
         pair_id = (key_val, canonical_when)
@@ -631,6 +660,7 @@ def main():
     sys.stdout.write(postamble)
     if not postamble.endswith('\n'):
         sys.stdout.write('\n')
+
 
 if __name__ == "__main__":
     main()
