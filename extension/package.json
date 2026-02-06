@@ -2,7 +2,7 @@
   "name": "alt-key",
   "displayName": "AlterNative Keybindings",
   "publisher": "josephtingiris",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/josephtingiris/vscode-alternative-keybindings"
@@ -57,6 +57,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enable AlterNative arrows for navigation."
+        },
+        "altKey.terminal": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AlterNative keys when focused on a terminal (disabling will pass through the navigation keys to the terminal)."
         },
         "altKey.vi": {
           "type": "boolean",
