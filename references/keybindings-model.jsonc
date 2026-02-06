@@ -1,947 +1,1154 @@
-[
-  {
+[  {
+    // (right)
     "key": "alt+'",
-    "command": "alt+' 0d89",
+    "command": "(model) alt+' 0bbb",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+,",
-    "command": "alt+, 37b4",
+    "command": "(model) alt+, 00ae",
     "when": "altKey.enabled"
   },
+
   {
     "key": "alt+-",
-    "command": "alt+- 8e28",
+    "command": "(model) alt+- f225",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "alt+.",
-    "command": "alt+. fe67",
+    "command": "(model) alt+. dc03",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+;",
-    "command": "alt+; 803a",
+    "command": "(model) alt+; f325",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+=",
-    "command": "alt+= 1237",
+    "command": "(model) alt+= eed7",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+[",
-    "command": "alt+[ 063f",
+    "command": "(model) alt+[ 2783",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "alt+]",
-    "command": "alt+] 1b5d",
+    "command": "(model) alt+] 4783",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+a",
-    "command": "alt+a a015",
+    "command": "(model) alt+a 3b07",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+d",
-    "command": "alt+d 9461",
+    "command": "(model) alt+d 7ea2",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "alt+down",
-    "command": "alt+down 0b7f",
+    "command": "(model) alt+down a932",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "alt+end",
-    "command": "alt+end 809c",
+    "command": "(model) alt+end 98d6",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "alt+h",
-    "command": "alt+h 7f8a",
+    "command": "(model) alt+h 9c94",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "alt+home",
-    "command": "alt+home b5e0",
+    "command": "(model) alt+home 5876",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "alt+j",
-    "command": "alt+j f724",
+    "command": "(model) alt+j 920d",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "alt+k",
-    "command": "alt+k 7a78",
+    "command": "(model) alt+k 9698",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "alt+l",
-    "command": "alt+l 0f92",
+    "command": "(model) alt+l 7437",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "alt+left",
-    "command": "alt+left 1f04",
+    "command": "(model) alt+left 8eb2",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (right)
     "key": "alt+meta+'",
-    "command": "alt+meta+' 6655",
+    "command": "(model) alt+meta+' 74dc",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+meta+,",
-    "command": "alt+meta+, afb2",
+    "command": "(model) alt+meta+, aa57",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+-",
-    "command": "alt+meta+- f5ab",
+    "command": "(model) alt+meta+- 4608",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "alt+meta+.",
-    "command": "alt+meta+. 749c",
+    "command": "(model) alt+meta+. f3a7",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+meta+;",
-    "command": "alt+meta+; 7b24",
+    "command": "(model) alt+meta+; 5add",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+=",
-    "command": "alt+meta+= f469",
+    "command": "(model) alt+meta+= 7eb3",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "alt+meta+[",
-    "command": "alt+meta+[ 0359",
+    "command": "(model) alt+meta+[ 363a",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "alt+meta+]",
-    "command": "alt+meta+] 0d2a",
+    "command": "(model) alt+meta+] 694c",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+a",
-    "command": "alt+meta+a 8cc5",
+    "command": "(model) alt+meta+a 121d",
     "when": "altKey.enabled"
   },
   {
     "key": "alt+meta+d",
-    "command": "alt+meta+d 0cfa",
+    "command": "(model) alt+meta+d 2b2b",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "alt+meta+down",
-    "command": "alt+meta+down 1b75",
+    "command": "(model) alt+meta+down f781",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "alt+meta+end",
-    "command": "alt+meta+end 7df9",
+    "command": "(model) alt+meta+end 59f8",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "alt+meta+h",
-    "command": "alt+meta+h 558a",
+    "command": "(model) alt+meta+h 18b8",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "alt+meta+home",
-    "command": "alt+meta+home efb3",
+    "command": "(model) alt+meta+home 5b7b",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "alt+meta+j",
-    "command": "alt+meta+j df44",
+    "command": "(model) alt+meta+j 719c",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "alt+meta+k",
-    "command": "alt+meta+k e15c",
+    "command": "(model) alt+meta+k 0588",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "alt+meta+l",
-    "command": "alt+meta+l 634e",
+    "command": "(model) alt+meta+l 6762",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "alt+meta+left",
-    "command": "alt+meta+left 021d",
+    "command": "(model) alt+meta+left f61f",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "alt+meta+pagedown",
-    "command": "alt+meta+pagedown 96c1",
+    "command": "(model) alt+meta+pagedown 0e83",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "alt+meta+pageup",
+    "command": "(model) alt+meta+pageup 3db8",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "alt+meta+right",
-    "command": "alt+meta+right 1cbd",
+    "command": "(model) alt+meta+right f7a5",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "alt+meta+up",
-    "command": "alt+meta+up 18fe",
+    "command": "(model) alt+meta+up cb8e",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "alt+pagedown",
-    "command": "alt+pagedown cf85",
+    "command": "(model) alt+pagedown 266d",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "alt+pageup",
+    "command": "(model) alt+pageup e5e7",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "alt+right",
-    "command": "alt+right 17b3",
+    "command": "(model) alt+right 8bb9",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "alt+up",
-    "command": "alt+up 0b48",
+    "command": "(model) alt+up f12c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+'",
-    "command": "ctrl+' 87ee",
+    "command": "(model) ctrl+' 0173",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+,",
-    "command": "ctrl+, c9a4",
+    "command": "(model) ctrl+, 42f3",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+-",
-    "command": "ctrl+- c018",
+    "command": "(model) ctrl+- 274d",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+.",
-    "command": "ctrl+. 24e0",
+    "command": "(model) ctrl+. e641",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+;",
-    "command": "ctrl+; fa8c",
+    "command": "(model) ctrl+; c7ea",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+=",
-    "command": "ctrl+= 4ee4",
+    "command": "(model) ctrl+= 611d",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+[",
-    "command": "ctrl+[ 898f",
+    "command": "(model) ctrl+[ fc47",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+]",
-    "command": "ctrl+] 38e6",
+    "command": "(model) ctrl+] cfcb",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+a",
-    "command": "ctrl+a 1293",
+    "command": "(model) ctrl+a efa9",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+alt+'",
-    "command": "ctrl+alt+' cd01",
+    "command": "(model) ctrl+alt+' 6813",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+alt+,",
-    "command": "ctrl+alt+, daa2",
+    "command": "(model) ctrl+alt+, c643",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+-",
-    "command": "ctrl+alt+- 63b5",
+    "command": "(model) ctrl+alt+- 1151",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+alt+.",
-    "command": "ctrl+alt+. 10c5",
+    "command": "(model) ctrl+alt+. 527d",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+alt+;",
-    "command": "ctrl+alt+; 92fd",
+    "command": "(model) ctrl+alt+; 752d",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+=",
-    "command": "ctrl+alt+= c367",
+    "command": "(model) ctrl+alt+= a48e",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+alt+[",
-    "command": "ctrl+alt+[ b61b",
+    "command": "(model) ctrl+alt+[ e649",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+alt+]",
-    "command": "ctrl+alt+] 6c2c",
+    "command": "(model) ctrl+alt+] 2749",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+a",
-    "command": "ctrl+alt+a 69ef",
+    "command": "(model) ctrl+alt+a 72a5",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+d",
-    "command": "ctrl+alt+d baa2",
+    "command": "(model) ctrl+alt+d a7dd",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+alt+down",
-    "command": "ctrl+alt+down 567a",
+    "command": "(model) ctrl+alt+down 8f9e",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "ctrl+alt+end",
-    "command": "ctrl+alt+end e503",
+    "command": "(model) ctrl+alt+end 7036",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "ctrl+alt+h",
-    "command": "ctrl+alt+h 52bc",
+    "command": "(model) ctrl+alt+h d7f0",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "ctrl+alt+home",
-    "command": "ctrl+alt+home f76f",
+    "command": "(model) ctrl+alt+home ae89",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "ctrl+alt+j",
-    "command": "ctrl+alt+j 4d12",
+    "command": "(model) ctrl+alt+j 9356",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "ctrl+alt+k",
-    "command": "ctrl+alt+k d7ef",
+    "command": "(model) ctrl+alt+k 3e29",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "ctrl+alt+l",
-    "command": "ctrl+alt+l 400c",
+    "command": "(model) ctrl+alt+l 30c2",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "ctrl+alt+left",
-    "command": "ctrl+alt+left 71f2",
+    "command": "(model) ctrl+alt+left 6e9c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+alt+meta+'",
-    "command": "ctrl+alt+meta+' 96e8",
+    "command": "(model) ctrl+alt+meta+' fcb7",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+alt+meta+,",
-    "command": "ctrl+alt+meta+, fc60",
+    "command": "(model) ctrl+alt+meta+, e8f1",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+-",
-    "command": "ctrl+alt+meta+- 363e",
+    "command": "(model) ctrl+alt+meta+- e5e0",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+alt+meta+.",
-    "command": "ctrl+alt+meta+. 9e7a",
+    "command": "(model) ctrl+alt+meta+. a0ef",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+alt+meta+;",
-    "command": "ctrl+alt+meta+; 5a02",
+    "command": "(model) ctrl+alt+meta+; f8a6",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+=",
-    "command": "ctrl+alt+meta+= 3237",
+    "command": "(model) ctrl+alt+meta+= 9df5",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+alt+meta+[",
-    "command": "ctrl+alt+meta+[ 692e",
+    "command": "(model) ctrl+alt+meta+[ 310b",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+alt+meta+]",
-    "command": "ctrl+alt+meta+] c376",
+    "command": "(model) ctrl+alt+meta+] 11d5",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+a",
-    "command": "ctrl+alt+meta+a 4878",
+    "command": "(model) ctrl+alt+meta+a 92a9",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+d",
-    "command": "ctrl+alt+meta+d cd59",
+    "command": "(model) ctrl+alt+meta+d b79d",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+alt+meta+down",
-    "command": "ctrl+alt+meta+down b597",
+    "command": "(model) ctrl+alt+meta+down e2cf",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "ctrl+alt+meta+end",
-    "command": "ctrl+alt+meta+end c12e",
+    "command": "(model) ctrl+alt+meta+end 0f7d",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "ctrl+alt+meta+h",
-    "command": "ctrl+alt+meta+h b834",
+    "command": "(model) ctrl+alt+meta+h 919f",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "ctrl+alt+meta+home",
-    "command": "ctrl+alt+meta+home dfb9",
+    "command": "(model) ctrl+alt+meta+home e4f5",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "ctrl+alt+meta+j",
-    "command": "ctrl+alt+meta+j e3ea",
+    "command": "(model) ctrl+alt+meta+j 83fc",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "ctrl+alt+meta+k",
-    "command": "ctrl+alt+meta+k b084",
+    "command": "(model) ctrl+alt+meta+k 2db1",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "ctrl+alt+meta+l",
-    "command": "ctrl+alt+meta+l 4f99",
+    "command": "(model) ctrl+alt+meta+l 09b0",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "ctrl+alt+meta+left",
-    "command": "ctrl+alt+meta+left 0533",
+    "command": "(model) ctrl+alt+meta+left 6853",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+alt+meta+pagedown",
-    "command": "ctrl+alt+meta+pagedown 3327",
+    "command": "(model) ctrl+alt+meta+pagedown 6369",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "ctrl+alt+meta+pageup",
+    "command": "(model) ctrl+alt+meta+pageup 4b27",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "ctrl+alt+meta+right",
-    "command": "ctrl+alt+meta+right 1e4b",
+    "command": "(model) ctrl+alt+meta+right e198",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "ctrl+alt+meta+up",
-    "command": "ctrl+alt+meta+up d8c1",
+    "command": "(model) ctrl+alt+meta+up 376c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+alt+pagedown",
-    "command": "ctrl+alt+pagedown 2022",
+    "command": "(model) ctrl+alt+pagedown cd26",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "ctrl+alt+pageup",
+    "command": "(model) ctrl+alt+pageup 081a",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "ctrl+alt+right",
-    "command": "ctrl+alt+right 39e1",
+    "command": "(model) ctrl+alt+right c101",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "ctrl+alt+up",
-    "command": "ctrl+alt+up 1011",
+    "command": "(model) ctrl+alt+up 229c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
     "key": "ctrl+d",
-    "command": "ctrl+d e346",
+    "command": "(model) ctrl+d 11a4",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+down",
-    "command": "ctrl+down 9773",
+    "command": "(model) ctrl+down 7bbc",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "ctrl+end",
-    "command": "ctrl+end 1441",
+    "command": "(model) ctrl+end 8bce",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "ctrl+h",
-    "command": "ctrl+h ef2f",
+    "command": "(model) ctrl+h 4c78",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "ctrl+home",
-    "command": "ctrl+home c43e",
+    "command": "(model) ctrl+home 8172",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "ctrl+j",
-    "command": "ctrl+j b24a",
+    "command": "(model) ctrl+j 44e3",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "ctrl+k",
-    "command": "ctrl+k 4874",
+    "command": "(model) ctrl+k 4f45",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "ctrl+l",
-    "command": "ctrl+l a7d0",
+    "command": "(model) ctrl+l 1965",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "ctrl+left",
-    "command": "ctrl+left 226b",
+    "command": "(model) ctrl+left f271",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+pagedown",
-    "command": "ctrl+pagedown 8c48",
+    "command": "(model) ctrl+pagedown 6578",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "ctrl+pageup",
+    "command": "(model) ctrl+pageup 303b",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "ctrl+right",
-    "command": "ctrl+right 0d49",
+    "command": "(model) ctrl+right 714c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+shift+alt+'",
-    "command": "ctrl+shift+alt+' 6171",
+    "command": "(model) ctrl+shift+alt+' fb15",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+shift+alt+,",
-    "command": "ctrl+shift+alt+, 28ac",
+    "command": "(model) ctrl+shift+alt+, 5724",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+-",
-    "command": "ctrl+shift+alt+- 0c99",
+    "command": "(model) ctrl+shift+alt+- 486b",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+shift+alt+.",
-    "command": "ctrl+shift+alt+. edf8",
+    "command": "(model) ctrl+shift+alt+. 8ab5",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+shift+alt+;",
-    "command": "ctrl+shift+alt+; 3d06",
+    "command": "(model) ctrl+shift+alt+; b6fa",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+=",
-    "command": "ctrl+shift+alt+= 0028",
+    "command": "(model) ctrl+shift+alt+= 6003",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+shift+alt+[",
-    "command": "ctrl+shift+alt+[ c40e",
+    "command": "(model) ctrl+shift+alt+[ ded3",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+shift+alt+]",
-    "command": "ctrl+shift+alt+] a940",
+    "command": "(model) ctrl+shift+alt+] 73bb",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+a",
-    "command": "ctrl+shift+alt+a d063",
+    "command": "(model) ctrl+shift+alt+a 36d3",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+d",
-    "command": "ctrl+shift+alt+d 6664",
+    "command": "(model) ctrl+shift+alt+d b8f2",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+shift+alt+down",
-    "command": "ctrl+shift+alt+down 0d5e",
+    "command": "(model) ctrl+shift+alt+down bd7c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "ctrl+shift+alt+end",
-    "command": "ctrl+shift+alt+end b974",
+    "command": "(model) ctrl+shift+alt+end 8a81",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "ctrl+shift+alt+h",
-    "command": "ctrl+shift+alt+h 4b43",
+    "command": "(model) ctrl+shift+alt+h e03d",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "ctrl+shift+alt+home",
-    "command": "ctrl+shift+alt+home d6bb",
+    "command": "(model) ctrl+shift+alt+home fa38",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "ctrl+shift+alt+j",
-    "command": "ctrl+shift+alt+j 2fb9",
+    "command": "(model) ctrl+shift+alt+j 9d33",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "ctrl+shift+alt+k",
-    "command": "ctrl+shift+alt+k 8863",
+    "command": "(model) ctrl+shift+alt+k b8ae",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "ctrl+shift+alt+l",
-    "command": "ctrl+shift+alt+l 8e01",
+    "command": "(model) ctrl+shift+alt+l 0f30",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "ctrl+shift+alt+left",
-    "command": "ctrl+shift+alt+left ee85",
+    "command": "(model) ctrl+shift+alt+left 3489",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+shift+alt+meta+'",
-    "command": "ctrl+shift+alt+meta+' 4bad",
+    "command": "(model) ctrl+shift+alt+meta+' 1332",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+shift+alt+meta+,",
-    "command": "ctrl+shift+alt+meta+, e919",
+    "command": "(model) ctrl+shift+alt+meta+, 187d",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+-",
-    "command": "ctrl+shift+alt+meta+- e1f8",
+    "command": "(model) ctrl+shift+alt+meta+- 6e58",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+shift+alt+meta+.",
-    "command": "ctrl+shift+alt+meta+. 78d7",
+    "command": "(model) ctrl+shift+alt+meta+. 156e",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+shift+alt+meta+;",
-    "command": "ctrl+shift+alt+meta+; 66d0",
+    "command": "(model) ctrl+shift+alt+meta+; be7a",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+=",
-    "command": "ctrl+shift+alt+meta+= 8826",
+    "command": "(model) ctrl+shift+alt+meta+= 753d",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "ctrl+shift+alt+meta+[",
-    "command": "ctrl+shift+alt+meta+[ 9483",
+    "command": "(model) ctrl+shift+alt+meta+[ 33cb",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "ctrl+shift+alt+meta+]",
-    "command": "ctrl+shift+alt+meta+] 50d4",
+    "command": "(model) ctrl+shift+alt+meta+] 9748",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+a",
-    "command": "ctrl+shift+alt+meta+a 43b2",
+    "command": "(model) ctrl+shift+alt+meta+a b015",
     "when": "altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+d",
-    "command": "ctrl+shift+alt+meta+d e367",
+    "command": "(model) ctrl+shift+alt+meta+d e4c0",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+shift+alt+meta+down",
-    "command": "ctrl+shift+alt+meta+down 5989",
+    "command": "(model) ctrl+shift+alt+meta+down e938",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "ctrl+shift+alt+meta+end",
-    "command": "ctrl+shift+alt+meta+end f1de",
+    "command": "(model) ctrl+shift+alt+meta+end 583c",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "ctrl+shift+alt+meta+h",
-    "command": "ctrl+shift+alt+meta+h 8148",
+    "command": "(model) ctrl+shift+alt+meta+h 245f",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "ctrl+shift+alt+meta+home",
-    "command": "ctrl+shift+alt+meta+home cf2c",
+    "command": "(model) ctrl+shift+alt+meta+home 776f",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "ctrl+shift+alt+meta+j",
-    "command": "ctrl+shift+alt+meta+j fbe0",
+    "command": "(model) ctrl+shift+alt+meta+j d78f",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "ctrl+shift+alt+meta+k",
-    "command": "ctrl+shift+alt+meta+k 7fc5",
+    "command": "(model) ctrl+shift+alt+meta+k 48fe",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "ctrl+shift+alt+meta+l",
-    "command": "ctrl+shift+alt+meta+l 8332",
+    "command": "(model) ctrl+shift+alt+meta+l 4cf0",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "ctrl+shift+alt+meta+left",
-    "command": "ctrl+shift+alt+meta+left 83fe",
+    "command": "(model) ctrl+shift+alt+meta+left 2ba4",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+shift+alt+meta+pagedown",
-    "command": "ctrl+shift+alt+meta+pagedown 125b",
+    "command": "(model) ctrl+shift+alt+meta+pagedown 1b92",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "ctrl+shift+alt+meta+pageup",
+    "command": "(model) ctrl+shift+alt+meta+pageup a158",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "ctrl+shift+alt+meta+right",
-    "command": "ctrl+shift+alt+meta+right 4ef8",
+    "command": "(model) ctrl+shift+alt+meta+right 2cab",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "ctrl+shift+alt+meta+up",
-    "command": "ctrl+shift+alt+meta+up ac55",
+    "command": "(model) ctrl+shift+alt+meta+up 19a5",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "ctrl+shift+alt+pagedown",
-    "command": "ctrl+shift+alt+pagedown 6acb",
+    "command": "(model) ctrl+shift+alt+pagedown 655f",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "ctrl+shift+alt+pageup",
+    "command": "(model) ctrl+shift+alt+pageup 3444",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "ctrl+shift+alt+right",
-    "command": "ctrl+shift+alt+right ac51",
+    "command": "(model) ctrl+shift+alt+right a65e",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "ctrl+shift+alt+up",
-    "command": "ctrl+shift+alt+up 907f",
+    "command": "(model) ctrl+shift+alt+up 4ad9",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "ctrl+up",
-    "command": "ctrl+up a5a5",
+    "command": "(model) ctrl+up 2a27",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (right)
     "key": "shift+alt+'",
-    "command": "shift+alt+' b672",
+    "command": "(model) shift+alt+' d3ad",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "shift+alt+,",
-    "command": "shift+alt+, 6178",
+    "command": "(model) shift+alt+, fee5",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+-",
-    "command": "shift+alt+- 48c7",
+    "command": "(model) shift+alt+- b038",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "shift+alt+.",
-    "command": "shift+alt+. b760",
+    "command": "(model) shift+alt+. ac1a",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "shift+alt+;",
-    "command": "shift+alt+; 2b93",
+    "command": "(model) shift+alt+; 6622",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+=",
-    "command": "shift+alt+= 8609",
+    "command": "(model) shift+alt+= da83",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "shift+alt+[",
-    "command": "shift+alt+[ 2392",
+    "command": "(model) shift+alt+[ 0231",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "shift+alt+]",
-    "command": "shift+alt+] be17",
+    "command": "(model) shift+alt+] de0a",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+a",
-    "command": "shift+alt+a e531",
+    "command": "(model) shift+alt+a 369b",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+d",
-    "command": "shift+alt+d aa19",
+    "command": "(model) shift+alt+d 1384",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "shift+alt+down",
-    "command": "shift+alt+down 5e01",
+    "command": "(model) shift+alt+down 4efb",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "shift+alt+end",
-    "command": "shift+alt+end a4b5",
+    "command": "(model) shift+alt+end 48a1",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "shift+alt+h",
-    "command": "shift+alt+h 54c2",
+    "command": "(model) shift+alt+h d718",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "shift+alt+home",
-    "command": "shift+alt+home e891",
+    "command": "(model) shift+alt+home 2914",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "shift+alt+j",
-    "command": "shift+alt+j e4a8",
+    "command": "(model) shift+alt+j 0e10",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "shift+alt+k",
-    "command": "shift+alt+k 87f7",
+    "command": "(model) shift+alt+k 2b7a",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "shift+alt+l",
-    "command": "shift+alt+l 64bc",
+    "command": "(model) shift+alt+l 5d7e",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "shift+alt+left",
-    "command": "shift+alt+left a002",
+    "command": "(model) shift+alt+left 3c39",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (right)
     "key": "shift+alt+meta+'",
-    "command": "shift+alt+meta+' f3c9",
+    "command": "(model) shift+alt+meta+' 5767",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "shift+alt+meta+,",
-    "command": "shift+alt+meta+, 9f8d",
+    "command": "(model) shift+alt+meta+, 7b92",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+-",
-    "command": "shift+alt+meta+- fb6b",
+    "command": "(model) shift+alt+meta+- 94e0",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "shift+alt+meta+.",
-    "command": "shift+alt+meta+. 0e77",
+    "command": "(model) shift+alt+meta+. bb2e",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "shift+alt+meta+;",
-    "command": "shift+alt+meta+; 1cca",
+    "command": "(model) shift+alt+meta+; cffd",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+=",
-    "command": "shift+alt+meta+= af53",
+    "command": "(model) shift+alt+meta+= df0e",
     "when": "altKey.enabled"
   },
   {
+    // (left)
     "key": "shift+alt+meta+[",
-    "command": "shift+alt+meta+[ b241",
+    "command": "(model) shift+alt+meta+[ d73b",
     "when": "altKey.enabled"
   },
   {
+    // (right)
     "key": "shift+alt+meta+]",
-    "command": "shift+alt+meta+] 338f",
+    "command": "(model) shift+alt+meta+] 4d7a",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+a",
-    "command": "shift+alt+meta+a 3ccb",
+    "command": "(model) shift+alt+meta+a db3c",
     "when": "altKey.enabled"
   },
   {
     "key": "shift+alt+meta+d",
-    "command": "shift+alt+meta+d 2376",
+    "command": "(model) shift+alt+meta+d 9780",
     "when": "altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "shift+alt+meta+down",
-    "command": "shift+alt+meta+down 349a",
+    "command": "(model) shift+alt+meta+down c05f",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow)
     "key": "shift+alt+meta+end",
-    "command": "shift+alt+meta+end 2a33",
+    "command": "(model) shift+alt+meta+end bf0d",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (left)
     "key": "shift+alt+meta+h",
-    "command": "shift+alt+meta+h fb31",
+    "command": "(model) shift+alt+meta+h 556b",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow)
     "key": "shift+alt+meta+home",
-    "command": "shift+alt+meta+home b0c9",
+    "command": "(model) shift+alt+meta+home efaa",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (vi) (down)
     "key": "shift+alt+meta+j",
-    "command": "shift+alt+meta+j ce4f",
+    "command": "(model) shift+alt+meta+j 62bb",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (up)
     "key": "shift+alt+meta+k",
-    "command": "shift+alt+meta+k 852a",
+    "command": "(model) shift+alt+meta+k 210e",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (vi) (right)
     "key": "shift+alt+meta+l",
-    "command": "shift+alt+meta+l 034c",
+    "command": "(model) shift+alt+meta+l 59b4",
     "when": "altKey.enabled && altKey.vi"
   },
   {
+    // (arrow) (left)
     "key": "shift+alt+meta+left",
-    "command": "shift+alt+meta+left 1ac6",
+    "command": "(model) shift+alt+meta+left a081",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "shift+alt+meta+pagedown",
-    "command": "shift+alt+meta+pagedown 35c3",
+    "command": "(model) shift+alt+meta+pagedown 7106",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "shift+alt+meta+pageup",
+    "command": "(model) shift+alt+meta+pageup dca6",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "shift+alt+meta+right",
-    "command": "shift+alt+meta+right f549",
+    "command": "(model) shift+alt+meta+right 9cc5",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "shift+alt+meta+up",
-    "command": "shift+alt+meta+up 5401",
+    "command": "(model) shift+alt+meta+up 0535",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (down)
     "key": "shift+alt+pagedown",
-    "command": "shift+alt+pagedown 6181",
+    "command": "(model) shift+alt+pagedown 6c48",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
+    "key": "shift+alt+pageup",
+    "command": "(model) shift+alt+pageup 2d46",
+    "when": "altKey.arrows && altKey.enabled"
+  },
+  {
+    // (arrow) (right)
     "key": "shift+alt+right",
-    "command": "shift+alt+right 04aa",
+    "command": "(model) shift+alt+right affd",
     "when": "altKey.arrows && altKey.enabled"
   },
   {
+    // (arrow) (up)
     "key": "shift+alt+up",
-    "command": "shift+alt+up be53",
+    "command": "(model) shift+alt+up 3f52",
     "when": "altKey.arrows && altKey.enabled"
   }
 ]
