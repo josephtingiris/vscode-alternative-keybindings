@@ -2,7 +2,7 @@
   "name": "alt-key",
   "displayName": "AlterNative Keybindings",
   "publisher": "josephtingiris",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/josephtingiris/vscode-alternative-keybindings"
@@ -25,7 +25,7 @@
       {
         "command": "altKey.resetLayout",
         "title": "Reset Workbench Layout",
-        "category": "altNav"
+        "category": "altKey"
       }
     ],
     "keybindings": [
@@ -38,6 +38,11 @@
     "configuration": {
       "title": "AlterNative Keybindings Settings",
       "properties": {
+        "altKey.arrows": {
+          "type": "boolean",
+          "default": true,
+          "description": "Support arrow key navigation for UI component navigation. Use config.altKey.arrows in when-clauses."
+        },
         "altKey.enabled": {
           "type": "boolean",
           "default": true,
@@ -53,10 +58,10 @@
           "default": "default",
           "description": "Preferred navigation orientation ('default' uses VS Code defaults). Use in when-clauses as config.altKey.orientation == 'left'."
         },
-        "altKey.vim": {
+        "altKey.vi": {
           "type": "boolean",
           "default": true,
-          "description": "Bind VIM key navigation (h, j, k, l) for UI component navigation. Use config.altKey.vim in when-clauses."
+          "description": "Support VI key (h, j, k, l) navigation for UI component navigation. Use config.altKey.vi in when-clauses."
         },
         "altKey.wrap": {
           "type": "boolean",
