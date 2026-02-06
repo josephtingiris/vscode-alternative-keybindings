@@ -626,7 +626,8 @@ def main():
         pair[1], primary=primary_order, secondary=secondary_order))
     seen = set()
     sys.stdout.write(preamble)
-    sys.stdout.write('[')
+    # Ensure the opening bracket is on its own line
+    sys.stdout.write('[\n')
     for i, (comments, obj) in enumerate(sorted_groups):
         is_last = (i == len(sorted_groups) - 1)
         obj_out = obj.rstrip()
@@ -647,8 +648,15 @@ def main():
         if not is_last and not object_has_trailing_comma(obj_out):
             sys.stdout.write(',')
         sys.stdout.write('\n')
+    # Write any trailing comments that followed the array contents
     sys.stdout.write(trailing_comments)
-    sys.stdout.write(']')
+    # If trailing_comments is present, ensure it ends with a newline so the
+    # closing bracket appears on its own line. If no trailing_comments were
+    # written, the previous loop already emitted a newline after the last
+    # object so the bracket will still be on its own line.
+    if trailing_comments and not trailing_comments.endswith('\n'):
+        sys.stdout.write('\n')
+    sys.stdout.write(']\n')
     sys.stdout.write(postamble)
     if not postamble.endswith('\n'):
         sys.stdout.write('\n')
