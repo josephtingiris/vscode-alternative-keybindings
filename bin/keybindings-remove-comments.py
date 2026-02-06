@@ -1,18 +1,50 @@
 #!/usr/bin/env python3
+"""
+(C) 2026 Joseph Tingiris (joseph.tingiris@gmail.com)
+
+Utility to remove comments from a JSONC string read on stdin and write JSON to
+stdout. This is intentionally small and dependency-free; it is used by other
+tools in the repo when a strict JSON payload is required.
+
+Usage:
+    ./bin/keybindings-remove-comments.py < keybindings.json
+"""
+
+from __future__ import annotations
 
 import re
 import sys
 
-def strip_comments(jsonc_string):
-    # Remove single-line comments
-    no_single_line_comments = re.sub(r'//.*', '', jsonc_string)
-    # Remove multi-line comments
-    no_multi_line_comments = re.sub(r'/\*.*?\*/', '', no_single_line_comments, flags=re.DOTALL)
-    return no_multi_line_comments.strip()
 
-if __name__ == "__main__":
-    # Read from stdin
+def strip_comments(jsonc_string: str) -> str:
+    """Return `jsonc_string` with // and /* */ comments removed.
+
+    This simple implementation preserves line breaks for most single-line
+    comments and strips block comments using a non-greedy DOTALL regex.
+    """
+    # Remove comments while respecting quoted strings. This avoids stripping
+    # comment-like sequences inside string literals.
+    def _replacer(match: re.Match) -> str:
+        token = match.group(0)
+        # If token starts with / it's a comment; drop it. Otherwise keep string.
+        if token.startswith('/'):
+            return ''
+        return token
+
+    pattern = r'("(?:\\.|[^"\\])*"|//.*?$|/\*.*?\*/)'
+    no_comments = re.sub(pattern, _replacer, jsonc_string,
+                         flags=re.DOTALL | re.MULTILINE)
+    # Remove any now-empty lines that came from full-line comments so there are no blank lines in the output.
+    no_blank_lines = re.sub(r'(?m)^[ \t]*\n+', '', no_comments)
+    return no_blank_lines.strip()
+
+
+def main() -> None:
+    # Read from stdin and write the cleaned JSON to stdout
     jsonc_string = sys.stdin.read()
     json_string = strip_comments(jsonc_string)
-    # Print the resulting JSON
     print(json_string)
+
+
+if __name__ == "__main__":
+    main()
