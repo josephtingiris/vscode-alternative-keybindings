@@ -78,10 +78,10 @@ def tags_for(key):
 
 def when_for(key):
     if key in VI_KEYS:
-        return "altKey.enabled && altKey.vi"
+        return "config.altKey.enabled && config.altKey.vi"
     if key in ARROW_KEYS:
-        return "altKey.enabled && altKey.arrows"
-    return "altKey.enabled"
+        return "config.altKey.enabled && config.altKey.arrows"
+    return "config.altKey.enabled"
 
 
 def emit_record(key_str, command_str, when_str, comment_tags):
