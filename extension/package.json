@@ -2,7 +2,7 @@
   "name": "alt-key",
   "displayName": "AlterNative Keybindings",
   "publisher": "josephtingiris",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/josephtingiris/vscode-alternative-keybindings"
@@ -38,15 +38,10 @@
     "configuration": {
       "title": "AlterNative Keybindings Settings",
       "properties": {
-        "altKey.arrows": {
-          "type": "boolean",
-          "default": true,
-          "description": "Support arrow key navigation for UI component navigation. Use config.altKey.arrows in when-clauses."
-        },
         "altKey.enabled": {
           "type": "boolean",
           "default": true,
-          "description": "Enable AlterNative altKey behaviors. Access in when-clauses as config.altKey.enabled."
+          "description": "Enable AlterNative Keybindings extension."
         },
         "altKey.orientation": {
           "type": "string",
@@ -56,17 +51,22 @@
             "right"
           ],
           "default": "default",
-          "description": "Preferred navigation orientation ('default' uses VS Code defaults). Use in when-clauses as config.altKey.orientation == 'left'."
+          "description": "Preferred AlterNative navigation orientation ('default' uses VS Code defaults)."
+        },
+        "altKey.arrows": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AlterNative arrows for navigation."
         },
         "altKey.vi": {
           "type": "boolean",
           "default": true,
-          "description": "Support VI key (h, j, k, l) navigation for UI component navigation. Use config.altKey.vi in when-clauses."
+          "description": "Enable AlterNative vi keys (h, j, k, l) for navigation."
         },
         "altKey.wrap": {
           "type": "boolean",
           "default": true,
-          "description": "When navigating across UI components, wrap around at screen edges. Use config.altKey.wrap in when-clauses."
+          "description": "Enable AlterNative wrap around navigation at screen edges."
         }
       }
     }
