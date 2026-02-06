@@ -6,10 +6,13 @@ from random import Random
 # Deterministic RNG for reproducible outputs
 rng = Random(0)
 
-MODIFIERS_SINGLE = ["alt", "ctrl", "meta", "shift"]
+# Include modifiers: `alt+ ctrl+ meta+ alt+meta ctrl+alt+ shift+alt+ ctrl+alt+meta+ ctrl+shift+alt+ shift+alt+meta+ ctrl+shift+alt+meta+`
+
+MODIFIERS_SINGLE = ["alt", "ctrl", "meta"]
 MODIFIERS_MULTI = [
-    "ctrl+alt",
     "alt+meta",
+    "ctrl+alt",
+    "shift+alt",
     "ctrl+alt+meta",
     "ctrl+shift+alt",
     "shift+alt+meta",
@@ -31,7 +34,7 @@ DOWN_GROUP = {"j", "down", "pagedown"}
 UP_GROUP = {"k", "up", "pageup"}
 RIGHT_GROUP = {"l", "]", "'", ".", "right"}
 
-TAG_ORDER = ["(arrow)", "(down)", "(left)", "(right)", "(up)", "(vi)"]
+TAG_ORDER = ["(down)", "(left)", "(right)", "(up)", "(arrow)", "(vi)"]
 
 
 def hex4():

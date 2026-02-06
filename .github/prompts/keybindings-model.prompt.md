@@ -13,7 +13,7 @@ If a `./bin/keybindings-model.py` file already exists, overwrite it or remove it
 Write a new script named `./bin/keybindings-model.py` that generates a JSONC output containing keybindings based on the following specifications:
 The ouput should contain an array of JSONC objects, each representing a keybinding.
 Each object should have the following properties: "key", "command", and "when".
-Include modifiers: `alt+ ctrl+ alt+meta ctrl+alt+ shift+alt+ ctrl+alt+meta+ ctrl+shift+alt+ shift+alt+meta+ ctrl+shift+alt+meta+`
+Include modifiers: `alt+ ctrl+ meta+ alt+meta ctrl+alt+ shift+alt+ ctrl+alt+meta+ ctrl+shift+alt+ shift+alt+meta+ ctrl+shift+alt+meta+`
 Include keys: `- = [ ] ; ' , . a d h j k l end home pagedown left down up right`
 For each of the include keys, create keybindings for each of the minclude odifiers listed above. For example, for the key "a", you would create keybindings for "alt+a", "ctrl+a", "alt+meta+a", "ctrl+alt+a", "shift+alt+a", "ctrl+alt+meta+a", "ctrl+shift+alt+a", "shift+alt+meta+a", and "ctrl+shift+alt+meta+a".
 For the "command:" use the form `"command": "(model) <exact value of "key:"> <4 random hexidecimal digits>"`
