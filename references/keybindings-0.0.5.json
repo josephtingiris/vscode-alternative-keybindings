@@ -151,122 +151,122 @@ Notes:
     "key": "alt+h",
     //"command": "noop",
     "command": "alt+h and when? no and when! :)",
-    "when": "config.altKey.enabled && config.altKey.vim"
+    "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 9e22",
-    "when": "config.altKey.enabled && config.altKey.vim && !config.altKey.wrap && config.workbench.sideBar.location == 'left'"
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left'"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 9e21",
     // "command": "workbench.action.focusPreviousPart",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left'"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left'"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 8d95",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && panelFocus"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelFocus"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 080e",
     // "command": "cursorLeft",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && textInputFocus"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && textInputFocus"
   },
   {
     // (left) [no wrap]
     "key": "alt+h",
     "command": "workbench.action.previousPanelView",
     // "command": "alt+h c899",
-    "when": "config.altKey.enabled && config.altKey.vim && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "workbench.action.previousEditor",
     // "command": "alt+h d8fd",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 30e1",
     // "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
   },
   {
     // (left) [wrap]
     "key": "alt+h",
     "command": "workbench.action.previousPanelView",
     // "command": "alt+h a8ed",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 6318",
     // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && !panelVisible"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && !panelVisible"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "workbench.action.focusPanel",
     // "command": "alt+h 43ad",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "workbench.action.focusAuxiliaryBar",
     // "command": "alt+h 6317",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h 6320",
     // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible && editorIsOpen"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible && editorIsOpen"
   },
   {
     // (left)
     "key": "alt+h",
     "command": "alt+h a330",
     // "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
     // (left) [top left]
     "key": "alt+h",
     "command": "alt+h cd7e",
-    "when": "config.altKey.enabled && config.altKey.vim && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (left) [top left]
     "key": "alt+h",
     "command": "workbench.action.focusSideBar",
     // "command": "alt+h ad8d",
-    "when": "config.altKey.enabled && config.altKey.vim && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (left) [top left]
     "key": "alt+h",
     "command": "alt+h cd8e",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     // (left) [top left]
     "key": "alt+h",
     "command": "workbench.action.focusSideBar",
     // "command": "alt+h cd8d",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
     "key": "alt+home",
@@ -593,32 +593,32 @@ Notes:
     "key": "alt+l",
     "command": "alt+l 1384",
     // "command": "workbench.action.nextPanelView",
-    "when": "config.altKey.enabled && config.altKey.vim && config.workbench.sideBar.location == 'left' && panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
   },
   {
     // (right) (no wrap)
     "key": "alt+l",
     "command": "alt+l bdf8",
-    "when": "config.altKey.enabled && config.altKey.vim && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
   },
   {
     "key": "alt+l",
     "command": "alt+l fe0b",
     // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && !panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && !panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
   },
   {
     // (right) (wrap)
     "key": "alt+l",
     "command": "workbench.action.focusSideBar",
     // "command": "alt+l f108",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
   },
   {
     "key": "alt+l",
     "command": "workbench.action.nextEditor",
     // "command": "alt+l 32e7",
-    "when": "config.altKey.enabled && config.altKey.vim && activeEditor != '' && !auxiliaryBarFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && !textInputFocus && activeEditorIsReadonly && editorIsOpen"
+    "when": "config.altKey.enabled && config.altKey.vi && activeEditor != '' && !auxiliaryBarFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && !textInputFocus && activeEditorIsReadonly && editorIsOpen"
     //"when": "config.altKey.enabled && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
     //"when": "config.altKey.enabled && activeEditor == 'workbench.editor.keybindings' && textInputFocus"
   },
@@ -1029,6 +1029,6 @@ Notes:
   {
     "key": "shift+alt+z",
     "command": "shift+alt+z fzz1",
-    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap"
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap"
   }
 ]
