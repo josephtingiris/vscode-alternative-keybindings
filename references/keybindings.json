@@ -1053,6 +1053,6 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   {
     "key": "shift+alt+z",
     "command": "shift+alt+z fzz1",
-    "when": "config.altKey.enabled && config.altKey.wrap && "
+    "when": "config.altKey.enabled && config.altKey.wrap"
   }
 ]
