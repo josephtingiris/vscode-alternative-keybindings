@@ -175,13 +175,6 @@ Notes:
   {
     // (left)
     "key": "alt+h",
-    "command": "alt+h 30e1",
-    // "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
-  },
-  {
-    // (left)
-    "key": "alt+h",
     "command": "alt+h 9e21",
     // "command": "workbench.action.focusPreviousPart",
     "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left'"
@@ -191,28 +184,28 @@ Notes:
     "key": "alt+h",
     "command": "workbench.action.previousEditor",
     // "command": "alt+h d8fd",
-    "when": "config.altKey.enabled && config.altKey.wrap && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
+    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
   },
   {
-    // (left) [no wrap]
+    // (left)
     "key": "alt+h",
-    "command": "workbench.action.previousPanelView",
-    // "command": "alt+h c899",
-    "when": "config.altKey.enabled && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
+    "command": "alt+h 30e1",
+    // "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
   },
   {
     // (left) [wrap]
     "key": "alt+h",
     "command": "workbench.action.previousPanelView",
     // "command": "alt+h a8ed",
-    "when": "config.altKey.enabled && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
+    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
   },
   {
-    // (left)
+    // (left) [no wrap]
     "key": "alt+h",
-    "command": "alt+h 6318",
-    // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && !panelVisible"
+    "command": "workbench.action.previousPanelView",
+    // "command": "alt+h c899",
+    "when": "config.altKey.enabled && config.altKey.vim && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
   },
   {
     // (left)
@@ -220,6 +213,13 @@ Notes:
     "command": "workbench.action.focusPanel",
     // "command": "alt+h 43ad",
     "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
+  },
+  {
+    // (left)
+    "key": "alt+h",
+    "command": "alt+h 6318",
+    // "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.altKey.enabled && config.altKey.vim && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && !panelVisible"
   },
   {
     // (left)
