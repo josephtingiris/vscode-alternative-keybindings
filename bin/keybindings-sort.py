@@ -623,14 +623,9 @@ def main():
     raw = sys.stdin.read()
     preamble, array_text, postamble = extract_preamble_postamble(raw)
     groups, trailing_comments = group_objects_with_comments(array_text)
-    # Sort by chosen primary (natural), then the other field (natural), then by _comment
-    sorted_groups = sorted(groups, key=lambda pair: extract_sort_keys(
-        pair[1], primary=primary_order, secondary=secondary_order))
-    seen = set()
-    sys.stdout.write(preamble)
-    sys.stdout.write('[')
-    for i, (comments, obj) in enumerate(sorted_groups):
-        is_last = (i == len(sorted_groups) - 1)
+
+    normalized_groups = []
+    for comments, obj in groups:
         obj_out = obj.rstrip()
         when_changed = False
         if normalize_when:
@@ -638,6 +633,17 @@ def main():
             if when_changed:
                 comments = re.sub(r'^\s*//\s*when-sorted:.*\n',
                                   '', comments, flags=re.MULTILINE)
+        normalized_groups.append((comments, obj_out))
+
+    # Sort by chosen primary (natural), then the other field (natural), then by _comment
+    sorted_groups = sorted(normalized_groups, key=lambda pair: extract_sort_keys(
+        pair[1], primary=primary_order, secondary=secondary_order))
+    seen = set()
+    sys.stdout.write(preamble)
+    sys.stdout.write('[')
+    for i, (comments, obj) in enumerate(sorted_groups):
+        is_last = (i == len(sorted_groups) - 1)
+        obj_out = obj.rstrip()
         key_val, when_val = extract_key_when(obj_out)
         canonical_when = canonicalize_when(when_val)
         pair_id = (key_val, canonical_when)
