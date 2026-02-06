@@ -8,11 +8,11 @@ with predictable, ergonomic behavior.
 Why use it
 - Keeps hands on the keyboard — fast spatial navigation between visible workbench elements.
 - Respects in-element movement (lists, trees, and editor splits) when available.
-- Configurable handedness and optional wrap behavior for custom layouts.
+- Configurable sidebar orientation and optional wrap behavior for custom layouts (primary sidebar on the left side of the screen by default).
 
 Highlights
 - alt + arrow and alt + hjkl navigation across editors, side bars, panel, and terminals.
-- Right- and left-handed navigation modes and optional screen wrapping.
+- Navigation modes for left or right sidebar orientation and optional screen wrapping.
 - Lightweight status bar indicator and optional edge notifications.
 
 Install
@@ -27,7 +27,7 @@ Configuration (selected)
 - `altKey.logLevel` (string): `off|error|info|debug` (default: `off`).
 - `altKey.logChannel` (string): name of the output channel (default: `AlterNative Keybindings`).
 - `altKey.logFile` (string): optional file path for log output (default: empty).
-- `altKey.wrap` (boolean): allow wrap-around navigation based on handedness (default: `true`).
+-- `altKey.wrap` (boolean): allow wrap-around navigation based on sidebar orientation (default: `true`).
 
 Support & development
 - Report issues, feature requests, or contribute on the GitHub repository root.
