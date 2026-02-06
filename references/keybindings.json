@@ -35,7 +35,8 @@ Conventions:
 
 Notes:
   * terminal's only split one way, depending on the orientation of the panel. see: https://github.com/microsoft/vscode/issues/160501
-  * my primary editor is [neo]vim, so this keyboard grammar is designed to work well with and without the vscode-neovim extension
+  * my primary editor is [
+neo]vim, so this keyboard grammar is designed to work well with and without the vscode-neovim extension
   * i try to avoid conflicts with default bindings and commoon extensions, however some conflicts are unavoidable and can be noted
   * i still need to test compatibility with other extensions, particularly vim emulation extensions
   * i'm aware of numerous conflicts with the vs code multiple cursor feature, and will circle back to resolve them later (once I learn to use it better)

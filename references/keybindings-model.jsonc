@@ -11,7 +11,6 @@
     "command": "(model) alt+, 94a6",
     "when": "altKey.enabled"
   },
-
   {
     "key": "alt+-",
     "command": "(model) alt+- c53e",
