@@ -1,9 +1,24 @@
 #!/usr/bin/env python3
+"""
+(C) 2026 Joseph Tingiris (joseph.tingiris@gmail.com)
+
+Generate a reproducible set of sample VS Code keybinding JSONC records.
+
+Usage:
+    ./bin/keybindings-model.py
+
+This small helper emits a JSONC array of keybinding objects to stdout. By
+default it uses a fixed PRNG seed so output is deterministic and useful for
+testing the sort/merge tools in this repository.
+"""
+
+from __future__ import annotations
+
 import json
 import sys
 from random import Random
 
-# Create a deterministic RNG so command comments are stable across runs (which makes it easier to diff changes to the generated keybindings)
+# Deterministic RNG for reproducible outputs
 rng = Random(0)
 
 # Include modifiers: `alt+ ctrl+ meta+ alt+meta ctrl+alt+ shift+alt+ ctrl+alt+meta+ ctrl+shift+alt+ shift+alt+meta+ ctrl+shift+alt+meta+`
@@ -26,7 +41,8 @@ KEYS = [
 ]
 
 VI_KEYS = {"h", "j", "k", "l"}
-ARROW_KEYS = {"end", "home", "pageup", "pagedown", "left", "down", "up", "right"}
+ARROW_KEYS = {"end", "home", "pageup",
+              "pagedown", "left", "down", "up", "right"}
 
 # Mapping groups for comments
 LEFT_GROUP = {"h", "[", ";", ",", "left"}
@@ -36,8 +52,10 @@ RIGHT_GROUP = {"l", "]", "'", ".", "right"}
 
 TAG_ORDER = ["(down)", "(left)", "(right)", "(up)", "(arrow)", "(vi)"]
 
+
 def hex4():
     return f"{rng.randint(0, 0xFFFF):04x}"
+
 
 def tags_for(key):
     tags = []
