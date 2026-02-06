@@ -2,7 +2,7 @@
   "name": "alt-key",
   "displayName": "AlterNative Keybindings",
   "publisher": "josephtingiris",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/josephtingiris/vscode-alternative-keybindings"
@@ -13,8 +13,28 @@
     "vscode": "^1.60.0"
   },
   "description": "Minimal extension that registers configuration under the altKey.* namespace for use in when-clauses and context debugging.",
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:altKey.resetLayout"
+  ],
   "contributes": {
+    "commands": [
+      {
+        "command": "altKey.resetLayout",
+        "title": "Reset Workbench Layout",
+        "category": "altNav"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "alt+a escape",
+        "command": "altKey.resetLayout",
+        "when": "config.altKey.enabled"
+      }
+    ],
     "configuration": {
       "title": "AlterNative Keybindings Settings",
       "properties": {
@@ -25,7 +45,11 @@
         },
         "altKey.orientation": {
           "type": "string",
-          "enum": ["default", "left", "right"],
+          "enum": [
+            "default",
+            "left",
+            "right"
+          ],
           "default": "default",
           "description": "Preferred navigation orientation ('default' uses VS Code defaults). Use in when-clauses as config.altKey.orientation == 'left'."
         },
