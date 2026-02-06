@@ -14,13 +14,13 @@ python3 keybindings-sort.py --primary when < keybindings.json > keybindings.sort
 
 Description:
 
-Sorts a VS Code `keybindings.json` (JSONC) array. By default the script sorts by
+    Sorts a VS Code `keybindings.json` (JSONC) array. By default the script sorts by
 `key` (natural order), then by `when` specificity (broad to specific), then by the
-`when` text (natural order), and finally by `_comment` if present. Specificity is
+`when` text (natural order). Specificity is
 based on the number of terms (split on `&&` / `||`), and ties are resolved purely
 alphabetically by the `when` text. This keeps more specific rules later so they win
 during VS Code's bottom-to-top evaluation. Pass `--primary when` (or `-p when`) to
-make `when` the primary sort key (then `key`, then `_comment`), with `when` still
+    make `when` the primary sort key (then `key`), with `when` still
 ordered by specificity first. Both `key` and `when` use natural ordering so numeric
 segments sort intuitively (e.g. "ctrl+2" before "ctrl+10").
 
@@ -501,7 +501,6 @@ def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None
         obj = json.loads(clean)
         key_val = str(obj.get('key', ''))
         when_val = str(obj.get('when', ''))
-        comment_val = str(obj.get('_comment', ''))
         canonical_when = canonicalize_when(when_val)
         sortable_when = sortable_when_key(when_val)
 
@@ -536,8 +535,6 @@ def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None
         if 'key' not in (primary, secondary):
             append_key()
 
-        # Finally tie-break on comment
-        keys.append(comment_val)
         return tuple(keys)
     except Exception:
         return ([], '', '')
