@@ -8,7 +8,10 @@
     // settings that should be here (or in user settings), not in directory .vscode/settings.json
     "chat.tools.terminal.autoApprove": {
       "getent": true,
-      "npm run compile": true
+      "npm run compile": true,
+      "./bin/keybindings-model.py": true,
+      "./bin/keybindings-remove-comments.py": true,
+      "./bin/keybindings-sort.py": true
     },
     "makefile.configureOnOpen": false,
     "shfmt.executablePath": "shfmt",
