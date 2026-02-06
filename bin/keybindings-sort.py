@@ -485,23 +485,9 @@ def canonicalize_when(when_val: str) -> str:
 def sortable_when_key(when_val: str) -> str:
     if not when_val:
         return ''
-    canonical = canonicalize_when(when_val)
-    ast = parse_when(canonical)
-
-    def render_sort(node: WhenNode) -> str:
-        if isinstance(node, WhenLeaf):
-            return node.text
-        if isinstance(node, WhenNot):
-            return render_sort(node.child)
-        if isinstance(node, WhenAnd):
-            inner = ' && '.join([render_sort(c) for c in node.children])
-            return f'({inner})' if node.parens else inner
-        if isinstance(node, WhenOr):
-            inner = ' || '.join([render_sort(c) for c in node.children])
-            return f'({inner})' if node.parens else inner
-        return ''
-
-    return render_sort(ast)
+    # Preserve negation for sorting to avoid unstable ordering when
+    # otherwise-identical clauses differ only by '!'.
+    return canonicalize_when(when_val)
 
 
 def extract_sort_keys(obj_text: str, primary: str = 'key', secondary: str = None) -> Tuple:
