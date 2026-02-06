@@ -3,7 +3,7 @@ import json
 import sys
 from random import Random
 
-# Deterministic RNG for reproducible outputs
+# Create a deterministic RNG so command comments are stable across runs (which makes it easier to diff changes to the generated keybindings)
 rng = Random(0)
 
 # Include modifiers: `alt+ ctrl+ meta+ alt+meta ctrl+alt+ shift+alt+ ctrl+alt+meta+ ctrl+shift+alt+ shift+alt+meta+ ctrl+shift+alt+meta+`
@@ -36,10 +36,8 @@ RIGHT_GROUP = {"l", "]", "'", ".", "right"}
 
 TAG_ORDER = ["(down)", "(left)", "(right)", "(up)", "(arrow)", "(vi)"]
 
-
 def hex4():
     return f"{rng.randint(0, 0xFFFF):04x}"
-
 
 def tags_for(key):
     tags = []

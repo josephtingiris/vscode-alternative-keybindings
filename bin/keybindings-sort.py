@@ -635,6 +635,10 @@ def main():
         if pair_id in seen:
             comments += f'// DUPLICATE key: {key_val!r} when: {canonical_when!r}\n'
         seen.add(pair_id)
+        # Strip blank-only lines from comment blocks so sorting does not
+        # introduce spurious empty lines between objects.
+        if comments:
+            comments = re.sub(r'(?m)^[ \t]*\n+', '', comments)
         sys.stdout.write(comments)
         idx = obj_out.rfind('}')
         if idx != -1:
@@ -645,18 +649,23 @@ def main():
         if not is_last and not object_has_trailing_comma(obj_out):
             sys.stdout.write(',')
         sys.stdout.write('\n')
+
     # Write any trailing comments that followed the array contents
     sys.stdout.write(trailing_comments)
     # If trailing_comments is present, ensure it ends with a newline so the
     # closing bracket appears on its own line. If no trailing_comments were
-    # written, the previous loop already emitted a newline after the last
     # object so the bracket will still be on its own line.
+    # written, the previous loop already emitted a newline after the last
     if trailing_comments and not trailing_comments.endswith('\n'):
         sys.stdout.write('\n')
-    sys.stdout.write(']\n')
-    sys.stdout.write(postamble)
-    if not postamble.endswith('\n'):
-        sys.stdout.write('\n')
+    # Trim leading/trailing blanks (spaces and blank lines) from the
+    # postamble and append it. This prevents accidental blank lines being
+    # introduced while preserving the postamble content.
+    postamble_trimmed = re.sub(r'^[ \t\r\n]+|[ \t\r\n]+$', '', postamble)
+    if postamble_trimmed:
+        sys.stdout.write(']\n' + postamble_trimmed + '\n')
+    else:
+        sys.stdout.write(']\n')
 
 
 if __name__ == "__main__":
