@@ -2,12 +2,13 @@
 """
 (C) 2026 Joseph Tingiris (joseph.tingiris@gmail.com)
 
-Generate a reproducible set of sample VS Code keybinding JSONC records.
+Generate a reproducible set of sample VS Code keybinding JSONC records
+representing the most commonly used navigation keys.
 
 Usage:
     ./bin/keybindings-model.py
 
-This small helper emits a JSONC array of keybinding objects to stdout. By
+This small helper writes a JSONC array of keybinding objects to stdout. By
 default it uses a fixed PRNG seed so output is deterministic and useful for
 testing the sort/merge tools in this repository.
 """
@@ -59,28 +60,28 @@ def hex4():
 
 def tags_for(key):
     tags = []
-    if key in VI_KEYS:
-        tags.append("(vi)")
     if key in ARROW_KEYS:
         tags.append("(arrow)")
-    if key in LEFT_GROUP:
-        tags.append("(left)")
     if key in DOWN_GROUP:
         tags.append("(down)")
-    if key in UP_GROUP:
-        tags.append("(up)")
+    if key in LEFT_GROUP:
+        tags.append("(left)")
     if key in RIGHT_GROUP:
         tags.append("(right)")
+    if key in UP_GROUP:
+        tags.append("(up)")
+    if key in VI_KEYS:
+        tags.append("(vi)")
     # Sort tags according to TAG_ORDER
     tags_sorted = [t for t in TAG_ORDER if t in tags]
     return tags_sorted
 
 
 def when_for(key):
-    if key in VI_KEYS:
-        return "config.altKey.enabled && config.altKey.vi"
     if key in ARROW_KEYS:
         return "config.altKey.enabled && config.altKey.arrows"
+    if key in VI_KEYS:
+        return "config.altKey.enabled && config.altKey.vi"
     return "config.altKey.enabled"
 
 
@@ -110,7 +111,7 @@ for key in KEYS:
         comment_tags = tags if tags else []
         records.append((key_str, cmd, when, comment_tags))
 
-# Emit JSONC array
+# Ouput JSONC array
 out_lines = []
 out_lines.append("[")
 for i, (k, c, w, tags) in enumerate(records):
