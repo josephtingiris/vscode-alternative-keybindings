@@ -64,8 +64,9 @@ main() {
         aborting "'${user_keybindings_json}' file not found readable"
     fi
 
+	KEYBINDINGS_SORT_ARGUMENTS="${KEYBINDINGS_SORT_ARGUMENTS:--p key -s when}"
     if type -p keybindings-sort.py > /dev/null 2>&1; then
-        keybindings-sort.py -p key -s when < "${KEYBINDINGS_JSON}" > /tmp/keybindings-sorted.json
+        keybindings-sort.py ${KEYBINDINGS_SORT_ARGUMENTS} < "${KEYBINDINGS_JSON}" > /tmp/keybindings-sorted.json
         mv /tmp/keybindings-sorted.json "${KEYBINDINGS_JSON}"
     fi
 
