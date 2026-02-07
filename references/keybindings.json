@@ -425,13 +425,6 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   {
     // (down)
     "key": "alt+j",
-    "command": "workbench.action.terminal.focusPrevious",
-    // "command": "alt+j a1d4",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
-  },
-  {
-    // (down)
-    "key": "alt+j",
     "command": "alt+j 54d6",
     // "command": "workbench.action.focusFirstEditorGroup",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
@@ -1772,11 +1765,25 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
+    // (down) (inside)
+    "key": "shift+alt+j",
+    "command": "workbench.action.terminal.focusNext",
+    // "command": "shift+alt+j a1d4",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
+  },
+  {
     // (up) (vi)
     "key": "shift+alt+k",
     "command": "(model) shift+alt+k 24d9",
     // "command": "cursorUpSelect",
     "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) (inside)
+    "key": "shift+alt+k",
+    "command": "workbench.action.terminal.focusPrevious",
+    // "command": "shift+alt+j a4d4",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
   },
   {
     // (right) (vi)
