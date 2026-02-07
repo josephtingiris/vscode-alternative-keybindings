@@ -24,7 +24,7 @@ Scope:
 
 Conventions: 
   * treat 'up' or 'k' or 'right' or 'l' as 'next'
-    "when": "config.altKey.enabled && config.altKey.vi && !panelFocus && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+    "when": "config.altKey.enabled && config.altKey.vi && !panelFocus && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   * if there is a commented command in an object:
     - if it is ABOVE the active command:, then it is a potential future command that i have not yet implemented
     - if it is BELOW the active command:, then it is an old command that has been replaced but left for reference (lower is older)
@@ -48,12 +48,11 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
-    // (noop)
+    // (right)
     "key": "alt+'",
-    "command": "noop",
-    // "command": "alt+' 2310",
-    // "command": "cursorEnd",
-    "when": "config.altKey.enabled && textInputFocus"
+    "command": "alt+' 2310",
+    // "command": "cursorEnd", // maybe for non-neovim profiles but for neovim users there are many ways to navigate to the end of the line ...
+    "when": "config.altKey.enabled && editorFocus"
   },
   {
     // (left)
@@ -63,19 +62,20 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (split) (horizontal)
     "key": "alt+-",
     "command": "(model) alt+- c53e",
     "when": "config.altKey.enabled"
   },
   {
-    // (split) [horizontal]
+    // (split) (horizontal)
     "key": "alt+-",
     "command": "workbench.action.splitEditorDown",
     // "command": "alt+- 301f",
-    "when": "config.altKey.enabled && textInputFocus"
+    "when": "config.altKey.enabled && editorFocus"
   },
   {
-    // (split) [horizontal]
+    // (split) (horizontal)
     "key": "alt+-",
     "command": "workbench.action.terminal.split",
     "when": "config.altKey.enabled && panelFocus && terminalFocus"
@@ -218,7 +218,7 @@ Notes:
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
-    // (arrow)
+    // (end) (arrow)
     "key": "alt+end",
     "command": "(model) alt+end 0b13",
     "when": "config.altKey.arrows && config.altKey.enabled"
@@ -233,89 +233,75 @@ Notes:
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (left)
+    // (left) (vi) (no wrap)
     "key": "alt+h",
     "command": "alt+h 9e22",
     "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left'"
   },
   {
-    // (left)
+    // (left) (vi) (wrap)
     "key": "alt+h",
     "command": "alt+h 9e21",
     // "command": "workbench.action.focusPreviousPart",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left'"
   },
   {
-    // (left)
+    // (left) (vi)
     "key": "alt+h",
     "command": "alt+h 8d95",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelFocus"
   },
   {
-    // (left)
+    // (left) (vi)
     "key": "alt+h",
     "command": "alt+h 080e",
     // "command": "cursorLeft",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && textInputFocus"
   },
   {
-    // (left) (no wrap)
-    "key": "alt+h",
-    "command": "workbench.action.previousPanelView",
-    // "command": "alt+h c899",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
-  },
-  {
-    // (left)
-    "key": "alt+h",
-    "command": "workbench.action.previousEditor",
-    // "command": "alt+h d8fd",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
-  },
-  {
-    // (left)
+    // (left) (vi)
     "key": "alt+h",
     "command": "alt+h 30e1",
     // "command": "workbench.action.focusActiveEditorGroup",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus"
   },
   {
-    // (left) [wrap]
+    // (left) (vi) (wrap)
     "key": "alt+h",
     "command": "workbench.action.previousPanelView",
     // "command": "alt+h a8ed",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
   },
   {
-    // (left)
+    // (left) (vi)
     "key": "alt+h",
     "command": "alt+h 6318",
     // "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && !panelVisible"
   },
   {
-    // (left)
+    // (left) (vi)
     "key": "alt+h",
     "command": "workbench.action.focusPanel",
     // "command": "alt+h 43ad",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
   },
   {
-    // (left)
+    // (left) (vi)
     "key": "alt+h",
     "command": "workbench.action.focusAuxiliaryBar",
     // "command": "alt+h 6317",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
-    // (left)
+    // (left) (vi)
     "key": "alt+h",
     "command": "alt+h 6320",
     // "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible && editorIsOpen"
   },
   {
-    // (left)
+    // (left) (vi)
     "key": "alt+h",
     "command": "alt+h a330",
     // "command": "workbench.action.terminal.focusPreviousPane",
@@ -578,15 +564,17 @@ Notes:
     "when": "config.altKey.enabled && neovim.init"
   },
   {
-    // (down) (arrow)
+    // (down) (arrow) - moves/replaces vscode alt+left
     "key": "alt+pagedown",
-    "command": "(model) alt+pagedown 8530",
+    "command": "workbench.action.navigateBack",
+    // "command": "(model) alt+pagedown 8530",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
-    // (up) (arrow)
+    // (up) (arrow) - moves/replaces vscode alt+right
     "key": "alt+pageup",
-    "command": "(model) alt+pageup df44",
+    "command": "workbench.action.navigateForward",
+    // "command": "(model) alt+pageup df44",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
@@ -817,24 +805,26 @@ Notes:
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (left) toggle left primary sidebar
+    // (left) (vi) - toggle left primary sidebar when the sidebar is hidden
     "key": "ctrl+alt+h",
     "command": "workbench.action.toggleSidebarVisibility",
     // "command": "ctrl+alt+h 8e24",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && !sideBarVisible"
   },
   {
-    // (left)
+    // (left) (vi) - toggle left primary sidebar when the sidebar is visible
     "key": "ctrl+alt+h",
-    "command": "workbench.action.focusSideBar",
+    "command": "workbench.action.toggleSidebarVisibility",
+    // "command": "workbench.action.focusSideBar",
     // "command": "ctrl+alt+h bc4d",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarVisible"
   },
   {
-    // (left)
+    // (left) (vi) - do nothing when the sidebar is visible and focused
     "key": "ctrl+alt+h",
-    "command": "workbench.action.toggleSidebarVisibility",
+    "command": "noop",
     // "command": "ctrl+alt+h 2ed2",
+    // "command": "workbench.action.toggleSidebarVisibility",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
   },
   {
@@ -850,23 +840,25 @@ Notes:
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (down)
+    // (down) (vi) - toggle bottom panel when the panel is hidden
     "key": "ctrl+alt+j",
     "command": "workbench.action.togglePanel",
     // "command": "ctrl+alt+j 398d",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && !panelVisible"
   },
   {
-    // (down)
+    // (down) (vi) - toggle bottom panel when the panel is visible
     "key": "ctrl+alt+j",
-    "command": "workbench.action.focusPanel",
+    "command": "workbench.action.togglePanel",
+    // "command": "workbench.action.focusPanel",
     // "command": "ctrl+alt+j de38",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelVisible"
   },
   {
     // (down) toggle bottom panel
     "key": "ctrl+alt+j",
-    "command": "workbench.action.togglePanel",
+    "command": "noop",
+    //"command": "workbench.action.togglePanel",
     // "command": "ctrl+alt+j 8c48",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus && panelVisible"
   },
@@ -1101,7 +1093,7 @@ Notes:
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
-    // (arrow)
+    // (end) (arrow)
     "key": "ctrl+end",
     "command": "(model) ctrl+end 63a1",
     "when": "config.altKey.arrows && config.altKey.enabled"
@@ -1113,7 +1105,7 @@ Notes:
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (arrow)
+    // (home) (arrow)
     "key": "ctrl+home",
     "command": "(model) ctrl+home 33f7",
     "when": "config.altKey.arrows && config.altKey.enabled"
@@ -1587,6 +1579,20 @@ Notes:
     "key": "shift+alt+h",
     "command": "(model) shift+alt+h a60d",
     "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (left) (vi) (no wrap)
+    "key": "shift+alt+h",
+    "command": "workbench.action.previousPanelView",
+    // "command": "shift+alt+h c899",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus"
+  },
+  {
+    // (left) (vi) (wrap)
+    "key": "shift+alt+h",
+    "command": "workbench.action.previousEditor",
+    // "command": "shift+alt+h d8fd",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
   },
   {
     "key": "shift+alt+home",
