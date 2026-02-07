@@ -1004,25 +1004,12 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled"
   },
   {
-    // (select) - Typically used for "Select All" in many applications, so don't use it here.
+    // (select) - This keybinding must NOT be a chord or selectAll will not work.
     "key": "ctrl+a",
-    "command": "-noop",
+    "command": "editor.action.selectAll",
+    // "command": "-noop",
     // "command": "(model) ctrl+a b6f8",
     "when": "config.altKey.enabled"
-  },
-  {
-    // (zoom) toggle maximized editor (zen mode)
-    "key": "ctrl+a z",
-    "command": "workbench.action.toggleZenMode",
-    // "command": "ctrl+a z 3f44",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (zoom) toggle maximized panel
-    "key": "ctrl+a z",
-    "command": "workbench.action.toggleMaximizedPanel",
-    // "command": "ctrl+a z 703e",
-    "when": "config.altKey.enabled && panelFocus"
   },
   {
     // (right)
