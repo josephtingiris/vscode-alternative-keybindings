@@ -1286,13 +1286,15 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (up) (vi) (neovim) - this when statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    // (up) (vi) (user) (neovim) - this when statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    // (note) ctrl+k must be a chord for native vscode keybindings to work
     "key": "ctrl+k",
     "command": "-vscode-neovim.send",
     "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert'"
   },
   {
-    // (up) (vi) (neovim) - this statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    // (up) (vi) (user) (neovim) - this statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    // (note) ctrl+k must be a chord for native vscode keybindings to work
     "key": "ctrl+k",
     "command": "-vscode-neovim.send",
     "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert'"
