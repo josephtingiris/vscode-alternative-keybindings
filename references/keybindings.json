@@ -124,7 +124,7 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     // (split) [vertical]
     "key": "alt+=",
     "command": "workbench.action.terminal.split",
-    //"command": "alt+= 9e54",
+    // "command": "alt+= 9e54",
     "when": "config.altKey.enabled && panelFocus && terminalFocus"
   },
   {
@@ -229,9 +229,9 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   {
     // (left) (vi)
     "key": "alt+h",
-    //"command": "noop",
+    // "command": "noop",
     "command": "alt+h and when? no and when! :)",
-    //"command": "(model) alt+h 7003",
+    // "command": "(model) alt+h 7003",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
@@ -502,7 +502,7 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   {
     // (up) (vi)
     "key": "alt+k",
-    //"command": "noop",
+    // "command": "noop",
     "command": "alt+k and when? no and when! :)",
     // "command": "(model) alt+k d9ea",
     "when": "config.altKey.enabled && config.altKey.vi"
@@ -544,7 +544,7 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     // (up)
     "key": "alt+k",
     "command": "alt+k 5a80",
-    //"command": "workbench.action.focusAuxiliaryBar",
+    // "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
   },
   {
@@ -711,8 +711,8 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "command": "workbench.action.nextEditor",
     // "command": "alt+l 32e7",
     "when": "config.altKey.enabled && config.altKey.vi && activeEditor != '' && !auxiliaryBarFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && !textInputFocus && activeEditorIsReadonly && editorIsOpen"
-    //"when": "config.altKey.enabled && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
-    //"when": "config.altKey.enabled && activeEditor == 'workbench.editor.keybindings' && textInputFocus"
+    // "when": "config.altKey.enabled && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
+    // "when": "config.altKey.enabled && activeEditor == 'workbench.editor.keybindings' && textInputFocus"
   },
   {
     // (left) (arrow)
@@ -727,10 +727,18 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && editorTextFocus"
   },
   {
+    // (neovim)
     "key": "alt+n",
     "command": "alt+n 318f",
     // "command": "editor.action.nextMatchFindAction",
-    "when": "config.altKey.enabled && textInputFocus"
+    "when": "config.altKey.enabled && neovim.init"
+  },
+  {
+    // (neovim) - restart (only) the neovim extension
+    "key": "alt+n r",
+    "command": "vscode-neovim.restart",
+    // "command": "alt+n 419e",
+    "when": "config.altKey.enabled && neovim.init"
   },
   {
     // (down) (arrow)
@@ -1279,7 +1287,7 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (up) (vi) - remove noop; don't stop processing (noop) this keybinding
+    // (up) (vi) (vscode) - remove noop; don't stop processing (noop) this keybinding
     "key": "ctrl+k",
     "command": "-noop",
     // "command": "(model) ctrl+k 33f7",
