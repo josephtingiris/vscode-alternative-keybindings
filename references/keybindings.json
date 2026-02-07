@@ -396,8 +396,8 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   {
     // (down) (vi)
     "key": "alt+j",
-    "command": "alt+j 12a2",
-    // "command": "workbench.action.focusPanel",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+j 12a2",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && multipleEditorGroups"
   },
   {
@@ -467,8 +467,9 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   {
     // (up) (vi)
     "key": "alt+k",
-    "command": "alt+k 12a3",
-    // "command": "workbench.action.focusPanel",
+    "command": "workbench.action.focusPanel",
+    // "command": "workbench.action.focusAboveGroup",
+    // "command": "alt+k 12a3",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && multipleEditorGroups"
   },
   {
@@ -1707,18 +1708,25 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelPosition == 'bottom' && panelFocus"
   },
   {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "shift+alt+j b422",
-    // "command": "workbench.action.focusPreviousPart",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex == 1"
-  },
-  {
     // (down) (inside)
     "key": "shift+alt+j",
     "command": "workbench.action.terminal.focusNext",
     // "command": "shift+alt+j a1d4",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
+  },
+  {
+    // (down) (vi)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j b422",
+    // "command": "workbench.action.focusPreviousPart",
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && activeEditorGroupIndex == 1 && !multipleEditorGroups"
+  },
+  {
+    // (down) (vi)
+    "key": "shift+alt+j",
+    "command": "workbench.action.focusBelowGroup",
+    // "command": "shift+alt+j b423",
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && activeEditorGroupIndex == 1 && multipleEditorGroups"
   },
   {
     // (down)
@@ -1784,11 +1792,24 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (up) when the primary sidebar is on the left then focus next part
+    // (up) (inside) when the primary sidebar is on the left then focus next part
     "key": "shift+alt+k",
     "command": "shift+alt+k 229d",
     // "command": "workbench.action.focusNextPart",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (up) (inside)
+    "key": "shift+alt+k",
+    "command": "shift+alt+k 229e",
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && !multipleEditorGroups"
+  },
+  {
+    // (up) (inside)
+    "key": "shift+alt+k",
+    "command": "workbench.action.focusAboveGroup",
+    // "command": "shift+alt+k 229f",
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && multipleEditorGroups"
   },
   {
     // (up) (inside)
