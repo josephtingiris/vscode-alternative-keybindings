@@ -366,10 +366,11 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   },
   {
     // (down) (vi)
+    // (note) vi-like extensions disabled
     "key": "alt+j",
     "command": "alt+j 8e38",
     // "command": "cursorDown",
-    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && neovim.init"
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && !neovim.init"
   },
   {
     // (down) (vi)
@@ -415,23 +416,10 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (up) when the primary sidebar is on the left then focus next part
-    "key": "alt+k",
-    "command": "alt+k 229d",
-    // "command": "workbench.action.focusNextPart",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left'"
-  },
-  {
     "key": "alt+k",
     "command": "alt+k b9c4",
     // "command": "workbench.action.quickOpenSelectPrevious",
     "when": "config.altKey.enabled && config.altKey.vi && inQuickOpen"
-  },
-  {
-    "key": "alt+k",
-    "command": "alt+k 6375",
-    // "command": "cursorUp",
-    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus"
   },
   {
     // (up)
@@ -441,11 +429,12 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus"
   },
   {
-    // (up)
+    // (up) (vi)
+    // (note) vi-like extensions disabled
     "key": "alt+k",
-    "command": "alt+k a367",
-    // "command": "noop",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus"
+    "command": "alt+k 6375",
+    // "command": "cursorUp",
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && !neovim.init"
   },
   {
     // (up)
@@ -467,6 +456,34 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "command": "workbench.action.focusActiveEditorGroup",
     // "command": "alt+k b321",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus && textInputFocus"
+  },
+  {
+    // (up)
+    "key": "alt+k",
+    "command": "alt+k a367",
+    // "command": "noop",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && multipleEditorGroups"
+  },
+  {
+    // (up) (vi)
+    "key": "alt+k",
+    "command": "alt+k 12a3",
+    // "command": "workbench.action.focusPanel",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && multipleEditorGroups"
+  },
+  {
+    // (up) (vi) (nowrap)
+    "key": "alt+k",
+    "command": "alt+k 12a4",
+    // "command": "workbench.action.focusPanel",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && panelPosition == 'bottom' && textInputFocus && panelVisible && !multipleEditorGroups"
+  },
+  {
+    // (up) (vi) (wrap)
+    "key": "alt+k",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+k 12a5",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelPosition == 'bottom' && textInputFocus && panelVisible && !multipleEditorGroups"
   },
   {
     // (right) (vi)
@@ -1194,35 +1211,26 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (up) (vi) (vscode) - remove noop; don't stop processing (noop) this keybinding
+    // (up) (vi) (vscode) (user?) - remove noop; don't stop processing (noop) this keybinding
     "key": "ctrl+k",
     "command": "-noop",
     // "command": "(model) ctrl+k 33f7",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (up) (vi) (user) (neovim) - this when statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    // (up) (vi) (neovim) (user) - this when statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
     // (note) ctrl+k must be a chord for native vscode keybindings to work
     "key": "ctrl+k",
     "command": "-vscode-neovim.send",
     "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert'"
   },
   {
-    // (up) (vi) (user) (neovim) - this statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    // (up) (vi) (neovim) (user) - this statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
     // (note) ctrl+k must be a chord for native vscode keybindings to work
     "key": "ctrl+k",
     "command": "-vscode-neovim.send",
     "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert'"
   },
-  /*
-  {
-    // (right) (vi) - A command here will prevent the default behavior of ctrl+l in the terminal (clear), so we disable it to preserve that functionality)
-    "key": "ctrl+l",
-    "command": "-noop",
-    // "command": "(model) ctrl+l ef2b",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  */
   {
     // (left) (arrow)
     "key": "ctrl+left",
@@ -1774,6 +1782,13 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "command": "(model) shift+alt+k 24d9",
     // "command": "cursorUpSelect",
     "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) when the primary sidebar is on the left then focus next part
+    "key": "shift+alt+k",
+    "command": "shift+alt+k 229d",
+    // "command": "workbench.action.focusNextPart",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left'"
   },
   {
     // (up) (inside)
