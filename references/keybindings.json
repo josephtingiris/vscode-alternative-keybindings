@@ -34,20 +34,19 @@ Conventions:
 
 Notes:
   * terminal's only split one way, depending on the orientation of the panel. see: https://github.com/microsoft/vscode/issues/160501
-  * my primary editor is [
-  {
-    // (right)
-    "key": "alt+'",
-    "command": "(model) alt+' 9509",
-    "when": "config.altKey.enabled"
-  },
-neo]vim, so this keyboard grammar is designed to work well with and without the vscode-neovim extension
+  * my primary editor is [neo]vim, so this keyboard grammar is designed to work well with and without the vscode-neovim extension
   * i try to avoid conflicts with default bindings and commoon extensions, however some conflicts are unavoidable and can be noted
   * i still need to test compatibility with other extensions, particularly vim emulation extensions
   * i'm aware of numerous conflicts with the vs code multiple cursor feature, and will circle back to resolve them later (once I learn to use it better)
   * ctrl+shift+alt+arrow keys have system keybindings (mimic them?)
 */
 [
+  {
+    // (right)
+    "key": "alt+'",
+    "command": "(model) alt+' 9509",
+    "when": "config.altKey.enabled"
+  },
   {
     // (noop)
     "key": "alt+'",
@@ -541,19 +540,6 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "command": "workbench.action.focusSideBar",
     // "command": "alt+l 55d3",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible"
-  },
-  {
-    // (right) (no wrap)
-    "key": "alt+l",
-    "command": "alt+l bdf8",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
-  },
-  {
-    // (right) (wrap)
-    "key": "alt+l",
-    "command": "alt+l fe0b",
-    // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && !panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
   },
   {
     // (right) (wrap)
@@ -1843,6 +1829,19 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "command": "shift+alt+l 1384",
     // "command": "workbench.action.nextPanelView",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+  },
+  {
+    // (right) (no wrap)
+    "key": "shift+alt+l",
+    "command": "shift+alt+l bdf8",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+  },
+  {
+    // (right) (wrap)
+    "key": "shift+alt+l",
+    "command": "shift+alt+l fe0b",
+    // "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && !panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
   },
   {
     "key": "shift+alt+l",
