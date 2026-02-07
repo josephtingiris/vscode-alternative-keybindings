@@ -495,121 +495,45 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (right)
+    // (right) (vi)
     "key": "alt+l",
     "command": "alt+l 0ae0",
-    // "command": "workbench.action.focusNextPart",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left'"
   },
   {
-    // (right)
+    // (right) (vi)
     "key": "alt+l",
-    "command": "workbench.action.nextPanelView",
-    // "command": "alt+l e857",
-    "when": "config.altKey.enabled && config.altKey.vi && panelFocus"
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+l 53d4",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus"
   },
   {
+    // (right) (vi)
     "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    // "command": "alt+l cc62",
-    // "command": "cursorRight",
-    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus"
+    "command": "workbench.action.focusAuxiliaryBar",
+    // "command": "alt+l 53d4",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && auxiliaryBarVisible"
   },
   {
-    // (right) unknown
-    "key": "alt+l",
-    "command": "alt+l 8c60",
-    // "command": "workbench.action.nextEditor",
-    "when": "config.altKey.enabled && config.altKey.vi && activeEditor == 'workbench.editor.keybindings' && textInputFocus"
-  },
-  {
-    // (right)
+    // (right) (vi)
     "key": "alt+l",
     "command": "alt+l 53d3",
-    // "command": "noop",
-    "when": "config.altKey.enabled && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible"
+    // "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible"
   },
   {
     // (right)
     "key": "alt+l",
-    "command": "workbench.action.openEditorAtIndex1",
-    // "command": "alt+l 6ae3",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
-  },
-  {
-    // (right)
-    "key": "alt+l",
-    "command": "workbench.action.nextPanelView",
-    // "command": "alt+l 90d8",
-    "when": "config.altKey.enabled && config.altKey.vi && focusedView != '' && panelFocus && textInputFocus"
-  },
-  {
-    // (right)
-    "key": "alt+l",
-    "command": "alt+l 6539",
-    // "command": "workbench.action.nextEditor",
-    "when": "config.altKey.enabled && config.altKey.vi && focusedView == '' && panelFocus && textInputFocus"
-  },
-  {
-    "key": "alt+l",
-    "command": "alt+l effb",
-    // "command": "workbench.action.nextEditor",
-    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && textInputFocus"
-  },
-  {
-    // (right) [top left]
-    "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    // "command": "alt+l 2195",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible"
-  },
-  {
-    // (right)
-    "key": "alt+l",
-    "command": "alt+l ec4c",
-    // "command": "workbench.action.focusSideBar",
+    "command": "workbench.action.focusSideBar",
+    // "command": "alt+l ec4d",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible"
   },
   {
-    // (right)
+    // (right) (vi)
     "key": "alt+l",
-    // "command": "workbench.action.terminal.focusNextPane",
-    "command": "alt+l ca60",
-    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
-  },
-  {
-    // (right)
-    "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    // "command": "alt+l d40b",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && auxiliaryBarVisible && activeEditorGroupLast && multipleEditorGroups"
-  },
-  {
-    "key": "alt+l",
-    "command": "alt+l 8d53",
-    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && !auxiliaryBarVisible && terminalCount == 1 && terminalGroupCount == 1"
-  },
-  {
-    "key": "alt+l",
-    "command": "alt+l f2dc",
-    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && auxiliaryBarVisible && terminalCount == 1 && terminalGroupCount == 1"
-  },
-  {
-    "key": "alt+l",
-    "command": "alt+l d001",
-    // "command": "workbench.action.nextPanelView",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && !textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
-  },
-  {
-    "key": "alt+l",
-    "command": "alt+l 458e",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && textInputFocus && !auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
-  },
-  {
-    "key": "alt+l",
-    "command": "alt+l 1384",
-    // "command": "workbench.action.nextPanelView",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+    "command": "workbench.action.focusSideBar",
+    // "command": "alt+l 55d3",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible"
   },
   {
     // (right) (no wrap)
@@ -627,17 +551,9 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   {
     // (right) (wrap)
     "key": "alt+l",
-    "command": "workbench.action.focusSideBar",
-    // "command": "alt+l f108",
+    "command": "alt+l f108",
+    // "command": "workbench.action.focusSideBar",
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && !auxiliaryBarVisible && sideBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
-  },
-  {
-    "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    // "command": "alt+l 32e7",
-    "when": "config.altKey.enabled && config.altKey.vi && activeEditor != '' && !auxiliaryBarFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && !textInputFocus && activeEditorIsReadonly && editorIsOpen"
-    // "when": "config.altKey.enabled && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
-    // "when": "config.altKey.enabled && activeEditor == 'workbench.editor.keybindings' && textInputFocus"
   },
   {
     // (left) (arrow)
@@ -1824,6 +1740,110 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "command": "(model) shift+alt+l 6611",
     // "command": "cursorRightSelect",
     "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (right) (vi)
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextPanelView",
+    // "command": "shift+alt+l e857",
+    "when": "config.altKey.enabled && config.altKey.vi && panelFocus"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextEditor",
+    // "command": "shift+alt+l cc62",
+    // "command": "cursorRight",
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus"
+  },
+  {
+    // (right) (vi)
+    "key": "shift+alt+l",
+    "command": "shift+alt+l 8c60",
+    // "command": "workbench.action.nextEditor",
+    "when": "config.altKey.enabled && config.altKey.vi && activeEditor == 'workbench.editor.keybindings' && textInputFocus"
+  },
+  {
+    // (right)
+    "key": "shift+alt+l",
+    "command": "workbench.action.openEditorAtIndex1",
+    // "command": "shift+alt+l 6ae3",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus && editorIsOpen"
+  },
+  {
+    // (right)
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextPanelView",
+    // "command": "shift+alt+l 90d8",
+    "when": "config.altKey.enabled && config.altKey.vi && focusedView != '' && panelFocus && textInputFocus"
+  },
+  {
+    // (right)
+    "key": "shift+alt+l",
+    "command": "shift+alt+l 6539",
+    // "command": "workbench.action.nextEditor",
+    "when": "config.altKey.enabled && config.altKey.vi && focusedView == '' && panelFocus && textInputFocus"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "shift+alt+l effb",
+    // "command": "workbench.action.nextEditor",
+    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && textInputFocus"
+  },
+  {
+    // (right) [top left]
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextEditor",
+    // "command": "shift+alt+l 2195",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible"
+  },
+  {
+    // (right)
+    "key": "shift+alt+l",
+    // "command": "workbench.action.terminal.focusNextPane",
+    "command": "shift+alt+l ca60",
+    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
+  },
+  {
+    // (right)
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextEditor",
+    // "command": "shift+alt+l d40b",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && auxiliaryBarVisible && activeEditorGroupLast && multipleEditorGroups"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "shift+alt+l 8d53",
+    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && !auxiliaryBarVisible && terminalCount == 1 && terminalGroupCount == 1"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "shift+alt+l f2dc",
+    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && auxiliaryBarVisible && terminalCount == 1 && terminalGroupCount == 1"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "shift+alt+l d001",
+    // "command": "workbench.action.nextPanelView",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && !textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "shift+alt+l 458e",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && textInputFocus && !auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "shift+alt+l 1384",
+    // "command": "workbench.action.nextPanelView",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && textInputFocus && auxiliaryBarVisible && activeEditorIsLastInGroup && !multipleEditorGroups"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextEditor",
+    // "command": "shift+alt+l 32e7",
+    "when": "config.altKey.enabled && config.altKey.vi && activeEditor != '' && !auxiliaryBarFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && !textInputFocus && activeEditorIsReadonly && editorIsOpen"
+    // "when": "config.altKey.enabled && activeEditor =~ '/^workbench.editor.settings/' && textInputFocus"
+    // "when": "config.altKey.enabled && activeEditor == 'workbench.editor.keybindings' && textInputFocus"
   },
   {
     // (left) (arrow)
