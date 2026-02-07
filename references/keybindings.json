@@ -1004,8 +1004,10 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled"
   },
   {
+    // (select) - Typically used for "Select All" in many applications, so don't use it here.
     "key": "ctrl+a",
-    "command": "(model) ctrl+a b6f8",
+    "command": "-noop",
+    // "command": "(model) ctrl+a b6f8",
     "when": "config.altKey.enabled"
   },
   {
