@@ -261,7 +261,7 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && textInputFocus"
   },
   {
-    // (left) [no wrap]
+    // (left) (no wrap)
     "key": "alt+h",
     "command": "workbench.action.previousPanelView",
     // "command": "alt+h c899",
@@ -473,7 +473,7 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && multipleEditorGroups"
   },
   {
-    // (up) (vi) (nowrap)
+    // (up) (vi) (no wrap)
     "key": "alt+k",
     "command": "alt+k 12a4",
     // "command": "workbench.action.focusPanel",
@@ -511,11 +511,18 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     // (right) (vi)
     "key": "alt+l",
     "command": "workbench.action.focusAuxiliaryBar",
+    // "command": "alt+l e241",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && auxiliaryBarVisible"
+  },
+  {
+    // (right) (vi)
+    "key": "alt+l",
+    "command": "workbench.action.focusAuxiliaryBar",
     // "command": "alt+l 53d4",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && auxiliaryBarVisible"
   },
   {
-    // (right) (vi)
+    // (right) (vi) (no wrap)
     "key": "alt+l",
     "command": "alt+l 53d3",
     // "command": "workbench.action.focusAuxiliaryBar",
