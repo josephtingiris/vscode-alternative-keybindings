@@ -44,10 +44,130 @@ def usage(prog: str | None = None) -> None:
     sys.exit(1)
 
 def extract_preamble_postamble(text):
-    start = text.find('[')
-    end = text.rfind(']')
-    if start == -1 or end == -1 or end < start:
+    """
+    Find the top-level JSON array brackets, skipping any brackets that appear
+    inside comments or strings in the preamble/postamble.
+    """
+    i = 0
+    n = len(text)
+    in_string = False
+    string_char = ''
+    esc = False
+    in_line_comment = False
+    in_block_comment = False
+    start = -1
+    
+    # Find opening bracket, skipping comments and strings
+    while i < n:
+        ch = text[i]
+        next2 = text[i:i+2] if i+2 <= n else ''
+        
+        if in_line_comment:
+            if ch == '\n':
+                in_line_comment = False
+            i += 1
+            continue
+        if in_block_comment:
+            if next2 == '*/':
+                in_block_comment = False
+                i += 2
+            else:
+                i += 1
+            continue
+        if in_string:
+            if esc:
+                esc = False
+            elif ch == '\\':
+                esc = True
+            elif ch == string_char:
+                in_string = False
+            i += 1
+            continue
+        
+        # Not in string/comment
+        if next2 == '//':
+            in_line_comment = True
+            i += 2
+            continue
+        if next2 == '/*':
+            in_block_comment = True
+            i += 2
+            continue
+        if ch == '"' or ch == "'":
+            in_string = True
+            string_char = ch
+            i += 1
+            continue
+        if ch == '[':
+            start = i
+            break
+        i += 1
+    
+    if start == -1:
         return '', '', text
+    
+    # Find matching closing bracket
+    depth = 1
+    i = start + 1
+    in_string = False
+    string_char = ''
+    esc = False
+    in_line_comment = False
+    in_block_comment = False
+    end = -1
+    
+    while i < n:
+        ch = text[i]
+        next2 = text[i:i+2] if i+2 <= n else ''
+        
+        if in_line_comment:
+            if ch == '\n':
+                in_line_comment = False
+            i += 1
+            continue
+        if in_block_comment:
+            if next2 == '*/':
+                in_block_comment = False
+                i += 2
+            else:
+                i += 1
+            continue
+        if in_string:
+            if esc:
+                esc = False
+            elif ch == '\\':
+                esc = True
+            elif ch == string_char:
+                in_string = False
+            i += 1
+            continue
+        
+        # Not in string/comment
+        if next2 == '//':
+            in_line_comment = True
+            i += 2
+            continue
+        if next2 == '/*':
+            in_block_comment = True
+            i += 2
+            continue
+        if ch == '"' or ch == "'":
+            in_string = True
+            string_char = ch
+            i += 1
+            continue
+        if ch == '[':
+            depth += 1
+        elif ch == ']':
+            depth -= 1
+            if depth == 0:
+                end = i
+                break
+        i += 1
+    
+    if end == -1:
+        return '', '', text
+    
     preamble = text[:start]
     postamble = text[end+1:]
     array_text = text[start+1:end]  # exclude [ and ]
