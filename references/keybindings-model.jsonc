@@ -2,13 +2,13 @@
   {
     // (right)
     "key": "alt+'",
-    "command": "(model) alt+' 9509",
+    "command": "(model) alt+' 2930",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "alt+,",
-    "command": "(model) alt+, 94a6",
+    "command": "(model) alt+, 9347",
     "when": "config.altKey.enabled"
   },
   {
@@ -19,252 +19,252 @@
   {
     // (right)
     "key": "alt+.",
-    "command": "(model) alt+. 4c91",
+    "command": "(model) alt+. 5f9b",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "alt+;",
-    "command": "(model) alt+; 7183",
+    "command": "(model) alt+; 7ce1",
     "when": "config.altKey.enabled"
   },
   {
     "key": "alt+=",
-    "command": "(model) alt+= 474e",
+    "command": "(model) alt+= 6fd7",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "alt+[",
-    "command": "(model) alt+[ f1bc",
+    "command": "(model) alt+[ 25c1",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "alt+]",
-    "command": "(model) alt+] 0730",
+    "command": "(model) alt+] e2a8",
     "when": "config.altKey.enabled"
   },
   {
     "key": "alt+a",
-    "command": "(model) alt+a fc3d",
+    "command": "(model) alt+a 2916",
     "when": "config.altKey.enabled"
   },
   {
     "key": "alt+d",
-    "command": "(model) alt+d 8ac5",
+    "command": "(model) alt+d b6f8",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "alt+down",
-    "command": "(model) alt+down 84b9",
+    "command": "(model) alt+down c6aa",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "alt+end",
-    "command": "(model) alt+end 6825",
+    "command": "(model) alt+end 9a24",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "alt+h",
-    "command": "(model) alt+h 7003",
+    "command": "(model) alt+h 8ac5",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "alt+home",
-    "command": "(model) alt+home f178",
+    "command": "(model) alt+home 6611",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "alt+j",
-    "command": "(model) alt+j 3b6a",
+    "command": "(model) alt+j 4aef",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "alt+k",
-    "command": "(model) alt+k d9ea",
+    "command": "(model) alt+k 2edd",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "alt+l",
-    "command": "(model) alt+l 1f40",
+    "command": "(model) alt+l 6bd0",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "alt+left",
-    "command": "(model) alt+left e571",
+    "command": "(model) alt+left 8fcf",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
     "key": "alt+meta+'",
-    "command": "(model) alt+meta+' 680a",
+    "command": "(model) alt+meta+' fa83",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "alt+meta+,",
-    "command": "(model) alt+meta+, 5f9b",
+    "command": "(model) alt+meta+, 2eea",
     "when": "config.altKey.enabled"
   },
   {
     "key": "alt+meta+-",
-    "command": "(model) alt+meta+- 8490",
+    "command": "(model) alt+meta+- 14ba",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "alt+meta+.",
-    "command": "(model) alt+meta+. c857",
+    "command": "(model) alt+meta+. 8526",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "alt+meta+;",
-    "command": "(model) alt+meta+; e55c",
+    "command": "(model) alt+meta+; 203f",
     "when": "config.altKey.enabled"
   },
   {
     "key": "alt+meta+=",
-    "command": "(model) alt+meta+= 308d",
+    "command": "(model) alt+meta+= 904d",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "alt+meta+[",
-    "command": "(model) alt+meta+[ de4b",
+    "command": "(model) alt+meta+[ f1bc",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "alt+meta+]",
-    "command": "(model) alt+meta+] 0095",
+    "command": "(model) alt+meta+] 1fe3",
     "when": "config.altKey.enabled"
   },
   {
     "key": "alt+meta+a",
-    "command": "(model) alt+meta+a a60d",
+    "command": "(model) alt+meta+a 8d1f",
     "when": "config.altKey.enabled"
   },
   {
     "key": "alt+meta+d",
-    "command": "(model) alt+meta+d be7e",
+    "command": "(model) alt+meta+d a60d",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "alt+meta+down",
-    "command": "(model) alt+meta+down f97a",
+    "command": "(model) alt+meta+down 2954",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "alt+meta+end",
-    "command": "(model) alt+meta+end 52eb",
+    "command": "(model) alt+meta+end df44",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "alt+meta+h",
-    "command": "(model) alt+meta+h 0dab",
+    "command": "(model) alt+meta+h 70e0",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "alt+meta+home",
-    "command": "(model) alt+meta+home b6dc",
+    "command": "(model) alt+meta+home b794",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "alt+meta+j",
-    "command": "(model) alt+meta+j 63a1",
+    "command": "(model) alt+meta+j 1728",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "alt+meta+k",
-    "command": "(model) alt+meta+k 23d7",
+    "command": "(model) alt+meta+k 3b6a",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "alt+meta+l",
-    "command": "(model) alt+meta+l 33ab",
+    "command": "(model) alt+meta+l 0baa",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "alt+meta+left",
-    "command": "(model) alt+meta+left 1026",
+    "command": "(model) alt+meta+left 7af2",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "alt+meta+pagedown",
-    "command": "(model) alt+meta+pagedown 2954",
+    "command": "(model) alt+meta+pagedown 807a",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "alt+meta+pageup",
-    "command": "(model) alt+meta+pageup 4509",
+    "command": "(model) alt+meta+pageup 3c03",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "alt+meta+right",
-    "command": "(model) alt+meta+right 3210",
+    "command": "(model) alt+meta+right 50bc",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "alt+meta+up",
-    "command": "(model) alt+meta+up 2abc",
+    "command": "(model) alt+meta+up d42d",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "alt+pagedown",
-    "command": "(model) alt+pagedown 9edf",
+    "command": "(model) alt+pagedown b6dc",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "alt+pageup",
-    "command": "(model) alt+pageup abfd",
+    "command": "(model) alt+pageup af43",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "alt+right",
-    "command": "(model) alt+right 6d53",
+    "command": "(model) alt+right 20b5",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "alt+up",
-    "command": "(model) alt+up 1986",
+    "command": "(model) alt+up e571",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+'",
-    "command": "(model) ctrl+' 3fe7",
+    "command": "(model) ctrl+' a3de",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+,",
-    "command": "(model) ctrl+, 5e24",
+    "command": "(model) ctrl+, e3d5",
     "when": "config.altKey.enabled"
   },
   {
@@ -275,1008 +275,880 @@
   {
     // (right)
     "key": "ctrl+.",
-    "command": "(model) ctrl+. 13c8",
+    "command": "(model) ctrl+. 10e1",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+;",
-    "command": "(model) ctrl+; 7a2b",
+    "command": "(model) ctrl+; a681",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+=",
-    "command": "(model) ctrl+= 904d",
+    "command": "(model) ctrl+= 474e",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+[",
-    "command": "(model) ctrl+[ 338f",
+    "command": "(model) ctrl+[ a90f",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+]",
-    "command": "(model) ctrl+] 2fc1",
+    "command": "(model) ctrl+] 855f",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+a",
-    "command": "(model) ctrl+a b6f8",
+    "command": "(model) ctrl+a c857",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+alt+'",
-    "command": "(model) ctrl+alt+' 9347",
+    "command": "(model) ctrl+alt+' 37d6",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+alt+,",
-    "command": "(model) ctrl+alt+, 10e1",
+    "command": "(model) ctrl+alt+, c511",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+alt+-",
-    "command": "(model) ctrl+alt+- f8cb",
+    "command": "(model) ctrl+alt+- 8490",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+alt+.",
-    "command": "(model) ctrl+alt+. 8d1f",
+    "command": "(model) ctrl+alt+. f3fb",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+alt+;",
-    "command": "(model) ctrl+alt+; 2eb3",
+    "command": "(model) ctrl+alt+; 61d3",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+alt+=",
-    "command": "(model) ctrl+alt+= 8042",
+    "command": "(model) ctrl+alt+= 478c",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+alt+[",
-    "command": "(model) ctrl+alt+[ a1e4",
+    "command": "(model) ctrl+alt+[ 338f",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+alt+]",
-    "command": "(model) ctrl+alt+] fcb6",
+    "command": "(model) ctrl+alt+] 0730",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+alt+a",
-    "command": "(model) ctrl+alt+a 3b0f",
+    "command": "(model) ctrl+alt+a 7893",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+alt+d",
-    "command": "(model) ctrl+alt+d 5749",
+    "command": "(model) ctrl+alt+d 3b0f",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+alt+down",
-    "command": "(model) ctrl+alt+down 0009",
+    "command": "(model) ctrl+alt+down 00c7",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "ctrl+alt+end",
-    "command": "(model) ctrl+alt+end af43",
+    "command": "(model) ctrl+alt+end 5c52",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "ctrl+alt+h",
-    "command": "(model) ctrl+alt+h 3fb7",
+    "command": "(model) ctrl+alt+h be7e",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "ctrl+alt+home",
-    "command": "(model) ctrl+alt+home c6fc",
+    "command": "(model) ctrl+alt+home f0c0",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "ctrl+alt+j",
-    "command": "(model) ctrl+alt+j 5eb4",
+    "command": "(model) ctrl+alt+j 25e2",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "ctrl+alt+k",
-    "command": "(model) ctrl+alt+k 7110",
+    "command": "(model) ctrl+alt+k 12a1",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "ctrl+alt+l",
-    "command": "(model) ctrl+alt+l c855",
+    "command": "(model) ctrl+alt+l d9ea",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "ctrl+alt+left",
-    "command": "(model) ctrl+alt+left cdf5",
+    "command": "(model) ctrl+alt+left f6b2",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+alt+meta+'",
-    "command": "(model) ctrl+alt+meta+' 2eea",
+    "command": "(model) ctrl+alt+meta+' 9509",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+alt+meta+,",
-    "command": "(model) ctrl+alt+meta+, f3fb",
+    "command": "(model) ctrl+alt+meta+, 7bf5",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+-",
-    "command": "(model) ctrl+alt+meta+- 9b4b",
+    "command": "(model) ctrl+alt+meta+- cf53",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+alt+meta+.",
-    "command": "(model) ctrl+alt+meta+. 6e2e",
+    "command": "(model) ctrl+alt+meta+. 2dfd",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+alt+meta+;",
-    "command": "(model) ctrl+alt+meta+; a3de",
+    "command": "(model) ctrl+alt+meta+; 7a2b",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+=",
-    "command": "(model) ctrl+alt+meta+= 9ecb",
+    "command": "(model) ctrl+alt+meta+= 8042",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+alt+meta+[",
-    "command": "(model) ctrl+alt+meta+[ f43a",
+    "command": "(model) ctrl+alt+meta+[ de4b",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+alt+meta+]",
-    "command": "(model) ctrl+alt+meta+] 7ce1",
+    "command": "(model) ctrl+alt+meta+] cc32",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+a",
-    "command": "(model) ctrl+alt+meta+a aba8",
+    "command": "(model) ctrl+alt+meta+a d6be",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+alt+meta+d",
-    "command": "(model) ctrl+alt+meta+d da2d",
+    "command": "(model) ctrl+alt+meta+d aba8",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+alt+meta+down",
-    "command": "(model) ctrl+alt+meta+down fd39",
+    "command": "(model) ctrl+alt+meta+down ab36",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "ctrl+alt+meta+end",
-    "command": "(model) ctrl+alt+meta+end 3c03",
+    "command": "(model) ctrl+alt+meta+end ef2b",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "ctrl+alt+meta+h",
-    "command": "(model) ctrl+alt+meta+h 3d48",
+    "command": "(model) ctrl+alt+meta+h aa42",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "ctrl+alt+meta+home",
-    "command": "(model) ctrl+alt+meta+home 4e8c",
+    "command": "(model) ctrl+alt+meta+home 6825",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "ctrl+alt+meta+j",
-    "command": "(model) ctrl+alt+meta+j f55e",
+    "command": "(model) ctrl+alt+meta+j 3fb7",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "ctrl+alt+meta+k",
-    "command": "(model) ctrl+alt+meta+k 9a24",
+    "command": "(model) ctrl+alt+meta+k 63a1",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "ctrl+alt+meta+l",
-    "command": "(model) ctrl+alt+meta+l 8530",
+    "command": "(model) ctrl+alt+meta+l 8514",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "ctrl+alt+meta+left",
-    "command": "(model) ctrl+alt+meta+left 17f3",
+    "command": "(model) ctrl+alt+meta+left 9364",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+alt+meta+pagedown",
-    "command": "(model) ctrl+alt+meta+pagedown ab36",
+    "command": "(model) ctrl+alt+meta+pagedown ea78",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+alt+meta+pageup",
-    "command": "(model) ctrl+alt+meta+pageup b456",
+    "command": "(model) ctrl+alt+meta+pageup 06c2",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "ctrl+alt+meta+right",
-    "command": "(model) ctrl+alt+meta+right 65a3",
+    "command": "(model) ctrl+alt+meta+right 0009",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+alt+meta+up",
-    "command": "(model) ctrl+alt+meta+up cdba",
+    "command": "(model) ctrl+alt+meta+up d621",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+alt+pagedown",
-    "command": "(model) ctrl+alt+pagedown 00c7",
+    "command": "(model) ctrl+alt+pagedown 4e8c",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+alt+pageup",
-    "command": "(model) ctrl+alt+pageup 7af2",
+    "command": "(model) ctrl+alt+pageup e276",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "ctrl+alt+right",
-    "command": "(model) ctrl+alt+right 6183",
+    "command": "(model) ctrl+alt+right e489",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+alt+up",
-    "command": "(model) ctrl+alt+up 42d3",
+    "command": "(model) ctrl+alt+up 1026",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     "key": "ctrl+d",
-    "command": "(model) ctrl+d 3bf9",
+    "command": "(model) ctrl+d 2a2c",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+down",
-    "command": "(model) ctrl+down 50bc",
+    "command": "(model) ctrl+down d42e",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "ctrl+end",
-    "command": "(model) ctrl+end 1db8",
+    "command": "(model) ctrl+end b359",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "ctrl+h",
-    "command": "(model) ctrl+h 1728",
+    "command": "(model) ctrl+h 3bf9",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "ctrl+home",
-    "command": "(model) ctrl+home d1df",
+    "command": "(model) ctrl+home 8530",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "ctrl+j",
-    "command": "(model) ctrl+j 12a1",
+    "command": "(model) ctrl+j 7003",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "ctrl+k",
-    "command": "(model) ctrl+k 33f7",
+    "command": "(model) ctrl+k bd82",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "ctrl+l",
-    "command": "(model) ctrl+l ef2b",
+    "command": "(model) ctrl+l 1f46",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "ctrl+left",
-    "command": "(model) ctrl+left c1de",
+    "command": "(model) ctrl+left 4509",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+pagedown",
-    "command": "(model) ctrl+pagedown c6aa",
+    "command": "(model) ctrl+pagedown c6fc",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+pageup",
-    "command": "(model) ctrl+pageup 1765",
+    "command": "(model) ctrl+pageup 805a",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "ctrl+right",
-    "command": "(model) ctrl+right 0751",
+    "command": "(model) ctrl+right 84b9",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+shift+alt+'",
-    "command": "(model) ctrl+shift+alt+' c511",
+    "command": "(model) ctrl+shift+alt+' 3fe7",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+shift+alt+,",
-    "command": "(model) ctrl+shift+alt+, 235f",
+    "command": "(model) ctrl+shift+alt+, 94a6",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+-",
-    "command": "(model) ctrl+shift+alt+- f404",
+    "command": "(model) ctrl+shift+alt+- 9b4b",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+shift+alt+.",
-    "command": "(model) ctrl+shift+alt+. d6be",
+    "command": "(model) ctrl+shift+alt+. 42ac",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+shift+alt+;",
-    "command": "(model) ctrl+shift+alt+; fa83",
+    "command": "(model) ctrl+shift+alt+; 48f5",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+=",
-    "command": "(model) ctrl+shift+alt+= 3291",
+    "command": "(model) ctrl+shift+alt+= 4b3e",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+shift+alt+[",
-    "command": "(model) ctrl+shift+alt+[ e2a8",
+    "command": "(model) ctrl+shift+alt+[ a1e4",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+shift+alt+]",
-    "command": "(model) ctrl+shift+alt+] a681",
+    "command": "(model) ctrl+shift+alt+] 0095",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+a",
-    "command": "(model) ctrl+shift+alt+a 6179",
+    "command": "(model) ctrl+shift+alt+a 8ce8",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+d",
-    "command": "(model) ctrl+shift+alt+d 1fd7",
+    "command": "(model) ctrl+shift+alt+d 6179",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+shift+alt+down",
-    "command": "(model) ctrl+shift+alt+down a6e2",
+    "command": "(model) ctrl+shift+alt+down 51f5",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "ctrl+shift+alt+end",
-    "command": "(model) ctrl+shift+alt+end e276",
+    "command": "(model) ctrl+shift+alt+end 1429",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "ctrl+shift+alt+h",
-    "command": "(model) ctrl+shift+alt+h c84c",
+    "command": "(model) ctrl+shift+alt+h da2d",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "ctrl+shift+alt+home",
-    "command": "(model) ctrl+shift+alt+home 065e",
+    "command": "(model) ctrl+shift+alt+home 1db8",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "ctrl+shift+alt+j",
-    "command": "(model) ctrl+shift+alt+j 6bd0",
+    "command": "(model) ctrl+shift+alt+j 6085",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "ctrl+shift+alt+k",
-    "command": "(model) ctrl+shift+alt+k b359",
+    "command": "(model) ctrl+shift+alt+k 5eb4",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "ctrl+shift+alt+l",
-    "command": "(model) ctrl+shift+alt+l b794",
+    "command": "(model) ctrl+shift+alt+l 23d7",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "ctrl+shift+alt+left",
-    "command": "(model) ctrl+shift+alt+left 54d3",
+    "command": "(model) ctrl+shift+alt+left b7e9",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+shift+alt+meta+'",
-    "command": "(model) ctrl+shift+alt+meta+' 7bf5",
+    "command": "(model) ctrl+shift+alt+meta+' 680a",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+shift+alt+meta+,",
-    "command": "(model) ctrl+shift+alt+meta+, 42ac",
+    "command": "(model) ctrl+shift+alt+meta+, 60f7",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+-",
-    "command": "(model) ctrl+shift+alt+meta+- 6fd7",
+    "command": "(model) ctrl+shift+alt+meta+- b752",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+shift+alt+meta+.",
-    "command": "(model) ctrl+shift+alt+meta+. e6b0",
+    "command": "(model) ctrl+shift+alt+meta+. 13c8",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+shift+alt+meta+;",
-    "command": "(model) ctrl+shift+alt+meta+; 9a57",
+    "command": "(model) ctrl+shift+alt+meta+; 2eb3",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+=",
-    "command": "(model) ctrl+shift+alt+meta+= a90f",
+    "command": "(model) ctrl+shift+alt+meta+= 3291",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "ctrl+shift+alt+meta+[",
-    "command": "(model) ctrl+shift+alt+meta+[ 1fe3",
+    "command": "(model) ctrl+shift+alt+meta+[ f43a",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "ctrl+shift+alt+meta+]",
-    "command": "(model) ctrl+shift+alt+meta+] 61d3",
+    "command": "(model) ctrl+shift+alt+meta+] aa90",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+a",
-    "command": "(model) ctrl+shift+alt+meta+a 084c",
+    "command": "(model) ctrl+shift+alt+meta+a fc3d",
     "when": "config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+meta+d",
-    "command": "(model) ctrl+shift+alt+meta+d 4aef",
+    "command": "(model) ctrl+shift+alt+meta+d 084c",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+shift+alt+meta+down",
-    "command": "(model) ctrl+shift+alt+meta+down ef0c",
+    "command": "(model) ctrl+shift+alt+meta+down 7239",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "ctrl+shift+alt+meta+end",
-    "command": "(model) ctrl+shift+alt+meta+end 06c2",
+    "command": "(model) ctrl+shift+alt+meta+end c855",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "ctrl+shift+alt+meta+h",
-    "command": "(model) ctrl+shift+alt+meta+h bd82",
+    "command": "(model) ctrl+shift+alt+meta+h 3382",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "ctrl+shift+alt+meta+home",
-    "command": "(model) ctrl+shift+alt+meta+home 287c",
+    "command": "(model) ctrl+shift+alt+meta+home 52eb",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "ctrl+shift+alt+meta+j",
-    "command": "(model) ctrl+shift+alt+meta+j 0baa",
+    "command": "(model) ctrl+shift+alt+meta+j c84c",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "ctrl+shift+alt+meta+k",
-    "command": "(model) ctrl+shift+alt+meta+k 5c52",
+    "command": "(model) ctrl+shift+alt+meta+k f55e",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "ctrl+shift+alt+meta+l",
-    "command": "(model) ctrl+shift+alt+meta+l 56be",
+    "command": "(model) ctrl+shift+alt+meta+l 24d9",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "ctrl+shift+alt+meta+left",
-    "command": "(model) ctrl+shift+alt+meta+left 20b5",
+    "command": "(model) ctrl+shift+alt+meta+left 9edf",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+shift+alt+meta+pagedown",
-    "command": "(model) ctrl+shift+alt+meta+pagedown 7239",
+    "command": "(model) ctrl+shift+alt+meta+pagedown 1765",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+shift+alt+meta+pageup",
-    "command": "(model) ctrl+shift+alt+meta+pageup 43c2",
+    "command": "(model) ctrl+shift+alt+meta+pageup 9f75",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "ctrl+shift+alt+meta+right",
-    "command": "(model) ctrl+shift+alt+meta+right 5d4c",
+    "command": "(model) ctrl+shift+alt+meta+right a6e2",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+shift+alt+meta+up",
-    "command": "(model) ctrl+shift+alt+meta+up 01bc",
+    "command": "(model) ctrl+shift+alt+meta+up e405",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "ctrl+shift+alt+pagedown",
-    "command": "(model) ctrl+shift+alt+pagedown 51f5",
+    "command": "(model) ctrl+shift+alt+pagedown 287c",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+shift+alt+pageup",
-    "command": "(model) ctrl+shift+alt+pageup 9364",
+    "command": "(model) ctrl+shift+alt+pageup f178",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "ctrl+shift+alt+right",
-    "command": "(model) ctrl+shift+alt+right 9ad6",
+    "command": "(model) ctrl+shift+alt+right 13ec",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+shift+alt+up",
-    "command": "(model) ctrl+shift+alt+up d5c0",
+    "command": "(model) ctrl+shift+alt+up 17f3",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "ctrl+up",
-    "command": "(model) ctrl+up d48c",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right)
-    "key": "meta+'",
-    "command": "(model) meta+' aa5e",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "meta+,",
-    "command": "(model) meta+, 60f7",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "meta+-",
-    "command": "(model) meta+- 14ba",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (right)
-    "key": "meta+.",
-    "command": "(model) meta+. 2916",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "meta+;",
-    "command": "(model) meta+; 48f5",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "meta+=",
-    "command": "(model) meta+= 478c",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "meta+[",
-    "command": "(model) meta+[ b524",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (right)
-    "key": "meta+]",
-    "command": "(model) meta+] cc32",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "meta+a",
-    "command": "(model) meta+a 2a2c",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "meta+d",
-    "command": "(model) meta+d 70e0",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "meta+down",
-    "command": "(model) meta+down e489",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "meta+end",
-    "command": "(model) meta+end 5100",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (vi)
-    "key": "meta+h",
-    "command": "(model) meta+h 25e2",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (arrow)
-    "key": "meta+home",
-    "command": "(model) meta+home 9f75",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (vi)
-    "key": "meta+j",
-    "command": "(model) meta+j 0b13",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "meta+k",
-    "command": "(model) meta+k 8514",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "meta+l",
-    "command": "(model) meta+l 1429",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (arrow)
-    "key": "meta+left",
-    "command": "(model) meta+left d42d",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "meta+pagedown",
-    "command": "(model) meta+pagedown d42e",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "meta+pageup",
-    "command": "(model) meta+pageup 8fcf",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "meta+right",
-    "command": "(model) meta+right 0135",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "meta+up",
-    "command": "(model) meta+up 6041",
+    "command": "(model) ctrl+up c1de",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
     "key": "shift+alt+'",
-    "command": "(model) shift+alt+' e3d5",
+    "command": "(model) shift+alt+' 9a57",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "shift+alt+,",
-    "command": "(model) shift+alt+, 8526",
+    "command": "(model) shift+alt+, a253",
     "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+-",
-    "command": "(model) shift+alt+- cf53",
+    "command": "(model) shift+alt+- f8cb",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "shift+alt+.",
-    "command": "(model) shift+alt+. 7893",
+    "command": "(model) shift+alt+. 235f",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "shift+alt+;",
-    "command": "(model) shift+alt+; 2930",
+    "command": "(model) shift+alt+; 7183",
     "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+=",
-    "command": "(model) shift+alt+= 4b3e",
+    "command": "(model) shift+alt+= 308d",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "shift+alt+[",
-    "command": "(model) shift+alt+[ 68b1",
+    "command": "(model) shift+alt+[ b524",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "shift+alt+]",
-    "command": "(model) shift+alt+] aa90",
+    "command": "(model) shift+alt+] 2fc1",
     "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+a",
-    "command": "(model) shift+alt+a f90f",
+    "command": "(model) shift+alt+a 6e2e",
     "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+d",
-    "command": "(model) shift+alt+d aa42",
+    "command": "(model) shift+alt+d f90f",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "shift+alt+down",
-    "command": "(model) shift+alt+down 13ec",
+    "command": "(model) shift+alt+down 6276",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "shift+alt+end",
-    "command": "(model) shift+alt+end 805a",
+    "command": "(model) shift+alt+end 1f40",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "shift+alt+h",
-    "command": "(model) shift+alt+h 6085",
+    "command": "(model) shift+alt+h 5749",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "shift+alt+home",
-    "command": "(model) shift+alt+home 807a",
+    "command": "(model) shift+alt+home 56be",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "shift+alt+j",
-    "command": "(model) shift+alt+j 3f6f",
+    "command": "(model) shift+alt+j 0dab",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "shift+alt+k",
-    "command": "(model) shift+alt+k 24d9",
+    "command": "(model) shift+alt+k 0b13",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "shift+alt+l",
-    "command": "(model) shift+alt+l 6611",
+    "command": "(model) shift+alt+l 33f7",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "shift+alt+left",
-    "command": "(model) shift+alt+left d621",
+    "command": "(model) shift+alt+left b456",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
     "key": "shift+alt+meta+'",
-    "command": "(model) shift+alt+meta+' a253",
+    "command": "(model) shift+alt+meta+' aa5e",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "shift+alt+meta+,",
-    "command": "(model) shift+alt+meta+, 2dfd",
+    "command": "(model) shift+alt+meta+, 5e24",
     "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+meta+-",
-    "command": "(model) shift+alt+meta+- b752",
+    "command": "(model) shift+alt+meta+- f404",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "shift+alt+meta+.",
-    "command": "(model) shift+alt+meta+. 8ce8",
+    "command": "(model) shift+alt+meta+. 4c91",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "shift+alt+meta+;",
-    "command": "(model) shift+alt+meta+; 37d6",
+    "command": "(model) shift+alt+meta+; e55c",
     "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+meta+=",
-    "command": "(model) shift+alt+meta+= 25c1",
+    "command": "(model) shift+alt+meta+= 9ecb",
     "when": "config.altKey.enabled"
   },
   {
     // (left)
     "key": "shift+alt+meta+[",
-    "command": "(model) shift+alt+meta+[ 855f",
+    "command": "(model) shift+alt+meta+[ 68b1",
     "when": "config.altKey.enabled"
   },
   {
     // (right)
     "key": "shift+alt+meta+]",
-    "command": "(model) shift+alt+meta+] 203f",
+    "command": "(model) shift+alt+meta+] fcb6",
     "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+meta+a",
-    "command": "(model) shift+alt+meta+a 7c6f",
+    "command": "(model) shift+alt+meta+a e6b0",
     "when": "config.altKey.enabled"
   },
   {
     "key": "shift+alt+meta+d",
-    "command": "(model) shift+alt+meta+d 3382",
+    "command": "(model) shift+alt+meta+d 7c6f",
     "when": "config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "shift+alt+meta+down",
-    "command": "(model) shift+alt+meta+down 9fc6",
+    "command": "(model) shift+alt+meta+down 7a94",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (arrow)
     "key": "shift+alt+meta+end",
-    "command": "(model) shift+alt+meta+end 5981",
+    "command": "(model) shift+alt+meta+end 33ab",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (left) (vi)
     "key": "shift+alt+meta+h",
-    "command": "(model) shift+alt+meta+h 2edd",
+    "command": "(model) shift+alt+meta+h 1fd7",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (arrow)
     "key": "shift+alt+meta+home",
-    "command": "(model) shift+alt+meta+home ea78",
+    "command": "(model) shift+alt+meta+home 5100",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (vi)
     "key": "shift+alt+meta+j",
-    "command": "(model) shift+alt+meta+j 1f46",
+    "command": "(model) shift+alt+meta+j 3d48",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (up) (vi)
     "key": "shift+alt+meta+k",
-    "command": "(model) shift+alt+meta+k df44",
+    "command": "(model) shift+alt+meta+k 3f6f",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (right) (vi)
     "key": "shift+alt+meta+l",
-    "command": "(model) shift+alt+meta+l f0c0",
+    "command": "(model) shift+alt+meta+l 7110",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
     "key": "shift+alt+meta+left",
-    "command": "(model) shift+alt+meta+left e405",
+    "command": "(model) shift+alt+meta+left 43c2",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "shift+alt+meta+pagedown",
-    "command": "(model) shift+alt+meta+pagedown 7a94",
+    "command": "(model) shift+alt+meta+pagedown abfd",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "shift+alt+meta+pageup",
-    "command": "(model) shift+alt+meta+pageup b7e9",
+    "command": "(model) shift+alt+meta+pageup d1df",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "shift+alt+meta+right",
-    "command": "(model) shift+alt+meta+right 8f59",
+    "command": "(model) shift+alt+meta+right fd39",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "shift+alt+meta+up",
-    "command": "(model) shift+alt+meta+up a1e1",
+    "command": "(model) shift+alt+meta+up 54d3",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (down) (arrow)
     "key": "shift+alt+pagedown",
-    "command": "(model) shift+alt+pagedown 6276",
+    "command": "(model) shift+alt+pagedown 065e",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "shift+alt+pageup",
-    "command": "(model) shift+alt+pageup f6b2",
+    "command": "(model) shift+alt+pageup 5981",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right) (arrow)
     "key": "shift+alt+right",
-    "command": "(model) shift+alt+right 3ce0",
+    "command": "(model) shift+alt+right f97a",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (up) (arrow)
     "key": "shift+alt+up",
-    "command": "(model) shift+alt+up 078a",
+    "command": "(model) shift+alt+up cdf5",
     "when": "config.altKey.arrows && config.altKey.enabled"
   }
 ]

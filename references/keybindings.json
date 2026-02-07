@@ -7,7 +7,6 @@ Scope:
         - alt+
         - ctrl+
       * Two-modifier:
-        - alt+meta
         - ctrl+alt+
         - shift+alt+
       * Three-modifier:
@@ -728,134 +727,6 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && editorTextFocus"
   },
   {
-    // (right)
-    "key": "alt+meta+'",
-    "command": "(model) alt+meta+' 680a",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "alt+meta+,",
-    "command": "(model) alt+meta+, 5f9b",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "alt+meta+-",
-    "command": "(model) alt+meta+- 8490",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (right)
-    "key": "alt+meta+.",
-    "command": "(model) alt+meta+. c857",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "alt+meta+;",
-    "command": "(model) alt+meta+; e55c",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "alt+meta+=",
-    "command": "(model) alt+meta+= 308d",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "alt+meta+[",
-    "command": "(model) alt+meta+[ de4b",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (right)
-    "key": "alt+meta+]",
-    "command": "(model) alt+meta+] 0095",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "alt+meta+a",
-    "command": "(model) alt+meta+a a60d",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "alt+meta+d",
-    "command": "(model) alt+meta+d be7e",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "alt+meta+down",
-    "command": "(model) alt+meta+down f97a",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "alt+meta+end",
-    "command": "(model) alt+meta+end 52eb",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (vi)
-    "key": "alt+meta+h",
-    "command": "(model) alt+meta+h 0dab",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (arrow)
-    "key": "alt+meta+home",
-    "command": "(model) alt+meta+home b6dc",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (vi)
-    "key": "alt+meta+j",
-    "command": "(model) alt+meta+j 63a1",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "alt+meta+k",
-    "command": "(model) alt+meta+k 23d7",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "alt+meta+l",
-    "command": "(model) alt+meta+l 33ab",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (arrow)
-    "key": "alt+meta+left",
-    "command": "(model) alt+meta+left 1026",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "alt+meta+pagedown",
-    "command": "(model) alt+meta+pagedown 2954",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "alt+meta+pageup",
-    "command": "(model) alt+meta+pageup 4509",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "alt+meta+right",
-    "command": "(model) alt+meta+right 3210",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "alt+meta+up",
-    "command": "(model) alt+meta+up 2abc",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
     "key": "alt+n",
     "command": "alt+n 318f",
     // "command": "editor.action.nextMatchFindAction",
@@ -1004,11 +875,11 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled"
   },
   {
-    // (select) - This keybinding must NOT be a chord or selectAll will not work.
+    // (select) - If this keybinding (ctrl+a) is a chord then selectAll will NOT work.
     "key": "ctrl+a",
     "command": "editor.action.selectAll",
-    // "command": "-noop",
-    // "command": "(model) ctrl+a b6f8",
+    // "command": "noop",
+    // "command": "(model) ctrl+a b9f8",
     "when": "config.altKey.enabled"
   },
   {
@@ -1390,13 +1261,6 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
-    // (neovim) disable vscode's ctrl+f find handler (let Neovim deal with it)
-    "key": "ctrl+f",
-    "command": "-actions.find",
-    // "command": "ctrl+f 1d3e",
-    "when": "config.altKey.enabled && textInputFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.f && neovim.init"
-  },
-  {
     // (left) (vi)
     "key": "ctrl+h",
     "command": "(model) ctrl+h 1728",
@@ -1415,24 +1279,33 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (up) (vi)
+    // (up) (vi) - remove noop; don't stop processing (noop) this keybinding
     "key": "ctrl+k",
-    "command": "(model) ctrl+k 33f7",
+    "command": "-noop",
+    // "command": "(model) ctrl+k 33f7",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (neovim) disable neovim's ctrl+k handler (preserve VS Code's default ctrl+k chord behavior)
+    // (up) (vi) (neovim) - this when statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
     "key": "ctrl+k",
     "command": "-vscode-neovim.send",
-    "when": "config.altKey.enabled && textInputFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init"
+    "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert'"
   },
   {
-    // (right) (vi) - any command here will prevent the default behavior of ctrl+l in the terminal (clear), so we disable it to preserve that functionality)
+    // (up) (vi) (neovim) - this statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    "key": "ctrl+k",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert'"
+  },
+  /*
+  {
+    // (right) (vi) - A command here will prevent the default behavior of ctrl+l in the terminal (clear), so we disable it to preserve that functionality)
     "key": "ctrl+l",
     "command": "-noop",
     // "command": "(model) ctrl+l ef2b",
     "when": "config.altKey.enabled && config.altKey.vi"
   },
+  */
   {
     // (left) (arrow)
     "key": "ctrl+left",
@@ -1773,134 +1646,6 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
   },
   {
     // (right)
-    "key": "meta+'",
-    "command": "(model) meta+' aa5e",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "meta+,",
-    "command": "(model) meta+, 60f7",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "meta+-",
-    "command": "(model) meta+- 14ba",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (right)
-    "key": "meta+.",
-    "command": "(model) meta+. 2916",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "meta+;",
-    "command": "(model) meta+; 48f5",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "meta+=",
-    "command": "(model) meta+= 478c",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (left)
-    "key": "meta+[",
-    "command": "(model) meta+[ b524",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (right)
-    "key": "meta+]",
-    "command": "(model) meta+] cc32",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "meta+a",
-    "command": "(model) meta+a 2a2c",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "meta+d",
-    "command": "(model) meta+d 70e0",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "meta+down",
-    "command": "(model) meta+down e489",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "meta+end",
-    "command": "(model) meta+end 5100",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (vi)
-    "key": "meta+h",
-    "command": "(model) meta+h 25e2",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (arrow)
-    "key": "meta+home",
-    "command": "(model) meta+home 9f75",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (vi)
-    "key": "meta+j",
-    "command": "(model) meta+j 0b13",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "meta+k",
-    "command": "(model) meta+k 8514",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "meta+l",
-    "command": "(model) meta+l 1429",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (arrow)
-    "key": "meta+left",
-    "command": "(model) meta+left d42d",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "meta+pagedown",
-    "command": "(model) meta+pagedown d42e",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "meta+pageup",
-    "command": "(model) meta+pageup 8fcf",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "meta+right",
-    "command": "(model) meta+right 0135",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "meta+up",
-    "command": "(model) meta+up 6041",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right)
     "key": "shift+alt+'",
     "command": "(model) shift+alt+' e3d5",
     // "command": "cursorEndSelect",
@@ -1942,6 +1687,7 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled"
   },
   {
+    // (left) (select)
     "key": "shift+alt+[",
     "command": "shift+alt+[ d58a",
     // "command": "cursorMove",
@@ -1958,6 +1704,7 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled"
   },
   {
+    // (right) (select)
     "key": "shift+alt+]",
     "command": "shift+alt+] 26aa",
     // "command": "cursorMove",

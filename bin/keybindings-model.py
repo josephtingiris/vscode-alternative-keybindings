@@ -22,11 +22,10 @@ from random import Random
 # Deterministic RNG for reproducible outputs
 rng = Random(0)
 
-# Include modifiers: `alt+ ctrl+ meta+ alt+meta ctrl+alt+ shift+alt+ ctrl+alt+meta+ ctrl+shift+alt+ shift+alt+meta+ ctrl+shift+alt+meta+`
+# Include modifiers: `alt+ ctrl+ ctrl+alt+ shift+alt+ ctrl+alt+meta+ ctrl+shift+alt+ shift+alt+meta+ ctrl+shift+alt+meta+`
 
-MODIFIERS_SINGLE = ["alt", "ctrl", "meta"]
+MODIFIERS_SINGLE = ["alt", "ctrl"]
 MODIFIERS_MULTI = [
-    "alt+meta",
     "ctrl+alt",
     "shift+alt",
     "ctrl+alt+meta",
