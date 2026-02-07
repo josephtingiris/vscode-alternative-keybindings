@@ -350,14 +350,10 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && textInputFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
   },
   {
-    "key": "alt+home",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.altKey.enabled"
-  },
-  {
     // (arrow)
     "key": "alt+home",
-    "command": "(model) alt+home f178",
+    "command": "workbench.action.focusActiveEditorGroup",
+    //"command": "(model) alt+home f178",
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
@@ -369,128 +365,46 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j d93d",
-    // "command": "workbench.action.focusPreviousPart",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left'"
-  },
-  {
-    // (down)
+    // (down) (vi)
     "key": "alt+j",
     "command": "alt+j 8e38",
     // "command": "cursorDown",
-    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus"
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && neovim.init"
   },
   {
-    // (down)
+    // (down) (vi)
     "key": "alt+j",
     "command": "alt+j 083d",
-    // "command": "noop",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus"
+    // "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && panelPosition == 'bottom' && panelFocus"
   },
   {
-    // (down)
+    // (down) (vi)
     "key": "alt+j",
-    "command": "alt+j 753f",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && terminalFocus"
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+j 083e",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelPosition == 'bottom' && panelFocus"
   },
   {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j edf6",
-    // "command": "workbench.action.focusPanel",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
-  },
-  {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j f387",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelPosition == 'bottom' && terminalFocus"
-  },
-  {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j d8d2",
-    // "command": "workbench.action.terminal.focusPrevious",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && terminalFocus && terminalCount > 1"
-  },
-  {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j b422",
-    // "command": "workbench.action.focusPreviousPart",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex == 1"
-  },
-  {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j 54d6",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
-  },
-  {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j a51d",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
-  },
-  {
-    // (down)
+    // (down) (vi)
     "key": "alt+j",
     "command": "workbench.action.focusPanel",
     // "command": "alt+j 11a1",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && !multipleEditorGroups"
   },
   {
-    // (down)
+    // (down) (vi)
     "key": "alt+j",
-    "command": "workbench.action.focusBelowGroup",
-    // "command": "alt+j 3e25",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+    "command": "alt+j 12a2",
+    // "command": "workbench.action.focusPanel",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && multipleEditorGroups"
   },
   {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j 8e92",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
-  },
-  {
-    // (down)
-    "key": "alt+j",
-    "command": "alt+j 3f63",
-    // "command": "workbench.action.focusBelowGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && activeEditorIsFirstInGroup && multipleEditorGroups"
-  },
-  {
-    // (down)
-    "key": "alt+j",
-    "command": "workbench.action.nextEditor",
-    // "command": "alt+j 55e1",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
-  },
-  {
-    // (down)
-    "key": "alt+j",
-    "command": "workbench.action.focusBelowGroup",
-    // "command": "alt+j 061b",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup && multipleEditorGroups"
-  },
-  {
-    // (down)
+    // (down) (vi)
     "key": "alt+j",
     "command": "workbench.action.focusPanel",
     // "command": "alt+j 9b25",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup && !multipleEditorGroups"
-  },
-  {
-    // (down) [last editor group]
-    "key": "alt+j",
-    "command": "workbench.action.focusPanel",
-    // "command": "alt+j 64f5",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
   },
   {
     // (up) (vi)
@@ -1765,11 +1679,94 @@ neo]vim, so this keyboard grammar is designed to work well with and without the 
     "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j d93d",
+    // "command": "workbench.action.focusPreviousPart",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j d8d2",
+    // "command": "workbench.action.terminal.focusPrevious",
+    "when": "config.altKey.enabled && config.altKey.vi && terminalFocus && terminalCount > 1"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j f388",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelPosition == 'bottom' && panelFocus"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j b422",
+    // "command": "workbench.action.focusPreviousPart",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex == 1"
+  },
+  {
     // (down) (inside)
     "key": "shift+alt+j",
     "command": "workbench.action.terminal.focusNext",
     // "command": "shift+alt+j a1d4",
     "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j 54d6",
+    // "command": "workbench.action.focusFirstEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j a51d",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "workbench.action.focusBelowGroup",
+    // "command": "shift+alt+j 3e25",
+    // "command": "workbench.action.focusFirstEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j 8e92",
+    // "command": "workbench.action.focusFirstEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j 3f63",
+    // "command": "workbench.action.focusBelowGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && activeEditorIsFirstInGroup && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "workbench.action.nextEditor",
+    // "command": "shift+alt+j 55e1",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && textInputFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "workbench.action.focusBelowGroup",
+    // "command": "shift+alt+j 061b",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup && multipleEditorGroups"
+  },
+  {
+    // (down) [last editor group]
+    "key": "shift+alt+j",
+    "command": "workbench.action.focusPanel",
+    // "command": "shift+alt+j 64f5",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && textInputFocus && panelVisible && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
   },
   {
     // (up) (vi)
