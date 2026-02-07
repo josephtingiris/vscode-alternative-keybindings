@@ -32,6 +32,17 @@ import os
 import re
 import json
 
+def usage(prog: str | None = None) -> None:
+    """Print a concise usage message to stderr and exit with code 1."""
+    if prog is None:
+        prog = os.path.basename(sys.argv[0])
+    msg = (
+        f"Usage: {prog} <attribute> <search_string>\n\n"
+        "Options:\n  -h, --help    Show this usage message and exit\n"
+    )
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
 def extract_preamble_postamble(text):
     start = text.find('[')
     end = text.rfind(']')
@@ -119,9 +130,11 @@ def should_remove(obj_text, attr, val):
         return False
 
 def main():
+    prog = os.path.basename(sys.argv[0])
+    if any(arg in ('-h', '--help') for arg in sys.argv[1:]):
+        usage(prog)
     if len(sys.argv) != 3:
-        print("Usage: python3 keybindings-remove.py <attribute> <search_string>", file=sys.stderr)
-        sys.exit(1)
+        usage(prog)
     attr, val = sys.argv[1], sys.argv[2]
     raw = sys.stdin.read()
     preamble, array_text, postamble = extract_preamble_postamble(raw)

@@ -588,7 +588,23 @@ def object_has_trailing_comma(obj_text: str) -> bool:
     return False
 
 
+def usage(prog: str | None = None) -> None:
+    if prog is None:
+        prog = sys.argv[0].split('/')[-1]
+    msg = (
+        f"Usage: {prog} [--primary {{key,when}}] [--secondary {{key,when}}] < keybindings.json\n\n"
+        "Options:\n  --primary, -p {key,when}   Primary sort field (default: key)\n"
+        "  --secondary, -s {key,when} Secondary sort field (optional)\n"
+        "  -h, --help                Show this usage message and exit\n"
+    )
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
 def main():
+    raw_argv = sys.argv[1:]
+    if any(a in ('-h', '--help') for a in raw_argv):
+        usage()
     parser = argparse.ArgumentParser(
         description='Sort VS Code keybindings.json by key/when')
     parser.add_argument('--primary', '-p', choices=['key', 'when'], default='key',

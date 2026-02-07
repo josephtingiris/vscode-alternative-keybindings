@@ -481,7 +481,24 @@ def merge_keybinding_files(left_text: str, right_text: str, prefer: str, base: s
 
 # ---- CLI ----
 
+def usage(prog: str | None = None) -> None:
+    if prog is None:
+        prog = sys.argv[0].split('/')[-1]
+    msg = (
+        f"Usage: {prog} left.json right.json [--prefer left|right] [--base left|right] [--out merged.json]\n\n"
+        "Options:\n  --prefer left|right   Which file wins on duplicate key+when (default: right)\n"
+        "  --base left|right     Which file supplies the wrapper/prefix/suffix (default: left)\n"
+        "  --out PATH            Output file path (default: merged-keybindings.json)\n"
+        "  -h, --help            Show this usage message and exit\n"
+    )
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
 def main(argv: List[str] | None = None) -> int:
+    raw_argv = argv if argv is not None else sys.argv[1:]
+    if any(a in ('-h', '--help') for a in raw_argv):
+        usage()
     parser = argparse.ArgumentParser(description="Merge two VS Code keybindings.json (JSONC) files while preserving comments.")
     parser.add_argument('left', type=Path, help='Left keybindings file (e.g., fileA.json)')
     parser.add_argument('right', type=Path, help='Right keybindings file (e.g., fileB.json)')

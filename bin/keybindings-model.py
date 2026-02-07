@@ -22,6 +22,21 @@ from random import Random
 # Deterministic RNG for reproducible outputs
 rng = Random(0)
 
+
+def usage(prog: str | None = None) -> None:
+    if prog is None:
+        prog = sys.argv[0].split('/')[-1]
+    msg = (
+        f"Usage: {prog}\n\n"
+        "Options:\n  -h, --help    Show this usage message and exit\n"
+    )
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+# Respect -h/--help early so scripts invoking this file get the concise usage
+if any(arg in ('-h', '--help') for arg in sys.argv[1:]):
+    usage()
+
 # Include modifiers: `alt+ ctrl+ ctrl+alt+ shift+alt+ ctrl+alt+meta+ ctrl+shift+alt+ shift+alt+meta+ ctrl+shift+alt+meta+`
 
 MODIFIERS_SINGLE = ["alt", "ctrl"]

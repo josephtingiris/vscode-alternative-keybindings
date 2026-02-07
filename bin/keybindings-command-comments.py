@@ -26,6 +26,19 @@ import re
 import uuid
 from pathlib import Path
 from typing import Tuple
+import sys
+import os
+
+def usage(prog: str | None = None) -> None:
+    if prog is None:
+        prog = os.path.basename(sys.argv[0])
+    msg = (
+        f"Usage: {prog} <path/to/keybindings.json> [--no-inplace]\n\n"
+        "Options:\n  --no-inplace    Don't write files; print to stdout\n"
+        "  -h, --help      Show this usage message and exit\n"
+    )
+    print(msg, file=sys.stderr)
+    sys.exit(1)
 
 
 KEY_RE = re.compile(r'"key"\s*:\s*"([^\"]+)"')
@@ -104,6 +117,9 @@ def add_placeholders(path: Path, inplace: bool = True) -> None:
 
 
 def parse_args() -> Tuple[Path, bool]:
+    raw_argv = sys.argv[1:]
+    if any(a in ('-h', '--help') for a in raw_argv):
+        usage()
     parser = argparse.ArgumentParser(
         description='Add placeholder command comments.')
     parser.add_argument('path', type=Path, help='Path to keybindings.json')

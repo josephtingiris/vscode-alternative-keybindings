@@ -14,6 +14,18 @@ from __future__ import annotations
 
 import re
 import sys
+import os
+
+
+def usage(prog: str | None = None) -> None:
+    if prog is None:
+        prog = os.path.basename(sys.argv[0])
+    msg = (
+        f"Usage: {prog} < keybindings.json>\n\n"
+        "Options:\n  -h, --help    Show this usage message and exit\n"
+    )
+    print(msg, file=sys.stderr)
+    sys.exit(1)
 
 
 def strip_comments(jsonc_string: str) -> str:
@@ -40,6 +52,9 @@ def strip_comments(jsonc_string: str) -> str:
 
 
 def main() -> None:
+    prog = os.path.basename(sys.argv[0])
+    if any(arg in ('-h', '--help') for arg in sys.argv[1:]):
+        usage(prog)
     # Read from stdin and write the cleaned JSON to stdout
     jsonc_string = sys.stdin.read()
     json_string = strip_comments(jsonc_string)
