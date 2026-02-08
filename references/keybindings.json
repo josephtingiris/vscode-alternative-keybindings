@@ -49,6 +49,13 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (right)
+    "key": "alt+'",
+    "command": "alt+' 2310",
+    // "command": "cursorEnd", // maybe for non-neovim profiles but for neovim users there are many ways to navigate to the end of a line ...
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
     // (left)
     "key": "alt+,",
     "command": "(model) alt+, 37d6",
@@ -62,11 +69,30 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (split) (horizontal)
+    "key": "alt+-",
+    "command": "workbench.action.splitEditorDown",
+    // "command": "alt+- 301f",
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
+    // (split) (horizontal)
+    "key": "alt+-",
+    "command": "workbench.action.terminal.split",
+    "when": "config.altKey.enabled && panelFocus && terminalFocus"
+  },
+  {
     // (right)
     "key": "alt+.",
     "command": "(model) alt+. 2eea",
     // "command": "workbench.action.navigateForward",
     "when": "config.altKey.enabled"
+  },
+  {
+    "key": "alt+/",
+    "command": "alt+/ e9b2",
+    // "command": "editor.action.previousMatchFindAction",
+    "when": "config.altKey.enabled && editorFocus"
   },
   {
     // (left)
@@ -75,9 +101,29 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    "key": "alt+;",
+    "command": "alt+; afa2",
+    // "command": "cursorHome", // maybe for non-neovim profiles but for neovim users there are many ways to navigate to the beginning of a line ...
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
     "key": "alt+=",
     "command": "(model) alt+= b752",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (split) [vertical]
+    "key": "alt+=",
+    "command": "workbench.action.splitEditor",
+    // "command": "alt+= 54b0",
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
+    // (split) [vertical]
+    "key": "alt+=",
+    "command": "workbench.action.terminal.split",
+    // "command": "alt+= 9e54",
+    "when": "config.altKey.enabled && panelFocus && terminalFocus"
   },
   {
     // (left)
@@ -86,15 +132,63 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (left)
+    "key": "alt+[",
+    "command": "alt+[ f982",
+    // "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine"
+    },
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
     // (right)
     "key": "alt+]",
     "command": "(model) alt+] a1e4",
     "when": "config.altKey.enabled"
   },
   {
+    // (right)
+    "key": "alt+]",
+    "command": "alt+] ff82",
+    // "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine"
+    },
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
     "key": "alt+a",
     "command": "(model) alt+a 10e1",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (position) (panel) - rotate clockwise
+    "key": "alt+a alt+p",
+    "command": "workbench.action.positionPanelLeft",
+    // "command": "alt+a alt+p 77a1",
+    "when": "config.altKey.enabled && panelPosition == 'bottom'"
+  },
+  {
+    // (position) (panel) - rotate clockwise
+    "key": "alt+a alt+p",
+    "command": "workbench.action.positionPanelTop",
+    // "command": "alt+a alt+p 77a2",
+    "when": "config.altKey.enabled && panelPosition == 'left'"
+  },
+  {
+    // (position) (panel) - rotate clockwise
+    "key": "alt+a alt+p",
+    "command": "workbench.action.positionPanelBottom",
+    // "command": "alt+a alt+p 77a3",
+    "when": "config.altKey.enabled && panelPosition == 'right'"
+  },
+  {
+    // (position) (panel) - rotate clockwise
+    "key": "alt+a alt+p",
+    "command": "workbench.action.positionPanelRight",
+    // "command": "alt+a alt+p 77a4",
+    "when": "config.altKey.enabled && panelPosition == 'top'"
   },
   {
     "key": "alt+a alt+v",
@@ -110,11 +204,53 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (zoom) toggle secondary side bar
+    "key": "alt+a alt+z",
+    "command": "workbench.action.toggleMaximizedAuxiliaryBar",
+    // "command": "alt+a alt+z af38",
+    "when": "config.altKey.enabled && auxiliaryBarFocus"
+  },
+  {
+    // (zoom) toggle maximized panel
+    "key": "alt+a alt+z",
+    "command": "workbench.action.toggleMaximizedPanel",
+    // "command": "alt+a alt+z cbb3",
+    "when": "config.altKey.enabled && !editorFocus && panelFocus"
+  },
+  {
+    // (zoom) - maximize editor group
+    "key": "alt+a alt+z",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    // "command": "alt+a alt+z feb2",
+    "when": "config.altKey.enabled && editorFocus && !panelFocus"
+  },
+  {
     // (zoom) (copy) toggle zen mode
     "key": "alt+a z",
     "command": "alt+a z b809",
     // "command": "workbench.action.toggleZenMode",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (zoom) (copy) toggle secondary side bar
+    "key": "alt+a z",
+    "command": "workbench.action.toggleMaximizedAuxiliaryBar",
+    // "command": "alt+a z af39",
+    "when": "config.altKey.enabled && auxiliaryBarFocus"
+  },
+  {
+    // (zoom) (copy) toggle maximized panel
+    "key": "alt+a z",
+    "command": "workbench.action.toggleMaximizedPanel",
+    // "command": "alt+a z cbb4",
+    "when": "config.altKey.enabled && !editorFocus && panelFocus"
+  },
+  {
+    // (zoom) (copy) - maximize editor group
+    "key": "alt+a z",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    // "command": "alt+a z feb3",
+    "when": "config.altKey.enabled && editorFocus && !panelFocus"
   },
   {
     "key": "alt+d",
@@ -138,6 +274,380 @@ Notes:
     "command": "alt+d alt+v 0154",
     // "command": "config.altKey.enabled && workbench.action.toggleZenMode"
     "when": "config.altKey.enabled"
+  },
+  {
+    // (down) (arrow)
+    "key": "alt+down",
+    "command": "(model) alt+down 9f75",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (end) (arrow)
+    "key": "alt+end",
+    "command": "(model) alt+end 0b13",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (left) (vi)
+    "key": "alt+h",
+    // "command": "noop",
+    "command": "alt+h and when? no and when! :)",
+    // "command": "(model) alt+h fc3d",
+    // "command": "(model) alt+h 7003",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (left) (vi) (no wrap)
+    "key": "alt+h",
+    "command": "alt+h 9e22",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (left) (vi)
+    // (note) vi-like extensions disabled
+    "key": "alt+h",
+    "command": "alt+h 31ae",
+    // "command": "cursorLeft",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !neovim.init"
+  },
+  {
+    // (left) (vi) (edge) (no wrap)
+    "key": "alt+h",
+    "command": "alt+h 8d96",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && !sideBarVisible"
+  },
+  {
+    // (left) (vi)
+    "key": "alt+h",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+h 43ad",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
+  },
+  {
+    // (left) (vi)
+    "key": "alt+h",
+    "command": "workbench.action.focusSideBar",
+    // "command": "alt+h 33ad",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible"
+  },
+  {
+    // (left) (vi) (edge) (wrap)
+    "key": "alt+h",
+    "command": "alt+h 8d95",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && sideBarVisible"
+  },
+  {
+    // (left) (vi)
+    "key": "alt+h",
+    "command": "workbench.action.focusAuxiliaryBar",
+    // "command": "alt+h 6317",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (left) (vi)
+    "key": "alt+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+h 6318",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && !panelVisible && editorIsOpen"
+  },
+  {
+    // (left) (vi) (edge) (wrap)
+    "key": "alt+h",
+    "command": "alt+h 080e",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && panelVisible && !sideBarVisible"
+  },
+  {
+    // (left) (vi) (edge) (wrap)
+    "key": "alt+h",
+    "command": "alt+h 8e22",
+    // "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && !sideBarVisible && editorIsOpen"
+  },
+  {
+    // (left) (vi) (edge) (wrap)
+    "key": "alt+h",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+h 0812",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && panelVisible && !sideBarVisible"
+  },
+  {
+    // (left) (vi) (edge) (wrap)
+    "key": "alt+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+h 8e20",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && !sideBarVisible && editorIsOpen"
+  },
+  {
+    // (left) (top left)
+    "key": "alt+h",
+    "command": "alt+h cd7e",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && !sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+  },
+  {
+    // (left) (top left)
+    "key": "alt+h",
+    "command": "workbench.action.focusSideBar",
+    // "command": "alt+h ad8d",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+  },
+  {
+    // (left) (top left)
+    "key": "alt+h",
+    "command": "workbench.action.focusSideBar",
+    // "command": "alt+h cd8d",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
+  },
+  {
+    // (arrow)
+    "key": "alt+home",
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "(model) alt+home d9ea",
+    // "command": "(model) alt+home f178",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (vi)
+    "key": "alt+j",
+    // "command": "noop",
+    "command": "alt+j and when? no and when! :)",
+    // "command": "(model) alt+j 7c6f",
+    // "command": "(model) alt+j 3b6a",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (down) (vi)
+    // (note) vi-like extensions disabled
+    "key": "alt+j",
+    "command": "alt+j 9831",
+    // "command": "cursorDown",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !neovim.init"
+  },
+  {
+    // (down) (vi)
+    "key": "alt+j",
+    "command": "alt+j 083d",
+    // "command": "workbench.action.focusActiveEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && panelPosition == 'bottom' && panelFocus"
+  },
+  {
+    // (down) (vi)
+    "key": "alt+j",
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+j 083e",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelPosition == 'bottom' && panelFocus"
+  },
+  {
+    // (down) (vi)
+    "key": "alt+j",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+j 11a1",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && panelVisible && !multipleEditorGroups"
+  },
+  {
+    // (down) (vi)
+    "key": "alt+j",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+j 12a2",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && panelVisible && multipleEditorGroups"
+  },
+  {
+    // (down) (vi)
+    "key": "alt+j",
+    "command": "workbench.action.focusPanel",
+    // "command": "alt+j 9b25",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && panelVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup && !multipleEditorGroups"
+  },
+  {
+    // (up) (vi)
+    "key": "alt+k",
+    // "command": "noop",
+    "command": "alt+k and when? no and when! :)",
+    // "key": "alt+k",
+    // "command": "(model) alt+k d9ea",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    "key": "alt+k",
+    "command": "alt+k b9c4",
+    // "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "config.altKey.enabled && config.altKey.vi && inQuickOpen"
+  },
+  {
+    // (up) (vi)
+    // (note) vi-like extensions disabled
+    "key": "alt+k",
+    "command": "alt+k 6375",
+    // "command": "cursorUp",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !neovim.init"
+  },
+  {
+    // (up) (vi) (edge) - going up to the editor from every panel except the OUTPUT panel
+    "key": "alt+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+k c9e7",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && !editorFocus && panelFocus"
+  },
+  {
+    // (up) (vi) (edge) - going up to the editor from the OUTPUT panel
+    "key": "alt+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+k b321",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && panelFocus"
+  },
+  {
+    // (up) (vi) (no wrap)
+    "key": "alt+k",
+    "command": "alt+k 12a4",
+    // "command": "workbench.action.focusPanel",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && panelPosition == 'bottom' && editorFocus && !panelFocus && panelVisible && !multipleEditorGroups"
+  },
+  {
+    // (up) (vi) (wrap)
+    "key": "alt+k",
+    "command": "alt+k 12a5",
+    // "command": "workbench.action.focusPanel",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelPosition == 'bottom' && editorFocus && !panelFocus && panelVisible && !multipleEditorGroups"
+  },
+  {
+    // (right) (vi)
+    "key": "alt+l",
+    // "command": "noop"
+    "command": "alt+l and when? no and when! :)",
+    // "command": "(model) alt+l 3fb7",
+    // "command": "(model) alt+l 1f40",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (right) (vi)
+    "key": "alt+l",
+    "command": "alt+l 0ae0",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left'"
+  },
+  {
+    // (right) (vi)
+    "key": "alt+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "alt+l 53d4",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus"
+  },
+  {
+    // (right) (vi)
+    // (note) vi-like extensions disabled
+    "key": "alt+l",
+    "command": "alt+l be1a",
+    // "command": "cursorRight",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !neovim.init"
+  },
+  {
+    // (right) (vi)
+    "key": "alt+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    // "command": "alt+l 53d4",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible"
+  },
+  {
+    // (right) (vi)
+    "key": "alt+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    // "command": "alt+l e241",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && auxiliaryBarVisible"
+  },
+  {
+    // (right) (vi) (no wrap)
+    "key": "alt+l",
+    "command": "alt+l 53d3",
+    // "command": "workbench.action.focusAuxiliaryBar",
+    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && !auxiliaryBarVisible"
+  },
+  {
+    // (right) (vi) (edge)
+    "key": "alt+l",
+    "command": "workbench.action.focusSideBar",
+    // "command": "alt+l ec4d",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible"
+  },
+  {
+    // (right) (vi)
+    "key": "alt+l",
+    "command": "workbench.action.focusSideBar",
+    // "command": "alt+l 55d3",
+    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && !auxiliaryBarVisible && sideBarVisible"
+  },
+  {
+    // (left) (arrow)
+    "key": "alt+left",
+    "command": "(model) alt+left af43",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    "key": "alt+m",
+    "command": "alt+m 605a",
+    // "command": "editor.action.jumpToBracket",
+    "when": "config.altKey.enabled && editorTextFocus"
+  },
+  {
+    // (neovim)
+    "key": "alt+n",
+    "command": "alt+n 318f",
+    // "command": "editor.action.nextMatchFindAction",
+    "when": "config.altKey.enabled && neovim.init"
+  },
+  {
+    // (neovim) - restart (only) the neovim extension
+    "key": "alt+n r",
+    "command": "vscode-neovim.restart",
+    // "command": "alt+n 419e",
+    "when": "config.altKey.enabled && neovim.init"
+  },
+  {
+    // (down) (arrow) - moves/replaces vscode alt+left
+    "key": "alt+pagedown",
+    "command": "workbench.action.navigateBack",
+    // "command": "(model) alt+pagedown 8530",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow) - moves/replaces vscode alt+right
+    "key": "alt+pageup",
+    "command": "workbench.action.navigateForward",
+    // "command": "(model) alt+pageup df44",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (right) (arrow)
+    "key": "alt+right",
+    "command": "(model) alt+right b7e9",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    "key": "alt+s alt+l",
+    "command": "alt+s alt+l b3d5",
+    // "command": "expandLineSelection",
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
+    "key": "alt+s alt+m",
+    "command": "alt+s alt+m 696d",
+    // "command": "editor.action.selectToBracket",
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
+    "key": "alt+s alt+o",
+    "command": "alt+s alt+o 8f29",
+    // "command": "editor.action.smartSelect.expand",
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
+    "key": "alt+s shift+alt+o",
+    "command": "alt+s shift+alt+o 82de",
+    // "command": "editor.action.smartSelect.shrink",
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
+    // (up) (arrow)
+    "key": "alt+up",
+    "command": "(model) alt+up abfd",
+    "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     "key": "alt+v alt+c",
@@ -180,6 +690,12 @@ Notes:
     "command": "alt+v alt+t 7b8f",
     // "command": "workbench.action.toggleTabsVisibility",
     "when": "config.altKey.enabled"
+  },
+  {
+    "key": "alt+w",
+    "command": "alt+w d632",
+    // "command": "cursorWordStartRight",
+    "when": "config.altKey.enabled && editorFocus"
   },
   {
     // (right)
@@ -277,10 +793,24 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (left) unfold all
+    "key": "ctrl+alt+[",
+    "command": "editor.unfoldAll",
+    // "command": "ctrl+alt+[ d981",
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && editorFocus"
+  },
+  {
     // (right)
     "key": "ctrl+alt+]",
     "command": "(model) ctrl+alt+] f43a",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (right) fold all except current
+    "key": "ctrl+alt+]",
+    "command": "editor.foldAllExcept",
+    // "command": "ctrl+alt+] c878",
+    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && editorFocus"
   },
   {
     "key": "ctrl+alt+a",
@@ -291,6 +821,136 @@ Notes:
     "key": "ctrl+alt+d",
     "command": "(model) ctrl+alt+d 8d1f",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (down) (arrow)
+    "key": "ctrl+alt+down",
+    "command": "(model) ctrl+alt+down c6fc",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (arrow)
+    "key": "ctrl+alt+end",
+    "command": "(model) ctrl+alt+end 5eb4",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (left) (vi)
+    "key": "ctrl+alt+h",
+    "command": "(model) ctrl+alt+h 2a2c",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (left) (vi) - toggle left primary sidebar when the sidebar is hidden
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.toggleSidebarVisibility",
+    // "command": "ctrl+alt+h 8e24",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && !sideBarVisible"
+  },
+  {
+    // (left) (vi) - toggle left primary sidebar when the sidebar is visible
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.toggleSidebarVisibility",
+    // "command": "workbench.action.focusSideBar",
+    // "command": "ctrl+alt+h bc4d",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarVisible"
+  },
+  {
+    // (left) (vi) - do nothing when the sidebar is visible and focused
+    "key": "ctrl+alt+h",
+    "command": "noop",
+    // "command": "ctrl+alt+h 2ed2",
+    // "command": "workbench.action.toggleSidebarVisibility",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
+  },
+  {
+    // (arrow)
+    "key": "ctrl+alt+home",
+    "command": "(model) ctrl+alt+home 8514",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (vi)
+    "key": "ctrl+alt+j",
+    "command": "(model) ctrl+alt+j 8ac5",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (down) (vi) - toggle bottom panel when the panel is hidden
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.togglePanel",
+    // "command": "ctrl+alt+j 398d",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && !panelVisible"
+  },
+  {
+    // (down) (vi) - toggle bottom panel when the panel is visible
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.togglePanel",
+    // "command": "workbench.action.focusPanel",
+    // "command": "ctrl+alt+j de38",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelVisible"
+  },
+  {
+    // (down) toggle bottom panel
+    "key": "ctrl+alt+j",
+    "command": "noop",
+    //"command": "workbench.action.togglePanel",
+    // "command": "ctrl+alt+j 8c48",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus && panelVisible"
+  },
+  {
+    // (up) (vi)
+    "key": "ctrl+alt+k",
+    "command": "(model) ctrl+alt+k 3382",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up)
+    "key": "ctrl+alt+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    // "command": "ctrl+alt+k 2ba8",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && !editorFocus"
+  },
+  {
+    // (up)
+    "key": "ctrl+alt+k",
+    "command": "breadcrumbs.focusAndSelect",
+    // "command": "ctrl+alt+k 7ba3",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && activeEditorGroupIndex == 1"
+  },
+  {
+    // (right) (vi)
+    "key": "ctrl+alt+l",
+    "command": "(model) ctrl+alt+l 3d48",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (right) (vi)
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    // "command": "ctrl+alt+l ae58",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && !auxiliaryBarVisible"
+  },
+  {
+    // (right) (vi)
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    // "command": "workbench.action.focusAuxiliaryBar",
+    // "command": "ctrl+alt+l 45f7",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
+  },
+  {
+    // (right) (vi)
+    "key": "ctrl+alt+l",
+    "command": "noop",
+    // "command": "ctrl+alt+l 7d75",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
+  },
+  {
+    // (left) (arrow)
+    "key": "ctrl+alt+left",
+    "command": "(model) ctrl+alt+left 3c03",
+    "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
@@ -349,9 +1009,201 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (down) (arrow)
+    "key": "ctrl+alt+meta+down",
+    "command": "(model) ctrl+alt+meta+down 4e8c",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (arrow)
+    "key": "ctrl+alt+meta+end",
+    "command": "(model) ctrl+alt+meta+end f55e",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (left) (vi)
+    "key": "ctrl+alt+meta+h",
+    "command": "(model) ctrl+alt+meta+h 3b0f",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (arrow)
+    "key": "ctrl+alt+meta+home",
+    "command": "(model) ctrl+alt+meta+home 7110",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (vi)
+    "key": "ctrl+alt+meta+j",
+    "command": "(model) ctrl+alt+meta+j 70e0",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) (vi)
+    "key": "ctrl+alt+meta+k",
+    "command": "(model) ctrl+alt+meta+k 7003",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (right) (vi)
+    "key": "ctrl+alt+meta+l",
+    "command": "(model) ctrl+alt+meta+l 2edd",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (left) (arrow)
+    "key": "ctrl+alt+meta+left",
+    "command": "(model) ctrl+alt+meta+left 5981",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (arrow)
+    "key": "ctrl+alt+meta+pagedown",
+    "command": "(model) ctrl+alt+meta+pagedown 6825",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+alt+meta+pageup",
+    "command": "(model) ctrl+alt+meta+pageup 1429",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (right) (arrow)
+    "key": "ctrl+alt+meta+right",
+    "command": "(model) ctrl+alt+meta+right d42e",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+alt+meta+up",
+    "command": "(model) ctrl+alt+meta+up 7af2",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (arrow)
+    "key": "ctrl+alt+pagedown",
+    "command": "(model) ctrl+alt+pagedown f0c0",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+alt+pageup",
+    "command": "(model) ctrl+alt+pageup 1f40",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (right) (arrow)
+    "key": "ctrl+alt+right",
+    "command": "(model) ctrl+alt+right 9edf",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+alt+up",
+    "command": "(model) ctrl+alt+up 8fcf",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
     "key": "ctrl+d",
     "command": "(model) ctrl+d c857",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (close)
+    "key": "ctrl+d",
+    "command": "workbench.action.closeActiveEditor",
+    // "command": "ctrl+d 26cb",
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
+    // (close)
+    "key": "ctrl+d",
+    "command": "workbench.action.closeActiveEditor",
+    // "command": "ctrl+d cc30",
+    "when": "config.altKey.enabled && !auxiliaryBarFocus && !editorFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && activeEditorIsReadonly && editorIsOpen"
+  },
+  {
+    // (down) (arrow)
+    "key": "ctrl+down",
+    "command": "(model) ctrl+down b6dc",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (end) (arrow)
+    "key": "ctrl+end",
+    "command": "(model) ctrl+end 63a1",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (left) (vi)
+    "key": "ctrl+h",
+    "command": "(model) ctrl+h b6f8",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (home) (arrow)
+    "key": "ctrl+home",
+    "command": "(model) ctrl+home 33f7",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (vi)
+    "key": "ctrl+j",
+    "command": "(model) ctrl+j 084c",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) (vi) (vscode) (user?) - remove noop; don't stop processing (noop) this keybinding
+    "key": "ctrl+k",
+    "command": "-noop",
+    // "command": "(model) ctrl+k 1fd7",
+    // "command": "(model) ctrl+k 33f7",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) (vi) (neovim) (user) - this when statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    // (note) ctrl+k must be a chord for native vscode keybindings to work
+    "key": "ctrl+k",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert'"
+  },
+  {
+    // (up) (vi) (neovim) (user) - this statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
+    // (note) ctrl+k must be a chord for native vscode keybindings to work
+    "key": "ctrl+k",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    // (right) (vi)
+    "key": "ctrl+l",
+    "command": "(model) ctrl+l 6085",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (left) (arrow)
+    "key": "ctrl+left",
+    "command": "(model) ctrl+left 805a",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (arrow)
+    "key": "ctrl+pagedown",
+    "command": "(model) ctrl+pagedown b794",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+pageup",
+    "command": "(model) ctrl+pageup 5c52",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (right) (arrow)
+    "key": "ctrl+right",
+    "command": "(model) ctrl+right 43c2",
+    "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
@@ -412,6 +1264,58 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (down) (arrow)
+    "key": "ctrl+shift+alt+down",
+    "command": "(model) ctrl+shift+alt+down 065e",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (arrow)
+    "key": "ctrl+shift+alt+end",
+    "command": "(model) ctrl+shift+alt+end 6bd0",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (left) (vi)
+    "key": "ctrl+shift+alt+h",
+    "command": "(model) ctrl+shift+alt+h f90f",
+    // "command": "cursorWordPartLeftSelect",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (arrow)
+    "key": "ctrl+shift+alt+home",
+    "command": "(model) ctrl+shift+alt+home 24d9",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (vi)
+    "key": "ctrl+shift+alt+j",
+    "command": "(model) ctrl+shift+alt+j be7e",
+    // "command": "cursorWordPartDownSelect",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) (vi)
+    "key": "ctrl+shift+alt+k",
+    "command": "(model) ctrl+shift+alt+k 1728",
+    // "command": "cursorWordPartUpSelect",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (right) (vi)
+    "key": "ctrl+shift+alt+l",
+    "command": "(model) ctrl+shift+alt+l bd82",
+    // "command": "cursorWordPartRightSelect",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (left) (arrow)
+    "key": "ctrl+shift+alt+left",
+    "command": "(model) ctrl+shift+alt+left 06c2",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
     // (right)
     "key": "ctrl+shift+alt+meta+'",
     "command": "(model) ctrl+shift+alt+meta+' fa83",
@@ -468,10 +1372,88 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (down) (arrow)
+    "key": "ctrl+shift+alt+meta+down",
+    "command": "(model) ctrl+shift+alt+meta+down 287c",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (arrow)
+    "key": "ctrl+shift+alt+meta+end",
+    "command": "(model) ctrl+shift+alt+meta+end 0baa",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (left) (vi)
+    "key": "ctrl+shift+alt+meta+h",
+    "command": "(model) ctrl+shift+alt+meta+h 6179",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (arrow)
+    "key": "ctrl+shift+alt+meta+home",
+    "command": "(model) ctrl+shift+alt+meta+home b359",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (vi)
+    "key": "ctrl+shift+alt+meta+j",
+    "command": "(model) ctrl+shift+alt+meta+j aa42",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) (vi)
+    "key": "ctrl+shift+alt+meta+k",
+    "command": "(model) ctrl+shift+alt+meta+k 0dab",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (right) (vi)
+    "key": "ctrl+shift+alt+meta+l",
+    "command": "(model) ctrl+shift+alt+meta+l 12a1",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (left) (arrow)
+    "key": "ctrl+shift+alt+meta+left",
+    "command": "(model) ctrl+shift+alt+meta+left d1df",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (arrow)
+    "key": "ctrl+shift+alt+meta+pagedown",
+    "command": "(model) ctrl+shift+alt+meta+pagedown 52eb",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+shift+alt+meta+pageup",
+    "command": "(model) ctrl+shift+alt+meta+pageup 6611",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (right) (arrow)
+    "key": "ctrl+shift+alt+meta+right",
+    "command": "(model) ctrl+shift+alt+meta+right 6276",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+shift+alt+meta+up",
+    "command": "(model) ctrl+shift+alt+meta+up 9364",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
     "key": "ctrl+shift+alt+pagedown",
     // "command": "-noop",
     "command": "ctrl+shift+alt+pagedown a4b3",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (down) (arrow)
+    "key": "ctrl+shift+alt+pagedown",
+    "command": "(model) ctrl+shift+alt+pagedown 1db8",
+    "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     "key": "ctrl+shift+alt+pageup",
@@ -480,11 +1462,69 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (up) (arrow)
+    "key": "ctrl+shift+alt+pageup",
+    "command": "(model) ctrl+shift+alt+pageup 33ab",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (right) (arrow)
+    "key": "ctrl+shift+alt+right",
+    "command": "(model) ctrl+shift+alt+right 2954",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+shift+alt+up",
+    "command": "(model) ctrl+shift+alt+up f6b2",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
     // (backspace) go to html/xml tag open/close match
     "key": "ctrl+shift+backspace",
     "command": "ctrl+shift+backspace 6b42",
     // "command": "editor.emmet.action.matchTag",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (t) open native terminal when not in terminal
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.openNativeConsole",
+    // "command": "ctrl+shift+t f641",
+    "when": "config.altKey.enabled && !terminalFocus"
+  },
+  {
+    // (vscode) (mimic) - reopen closed editor when editor is focused
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.reopenClosedEditor",
+    // "command": "ctrl+shift+t 7c33",
+    "when": "config.altKey.enabled && editorFocus && !panelFocus"
+  },
+  {
+    // (t) open a new terminal when terminal is focused
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.new",
+    // "command": "ctrl+shift+t 7c32",
+    "when": "config.altKey.enabled && panelFocus && terminalFocus"
+  },
+  {
+    // (up) (arrow)
+    "key": "ctrl+up",
+    "command": "(model) ctrl+up 1765",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (f8) format/indent
+    "key": "f8",
+    "command": "editor.action.formatDocument",
+    // "command": "f8 f0fb"
+    "when": "config.altKey.enabled && editorFocus && editorHasDocumentFormattingProvider && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "f9",
+    "command": "config.altKey.enabled && config.altKey.wrap",
+    // "command": "f9 5a61"
+    "when": "config.altKey.enabled && config.altKey.wrap"
   },
   {
     // (right)
@@ -529,10 +1569,32 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (left) (select)
+    "key": "shift+alt+[",
+    "command": "shift+alt+[ d58a",
+    // "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine",
+      "select": true
+    },
+    "when": "config.altKey.enabled && editorFocus"
+  },
+  {
     // (right)
     "key": "shift+alt+]",
     "command": "(model) shift+alt+] e2a8",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (right) (select)
+    "key": "shift+alt+]",
+    "command": "shift+alt+] 26aa",
+    // "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine",
+      "select": true
+    },
+    "when": "config.altKey.enabled && editorFocus"
   },
   {
     "key": "shift+alt+a",
@@ -545,10 +1607,221 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
+    // (down) (arrow)
+    "key": "shift+alt+down",
+    "command": "(model) shift+alt+down 807a",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (arrow)
+    "key": "shift+alt+end",
+    "command": "(model) shift+alt+end 3f6f",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (left) (vi)
+    "key": "shift+alt+h",
+    "command": "(model) shift+alt+h a60d",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (left) (vi) (panel)
+    "key": "shift+alt+h",
+    "command": "workbench.action.previousPanelView",
+    // "command": "shift+alt+h c899",
+    "when": "config.altKey.enabled && config.altKey.vi && !editorFocus && panelFocus"
+  },
+  {
+    // (left) (vi)
+    "key": "shift+alt+h",
+    "command": "workbench.action.previousEditor",
+    // "command": "(model) shift+alt+h a60e",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !panelFocus"
+  },
+  {
+    // (left) (vi) (panel) (terminal)
+    "key": "shift+alt+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    // "command": "shift+alt+h a330",
+    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
+  },
+  {
+    // (left) (vi) (editor) - Settings editor, Keyboard Shortcuts, et al
+    "key": "shift+alt+h",
+    "command": "workbench.action.previousEditor",
+    // "command": "shift+alt+h 4823",
+    "when": "config.altKey.enabled && config.altKey.vi && activeEditor != '' && !auxiliaryBarFocus && !editorFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && activeEditorIsReadonly && editorIsOpen"
+  },
+  {
     "key": "shift+alt+home",
     // "command": "-noop",
     "command": "shift+alt+home 2cdf",
     "when": "config.altKey.enabled"
+  },
+  {
+    // (arrow)
+    "key": "shift+alt+home",
+    "command": "(model) shift+alt+home 23d7",
+    "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (vi)
+    "key": "shift+alt+j",
+    "command": "(model) shift+alt+j 3bf9",
+    // "command": "cursorDownSelect",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j f388",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j d8d2",
+    // "command": "workbench.action.terminal.focusPrevious",
+    "when": "config.altKey.enabled && config.altKey.vi && terminalFocus && terminalCount > 1"
+  },
+  {
+    // (down) (vi)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j b422",
+    // "command": "workbench.action.focusPreviousPart",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex == 1 && !multipleEditorGroups"
+  },
+  {
+    // (down) (vi)
+    "key": "shift+alt+j",
+    "command": "workbench.action.focusBelowGroup",
+    // "command": "shift+alt+j b423",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex == 1 && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j 3f63",
+    // "command": "workbench.action.focusBelowGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorIsFirstInGroup && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j 54d6",
+    // "command": "workbench.action.focusFirstEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j a51d",
+    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "workbench.action.focusBelowGroup",
+    // "command": "shift+alt+j 3e25",
+    // "command": "workbench.action.focusFirstEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "shift+alt+j 8e92",
+    // "command": "workbench.action.focusFirstEditorGroup",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
+  },
+  {
+    // (down)
+    "key": "shift+alt+j",
+    "command": "workbench.action.nextEditor",
+    // "command": "shift+alt+j 55e1",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
+  },
+  {
+    // (down) (vi) (inside)
+    "key": "shift+alt+j",
+    "command": "workbench.action.terminal.focusNext",
+    // "command": "shift+alt+j a1d4",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus && terminalFocus && terminalCount > 1"
+  },
+  {
+    // (up) (vi)
+    "key": "shift+alt+k",
+    "command": "(model) shift+alt+k 4aef",
+    // "command": "cursorUpSelect",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) (vi) (inside)
+    "key": "shift+alt+k",
+    "command": "workbench.action.focusAboveGroup",
+    // "command": "shift+alt+k 229e",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus"
+  },
+  {
+    // (up) (vi) (inside) (terminal)
+    "key": "shift+alt+k",
+    "command": "workbench.action.terminal.focusPrevious",
+    // "command": "shift+alt+j a4d4",
+    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
+  },
+  {
+    // (right) (vi)
+    "key": "shift+alt+l",
+    "command": "(model) shift+alt+l c84c",
+    // "command": "cursorRightSelect",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextEditor",
+    // "command": "shift+alt+l cc62",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus"
+  },
+  {
+    // (right) (vi)
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextPanelView",
+    // "command": "shift+alt+l e857",
+    "when": "config.altKey.enabled && config.altKey.vi && panelFocus"
+  },
+  {
+    // (right) (vi)
+    "key": "shift+alt+l",
+    "command": "shift+alt+l 8c60",
+    // "command": "workbench.action.nextEditor",
+    "when": "config.altKey.enabled && config.altKey.vi && activeEditor == 'workbench.editor.keybindings' && editorFocus"
+  },
+  {
+    // (right)
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextPanelView",
+    // "command": "shift+alt+l 90d8",
+    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && focusedView != '' && panelFocus"
+  },
+  {
+    // (right) (vi) (split) (panel) (terminal) - focused terminal is split pane
+    "key": "shift+alt+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    // "command": "shift+alt+l ca60",
+    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
+    //"when": "config.altKey.enabled && config.altKey.terminal && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
+  },
+  {
+    // (right) (vi) (editor) - Settings editor, Keyboard Shortcuts, et al
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextEditor",
+    // "command": "shift+alt+l 32e7",
+    "when": "config.altKey.enabled && config.altKey.vi && activeEditor != '' && !auxiliaryBarFocus && !editorFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && activeEditorIsReadonly && editorIsOpen"
+  },
+  {
+    // (left) (arrow)
+    "key": "shift+alt+left",
+    "command": "(model) shift+alt+left e276",
+    "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
     // (right)
@@ -607,334 +1880,6 @@ Notes:
     "when": "config.altKey.enabled"
   },
   {
-    "key": "shift+alt+pagedown",
-    // "command": "-noop",
-    "command": "shift+alt+pagedown 54be",
-    "when": "config.altKey.enabled"
-  },
-  {
-    "key": "shift+alt+pageup",
-    // "command": "-noop",
-    "command": "shift+alt+pageup fe23",
-    "when": "config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "alt+down",
-    "command": "(model) alt+down 9f75",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (end) (arrow)
-    "key": "alt+end",
-    "command": "(model) alt+end 0b13",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "alt+home",
-    "command": "workbench.action.focusActiveEditorGroup",
-    // "command": "(model) alt+home d9ea",
-    // "command": "(model) alt+home f178",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (arrow)
-    "key": "alt+left",
-    "command": "(model) alt+left af43",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow) - moves/replaces vscode alt+left
-    "key": "alt+pagedown",
-    "command": "workbench.action.navigateBack",
-    // "command": "(model) alt+pagedown 8530",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow) - moves/replaces vscode alt+right
-    "key": "alt+pageup",
-    "command": "workbench.action.navigateForward",
-    // "command": "(model) alt+pageup df44",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "alt+right",
-    "command": "(model) alt+right b7e9",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "alt+up",
-    "command": "(model) alt+up abfd",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+alt+down",
-    "command": "(model) ctrl+alt+down c6fc",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "ctrl+alt+end",
-    "command": "(model) ctrl+alt+end 5eb4",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "ctrl+alt+home",
-    "command": "(model) ctrl+alt+home 8514",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (arrow)
-    "key": "ctrl+alt+left",
-    "command": "(model) ctrl+alt+left 3c03",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+alt+meta+down",
-    "command": "(model) ctrl+alt+meta+down 4e8c",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "ctrl+alt+meta+end",
-    "command": "(model) ctrl+alt+meta+end f55e",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "ctrl+alt+meta+home",
-    "command": "(model) ctrl+alt+meta+home 7110",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (arrow)
-    "key": "ctrl+alt+meta+left",
-    "command": "(model) ctrl+alt+meta+left 5981",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+alt+meta+pagedown",
-    "command": "(model) ctrl+alt+meta+pagedown 6825",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+alt+meta+pageup",
-    "command": "(model) ctrl+alt+meta+pageup 1429",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "ctrl+alt+meta+right",
-    "command": "(model) ctrl+alt+meta+right d42e",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+alt+meta+up",
-    "command": "(model) ctrl+alt+meta+up 7af2",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+alt+pagedown",
-    "command": "(model) ctrl+alt+pagedown f0c0",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+alt+pageup",
-    "command": "(model) ctrl+alt+pageup 1f40",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "ctrl+alt+right",
-    "command": "(model) ctrl+alt+right 9edf",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+alt+up",
-    "command": "(model) ctrl+alt+up 8fcf",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+down",
-    "command": "(model) ctrl+down b6dc",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (end) (arrow)
-    "key": "ctrl+end",
-    "command": "(model) ctrl+end 63a1",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (home) (arrow)
-    "key": "ctrl+home",
-    "command": "(model) ctrl+home 33f7",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (arrow)
-    "key": "ctrl+left",
-    "command": "(model) ctrl+left 805a",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+pagedown",
-    "command": "(model) ctrl+pagedown b794",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+pageup",
-    "command": "(model) ctrl+pageup 5c52",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "ctrl+right",
-    "command": "(model) ctrl+right 43c2",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+shift+alt+down",
-    "command": "(model) ctrl+shift+alt+down 065e",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "ctrl+shift+alt+end",
-    "command": "(model) ctrl+shift+alt+end 6bd0",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "ctrl+shift+alt+home",
-    "command": "(model) ctrl+shift+alt+home 24d9",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (arrow)
-    "key": "ctrl+shift+alt+left",
-    "command": "(model) ctrl+shift+alt+left 06c2",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+shift+alt+meta+down",
-    "command": "(model) ctrl+shift+alt+meta+down 287c",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "ctrl+shift+alt+meta+end",
-    "command": "(model) ctrl+shift+alt+meta+end 0baa",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "ctrl+shift+alt+meta+home",
-    "command": "(model) ctrl+shift+alt+meta+home b359",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (arrow)
-    "key": "ctrl+shift+alt+meta+left",
-    "command": "(model) ctrl+shift+alt+meta+left d1df",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+shift+alt+meta+pagedown",
-    "command": "(model) ctrl+shift+alt+meta+pagedown 52eb",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+shift+alt+meta+pageup",
-    "command": "(model) ctrl+shift+alt+meta+pageup 6611",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "ctrl+shift+alt+meta+right",
-    "command": "(model) ctrl+shift+alt+meta+right 6276",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+shift+alt+meta+up",
-    "command": "(model) ctrl+shift+alt+meta+up 9364",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "ctrl+shift+alt+pagedown",
-    "command": "(model) ctrl+shift+alt+pagedown 1db8",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+shift+alt+pageup",
-    "command": "(model) ctrl+shift+alt+pageup 33ab",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (right) (arrow)
-    "key": "ctrl+shift+alt+right",
-    "command": "(model) ctrl+shift+alt+right 2954",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+shift+alt+up",
-    "command": "(model) ctrl+shift+alt+up f6b2",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (up) (arrow)
-    "key": "ctrl+up",
-    "command": "(model) ctrl+up 1765",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (down) (arrow)
-    "key": "shift+alt+down",
-    "command": "(model) shift+alt+down 807a",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "shift+alt+end",
-    "command": "(model) shift+alt+end 3f6f",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (arrow)
-    "key": "shift+alt+home",
-    "command": "(model) shift+alt+home 23d7",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
-    // (left) (arrow)
-    "key": "shift+alt+left",
-    "command": "(model) shift+alt+left e276",
-    "when": "config.altKey.arrows && config.altKey.enabled"
-  },
-  {
     // (down) (arrow)
     "key": "shift+alt+meta+down",
     "command": "(model) shift+alt+meta+down ea78",
@@ -947,10 +1892,34 @@ Notes:
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
+    // (left) (vi)
+    "key": "shift+alt+meta+h",
+    "command": "(model) shift+alt+meta+h aba8",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
     // (arrow)
     "key": "shift+alt+meta+home",
     "command": "(model) shift+alt+meta+home 9a24",
     "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    // (down) (vi)
+    "key": "shift+alt+meta+j",
+    "command": "(model) shift+alt+meta+j 5749",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (up) (vi)
+    "key": "shift+alt+meta+k",
+    "command": "(model) shift+alt+meta+k 25e2",
+    "when": "config.altKey.enabled && config.altKey.vi"
+  },
+  {
+    // (right) (vi)
+    "key": "shift+alt+meta+l",
+    "command": "(model) shift+alt+meta+l 3b6a",
+    "when": "config.altKey.enabled && config.altKey.vi"
   },
   {
     // (left) (arrow)
@@ -983,10 +1952,22 @@ Notes:
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
+    "key": "shift+alt+pagedown",
+    // "command": "-noop",
+    "command": "shift+alt+pagedown 54be",
+    "when": "config.altKey.enabled"
+  },
+  {
     // (down) (arrow)
     "key": "shift+alt+pagedown",
     "command": "(model) shift+alt+pagedown 56be",
     "when": "config.altKey.arrows && config.altKey.enabled"
+  },
+  {
+    "key": "shift+alt+pageup",
+    // "command": "-noop",
+    "command": "shift+alt+pageup fe23",
+    "when": "config.altKey.enabled"
   },
   {
     // (up) (arrow)
@@ -1007,989 +1988,8 @@ Notes:
     "when": "config.altKey.arrows && config.altKey.enabled"
   },
   {
-    // (t) open native terminal when not in terminal
-    "key": "ctrl+shift+t",
-    "command": "workbench.action.terminal.openNativeConsole",
-    // "command": "ctrl+shift+t f641",
-    "when": "config.altKey.enabled && !terminalFocus"
-  },
-  {
-    // (zoom) toggle secondary side bar
-    "key": "alt+a alt+z",
-    "command": "workbench.action.toggleMaximizedAuxiliaryBar",
-    // "command": "alt+a alt+z af38",
-    "when": "config.altKey.enabled && auxiliaryBarFocus"
-  },
-  {
-    // (zoom) (copy) toggle secondary side bar
-    "key": "alt+a z",
-    "command": "workbench.action.toggleMaximizedAuxiliaryBar",
-    // "command": "alt+a z af39",
-    "when": "config.altKey.enabled && auxiliaryBarFocus"
-  },
-  {
-    // (left) (vi)
-    "key": "alt+h",
-    // "command": "noop",
-    "command": "alt+h and when? no and when! :)",
-    // "command": "(model) alt+h fc3d",
-    // "command": "(model) alt+h 7003",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (down) (vi)
-    "key": "alt+j",
-    // "command": "noop",
-    "command": "alt+j and when? no and when! :)",
-    // "command": "(model) alt+j 7c6f",
-    // "command": "(model) alt+j 3b6a",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "alt+k",
-    // "command": "noop",
-    "command": "alt+k and when? no and when! :)",
-    // "key": "alt+k",
-    // "command": "(model) alt+k d9ea",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "alt+l",
-    // "command": "noop"
-    "command": "alt+l and when? no and when! :)",
-    // "command": "(model) alt+l 3fb7",
-    // "command": "(model) alt+l 1f40",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (vi)
-    "key": "ctrl+alt+h",
-    "command": "(model) ctrl+alt+h 2a2c",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (down) (vi)
-    "key": "ctrl+alt+j",
-    "command": "(model) ctrl+alt+j 8ac5",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "ctrl+alt+k",
-    "command": "(model) ctrl+alt+k 3382",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "ctrl+alt+l",
-    "command": "(model) ctrl+alt+l 3d48",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (vi)
-    "key": "ctrl+alt+meta+h",
-    "command": "(model) ctrl+alt+meta+h 3b0f",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (down) (vi)
-    "key": "ctrl+alt+meta+j",
-    "command": "(model) ctrl+alt+meta+j 70e0",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "ctrl+alt+meta+k",
-    "command": "(model) ctrl+alt+meta+k 7003",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "ctrl+alt+meta+l",
-    "command": "(model) ctrl+alt+meta+l 2edd",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (vi)
-    "key": "ctrl+h",
-    "command": "(model) ctrl+h b6f8",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (down) (vi)
-    "key": "ctrl+j",
-    "command": "(model) ctrl+j 084c",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi) (vscode) (user?) - remove noop; don't stop processing (noop) this keybinding
-    "key": "ctrl+k",
-    "command": "-noop",
-    // "command": "(model) ctrl+k 1fd7",
-    // "command": "(model) ctrl+k 33f7",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "ctrl+l",
-    "command": "(model) ctrl+l 6085",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (vi)
-    "key": "ctrl+shift+alt+h",
-    "command": "(model) ctrl+shift+alt+h f90f",
-    // "command": "cursorWordPartLeftSelect",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (down) (vi)
-    "key": "ctrl+shift+alt+j",
-    "command": "(model) ctrl+shift+alt+j be7e",
-    // "command": "cursorWordPartDownSelect",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "ctrl+shift+alt+k",
-    "command": "(model) ctrl+shift+alt+k 1728",
-    // "command": "cursorWordPartUpSelect",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "ctrl+shift+alt+l",
-    "command": "(model) ctrl+shift+alt+l bd82",
-    // "command": "cursorWordPartRightSelect",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (vi)
-    "key": "ctrl+shift+alt+meta+h",
-    "command": "(model) ctrl+shift+alt+meta+h 6179",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (down) (vi)
-    "key": "ctrl+shift+alt+meta+j",
-    "command": "(model) ctrl+shift+alt+meta+j aa42",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "ctrl+shift+alt+meta+k",
-    "command": "(model) ctrl+shift+alt+meta+k 0dab",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "ctrl+shift+alt+meta+l",
-    "command": "(model) ctrl+shift+alt+meta+l 12a1",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (vi)
-    "key": "shift+alt+h",
-    "command": "(model) shift+alt+h a60d",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (down) (vi)
-    "key": "shift+alt+j",
-    "command": "(model) shift+alt+j 3bf9",
-    // "command": "cursorDownSelect",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "shift+alt+k",
-    "command": "(model) shift+alt+k 4aef",
-    // "command": "cursorUpSelect",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "shift+alt+l",
-    "command": "(model) shift+alt+l c84c",
-    // "command": "cursorRightSelect",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (left) (vi)
-    "key": "shift+alt+meta+h",
-    "command": "(model) shift+alt+meta+h aba8",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (down) (vi)
-    "key": "shift+alt+meta+j",
-    "command": "(model) shift+alt+meta+j 5749",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (up) (vi)
-    "key": "shift+alt+meta+k",
-    "command": "(model) shift+alt+meta+k 25e2",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    // (right) (vi)
-    "key": "shift+alt+meta+l",
-    "command": "(model) shift+alt+meta+l 3b6a",
-    "when": "config.altKey.enabled && config.altKey.vi"
-  },
-  {
-    "key": "f9",
-    "command": "config.altKey.enabled && config.altKey.wrap",
-    // "command": "f9 5a61"
-    "when": "config.altKey.enabled && config.altKey.wrap"
-  },
-  {
     "key": "shift+alt+z",
     "command": "shift+alt+z fzz1",
     "when": "config.altKey.enabled && config.altKey.wrap"
-  },
-  {
-    // (right)
-    "key": "alt+'",
-    "command": "alt+' 2310",
-    // "command": "cursorEnd", // maybe for non-neovim profiles but for neovim users there are many ways to navigate to the end of a line ...
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    // (split) (horizontal)
-    "key": "alt+-",
-    "command": "workbench.action.splitEditorDown",
-    // "command": "alt+- 301f",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    "key": "alt+/",
-    "command": "alt+/ e9b2",
-    // "command": "editor.action.previousMatchFindAction",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    "key": "alt+;",
-    "command": "alt+; afa2",
-    // "command": "cursorHome", // maybe for non-neovim profiles but for neovim users there are many ways to navigate to the beginning of a line ...
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    // (split) [vertical]
-    "key": "alt+=",
-    "command": "workbench.action.splitEditor",
-    // "command": "alt+= 54b0",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    // (left)
-    "key": "alt+[",
-    "command": "alt+[ f982",
-    // "command": "cursorMove",
-    "args": {
-      "to": "prevBlankLine"
-    },
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    // (right)
-    "key": "alt+]",
-    "command": "alt+] ff82",
-    // "command": "cursorMove",
-    "args": {
-      "to": "nextBlankLine"
-    },
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    "key": "alt+s alt+l",
-    "command": "alt+s alt+l b3d5",
-    // "command": "expandLineSelection",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    "key": "alt+s alt+m",
-    "command": "alt+s alt+m 696d",
-    // "command": "editor.action.selectToBracket",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    "key": "alt+s alt+o",
-    "command": "alt+s alt+o 8f29",
-    // "command": "editor.action.smartSelect.expand",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    "key": "alt+s shift+alt+o",
-    "command": "alt+s shift+alt+o 82de",
-    // "command": "editor.action.smartSelect.shrink",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "alt+w d632",
-    // "command": "cursorWordStartRight",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    // (close)
-    "key": "ctrl+d",
-    "command": "workbench.action.closeActiveEditor",
-    // "command": "ctrl+d 26cb",
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    // (left) (select)
-    "key": "shift+alt+[",
-    "command": "shift+alt+[ d58a",
-    // "command": "cursorMove",
-    "args": {
-      "to": "prevBlankLine",
-      "select": true
-    },
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    // (right) (select)
-    "key": "shift+alt+]",
-    "command": "shift+alt+] 26aa",
-    // "command": "cursorMove",
-    "args": {
-      "to": "nextBlankLine",
-      "select": true
-    },
-    "when": "config.altKey.enabled && editorFocus"
-  },
-  {
-    "key": "alt+m",
-    "command": "alt+m 605a",
-    // "command": "editor.action.jumpToBracket",
-    "when": "config.altKey.enabled && editorTextFocus"
-  },
-  {
-    // (neovim)
-    "key": "alt+n",
-    "command": "alt+n 318f",
-    // "command": "editor.action.nextMatchFindAction",
-    "when": "config.altKey.enabled && neovim.init"
-  },
-  {
-    // (neovim) - restart (only) the neovim extension
-    "key": "alt+n r",
-    "command": "vscode-neovim.restart",
-    // "command": "alt+n 419e",
-    "when": "config.altKey.enabled && neovim.init"
-  },
-  {
-    // (position) (panel) - rotate clockwise
-    "key": "alt+a alt+p",
-    "command": "workbench.action.positionPanelLeft",
-    // "command": "alt+a alt+p 77a1",
-    "when": "config.altKey.enabled && panelPosition == 'bottom'"
-  },
-  {
-    // (position) (panel) - rotate clockwise
-    "key": "alt+a alt+p",
-    "command": "workbench.action.positionPanelTop",
-    // "command": "alt+a alt+p 77a2",
-    "when": "config.altKey.enabled && panelPosition == 'left'"
-  },
-  {
-    // (position) (panel) - rotate clockwise
-    "key": "alt+a alt+p",
-    "command": "workbench.action.positionPanelBottom",
-    // "command": "alt+a alt+p 77a3",
-    "when": "config.altKey.enabled && panelPosition == 'right'"
-  },
-  {
-    // (position) (panel) - rotate clockwise
-    "key": "alt+a alt+p",
-    "command": "workbench.action.positionPanelRight",
-    // "command": "alt+a alt+p 77a4",
-    "when": "config.altKey.enabled && panelPosition == 'top'"
-  },
-  {
-    // (zoom) toggle maximized panel
-    "key": "alt+a alt+z",
-    "command": "workbench.action.toggleMaximizedPanel",
-    // "command": "alt+a alt+z cbb3",
-    "when": "config.altKey.enabled && !editorFocus && panelFocus"
-  },
-  {
-    // (zoom) (copy) toggle maximized panel
-    "key": "alt+a z",
-    "command": "workbench.action.toggleMaximizedPanel",
-    // "command": "alt+a z cbb4",
-    "when": "config.altKey.enabled && !editorFocus && panelFocus"
-  },
-  {
-    // (right) (vi)
-    "key": "alt+l",
-    "command": "alt+l 0ae0",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left'"
-  },
-  {
-    // (up) (vi) (inside)
-    "key": "shift+alt+k",
-    "command": "workbench.action.focusAboveGroup",
-    // "command": "shift+alt+k 229e",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus"
-  },
-  {
-    "key": "shift+alt+l",
-    "command": "workbench.action.nextEditor",
-    // "command": "shift+alt+l cc62",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus"
-  },
-  {
-    "key": "alt+k",
-    "command": "alt+k b9c4",
-    // "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "config.altKey.enabled && config.altKey.vi && inQuickOpen"
-  },
-  {
-    // (right) (vi)
-    "key": "shift+alt+l",
-    "command": "workbench.action.nextPanelView",
-    // "command": "shift+alt+l e857",
-    "when": "config.altKey.enabled && config.altKey.vi && panelFocus"
-  },
-  {
-    // (left) unfold all
-    "key": "ctrl+alt+[",
-    "command": "editor.unfoldAll",
-    // "command": "ctrl+alt+[ d981",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && editorFocus"
-  },
-  {
-    // (right) fold all except current
-    "key": "ctrl+alt+]",
-    "command": "editor.foldAllExcept",
-    // "command": "ctrl+alt+] c878",
-    "when": "config.altKey.enabled && config.workbench.sideBar.location == 'left' && editorFocus"
-  },
-  {
-    // (zoom) - maximize editor group
-    "key": "alt+a alt+z",
-    "command": "workbench.action.toggleMaximizeEditorGroup",
-    // "command": "alt+a alt+z feb2",
-    "when": "config.altKey.enabled && editorFocus && !panelFocus"
-  },
-  {
-    // (zoom) (copy) - maximize editor group
-    "key": "alt+a z",
-    "command": "workbench.action.toggleMaximizeEditorGroup",
-    // "command": "alt+a z feb3",
-    "when": "config.altKey.enabled && editorFocus && !panelFocus"
-  },
-  {
-    // (vscode) (mimic) - reopen closed editor when editor is focused
-    "key": "ctrl+shift+t",
-    "command": "workbench.action.reopenClosedEditor",
-    // "command": "ctrl+shift+t 7c33",
-    "when": "config.altKey.enabled && editorFocus && !panelFocus"
-  },
-  {
-    // (split) (horizontal)
-    "key": "alt+-",
-    "command": "workbench.action.terminal.split",
-    "when": "config.altKey.enabled && panelFocus && terminalFocus"
-  },
-  {
-    // (split) [vertical]
-    "key": "alt+=",
-    "command": "workbench.action.terminal.split",
-    // "command": "alt+= 9e54",
-    "when": "config.altKey.enabled && panelFocus && terminalFocus"
-  },
-  {
-    // (t) open a new terminal when terminal is focused
-    "key": "ctrl+shift+t",
-    "command": "workbench.action.terminal.new",
-    // "command": "ctrl+shift+t 7c32",
-    "when": "config.altKey.enabled && panelFocus && terminalFocus"
-  },
-  {
-    // (left) (vi) (no wrap)
-    "key": "alt+h",
-    "command": "alt+h 9e22",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left'"
-  },
-  {
-    // (left) (vi) (panel)
-    "key": "shift+alt+h",
-    "command": "workbench.action.previousPanelView",
-    // "command": "shift+alt+h c899",
-    "when": "config.altKey.enabled && config.altKey.vi && !editorFocus && panelFocus"
-  },
-  {
-    // (right) (vi)
-    "key": "shift+alt+l",
-    "command": "shift+alt+l 8c60",
-    // "command": "workbench.action.nextEditor",
-    "when": "config.altKey.enabled && config.altKey.vi && activeEditor == 'workbench.editor.keybindings' && editorFocus"
-  },
-  {
-    // (right) (vi)
-    "key": "ctrl+alt+l",
-    "command": "workbench.action.toggleAuxiliaryBar",
-    // "command": "ctrl+alt+l ae58",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && !auxiliaryBarVisible"
-  },
-  {
-    // (left) (vi) - toggle left primary sidebar when the sidebar is hidden
-    "key": "ctrl+alt+h",
-    "command": "workbench.action.toggleSidebarVisibility",
-    // "command": "ctrl+alt+h 8e24",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && !sideBarVisible"
-  },
-  {
-    // (right) (vi)
-    "key": "ctrl+alt+l",
-    "command": "workbench.action.toggleAuxiliaryBar",
-    // "command": "workbench.action.focusAuxiliaryBar",
-    // "command": "ctrl+alt+l 45f7",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && auxiliaryBarVisible"
-  },
-  {
-    // (right) (vi)
-    "key": "alt+l",
-    "command": "workbench.action.focusActiveEditorGroup",
-    // "command": "alt+l 53d4",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus"
-  },
-  {
-    // (left) (vi) - toggle left primary sidebar when the sidebar is visible
-    "key": "ctrl+alt+h",
-    "command": "workbench.action.toggleSidebarVisibility",
-    // "command": "workbench.action.focusSideBar",
-    // "command": "ctrl+alt+h bc4d",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarVisible"
-  },
-  {
-    // (left) (vi)
-    // (note) vi-like extensions disabled
-    "key": "alt+h",
-    "command": "alt+h 31ae",
-    // "command": "cursorLeft",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !neovim.init"
-  },
-  {
-    // (down) (vi)
-    // (note) vi-like extensions disabled
-    "key": "alt+j",
-    "command": "alt+j 9831",
-    // "command": "cursorDown",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !neovim.init"
-  },
-  {
-    // (up) (vi)
-    // (note) vi-like extensions disabled
-    "key": "alt+k",
-    "command": "alt+k 6375",
-    // "command": "cursorUp",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !neovim.init"
-  },
-  {
-    // (right) (vi)
-    // (note) vi-like extensions disabled
-    "key": "alt+l",
-    "command": "alt+l be1a",
-    // "command": "cursorRight",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !neovim.init"
-  },
-  {
-    // (left) (vi)
-    "key": "shift+alt+h",
-    "command": "workbench.action.previousEditor",
-    // "command": "(model) shift+alt+h a60e",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && !panelFocus"
-  },
-  {
-    // (up)
-    "key": "ctrl+alt+k",
-    "command": "workbench.action.focusActiveEditorGroup",
-    // "command": "ctrl+alt+k 2ba8",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && !editorFocus"
-  },
-  {
-    // (down) (vi) - toggle bottom panel when the panel is hidden
-    "key": "ctrl+alt+j",
-    "command": "workbench.action.togglePanel",
-    // "command": "ctrl+alt+j 398d",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && !panelVisible"
-  },
-  {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "shift+alt+j f388",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus"
-  },
-  {
-    // (down) (vi) - toggle bottom panel when the panel is visible
-    "key": "ctrl+alt+j",
-    "command": "workbench.action.togglePanel",
-    // "command": "workbench.action.focusPanel",
-    // "command": "ctrl+alt+j de38",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelVisible"
-  },
-  {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "shift+alt+j d8d2",
-    // "command": "workbench.action.terminal.focusPrevious",
-    "when": "config.altKey.enabled && config.altKey.vi && terminalFocus && terminalCount > 1"
-  },
-  {
-    // (down) (vi)
-    "key": "alt+j",
-    "command": "alt+j 083d",
-    // "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && panelPosition == 'bottom' && panelFocus"
-  },
-  {
-    // (down) (vi)
-    "key": "alt+j",
-    "command": "workbench.action.focusActiveEditorGroup",
-    // "command": "alt+j 083e",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelPosition == 'bottom' && panelFocus"
-  },
-  {
-    // (right) (vi)
-    "key": "ctrl+alt+l",
-    "command": "noop",
-    // "command": "ctrl+alt+l 7d75",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && auxiliaryBarVisible"
-  },
-  {
-    // (right) (vi)
-    "key": "alt+l",
-    "command": "workbench.action.focusAuxiliaryBar",
-    // "command": "alt+l 53d4",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && editorFocus && auxiliaryBarVisible"
-  },
-  {
-    // (right) (vi)
-    "key": "alt+l",
-    "command": "alt+l e241",
-    // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && auxiliaryBarVisible"
-  },
-  {
-    // (left) (vi) - do nothing when the sidebar is visible and focused
-    "key": "ctrl+alt+h",
-    "command": "noop",
-    // "command": "ctrl+alt+h 2ed2",
-    // "command": "workbench.action.toggleSidebarVisibility",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && sideBarFocus && sideBarVisible"
-  },
-  {
-    // (down) (vi)
-    "key": "shift+alt+j",
-    "command": "shift+alt+j b422",
-    // "command": "workbench.action.focusPreviousPart",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex == 1 && !multipleEditorGroups"
-  },
-  {
-    // (down) (vi)
-    "key": "shift+alt+j",
-    "command": "workbench.action.focusBelowGroup",
-    // "command": "shift+alt+j b423",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex == 1 && multipleEditorGroups"
-  },
-  {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "shift+alt+j 3f63",
-    // "command": "workbench.action.focusBelowGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorIsFirstInGroup && multipleEditorGroups"
-  },
-  {
-    // (right)
-    "key": "shift+alt+l",
-    "command": "workbench.action.nextPanelView",
-    // "command": "shift+alt+l 90d8",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && focusedView != '' && panelFocus"
-  },
-  {
-    // (up) (vi) (edge) - going up to the editor from every panel except the OUTPUT panel
-    "key": "alt+k",
-    "command": "workbench.action.focusActiveEditorGroup",
-    // "command": "alt+k c9e7",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && !editorFocus && panelFocus"
-  },
-  {
-    // (up)
-    "key": "ctrl+alt+k",
-    "command": "breadcrumbs.focusAndSelect",
-    // "command": "ctrl+alt+k 7ba3",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && activeEditorGroupIndex == 1"
-  },
-  {
-    // (up) (vi) (edge) - going up to the editor from the OUTPUT panel
-    "key": "alt+k",
-    "command": "workbench.action.focusActiveEditorGroup",
-    // "command": "alt+k b321",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && panelFocus"
-  },
-  {
-    // (down) toggle bottom panel
-    "key": "ctrl+alt+j",
-    "command": "noop",
-    //"command": "workbench.action.togglePanel",
-    // "command": "ctrl+alt+j 8c48",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus && panelVisible"
-  },
-  {
-    // (up) (vi) (inside) (terminal)
-    "key": "shift+alt+k",
-    "command": "workbench.action.terminal.focusPrevious",
-    // "command": "shift+alt+j a4d4",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && terminalFocus && terminalCount > 1"
-  },
-  {
-    // (f8) format/indent
-    "key": "f8",
-    "command": "editor.action.formatDocument",
-    // "command": "f8 f0fb"
-    "when": "config.altKey.enabled && editorFocus && editorHasDocumentFormattingProvider && !editorReadonly && !inCompositeEditor"
-  },
-  {
-    // (up) (vi) (neovim) (user) - this when statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
-    // (note) ctrl+k must be a chord for native vscode keybindings to work
-    "key": "ctrl+k",
-    "command": "-vscode-neovim.send",
-    "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert'"
-  },
-  {
-    // (up) (vi) (neovim) (user) - this statement must be EXACTLY like this to remove the ctrl+k keybinding the neovim-vscode extension adds.
-    // (note) ctrl+k must be a chord for native vscode keybindings to work
-    "key": "ctrl+k",
-    "command": "-vscode-neovim.send",
-    "when": "editorTextFocus && editorLangId not in 'neovim.editorLangIdExclusions' && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert'"
-  },
-  {
-    // (right) (vi) (no wrap)
-    "key": "alt+l",
-    "command": "alt+l 53d3",
-    // "command": "workbench.action.focusAuxiliaryBar",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && !auxiliaryBarVisible"
-  },
-  {
-    // (left) (vi) (edge) (no wrap)
-    "key": "alt+h",
-    "command": "alt+h 8d96",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && !sideBarVisible"
-  },
-  {
-    // (left) (vi)
-    "key": "alt+h",
-    "command": "workbench.action.focusPanel",
-    // "command": "alt+h 43ad",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && panelVisible"
-  },
-  {
-    // (right) (vi) (edge)
-    "key": "alt+l",
-    "command": "workbench.action.focusSideBar",
-    // "command": "alt+l ec4d",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && sideBarVisible"
-  },
-  {
-    // (left) (vi)
-    "key": "alt+h",
-    "command": "workbench.action.focusSideBar",
-    // "command": "alt+h 33ad",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible"
-  },
-  {
-    // (left) (vi) (edge) (wrap)
-    "key": "alt+h",
-    "command": "alt+h 8d95",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && sideBarVisible"
-  },
-  {
-    // (left) (vi)
-    "key": "alt+h",
-    "command": "workbench.action.focusAuxiliaryBar",
-    // "command": "alt+h 6317",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && sideBarFocus && auxiliaryBarVisible"
-  },
-  {
-    // (left) (vi)
-    "key": "alt+h",
-    "command": "workbench.action.focusActiveEditorGroup",
-    // "command": "alt+h 6318",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && auxiliaryBarFocus && !panelVisible && editorIsOpen"
-  },
-  {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "shift+alt+j 54d6",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup"
-  },
-  {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "shift+alt+j a51d",
-    "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && editorFocus && activeEditorGroupIndex > 1 && multipleEditorGroups"
-  },
-  {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "workbench.action.focusBelowGroup",
-    // "command": "shift+alt+j 3e25",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex == 1 && activeEditorIsLastInGroup && multipleEditorGroups"
-  },
-  {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "shift+alt+j 8e92",
-    // "command": "workbench.action.focusFirstEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex > 1 && activeEditorGroupLast && multipleEditorGroups"
-  },
-  {
-    // (down)
-    "key": "shift+alt+j",
-    "command": "workbench.action.nextEditor",
-    // "command": "shift+alt+j 55e1",
-    "when": "config.altKey.enabled && config.altKey.vi && editorFocus && activeEditorGroupIndex > 1 && activeEditorIsLastInGroup && multipleEditorGroups"
-  },
-  {
-    // (left) (vi) (panel) (terminal)
-    "key": "shift+alt+h",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    // "command": "shift+alt+h a330",
-    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
-  },
-  {
-    // (right) (vi) (split) (panel) (terminal) - focused terminal is split pane
-    "key": "shift+alt+l",
-    "command": "workbench.action.terminal.focusNextPane",
-    // "command": "shift+alt+l ca60",
-    "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
-    //"when": "config.altKey.enabled && config.altKey.terminal && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
-  },
-  {
-    // (down) (vi)
-    "key": "alt+j",
-    "command": "workbench.action.focusPanel",
-    // "command": "alt+j 11a1",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && panelVisible && !multipleEditorGroups"
-  },
-  {
-    // (down) (vi)
-    "key": "alt+j",
-    "command": "workbench.action.focusPanel",
-    // "command": "alt+j 12a2",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && panelVisible && multipleEditorGroups"
-  },
-  {
-    // (down) (vi) (inside)
-    "key": "shift+alt+j",
-    "command": "workbench.action.terminal.focusNext",
-    // "command": "shift+alt+j a1d4",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && panelFocus && terminalFocus && terminalCount > 1"
-  },
-  {
-    // (left) (vi) (edge) (wrap)
-    "key": "alt+h",
-    "command": "alt+h 080e",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && panelVisible && !sideBarVisible"
-  },
-  {
-    // (left) (vi) (edge) (wrap)
-    "key": "alt+h",
-    "command": "alt+h 8e22",
-    // "command": "workbench.action.focusActiveEditorGroup",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && !sideBarVisible && editorIsOpen"
-  },
-  {
-    // (right) (vi)
-    "key": "alt+l",
-    "command": "workbench.action.focusSideBar",
-    // "command": "alt+l 55d3",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && !auxiliaryBarVisible && sideBarVisible"
-  },
-  {
-    // (left) (vi) (edge) (wrap)
-    "key": "alt+h",
-    "command": "workbench.action.focusPanel",
-    // "command": "alt+h 0812",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && panelVisible && !sideBarVisible"
-  },
-  {
-    // (left) (vi) (edge) (wrap)
-    "key": "alt+h",
-    "command": "workbench.action.focusActiveEditorGroup",
-    // "command": "alt+h 8e20",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && panelFocus && !sideBarVisible && editorIsOpen"
-  },
-  {
-    // (left) (top left)
-    "key": "alt+h",
-    "command": "alt+h cd7e",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && !sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    // (left) (top left)
-    "key": "alt+h",
-    "command": "workbench.action.focusSideBar",
-    // "command": "alt+h ad8d",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    // (up) (vi) (no wrap)
-    "key": "alt+k",
-    "command": "alt+k 12a4",
-    // "command": "workbench.action.focusPanel",
-    "when": "config.altKey.enabled && config.altKey.vi && !config.altKey.wrap && panelPosition == 'bottom' && editorFocus && !panelFocus && panelVisible && !multipleEditorGroups"
-  },
-  {
-    // (left) (top left)
-    "key": "alt+h",
-    "command": "workbench.action.focusSideBar",
-    // "command": "alt+h cd8d",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && config.workbench.sideBar.location == 'left' && editorFocus && sideBarVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup"
-  },
-  {
-    // (up) (vi) (wrap)
-    "key": "alt+k",
-    "command": "alt+k 12a5",
-    // "command": "workbench.action.focusPanel",
-    "when": "config.altKey.enabled && config.altKey.vi && config.altKey.wrap && panelPosition == 'bottom' && editorFocus && !panelFocus && panelVisible && !multipleEditorGroups"
-  },
-  {
-    // (down) (vi)
-    "key": "alt+j",
-    "command": "workbench.action.focusPanel",
-    // "command": "alt+j 9b25",
-    "when": "config.altKey.enabled && config.altKey.vi && panelPosition == 'bottom' && editorFocus && panelVisible && activeEditorGroupIndex == 1 && activeEditorIsFirstInGroup && !multipleEditorGroups"
-  },
-  {
-    // (close)
-    "key": "ctrl+d",
-    "command": "workbench.action.closeActiveEditor",
-    // "command": "ctrl+d cc30",
-    "when": "config.altKey.enabled && !auxiliaryBarFocus && !editorFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && activeEditorIsReadonly && editorIsOpen"
-  },
-  {
-    // (left) (vi) (editor) - Settings editor, Keyboard Shortcuts, et al
-    "key": "shift+alt+h",
-    "command": "workbench.action.previousEditor",
-    // "command": "shift+alt+h 4823",
-    "when": "config.altKey.enabled && config.altKey.vi && activeEditor != '' && !auxiliaryBarFocus && !editorFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && activeEditorIsReadonly && editorIsOpen"
-  },
-  {
-    // (right) (vi) (editor) - Settings editor, Keyboard Shortcuts, et al
-    "key": "shift+alt+l",
-    "command": "workbench.action.nextEditor",
-    // "command": "shift+alt+l 32e7",
-    "when": "config.altKey.enabled && config.altKey.vi && activeEditor != '' && !auxiliaryBarFocus && !editorFocus && focusedView == '' && !panelFocus && !sideBarFocus && !terminalFocus && activeEditorIsReadonly && editorIsOpen"
   }
 ]
