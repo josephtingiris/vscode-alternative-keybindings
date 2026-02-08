@@ -52,7 +52,7 @@ Notes:
     // (right)
     "key": "alt+'",
     "command": "alt+' 2310",
-    // "command": "cursorEnd", // maybe for non-neovim profiles but for neovim users there are many ways to navigate to the end of a line ...
+    // "command": "cursorEnd", // maybe for non-neovim profiles but for neovim users there are many ways to navigate to the end of the line ...
     "when": "config.altKey.enabled && editorFocus"
   },
   {
@@ -548,8 +548,8 @@ Notes:
   {
     // (right) (vi)
     "key": "alt+l",
-    "command": "workbench.action.focusAuxiliaryBar",
-    // "command": "alt+l e241",
+    "command": "alt+l e241",
+    // "command": "workbench.action.focusAuxiliaryBar",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && auxiliaryBarVisible"
   },
   {
@@ -1646,7 +1646,7 @@ Notes:
     "when": "config.altKey.enabled && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
-    // (left) (vi) (editor) - Settings editor, Keyboard Shortcuts, et al
+    // (left) (vi) - Settings editor, Keyboard Shortcuts, et al
     "key": "shift+alt+h",
     "command": "workbench.action.previousEditor",
     // "command": "shift+alt+h 4823",
@@ -1811,7 +1811,7 @@ Notes:
     //"when": "config.altKey.enabled && config.altKey.terminal && config.altKey.vi && panelFocus && terminalFocus && terminalCount > 1 && terminalSplitPaneActive"
   },
   {
-    // (right) (vi) (editor) - Settings editor, Keyboard Shortcuts, et al
+    // (right) (vi) - Settings editor, Keyboard Shortcuts, et al
     "key": "shift+alt+l",
     "command": "workbench.action.nextEditor",
     // "command": "shift+alt+l 32e7",
