@@ -548,8 +548,8 @@ Notes:
   {
     // (right) (vi)
     "key": "alt+l",
-    "command": "alt+l e241",
-    // "command": "workbench.action.focusAuxiliaryBar",
+    "command": "workbench.action.focusAuxiliaryBar",
+    // m/"cmand": "alt+l e241",
     "when": "config.altKey.enabled && config.altKey.vi && config.workbench.sideBar.location == 'left' && panelFocus && auxiliaryBarVisible"
   },
   {
